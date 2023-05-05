@@ -45,7 +45,7 @@ Xilinx Vitis
 `source /$installed_path/Xilinx/Vitis/2022.1/settings64.sh`  
 `source /$installed_path/xilinx/xrt/setup.sh`
 
-## 3 Labs Spec
+## 3 Labs Specification
 ### Lab1 : AXI Master to read/write BRAM
 * Design source: read_romcode.cpp  
 
