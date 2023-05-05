@@ -75,7 +75,7 @@ Note: spiflash.cpp is not verified
 1. Design a simple module mprj_control.v  
 Use one mprj_i pin (synchronize with host code) to stage through several steps, e.g.  
 a. Change mprj_o pins value  
-b. Some of mprj pins used for loop-back, e.g. (b1) mprj_o[x] =mprj_i[n] (b2) Control mprj_en accordingly  
+b. Some of mprj pins used for loop-back, e.g. (b1) mprj_o[x] =mprj_i[n], (b2) Control mprj_en accordingly  
 c. Host use axilite to read mprj_o, mprj_en values
 3. Integrate mprj_control.v & caravel_ps.v in Block design–generate bitstream
 4. Develop Python host code to verify its behavior
