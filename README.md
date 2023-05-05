@@ -11,8 +11,10 @@ Note: None of the design sources are verified. You have to verify it by yourself
 
 ## Background Prerequisites
 * VitisHLS – [Lab1](https://github.com/bol-edu/course-lab_1) and [Lab2](https://github.com/bol-edu/course-lab_2)
-* Xilinx Vitis XSIM
+* Xilinx XSIM
 * Basic Verilog & HLS coding
+
+[Draft design sources link](https://drive.google.com/drive/folders/15WaEzAkgZPE97dyX6pHcDiDTv6b-hRhJ?usp=sharing)
 
 ## Toolchain Prerequisites
 * [Ubuntu 20.04+](https://releases.ubuntu.com/focal/)
@@ -37,12 +39,11 @@ $ source ~/.bashrc
 ```
 Xilinx Vitis
 * Install Vitis dependencies `sudo apt install libtinfo5 libncurses5 -y` then 
-* Follow offical installation guide: https://docs.xilinx.com/r/2022.1-English/ug1400-vitis-embedded/Installation-Requirements (copy URL to new browser tab)
+* Follow offical installation guide: https://docs.xilinx.com/r/2022.1-English/ug1400-vitis-embedded/Installation-Requirements  
+  (copy and paste above URL to new browser tab)
 * Add to /home/$user/.bashrc after completed Vitis installation   
 `source /$installed_path/Xilinx/Vitis/2022.1/settings64.sh`  
 `source /$installed_path/xilinx/xrt/setup.sh`
-
-[Draft design sources link](https://drive.google.com/drive/folders/15WaEzAkgZPE97dyX6pHcDiDTv6b-hRhJ?usp=sharing).
 
 ## 3 Labs Spec
 ### Lab1 : AXI Master to read/write BRAM
