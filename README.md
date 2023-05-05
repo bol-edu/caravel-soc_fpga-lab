@@ -32,8 +32,8 @@ $ sudo mkdir /opt/riscv
 $ sudo tar -xzf /tmp/riscv32-unknown-elf.gcc-12.1.0.tar.gz -C /opt/riscv
 $ git clone https://github.com/bol-edu/caravel-soc_fpga
 $ cd caravel-soc_fpga/
-$ chmod +x ~/caravel-soc_fpga/testbench/counter_la/run_xsim ~/caravel-soc_fpga/testbench/counter_wb/run_xsim ~/caravel-soc_fpga/testbench/gcd_la/run_xsim
-$ chmod +x ~/caravel-soc_fpga/testbench/counter_la/run_clean ~/caravel-soc_fpga/testbench/counter_wb/run_clean ~caravel-soc_fpga/testbench/gcd_la/run_clean
+$ chmod +x ./testbench/counter_la/run_xsim ./testbench/counter_wb/run_xsim ./testbench/gcd_la/run_xsim
+$ chmod +x ./testbench/counter_la/run_clean ./testbench/counter_wb/run_clean ./testbench/gcd_la/run_clean
 $ echo 'export PATH=$PATH:/opt/riscv/bin' >> ~/.bashrc
 $ source ~/.bashrc
 ```
