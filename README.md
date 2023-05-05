@@ -47,8 +47,9 @@ Xilinx Vitis
 
 ## 3 Labs Spec
 ### Lab1 : AXI Master to read/write BRAM
-* Design source: read_romcode.cpp
-* Lab Content:  
+* Design source: read_romcode.cpp  
+
+* Lab Content:
 1. Add anotheraxi-master path to write to PS
 Memory  
 2. Loadprogram.hex(RISCV code from any of the
@@ -58,3 +59,16 @@ BRAM, and read from BRAM.
 4. Compare the input and output buffer content
 is the same
 <img src="https://user-images.githubusercontent.com/98332019/236379493-6fc15e9a-d093-4a80-8519-5984e8e25b26.png" width=40%>
+
+### Lab2 : spiflash protocol design and validation
+* Design source: spiflash.cpp  
+Note: this spiflash design only implements: single bitspiflash read  
+
+* Lab Content:
+1. Develop flash controller spiflash_ctrl.v (you can find the design from Caravel) in Verilog  
+2. Synthesize spiflash.cpp (this is flash memory device)  
+3. Develop a simple BRAM behavior model, preload the content in testbench  
+4. Integrate the spiflash_ctrl.v + spiflash.v and verify spiflash_ctrl.v can correctly read data from BRAM through spiflash.cpp  
+Note: spiflash.cpp is not verified
+<img src="https://user-images.githubusercontent.com/98332019/236381842-5591dd9c-ee11-40d9-8741-dad50b16bc9d.png" width=40%>
+
