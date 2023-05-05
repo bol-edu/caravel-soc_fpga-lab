@@ -11,7 +11,7 @@ Note: None of the design sources are verified. You have to verify it by yourself
 
 ## Background Prerequisites
 * VitisHLS – [Lab1](https://github.com/bol-edu/course-lab_1) and [Lab2](https://github.com/bol-edu/course-lab_2)
-* Xilinx XSIM
+* Xilinx Vitis XSIM
 * Basic Verilog & HLS coding
 
 ## Toolchain Prerequisites
