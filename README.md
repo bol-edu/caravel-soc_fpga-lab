@@ -68,7 +68,7 @@ Note: this spiflash design only implements: single bit spiflash read
 Note: spiflash.cpp is not verified
 <img src="https://user-images.githubusercontent.com/98332019/236381842-5591dd9c-ee11-40d9-8741-dad50b16bc9d.png" width=40%>
 
-### Lab3 : Axiliteaccess GPIO pins
+### Lab3 : Axilite access GPIO pins
 * Reference Design: caravel_ps.cpp  
 
 * Lab Content:  
