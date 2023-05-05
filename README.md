@@ -12,7 +12,35 @@ Note: None of the design sources are verified. You have to verify it by yourself
 ## Background Prerequisites
 * VitisHLS – [Lab1](https://github.com/bol-edu/course-lab_1) and [Lab2](https://github.com/bol-edu/course-lab_2)
 * Xilinx XSIM
-* Basic Verilog & HLS coding  
+* Basic Verilog & HLS coding
+
+## Toolchain Prerequisites
+* [Ubuntu 20.04+](https://releases.ubuntu.com/focal/)
+* [GTKWave v3.3.103](https://gtkwave.sourceforge.net/)
+* [RISC-V GCC Toolchains rv32i-4.0.0](https://github.com/stnolting/riscv-gcc-prebuilt)
+* [Xilinx Vitis 2022.1](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/2022-1.html)
+
+## Setup
+GTKWave and RISC-V GCC Toolchains
+```console
+$ sudo apt update
+$ sudo apt install gtkwave git -y
+$ sudo wget -O /tmp/riscv32-unknown-elf.gcc-12.1.0.tar.gz https://github.com/stnolting/riscv-gcc-prebuilt/releases/download/rv32i-4.0.0/riscv32-unknown-elf.gcc-12.1.0.tar.gz
+$ sudo mkdir /opt/riscv
+$ sudo tar -xzf /tmp/riscv32-unknown-elf.gcc-12.1.0.tar.gz -C /opt/riscv
+$ git clone https://github.com/bol-edu/caravel-soc_fpga
+$ cd caravel-soc_fpga/
+$ chmod +x ~/caravel-soc_fpga/testbench/counter_la/run_xsim ~/caravel-soc_fpga/testbench/counter_wb/run_xsim ~/caravel-soc_fpga/testbench/gcd_la/run_xsim
+$ chmod +x ~/caravel-soc_fpga/testbench/counter_la/run_clean ~/caravel-soc_fpga/testbench/counter_wb/run_clean ~caravel-soc_fpga/testbench/gcd_la/run_clean
+$ echo 'export PATH=$PATH:/opt/riscv/bin' >> ~/.bashrc
+$ source ~/.bashrc
+```
+Xilinx Vitis
+* Install Vitis dependencies `sudo apt install libtinfo5 libncurses5 -y` then 
+* Follow offical installation guide: https://docs.xilinx.com/r/2022.1-English/ug1400-vitis-embedded/Installation-Requirements (copy URL to new browser tab)
+* Add to /home/$user/.bashrc after completed Vitis installation   
+`source /$installed_path/Xilinx/Vitis/2022.1/settings64.sh`  
+`source /$installed_path/xilinx/xrt/setup.sh`
 
 [Draft design sources link](https://drive.google.com/drive/folders/15WaEzAkgZPE97dyX6pHcDiDTv6b-hRhJ?usp=sharing).
 
@@ -28,4 +56,4 @@ Caraveltestbench) to PS memory buffer
 BRAM, and read from BRAM.  
 4. Compare the input and output buffer content
 is the same
-![Lab1](https://user-images.githubusercontent.com/98332019/236379493-6fc15e9a-d093-4a80-8519-5984e8e25b26.png)
+<img src="https://user-images.githubusercontent.com/98332019/236379493-6fc15e9a-d093-4a80-8519-5984e8e25b26.png" width=40%>
