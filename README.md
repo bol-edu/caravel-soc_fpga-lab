@@ -38,12 +38,11 @@ $ echo 'export PATH=$PATH:/opt/riscv/bin' >> ~/.bashrc
 $ source ~/.bashrc
 ```
 Xilinx Vitis
-* Install Vitis dependencies `sudo apt install libtinfo5 libncurses5 -y` then 
-* Follow offical installation guide: https://docs.xilinx.com/r/2022.1-English/ug1400-vitis-embedded/Installation-Requirements  
-  (copy and paste above URL to new browser tab)
+* Install Vitis dependencies `sudo apt install libtinfo5 libncurses5 -y` then
+* Follow offical installation guide: https://docs.xilinx.com/r/2022.1-English/ug1400-vitis-embedded/Installation-Requirements
 * Add to /home/$user/.bashrc after completed Vitis installation   
-`source /$installed_path/Xilinx/Vitis/2022.1/settings64.sh`  
-`source /$installed_path/xilinx/xrt/setup.sh`
+`source <Vitis_install_path>/Xilinx/Vitis/2022.1/settings64.sh`  
+`source <Vitis_install_path>/xilinx/xrt/setup.sh`
 
 ## 3 Labs Specification
 ### Lab1 : AXI Master to read/write BRAM
