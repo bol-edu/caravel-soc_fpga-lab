@@ -4,7 +4,6 @@
 ## Introduce to 3 Labs
 * Lab1: AXI master read/write BRAM
 * Lab2: spiflash protocol design and validation
-* Lab1+2: integrate Lab1 and Lab2
 * Lab3: Axilite access GPIO pins  
 
 Note: None of the design sources are verified. You have to verify it by yourself.
