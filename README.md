@@ -14,9 +14,9 @@ Labs to experiment Caravel SoC module design with Verilog & HLS.
 
 ## Toolchain Prerequisites
 * [Ubuntu 20.04+](https://releases.ubuntu.com/focal/)
+* [Xilinx Vitis 2022.1](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/2022-1.html)
 * [GTKWave v3.3.103](https://gtkwave.sourceforge.net/)
 * [RISC-V GCC Toolchains rv32i-4.0.0](https://github.com/stnolting/riscv-gcc-prebuilt)
-* [Xilinx Vitis 2022.1](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/2022-1.html)
 
 ## Setup Toolchain
 Ubuntu 20.04+ and Xilinx Vitis reference the [HLS tools installation guide of course-lab_1](https://github.com/bol-edu/course-lab_1/blob/2022.1/HLS%20Tools%20Installation%20Guide%202022.1_ubuntu.md).
