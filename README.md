@@ -5,7 +5,7 @@ Labs to experiment Caravel SoC module design with Verilog & HLS.
 * Lab1: AXI master read/write BRAM
 * Lab2: spiflash protocol design and validation
 * Lab3: Axilite access GPIO pins
-* Labi: Caravel SoC FPGA integration ([Community Caravel SoC FPGA](https://github.com/bol-edu/caravel-soc_fpga))
+* Labi: Caravel SoC FPGA integration ([Community released Caravel SoC FPGA](https://github.com/bol-edu/caravel-soc_fpga))
 
 ## Background Prerequisites
 * Vitis HLS - [course-lab_1](https://github.com/bol-edu/course-lab_1) and [course-lab_2](https://github.com/bol-edu/course-lab_2)
