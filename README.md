@@ -33,9 +33,10 @@ $ source ~/.bashrc
 ```
 
 ## Labs Specification
-### Lab1 : AXI Master to read/write BRAM
-* Design source: read_romcode.cpp  
+Draft [design specs](https://drive.google.com/drive/folders/15WaEzAkgZPE97dyX6pHcDiDTv6b-hRhJ?usp=sharing) of labs.
 
+### Lab1 : AXI Master to read/write BRAM
+* Design spec: read_romcode.cpp
 * Lab Content:  
 1. Add another axi-master path to write to PS Memory
 2. Load program.hex (RISCV code from any of the Caravel testbench) to PS memory buffer
@@ -44,9 +45,8 @@ $ source ~/.bashrc
 <img src="https://user-images.githubusercontent.com/98332019/236379493-6fc15e9a-d093-4a80-8519-5984e8e25b26.png" width=40%>
 
 ### Lab2 : spiflash protocol design and validation
-* Design source: spiflash.cpp  
-Note: this spiflash design only implements: single bit spiflash read  
-
+* Design spec: spiflash.cpp  
+Note: this spiflash design only implements: single bit spiflash read
 * Lab Content:  
 1. Develop flash controller spiflash_ctrl.v (you can find the design from Caravel) in Verilog
 2. Synthesize spiflash.cpp (this is flash memory device)
@@ -56,8 +56,7 @@ Note: spiflash.cpp is not verified
 <img src="https://user-images.githubusercontent.com/98332019/236381842-5591dd9c-ee11-40d9-8741-dad50b16bc9d.png" width=40%>
 
 ### Lab3 : Axilite access GPIO pins
-* Reference Design: caravel_ps.cpp  
-
+* Design spec: caravel_ps.cpp
 * Lab Content:  
 1. Design a simple module mprj_control.v  
 Use one mprj_i pin (synchronize with host code) to stage through several steps, e.g.  
