@@ -1,4 +1,3 @@
-
 /*
  * FSIC - Full-Stack IC Development
  *  
@@ -52,7 +51,4 @@ void caravel_ps (
 
 
 }
-
-
-
 
