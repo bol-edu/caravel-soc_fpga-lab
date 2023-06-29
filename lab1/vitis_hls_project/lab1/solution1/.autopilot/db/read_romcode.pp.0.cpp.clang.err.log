@@ -1,0 +1,31 @@
+/home/allen/fsic-lab1/vitis_hls_project/run_hls.tcl:14:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=read_romcode_XLX_SEP_ PragmaOptions=name=read_romcode_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=read_romcode
+        ^
+src/read_romcode.cpp:26:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_romcode_XLX_SEP_ PragmaOptions=m_axi port=romcode offset=slave max_read_burst_length=64 bundle=BUS0_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=romcode offset=slave max_read_burst_length=64 bundle=BUS0
+        ^
+src/read_romcode.cpp:27:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_romcode_XLX_SEP_ PragmaOptions=s_axilite port=romcode bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=romcode bundle=control
+        ^
+src/read_romcode.cpp:30:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_romcode_XLX_SEP_ PragmaOptions=m_axi port=romcode_to_PS offset=slave max_read_burst_length=64 bundle=BUS1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=romcode_to_PS offset=slave max_read_burst_length=64 bundle=BUS1
+        ^
+src/read_romcode.cpp:31:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_romcode_XLX_SEP_ PragmaOptions=s_axilite port=romcode_to_PS bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=romcode_to_PS bundle=control
+        ^
+src/read_romcode.cpp:33:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_romcode_XLX_SEP_ PragmaOptions=s_axilite port=cmd bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=cmd bundle=control
+        ^
+src/read_romcode.cpp:34:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_romcode_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=control_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=return bundle=control
+        ^
+src/read_romcode.cpp:36:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_romcode_XLX_SEP_ PragmaOptions=mode=bram depth=1024 port=internal_bram_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE mode=bram depth=1024 port=internal_bram
+        ^
+src/read_romcode.cpp:42:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_romcode_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+src/read_romcode.cpp:48:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_romcode_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+10 warnings generated.

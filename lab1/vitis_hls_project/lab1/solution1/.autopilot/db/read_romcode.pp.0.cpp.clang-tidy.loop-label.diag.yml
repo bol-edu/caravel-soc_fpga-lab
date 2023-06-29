@@ -1,0 +1,22 @@
+---
+MainSourceFile:  /home/allen/fsic-lab1/vitis_hls_project/lab1/solution1/.autopilot/db/read_romcode.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_41_1:  '
+    FileOffset:      41
+    FilePath:        /home/allen/fsic-lab1/vitis_hls_project/src/read_romcode.cpp
+    Replacements:    
+      - FilePath:        /home/allen/fsic-lab1/vitis_hls_project/lab1/solution1/.autopilot/db/read_romcode.pp.0.cpp
+        Offset:          10535
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_41_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_47_2:  '
+    FileOffset:      47
+    FilePath:        /home/allen/fsic-lab1/vitis_hls_project/src/read_romcode.cpp
+    Replacements:    
+      - FilePath:        /home/allen/fsic-lab1/vitis_hls_project/lab1/solution1/.autopilot/db/read_romcode.pp.0.cpp
+        Offset:          10654
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_47_2: '
+...

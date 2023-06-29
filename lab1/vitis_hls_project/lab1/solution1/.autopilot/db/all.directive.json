@@ -1,0 +1,18 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "read_romcode",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/home\/allen\/fsic-lab1\/vitis_hls_project\/run_hls.tcl",
+          "sourceLine": "14",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "read_romcode"
+              }]
+          }
+        }]
+    }]}

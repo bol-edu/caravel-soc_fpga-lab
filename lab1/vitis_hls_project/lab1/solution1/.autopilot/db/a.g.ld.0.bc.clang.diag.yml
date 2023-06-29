@@ -1,0 +1,210 @@
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: src/read_romcode.cpp, Line: 41, Column: 20 }
+Function:        _Z12read_romcodePiS_S_i
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '1024'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc.load.4
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        romcodeseq
+  - String:          ' '
+  - ArrayName:       romcode
+  - String:          ' '
+  - BundleName:      BUS0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_41_1
+  - String:          ' '
+  - LoopLoc:         'src/read_romcode.cpp:41:20'
+  - String:          ' '
+  - Function:        'read_romcode(int*, int*, int*, int)'
+    DebugLoc:        { File: src/read_romcode.cpp, Line: 24, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: src/read_romcode.cpp, Line: 47, Column: 20 }
+Function:        _Z12read_romcodePiS_S_i
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '1024'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc14.store.6
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        romcode_to_PSseq
+  - String:          ' '
+  - ArrayName:       romcode_to_PS
+  - String:          ' '
+  - BundleName:      BUS1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_47_2
+  - String:          ' '
+  - LoopLoc:         'src/read_romcode.cpp:47:20'
+  - String:          ' '
+  - Function:        'read_romcode(int*, int*, int*, int)'
+    DebugLoc:        { File: src/read_romcode.cpp, Line: 24, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: src/read_romcode.cpp, Line: 41, Column: 20 }
+Function:        _Z12read_romcodePiS_S_i
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        romcodeseq
+  - String:          ' '
+  - ArrayName:       romcode
+  - String:          ' '
+  - BundleName:      BUS0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_41_1
+  - String:          ' '
+  - LoopLoc:         'src/read_romcode.cpp:41:20'
+  - String:          ' '
+  - Function:        'read_romcode(int*, int*, int*, int)'
+    DebugLoc:        { File: src/read_romcode.cpp, Line: 24, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: src/read_romcode.cpp, Line: 47, Column: 20 }
+Function:        _Z12read_romcodePiS_S_i
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        romcode_to_PSseq
+  - String:          ' '
+  - ArrayName:       romcode_to_PS
+  - String:          ' '
+  - BundleName:      BUS1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_47_2
+  - String:          ' '
+  - LoopLoc:         'src/read_romcode.cpp:47:20'
+  - String:          ' '
+  - Function:        'read_romcode(int*, int*, int*, int)'
+    DebugLoc:        { File: src/read_romcode.cpp, Line: 24, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: src/read_romcode.cpp, Line: 41, Column: 20 }
+Function:        _Z12read_romcodePiS_S_i
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '1024'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq1
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      BUS0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_41_1
+  - String:          ' '
+  - LoopLoc:         'src/read_romcode.cpp:41:20'
+  - String:          ' '
+  - Function:        'read_romcode(int*, int*, int*, int)'
+    DebugLoc:        { File: src/read_romcode.cpp, Line: 24, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: src/read_romcode.cpp, Line: 41, Column: 20 }
+Function:        _Z12read_romcodePiS_S_i
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '1024'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_41_1
+  - String:          '''('
+  - LoopLoc:         'src/read_romcode.cpp:41:20'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      BUS0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: src/read_romcode.cpp, Line: 47, Column: 20 }
+Function:        _Z12read_romcodePiS_S_i
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '1024'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      BUS1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_47_2
+  - String:          ' '
+  - LoopLoc:         'src/read_romcode.cpp:47:20'
+  - String:          ' '
+  - Function:        'read_romcode(int*, int*, int*, int)'
+    DebugLoc:        { File: src/read_romcode.cpp, Line: 24, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: src/read_romcode.cpp, Line: 47, Column: 20 }
+Function:        _Z12read_romcodePiS_S_i
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '1024'
+  - String:          ' and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_47_2
+  - String:          '''('
+  - LoopLoc:         'src/read_romcode.cpp:47:20'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      BUS1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

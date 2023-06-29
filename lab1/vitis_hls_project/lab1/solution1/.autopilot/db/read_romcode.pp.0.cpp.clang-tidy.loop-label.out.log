@@ -1,0 +1,10 @@
+/home/allen/fsic-lab1/vitis_hls_project/lab1/solution1/.autopilot/db/read_romcode.pp.0.cpp:190:3: warning: Added loop label VITIS_LOOP_41_1:   [xilinx-label-all-loops]
+  for(i=0; i < 1024*4/sizeof(int); i++) {
+  ^~~
+  VITIS_LOOP_41_1: 
+/home/allen/fsic-lab1/vitis_hls_project/lab1/solution1/.autopilot/db/read_romcode.pp.0.cpp:190:3: note: FIX-IT applied suggested code changes
+/home/allen/fsic-lab1/vitis_hls_project/lab1/solution1/.autopilot/db/read_romcode.pp.0.cpp:196:3: warning: Added loop label VITIS_LOOP_47_2:   [xilinx-label-all-loops]
+  for(i=0; i < 1024*4/sizeof(int); i++) {
+  ^~~
+  VITIS_LOOP_47_2: 
+/home/allen/fsic-lab1/vitis_hls_project/lab1/solution1/.autopilot/db/read_romcode.pp.0.cpp:196:3: note: FIX-IT applied suggested code changes

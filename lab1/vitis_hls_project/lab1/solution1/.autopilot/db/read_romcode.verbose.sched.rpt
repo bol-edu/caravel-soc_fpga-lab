@@ -1,0 +1,285 @@
+
+
+================================================================
+== Vitis HLS Report for 'read_romcode'
+================================================================
+* Date:           Sat May 20 23:31:59 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        lab1
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    | min |  max |   Type  |
+    +---------+---------+-----------+-----------+-----+------+---------+
+    |        2|     1036|  20.000 ns|  10.360 us|    3|  1037|       no|
+    +---------+---------+-----------+-----------+-----+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 18
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 9 10 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 18 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.95>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%spectopmodule_ln15 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_10" [src/read_romcode.cpp:15]   --->   Operation 19 'spectopmodule' 'spectopmodule_ln15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %BUS0, void @empty, i32 0, i32 0, void @empty_13, i32 0, i32 0, void @empty_0, void @empty_1, void @empty_13, i32 16, i32 16, i32 64, i32 16, void @empty_13, void @empty_13, i32 4294967295, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %BUS0"   --->   Operation 21 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %BUS1, void @empty, i32 0, i32 0, void @empty_13, i32 0, i32 0, void @empty_2, void @empty_1, void @empty_13, i32 16, i32 16, i32 64, i32 16, void @empty_13, void @empty_13, i32 4294967295, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %BUS1"   --->   Operation 23 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %romcode, void @empty_3, i32 0, i32 0, void @empty_13, i32 0, i32 0, void @empty_4, void @empty_5, void @empty_13, i32 0, i32 0, i32 0, i32 0, void @empty_13, void @empty_14, i32 4294967295, i32 0"   --->   Operation 24 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %romcode, void @empty_6, i32 0, i32 0, void @empty_13, i32 0, i32 0, void @empty_13, void @empty_13, void @empty_13, i32 0, i32 0, i32 0, i32 0, void @empty_13, void @empty_14, i32 4294967295, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %internal_bram, void @empty_7, i32 0, i32 0, void @empty_13, i32 4294967295, i32 0, void @empty_13, void @empty_13, void @empty_13, i32 0, i32 0, i32 0, i32 0, void @empty_13, void @empty_13, i32 4294967295, i32 0"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %internal_bram"   --->   Operation 27 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %romcode_to_PS, void @empty_3, i32 0, i32 0, void @empty_13, i32 0, i32 0, void @empty_4, void @empty_8, void @empty_13, i32 0, i32 0, i32 0, i32 0, void @empty_13, void @empty_14, i32 4294967295, i32 0"   --->   Operation 28 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %romcode_to_PS, void @empty_6, i32 0, i32 0, void @empty_13, i32 0, i32 0, void @empty_13, void @empty_13, void @empty_13, i32 0, i32 0, i32 0, i32 0, void @empty_13, void @empty_14, i32 4294967295, i32 0"   --->   Operation 29 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %cmd"   --->   Operation 30 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %cmd, void @empty_3, i32 0, i32 0, void @empty_13, i32 0, i32 0, void @empty_4, void @empty_9, void @empty_13, i32 0, i32 0, i32 0, i32 0, void @empty_13, void @empty_13, i32 4294967295, i32 0"   --->   Operation 31 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %cmd, void @empty_6, i32 0, i32 0, void @empty_13, i32 0, i32 0, void @empty_13, void @empty_13, void @empty_13, i32 0, i32 0, i32 0, i32 0, void @empty_13, void @empty_13, i32 4294967295, i32 0"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_3, i32 0, i32 0, void @empty_13, i32 0, i32 0, void @empty_4, void @empty_13, void @empty_13, i32 0, i32 0, i32 0, i32 0, void @empty_13, void @empty_13, i32 4294967295, i32 0"   --->   Operation 33 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (1.00ns)   --->   "%cmd_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %cmd" [src/read_romcode.cpp:17]   --->   Operation 34 'read' 'cmd_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 35 [1/1] (1.00ns)   --->   "%romcode_to_PS_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %romcode_to_PS" [src/read_romcode.cpp:17]   --->   Operation 35 'read' 'romcode_to_PS_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 36 [1/1] (1.00ns)   --->   "%romcode_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %romcode" [src/read_romcode.cpp:17]   --->   Operation 36 'read' 'romcode_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 37 [1/1] (0.95ns)   --->   "%switch_ln39 = switch i32 %cmd_read, void %if.end, i32 0, void %VITIS_LOOP_41_1, i32 1, void %VITIS_LOOP_47_2" [src/read_romcode.cpp:39]   --->   Operation 37 'switch' 'switch_ln39' <Predicate = true> <Delay = 0.95>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%trunc_ln1 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %romcode_to_PS_read, i32 2, i32 63" [src/read_romcode.cpp:47]   --->   Operation 38 'partselect' 'trunc_ln1' <Predicate = (cmd_read == 1)> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %romcode_read, i32 2, i32 63" [src/read_romcode.cpp:41]   --->   Operation 39 'partselect' 'trunc_ln' <Predicate = (cmd_read == 0)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 7.30>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%sext_ln47 = sext i62 %trunc_ln1" [src/read_romcode.cpp:47]   --->   Operation 40 'sext' 'sext_ln47' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%BUS1_addr = getelementptr i32 %BUS1, i64 %sext_ln47" [src/read_romcode.cpp:47]   --->   Operation 41 'getelementptr' 'BUS1_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (7.30ns)   --->   "%empty_20 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i32, i32 %BUS1_addr, i32 1024" [src/read_romcode.cpp:47]   --->   Operation 42 'writereq' 'empty_20' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 43 [2/2] (0.00ns)   --->   "%call_ln47 = call void @read_romcode_Pipeline_VITIS_LOOP_47_2, i32 %BUS1, i62 %trunc_ln1, i32 %internal_bram" [src/read_romcode.cpp:47]   --->   Operation 43 'call' 'call_ln47' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 44 [1/2] (0.00ns)   --->   "%call_ln47 = call void @read_romcode_Pipeline_VITIS_LOOP_47_2, i32 %BUS1, i62 %trunc_ln1, i32 %internal_bram" [src/read_romcode.cpp:47]   --->   Operation 44 'call' 'call_ln47' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 7.30>
+ST_5 : Operation 45 [5/5] (7.30ns)   --->   "%empty_21 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %BUS1_addr" [src/read_romcode.cpp:47]   --->   Operation 45 'writeresp' 'empty_21' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 7.30>
+ST_6 : Operation 46 [4/5] (7.30ns)   --->   "%empty_21 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %BUS1_addr" [src/read_romcode.cpp:47]   --->   Operation 46 'writeresp' 'empty_21' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 7.30>
+ST_7 : Operation 47 [3/5] (7.30ns)   --->   "%empty_21 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %BUS1_addr" [src/read_romcode.cpp:47]   --->   Operation 47 'writeresp' 'empty_21' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 7.30>
+ST_8 : Operation 48 [2/5] (7.30ns)   --->   "%empty_21 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %BUS1_addr" [src/read_romcode.cpp:47]   --->   Operation 48 'writeresp' 'empty_21' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 9 <SV = 8> <Delay = 7.30>
+ST_9 : Operation 49 [1/5] (7.30ns)   --->   "%empty_21 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %BUS1_addr" [src/read_romcode.cpp:47]   --->   Operation 49 'writeresp' 'empty_21' <Predicate = (cmd_read == 1)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_9 : Operation 50 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end"   --->   Operation 50 'br' 'br_ln0' <Predicate = (cmd_read == 1)> <Delay = 0.00>
+ST_9 : Operation 51 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end17"   --->   Operation 51 'br' 'br_ln0' <Predicate = (cmd_read != 0)> <Delay = 0.00>
+
+State 10 <SV = 1> <Delay = 7.30>
+ST_10 : Operation 52 [1/1] (0.00ns)   --->   "%sext_ln41 = sext i62 %trunc_ln" [src/read_romcode.cpp:41]   --->   Operation 52 'sext' 'sext_ln41' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 53 [1/1] (0.00ns)   --->   "%BUS0_addr = getelementptr i32 %BUS0, i64 %sext_ln41" [src/read_romcode.cpp:41]   --->   Operation 53 'getelementptr' 'BUS0_addr' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 54 [7/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %BUS0_addr, i32 1024" [src/read_romcode.cpp:41]   --->   Operation 54 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 11 <SV = 2> <Delay = 7.30>
+ST_11 : Operation 55 [6/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %BUS0_addr, i32 1024" [src/read_romcode.cpp:41]   --->   Operation 55 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 12 <SV = 3> <Delay = 7.30>
+ST_12 : Operation 56 [5/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %BUS0_addr, i32 1024" [src/read_romcode.cpp:41]   --->   Operation 56 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 13 <SV = 4> <Delay = 7.30>
+ST_13 : Operation 57 [4/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %BUS0_addr, i32 1024" [src/read_romcode.cpp:41]   --->   Operation 57 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 14 <SV = 5> <Delay = 7.30>
+ST_14 : Operation 58 [3/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %BUS0_addr, i32 1024" [src/read_romcode.cpp:41]   --->   Operation 58 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 15 <SV = 6> <Delay = 7.30>
+ST_15 : Operation 59 [2/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %BUS0_addr, i32 1024" [src/read_romcode.cpp:41]   --->   Operation 59 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 16 <SV = 7> <Delay = 7.30>
+ST_16 : Operation 60 [1/7] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %BUS0_addr, i32 1024" [src/read_romcode.cpp:41]   --->   Operation 60 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 17 <SV = 8> <Delay = 0.00>
+ST_17 : Operation 61 [2/2] (0.00ns)   --->   "%call_ln41 = call void @read_romcode_Pipeline_VITIS_LOOP_41_1, i32 %BUS0, i62 %trunc_ln, i32 %internal_bram" [src/read_romcode.cpp:41]   --->   Operation 61 'call' 'call_ln41' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 18 <SV = 9> <Delay = 0.00>
+ST_18 : Operation 62 [1/2] (0.00ns)   --->   "%call_ln41 = call void @read_romcode_Pipeline_VITIS_LOOP_41_1, i32 %BUS0, i62 %trunc_ln, i32 %internal_bram" [src/read_romcode.cpp:41]   --->   Operation 62 'call' 'call_ln41' <Predicate = (cmd_read == 0)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_18 : Operation 63 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end17"   --->   Operation 63 'br' 'br_ln0' <Predicate = (cmd_read == 0)> <Delay = 0.00>
+ST_18 : Operation 64 [1/1] (0.00ns)   --->   "%ret_ln54 = ret" [src/read_romcode.cpp:54]   --->   Operation 64 'ret' 'ret_ln54' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.96ns
+The critical path consists of the following:
+	s_axi read operation ('cmd', src/read_romcode.cpp:17) on port 'cmd' (src/read_romcode.cpp:17) [22]  (1 ns)
+	blocking operation 0.959 ns on control path)
+
+ <State 2>: 7.3ns
+The critical path consists of the following:
+	'getelementptr' operation ('BUS1_addr', src/read_romcode.cpp:47) [29]  (0 ns)
+	bus request operation ('empty_20', src/read_romcode.cpp:47) on port 'BUS1' (src/read_romcode.cpp:47) [30]  (7.3 ns)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_21', src/read_romcode.cpp:47) on port 'BUS1' (src/read_romcode.cpp:47) [32]  (7.3 ns)
+
+ <State 6>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_21', src/read_romcode.cpp:47) on port 'BUS1' (src/read_romcode.cpp:47) [32]  (7.3 ns)
+
+ <State 7>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_21', src/read_romcode.cpp:47) on port 'BUS1' (src/read_romcode.cpp:47) [32]  (7.3 ns)
+
+ <State 8>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_21', src/read_romcode.cpp:47) on port 'BUS1' (src/read_romcode.cpp:47) [32]  (7.3 ns)
+
+ <State 9>: 7.3ns
+The critical path consists of the following:
+	bus response operation ('empty_21', src/read_romcode.cpp:47) on port 'BUS1' (src/read_romcode.cpp:47) [32]  (7.3 ns)
+
+ <State 10>: 7.3ns
+The critical path consists of the following:
+	'getelementptr' operation ('BUS0_addr', src/read_romcode.cpp:41) [37]  (0 ns)
+	bus request operation ('empty', src/read_romcode.cpp:41) on port 'BUS0' (src/read_romcode.cpp:41) [38]  (7.3 ns)
+
+ <State 11>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', src/read_romcode.cpp:41) on port 'BUS0' (src/read_romcode.cpp:41) [38]  (7.3 ns)
+
+ <State 12>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', src/read_romcode.cpp:41) on port 'BUS0' (src/read_romcode.cpp:41) [38]  (7.3 ns)
+
+ <State 13>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', src/read_romcode.cpp:41) on port 'BUS0' (src/read_romcode.cpp:41) [38]  (7.3 ns)
+
+ <State 14>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', src/read_romcode.cpp:41) on port 'BUS0' (src/read_romcode.cpp:41) [38]  (7.3 ns)
+
+ <State 15>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', src/read_romcode.cpp:41) on port 'BUS0' (src/read_romcode.cpp:41) [38]  (7.3 ns)
+
+ <State 16>: 7.3ns
+The critical path consists of the following:
+	bus request operation ('empty', src/read_romcode.cpp:41) on port 'BUS0' (src/read_romcode.cpp:41) [38]  (7.3 ns)
+
+ <State 17>: 0ns
+The critical path consists of the following:
+
+ <State 18>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
