@@ -10,3 +10,7 @@ source run_vitis.sh
 ```sh
 source run_vivado.sh
 ```
+## Run on FPGA
+1. connect to remote PYNQ-Z2
+2. create ipy_fpga folder on jupyter notebook and upload bitstream and ipynb files to ipy_fpga folder
+3. open ipynb file and run (default test is counter_wb.hex)
