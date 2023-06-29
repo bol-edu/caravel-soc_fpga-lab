@@ -9,10 +9,15 @@ source run_vitis.sh
 ```
 
 ## Build up Vivado project for Caravel-FPGA and execute “write_bitstream” step to generate bitstream
+1. run_vivado.sh: generate bitstream of user project counter with clock 50MHz  
+2. run_vivado_gcd.sh: generate bitstream of user project gcd with clock 10MHz
+
 ```sh
 source run_vivado.sh
 ```
 ## Run on FPGA
 1. connect to remote PYNQ-Z2
-2. create ipy_fpga folder on jupyter notebook and upload bitstream and ipynb files to ipy_fpga folder
-3. open ipynb file and run (default test is counter_wb.hex)
+2. create ipy_fpga folder on jupyter notebook and upload bitstream, hex and ipynb files to ipy_fpga folder  
+   a. counter bitstream should be tested with counter_wb.hex/counter_la.hex  
+   b. gcd bitstream should be tested with gcd_la.hex
+4. open ipynb file and run (default test is counter_wb.hex written in ipynb)
