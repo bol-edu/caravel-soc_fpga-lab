@@ -10,5 +10,5 @@ source run_main.sh
 
 ## Run on FPGA
 1. connect to remote PYNQ-Z2
-2. upload jupyter_notebooks_project folder after compiling
+2. create lab1-read_romcode folder on jupyter notebook and upload bitstream, hex and ipynb files to lab1-read_romcode folder
 3. open main.ipynb and run
