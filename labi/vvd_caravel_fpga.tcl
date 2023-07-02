@@ -1707,7 +1707,7 @@ move_dashboard_gadget -name {methodology_1} -row 2 -col 1
 
 # Willy add for bitstream generated
 update_compile_order -fileset sources_1
-launch_runs impl_1 -to_step write_bitstream -job 16
+launch_runs impl_1 -to_step write_bitstream -job 3
 wait_on_run impl_1
 
 # Open implemented design before executing below commands.
