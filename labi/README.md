@@ -20,4 +20,4 @@ source run_vivado.sh
 2. create ipy_fpga folder on jupyter notebook and upload bitstream, hex and ipynb files to ipy_fpga folder  
    a. counter bitstream should be tested with counter_wb.hex/counter_la.hex  
    b. gcd bitstream should be tested with gcd_la.hex
-4. open ipynb file and run (default test is counter_wb.hex written in ipynb)
+4. open caravel_fpga.ipynb and run (default loaded hex is counter_wb.hex in caravel_fpga.ipynb)
