@@ -2,6 +2,8 @@
 Project detail are explained in [README.pptx](https://github.com/bol-edu/caravel-soc_fpga-lab/blob/main/labi/doc/README.pptx).
 <p align="center"><img src="https://github.com/bol-edu/caravel-soc_fpga-lab/assets/98332019/fd9c7658-03fe-47c1-af51-f3d0d3c413f9" width=70%></p>
 
+## Design presentation
+[全民一起學 IC 設計：Caravel SoC FPGA 驗證平台](https://www.youtube.com/watch?v=EF3vXdaVof0&t=63m46s)  
 
 ## Build up Vitis HLS projects and export IPs automatically
 ```sh
