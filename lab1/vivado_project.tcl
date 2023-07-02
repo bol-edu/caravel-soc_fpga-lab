@@ -1239,7 +1239,7 @@ move_dashboard_gadget -name {utilization_2} -row 1 -col 1
 move_dashboard_gadget -name {methodology_1} -row 2 -col 1
 
 update_compile_order -fileset sources_1
-launch_runs impl_1 -to_step write_bitstream -job 16
+launch_runs impl_1 -to_step write_bitstream -job 3
 wait_on_run impl_1
 
 exit
