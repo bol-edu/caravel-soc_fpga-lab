@@ -27,7 +27,7 @@
 #
 # 3. The following remote source files that were added to the original project:-
 #
-#    "/home/tonyho/workspace_willy/caravel_fpga/project/vvd_srcs/async_spiflash.v"
+#    "/home/tonyho/workspace_willy/caravel_fpga/project/vvd_srcs/spiflash.v"
 #    "/home/tonyho/workspace_willy/caravel_fpga/project/vvd_srcs/caravel_soc/vip/RAM128.v"
 #    "/home/tonyho/workspace_willy/caravel_fpga/project/vvd_srcs/caravel_soc/vip/RAM256.v"
 #    "/home/tonyho/workspace_willy/caravel_fpga/project/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v"
@@ -57,7 +57,7 @@
 proc checkRequiredFiles { origin_dir} {
   set status true
   set files [list \
- "[file normalize "$origin_dir/vvd_srcs/async_spiflash.v"]"\
+ "[file normalize "$origin_dir/vvd_srcs/spiflash.v"]"\
  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/vip/RAM128.v"]"\
  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/vip/RAM256.v"]"\
  "[file normalize "$origin_dir/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v"]"\
@@ -227,7 +227,7 @@ if { $obj != {} } {
 # Set 'sources_1' fileset object
 set obj [get_filesets sources_1]
 set files [list \
- [file normalize "${origin_dir}/vvd_srcs/async_spiflash.v"] \
+ [file normalize "${origin_dir}/vvd_srcs/spiflash.v"] \
  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/vip/RAM128.v"] \
  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/vip/RAM256.v"] \
  [file normalize "${origin_dir}/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v"] \
@@ -335,8 +335,8 @@ if { [get_files defines.v] == "" } {
 if { [get_files user_defines.v] == "" } {
   import_files -quiet -fileset sources_1 /home/tonyho/workspace_willy/caravel_fpga/project/vvd_srcs/caravel_soc/rtl/header/user_defines.v
 }
-if { [get_files async_spiflash.v] == "" } {
-  import_files -quiet -fileset sources_1 /home/tonyho/workspace_willy/caravel_fpga/project/vvd_srcs/async_spiflash.v
+if { [get_files spiflash.v] == "" } {
+  import_files -quiet -fileset sources_1 /home/tonyho/workspace_willy/caravel_fpga/project/vvd_srcs/spiflash.v
 }
 if { [get_files defines.v] == "" } {
   import_files -quiet -fileset sources_1 /home/tonyho/workspace_willy/caravel_fpga/project/vvd_srcs/caravel_soc/rtl/header/defines.v
