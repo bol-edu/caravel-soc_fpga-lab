@@ -1,5 +1,5 @@
 echo "start vitis_hls project"
-
+pushd ./
 cd ./vitis_hls_project/hls_output_pin
 if [ -d "./hls_output_pin.prj/" ]
 then
@@ -30,3 +30,4 @@ make run CSYNTH=1 EXPORT_IP=1
 echo "======================================================================"
 echo "                           vitis_hls complete "
 echo "======================================================================"
+popd
