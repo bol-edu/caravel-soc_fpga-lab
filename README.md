@@ -32,6 +32,11 @@ $ echo 'export PATH=$PATH:/opt/riscv/bin' >> ~/.bashrc
 $ source ~/.bashrc
 ```
 
+## Git Clone Caravel SoC FPGA Labs
+```sh
+git clone https://github.com/bol-edu/caravel-soc_fpga-lab ~/caravel-soc_fpga-lab
+```
+
 ## Labs Specification
 Draft [design specs](https://github.com/bol-edu/caravel-soc_fpga-lab/blob/main/caravel-fpga-lab.pdf) and [design reference sources](https://drive.google.com/drive/folders/15WaEzAkgZPE97dyX6pHcDiDTv6b-hRhJ?usp=sharing) of labs.
 
