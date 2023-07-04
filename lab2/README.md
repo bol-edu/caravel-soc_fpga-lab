@@ -14,7 +14,7 @@ source run_vitis.sh
 source run_vivado.sh
 vivado ./vvd_caravel_fpga/vvd_caravel_fpga.xpr
 ```
-Click Open Block Design in Flow Navigator to validate spiflash and its block memory (behavior bram.v is ported to Vivado block memory).
+Click Open Block Design in Flow Navigator to validate [spiflash](https://github.com/bol-edu/caravel-soc_fpga-lab/blob/main/labi/vvd_srcs/spiflash.v) and its block memory (behavior bram.v is ported to Vivado block memory).
 
 ![001](https://github.com/bol-edu/caravel-soc_fpga-lab/assets/98332019/0f0f0cee-603f-4216-b3c3-1122cb94c06f)
 ![002](https://github.com/bol-edu/caravel-soc_fpga-lab/assets/98332019/3f9c9bff-5cf2-4d18-9c29-2e8a41abfc66)
