@@ -1,5 +1,5 @@
 # Caravel SoC FPGA Labs
-Labs to experiment Caravel SoC module design with Verilog & HLS.
+Labs to experiment Caravel SoC FPGA module design with Verilog & HLS.
 
 ## Introduce to Labs
 * Lab1: AXI master read/write BRAM
