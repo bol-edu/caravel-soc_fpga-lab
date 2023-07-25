@@ -1,0 +1,943 @@
+
+*** Running vivado
+    with args -log design_1_caravel_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_caravel_0_0.tcl
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source design_1_caravel_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/josh/caravel-soc_fpga/vivado/vitis_prj/hls_caravel_ps'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/josh/caravel-soc_fpga/vivado/vitis_prj/hls_output_pin'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/josh/caravel-soc_fpga/vivado/vitis_prj/hls_read_romcode'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/mnt/X/tools/Xilinx/Vivado/2022.1/data/ip'.
+Command: synth_design -top design_1_caravel_0_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 186240
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2874.625 ; gain = 0.000 ; free physical = 4240 ; free virtual = 10373
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_caravel_0_0' [/home/josh/caravel-soc_fpga/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_caravel_0_0/synth/design_1_caravel_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'caravel' [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/caravel.v:77]
+INFO: [Synth 8-6157] synthesizing module 'chip_io' [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/chip_io.v:59]
+INFO: [Synth 8-6157] synthesizing module 'mprj_io' [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v:68]
+INFO: [Synth 8-6157] synthesizing module 'boledu_io' [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v:124]
+INFO: [Synth 8-6155] done synthesizing module 'boledu_io' (0#1) [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v:124]
+INFO: [Synth 8-6155] done synthesizing module 'mprj_io' (0#1) [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v:68]
+WARNING: [Synth 8-7071] port 'vdda' of module 'mprj_io' is unconnected for instance 'mprj_pads' [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/chip_io.v:155]
+WARNING: [Synth 8-7071] port 'vssa' of module 'mprj_io' is unconnected for instance 'mprj_pads' [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/chip_io.v:155]
+WARNING: [Synth 8-7071] port 'io_in_3v3' of module 'mprj_io' is unconnected for instance 'mprj_pads' [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/chip_io.v:155]
+WARNING: [Synth 8-7071] port 'analog_noesd_io' of module 'mprj_io' is unconnected for instance 'mprj_pads' [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/chip_io.v:155]
+WARNING: [Synth 8-7023] instance 'mprj_pads' of module 'mprj_io' has 33 connections declared, but only 29 given [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/chip_io.v:155]
+INFO: [Synth 8-6155] done synthesizing module 'chip_io' (0#1) [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/chip_io.v:59]
+WARNING: [Synth 8-6104] Input port 'flash_io1' has an internal driver [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/caravel.v:371]
+WARNING: [Synth 8-7071] port 'mprj_io_in' of module 'chip_io' is unconnected for instance 'padframe' [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/caravel.v:360]
+WARNING: [Synth 8-7023] instance 'padframe' of module 'chip_io' has 44 connections declared, but only 43 given [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/caravel.v:360]
+INFO: [Synth 8-6157] synthesizing module 'mgmt_core_wrapper' [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core_wrapper.v:38]
+INFO: [Synth 8-6157] synthesizing module 'mgmt_core' [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:1888]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:6809]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:6825]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7136]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7181]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7204]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7216]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7228]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7261]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7273]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7317]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7410]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7422]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7434]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7482]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7537]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7579]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7591]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7632]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7673]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7714]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7755]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7796]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7837]
+INFO: [Synth 8-6157] synthesizing module 'RAM256' [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/vip/RAM256.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'RAM256' (0#1) [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/vip/RAM256.v:1]
+INFO: [Synth 8-6157] synthesizing module 'RAM128' [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/vip/RAM128.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'RAM128' (0#1) [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/vip/RAM128.v:1]
+INFO: [Synth 8-6157] synthesizing module 'VexRiscv' [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:46]
+INFO: [Synth 8-6157] synthesizing module 'InstructionCache' [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:4305]
+INFO: [Synth 8-6155] done synthesizing module 'InstructionCache' (0#1) [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:4305]
+INFO: [Synth 8-6155] done synthesizing module 'VexRiscv' (0#1) [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:46]
+INFO: [Synth 8-6155] done synthesizing module 'mgmt_core' (0#1) [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'mgmt_core_wrapper' (0#1) [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core_wrapper.v:38]
+INFO: [Synth 8-6157] synthesizing module 'user_project_wrapper' [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/user_project_wrapper.v:32]
+INFO: [Synth 8-6157] synthesizing module 'user_proj_example' [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_example.counter.v:38]
+INFO: [Synth 8-6157] synthesizing module 'counter' [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_example.counter.v:125]
+INFO: [Synth 8-6155] done synthesizing module 'counter' (0#1) [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_example.counter.v:125]
+INFO: [Synth 8-6155] done synthesizing module 'user_proj_example' (0#1) [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_example.counter.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'user_project_wrapper' (0#1) [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/user/user_project_wrapper.v:32]
+INFO: [Synth 8-6157] synthesizing module 'housekeeping' [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/housekeeping.v:99]
+INFO: [Synth 8-6157] synthesizing module 'boledu_fd_sc_hd__clkbuf_8' [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/housekeeping.v:1503]
+INFO: [Synth 8-6155] done synthesizing module 'boledu_fd_sc_hd__clkbuf_8' (0#1) [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/housekeeping.v:1503]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/housekeeping.v:714]
+INFO: [Synth 8-6157] synthesizing module 'housekeeping_spi' [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/housekeeping_spi.v:75]
+INFO: [Synth 8-6155] done synthesizing module 'housekeeping_spi' (0#1) [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/housekeeping_spi.v:75]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/housekeeping.v:1152]
+INFO: [Synth 8-6155] done synthesizing module 'housekeeping' (0#1) [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/housekeeping.v:99]
+INFO: [Synth 8-6157] synthesizing module 'gpio_defaults_block' [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'gpio_defaults_block' (0#1) [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v:65]
+INFO: [Synth 8-6157] synthesizing module 'gpio_defaults_block__parameterized0' [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'gpio_defaults_block__parameterized0' (0#1) [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v:65]
+INFO: [Synth 8-6157] synthesizing module 'gpio_defaults_block__parameterized1' [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'gpio_defaults_block__parameterized1' (0#1) [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_defaults_block.v:65]
+INFO: [Synth 8-6157] synthesizing module 'gpio_control_block' [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v:98]
+INFO: [Synth 8-6155] done synthesizing module 'gpio_control_block' (0#1) [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v:98]
+INFO: [Synth 8-6155] done synthesizing module 'caravel' (0#1) [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/caravel.v:77]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_caravel_0_0' (0#1) [/home/josh/caravel-soc_fpga/vivado/vvd_caravel_fpga/vvd_caravel_fpga.gen/sources_1/bd/design_1/ip/design_1_caravel_0_0/synth/design_1_caravel_0_0.v:53]
+WARNING: [Synth 8-3848] Net io_in_3v3 in module/entity mprj_io does not have driver. [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mprj_io.v:104]
+WARNING: [Synth 8-3848] Net vddio_q in module/entity chip_io does not have driver. [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/chip_io.v:122]
+WARNING: [Synth 8-3848] Net vssio_q in module/entity chip_io does not have driver. [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/chip_io.v:122]
+WARNING: [Synth 8-3848] Net analog_a in module/entity chip_io does not have driver. [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/chip_io.v:121]
+WARNING: [Synth 8-3848] Net analog_b in module/entity chip_io does not have driver. [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/chip_io.v:121]
+WARNING: [Synth 8-6014] Unused sequential element decodeStage_mmuRsp_isIoAccess_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:4586]
+WARNING: [Synth 8-6014] Unused sequential element decodeStage_mmuRsp_allowRead_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:4588]
+WARNING: [Synth 8-6014] Unused sequential element decodeStage_mmuRsp_allowWrite_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:4589]
+WARNING: [Synth 8-6014] Unused sequential element decodeStage_mmuRsp_bypassTranslation_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:4593]
+WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_fetchPc_correctionReg_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:2357]
+WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_injector_nextPcCalc_valids_2_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:2465]
+WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_injector_nextPcCalc_valids_3_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:2466]
+WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_injector_nextPcCalc_valids_4_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:2467]
+WARNING: [Synth 8-6014] Unused sequential element IBusCachedPlugin_rspCounter_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:3673]
+WARNING: [Synth 8-6014] Unused sequential element execute_CsrPlugin_wfiWake_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:3693]
+WARNING: [Synth 8-6014] Unused sequential element HazardSimplePlugin_writeBackBuffer_payload_data_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:3978]
+WARNING: [Synth 8-6014] Unused sequential element CsrPlugin_mcycle_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:3982]
+WARNING: [Synth 8-6014] Unused sequential element CsrPlugin_minstret_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:3984]
+WARNING: [Synth 8-6014] Unused sequential element decode_to_execute_FORMAL_PC_NEXT_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:1969]
+WARNING: [Synth 8-6014] Unused sequential element execute_to_memory_FORMAL_PC_NEXT_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:1968]
+WARNING: [Synth 8-6014] Unused sequential element memory_to_writeBack_FORMAL_PC_NEXT_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:1967]
+WARNING: [Synth 8-6014] Unused sequential element decode_to_execute_BYPASSABLE_EXECUTE_STAGE_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:1988]
+WARNING: [Synth 8-6014] Unused sequential element decode_to_execute_BYPASSABLE_MEMORY_STAGE_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:1957]
+WARNING: [Synth 8-6014] Unused sequential element execute_to_memory_BYPASSABLE_MEMORY_STAGE_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:1991]
+WARNING: [Synth 8-6014] Unused sequential element memory_to_writeBack_MEMORY_STORE_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:2036]
+WARNING: [Synth 8-6014] Unused sequential element decode_to_execute_CSR_READ_OPCODE_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:1974]
+WARNING: [Synth 8-6014] Unused sequential element CsrPlugin_mtvec_mode_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:4203]
+WARNING: [Synth 8-6014] Unused sequential element DebugPlugin_firstCycle_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:4221]
+WARNING: [Synth 8-6014] Unused sequential element DebugPlugin_secondCycle_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:4225]
+WARNING: [Synth 8-3936] Found unconnected internal register 'memory_to_writeBack_INSTRUCTION_reg' and it is trimmed from '32' to '30' bits. [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:2096]
+WARNING: [Synth 8-3848] Net IBusCachedPlugin_cache_io_cpu_fetch_isRemoved in module/entity VexRiscv does not have driver. [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:92]
+WARNING: [Synth 8-3848] Net IBusCachedPlugin_mmuBus_rsp_bypassTranslation in module/entity VexRiscv does not have driver. [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:490]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_tx_fifo_source_first_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:2869]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_tx_fifo_source_last_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:2870]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_rx_fifo_source_first_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:6905]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_rx_fifo_source_last_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:6906]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_scratch_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7200]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_bus_errors_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7201]
+WARNING: [Synth 8-6014] Unused sequential element debug_mode_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7213]
+WARNING: [Synth 8-6014] Unused sequential element debug_oeb_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7225]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_litespimmap_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7249]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_cs_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7253]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_phyconfig_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7257]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_master_status_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7258]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_litespisdrphycore_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7270]
+WARNING: [Synth 8-6014] Unused sequential element gpio_mode1_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7297]
+WARNING: [Synth 8-6014] Unused sequential element gpio_mode0_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7301]
+WARNING: [Synth 8-6014] Unused sequential element gpio_ien_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7305]
+WARNING: [Synth 8-6014] Unused sequential element gpio_oe_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7309]
+WARNING: [Synth 8-6014] Unused sequential element gpio_in_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7310]
+WARNING: [Synth 8-6014] Unused sequential element gpio_out_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7314]
+WARNING: [Synth 8-6014] Unused sequential element la_ien_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7380]
+WARNING: [Synth 8-6014] Unused sequential element la_oe_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7393]
+WARNING: [Synth 8-6014] Unused sequential element la_in_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7394]
+WARNING: [Synth 8-6014] Unused sequential element la_out_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7407]
+WARNING: [Synth 8-6014] Unused sequential element mprj_wb_iena_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7419]
+WARNING: [Synth 8-6014] Unused sequential element spi_enabled_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7431]
+WARNING: [Synth 8-6014] Unused sequential element spi_master_status_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7462]
+WARNING: [Synth 8-6014] Unused sequential element spi_master_mosi_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7466]
+WARNING: [Synth 8-6014] Unused sequential element spi_master_miso_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7467]
+WARNING: [Synth 8-6014] Unused sequential element spi_master_cs_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7471]
+WARNING: [Synth 8-6014] Unused sequential element spi_master_loopback_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7475]
+WARNING: [Synth 8-6014] Unused sequential element spimaster_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7479]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_load_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7512]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_reload_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7516]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_en_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7520]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_value_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7525]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_status_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7526]
+WARNING: [Synth 8-6014] Unused sequential element mgmtsoc_enable_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7534]
+WARNING: [Synth 8-6014] Unused sequential element uart_txfull_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7564]
+WARNING: [Synth 8-6014] Unused sequential element uart_rxempty_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7565]
+WARNING: [Synth 8-6014] Unused sequential element uart_status_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7566]
+WARNING: [Synth 8-6014] Unused sequential element uart_enable_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7574]
+WARNING: [Synth 8-6014] Unused sequential element uart_txempty_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7575]
+WARNING: [Synth 8-6014] Unused sequential element uart_rxfull_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7576]
+WARNING: [Synth 8-6014] Unused sequential element uart_enabled_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7588]
+WARNING: [Synth 8-6014] Unused sequential element gpioin0_in_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7612]
+WARNING: [Synth 8-6014] Unused sequential element gpioin0_gpioin0_mode_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7616]
+WARNING: [Synth 8-6014] Unused sequential element gpioin0_gpioin0_edge_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7620]
+WARNING: [Synth 8-6014] Unused sequential element gpioin0_status_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7621]
+WARNING: [Synth 8-6014] Unused sequential element gpioin0_enable_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7629]
+WARNING: [Synth 8-6014] Unused sequential element gpioin1_in_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7653]
+WARNING: [Synth 8-6014] Unused sequential element gpioin1_gpioin1_mode_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7657]
+WARNING: [Synth 8-6014] Unused sequential element gpioin1_gpioin1_edge_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7661]
+WARNING: [Synth 8-6014] Unused sequential element gpioin1_status_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7662]
+WARNING: [Synth 8-6014] Unused sequential element gpioin1_enable_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7670]
+WARNING: [Synth 8-6014] Unused sequential element gpioin2_in_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7694]
+WARNING: [Synth 8-6014] Unused sequential element gpioin2_gpioin2_mode_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7698]
+WARNING: [Synth 8-6014] Unused sequential element gpioin2_gpioin2_edge_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7702]
+WARNING: [Synth 8-6014] Unused sequential element gpioin2_status_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7703]
+WARNING: [Synth 8-6014] Unused sequential element gpioin2_enable_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7711]
+WARNING: [Synth 8-6014] Unused sequential element gpioin3_in_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7735]
+WARNING: [Synth 8-6014] Unused sequential element gpioin3_gpioin3_mode_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7739]
+WARNING: [Synth 8-6014] Unused sequential element gpioin3_gpioin3_edge_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7743]
+WARNING: [Synth 8-6014] Unused sequential element gpioin3_status_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7744]
+WARNING: [Synth 8-6014] Unused sequential element gpioin3_enable_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7752]
+WARNING: [Synth 8-6014] Unused sequential element gpioin4_in_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7776]
+WARNING: [Synth 8-6014] Unused sequential element gpioin4_gpioin4_mode_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7780]
+WARNING: [Synth 8-6014] Unused sequential element gpioin4_gpioin4_edge_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7784]
+WARNING: [Synth 8-6014] Unused sequential element gpioin4_status_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7785]
+WARNING: [Synth 8-6014] Unused sequential element gpioin4_enable_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7793]
+WARNING: [Synth 8-6014] Unused sequential element gpioin5_in_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7817]
+WARNING: [Synth 8-6014] Unused sequential element gpioin5_gpioin5_mode_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7821]
+WARNING: [Synth 8-6014] Unused sequential element gpioin5_gpioin5_edge_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7825]
+WARNING: [Synth 8-6014] Unused sequential element gpioin5_status_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7826]
+WARNING: [Synth 8-6014] Unused sequential element gpioin5_enable_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7834]
+WARNING: [Synth 8-6014] Unused sequential element user_irq_ena_re_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:7846]
+WARNING: [Synth 8-6014] Unused sequential element memdat_reg was removed.  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:8398]
+INFO: [Common 17-14] Message 'Synth 8-6014' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3936] Found unconnected internal register 'litespi_tx_mux_source_payload_mask_reg' and it is trimmed from '8' to '1' bits. [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:2187]
+WARNING: [Synth 8-7137] Register wb_dat_o_reg in module housekeeping has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/housekeeping.v:741]
+WARNING: [Synth 8-7137] Register mgmt_ena_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v:232]
+WARNING: [Synth 8-7137] Register gpio_holdover_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v:233]
+WARNING: [Synth 8-7137] Register gpio_slow_sel_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v:234]
+WARNING: [Synth 8-7137] Register gpio_vtrip_sel_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v:235]
+WARNING: [Synth 8-7137] Register gpio_ib_mode_sel_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v:236]
+WARNING: [Synth 8-7137] Register gpio_inenb_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v:237]
+WARNING: [Synth 8-7137] Register gpio_outenb_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v:238]
+WARNING: [Synth 8-7137] Register gpio_dm_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v:239]
+WARNING: [Synth 8-7137] Register gpio_ana_en_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v:240]
+WARNING: [Synth 8-7137] Register gpio_ana_sel_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v:241]
+WARNING: [Synth 8-7137] Register gpio_ana_pol_reg in module gpio_control_block has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/gpio_control_block.v:242]
+WARNING: [Synth 8-3848] Net mprj_vcc_pwrgood in module/entity caravel does not have driver. [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/caravel.v:460]
+WARNING: [Synth 8-3848] Net mprj2_vcc_pwrgood in module/entity caravel does not have driver. [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/caravel.v:461]
+WARNING: [Synth 8-3848] Net mprj_vdd_pwrgood in module/entity caravel does not have driver. [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/caravel.v:462]
+WARNING: [Synth 8-3848] Net mprj2_vdd_pwrgood in module/entity caravel does not have driver. [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/caravel.v:463]
+WARNING: [Synth 8-3848] Net porb_h_in_nc in module/entity caravel does not have driver. [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/caravel.v:481]
+WARNING: [Synth 8-7129] Port wbs_adr_i[31] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[30] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[29] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[28] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[27] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[26] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[25] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[24] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[23] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[22] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[21] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[20] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[19] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[18] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[17] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[16] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[15] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[14] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[13] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[12] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[11] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[10] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[9] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[8] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[7] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[6] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[5] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[4] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[3] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[2] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[1] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wbs_adr_i[0] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[127] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[126] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[125] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[124] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[123] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[122] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[121] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[120] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[119] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[118] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[117] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[116] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[115] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[114] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[113] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[112] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[111] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[110] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[109] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[108] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[107] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[106] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[105] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[104] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[103] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[102] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[101] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[100] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[99] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[98] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[97] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[96] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[95] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[94] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[93] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[92] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[91] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[90] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[89] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[88] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[87] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[86] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[85] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[84] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[83] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[82] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[81] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[80] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[79] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[78] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[77] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[76] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[75] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[74] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[73] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[72] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[71] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[70] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[69] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[68] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[67] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[66] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[31] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[30] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[29] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[28] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[27] in module user_proj_example is either unconnected or has no load
+WARNING: [Synth 8-7129] Port la_data_in[26] in module user_proj_example is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2874.625 ; gain = 0.000 ; free physical = 3697 ; free virtual = 9832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2874.625 ; gain = 0.000 ; free physical = 3638 ; free virtual = 9773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2874.625 ; gain = 0.000 ; free physical = 3638 ; free virtual = 9773
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2874.625 ; gain = 0.000 ; free physical = 4622 ; free virtual = 10757
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2923.484 ; gain = 0.000 ; free physical = 4351 ; free virtual = 10486
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.14 . Memory (MB): peak = 2923.484 ; gain = 0.000 ; free physical = 4329 ; free virtual = 10464
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2923.484 ; gain = 48.859 ; free physical = 3675 ; free virtual = 9810
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2923.484 ; gain = 48.859 ; free physical = 3677 ; free virtual = 9811
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2923.484 ; gain = 48.859 ; free physical = 3684 ; free virtual = 9818
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3936] Found unconnected internal register 'execute_to_memory_INSTRUCTION_reg' and it is trimmed from '32' to '30' bits. [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/VexRiscv_MinDebugCache.v:1990]
+INFO: [Synth 8-802] inferred FSM for state register 'switch_Fetcher_l362_reg' in module 'VexRiscv'
+WARNING: [Synth 8-3936] Found unconnected internal register 'memdat_1_reg' and it is trimmed from '10' to '8' bits. [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:8403]
+WARNING: [Synth 8-3936] Found unconnected internal register 'memdat_3_reg' and it is trimmed from '10' to '8' bits. [/home/josh/caravel-soc_fpga/vivado/vvd_srcs/caravel_soc/rtl/soc/mgmt_core.v:8420]
+INFO: [Synth 8-802] inferred FSM for state register 'litespiphy_state_reg' in module 'mgmt_core'
+INFO: [Synth 8-802] inferred FSM for state register 'spimaster_state_reg' in module 'mgmt_core'
+INFO: [Synth 8-802] inferred FSM for state register 'grant_reg' in module 'mgmt_core'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'housekeeping_spi'
+INFO: [Synth 8-802] inferred FSM for state register 'wbbd_state_reg' in module 'housekeeping'
+INFO: [Synth 8-802] inferred FSM for state register 'xfer_state_reg' in module 'housekeeping'
+INFO: [Synth 8-7082] The signal banks_0_reg is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (4 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+INFO: [Synth 8-7082] The signal ways_0_tags_reg is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (1 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              000 |                              000
+                 iSTATE0 |                              001 |                              001
+                 iSTATE1 |                              010 |                              010
+                 iSTATE2 |                              011 |                              011
+                 iSTATE3 |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'switch_Fetcher_l362_reg' using encoding 'sequential' in module 'VexRiscv'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE1 |                              001 |                               00
+                  iSTATE |                              010 |                               10
+                 iSTATE0 |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'grant_reg' using encoding 'one-hot' in module 'mgmt_core'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE1 |                               00 |                               00
+*
+                  iSTATE |                               01 |                               01
+                 iSTATE0 |                               10 |                               10
+                 iSTATE2 |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'spimaster_state_reg' using encoding 'sequential' in module 'mgmt_core'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE1 |                               00 |                               00
+*
+                  iSTATE |                               01 |                               01
+                 iSTATE0 |                               10 |                               10
+                 iSTATE2 |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'litespiphy_state_reg' using encoding 'sequential' in module 'mgmt_core'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                            00001 |                              000
+                 iSTATE1 |                            00010 |                              101
+                 iSTATE3 |                            00100 |                              100
+                 iSTATE2 |                            01000 |                              001
+                  iSTATE |                            10000 |                              010
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'housekeeping_spi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                               00
+                 iSTATE1 |                               01 |                               01
+                 iSTATE0 |                               10 |                               10
+                 iSTATE2 |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'xfer_state_reg' using encoding 'sequential' in module 'housekeeping'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE3 |                       0000000001 |                             0000
+                 iSTATE2 |                       0000000010 |                             0001
+                 iSTATE1 |                       0000000100 |                             0010
+                  iSTATE |                       0000001000 |                             0011
+                 iSTATE0 |                       0000010000 |                             0100
+                 iSTATE8 |                       0000100000 |                             0101
+                 iSTATE6 |                       0001000000 |                             0110
+                 iSTATE5 |                       0010000000 |                             0111
+                 iSTATE7 |                       0100000000 |                             1000
+                 iSTATE4 |                       1000000000 |                             1001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wbbd_state_reg' using encoding 'one-hot' in module 'housekeeping'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2923.484 ; gain = 48.859 ; free physical = 1895 ; free virtual = 8033
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_0' (gpio_defaults_block) to 'inst/gpio_defaults_block_1'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_4'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_5'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_6'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_7'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_8'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_9'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_10'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_11'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_12'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_13'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_14'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_15'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_16'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_17'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_18'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_19'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_20'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_21'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_22'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_23'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_24'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_25'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_26'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_27'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_28'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_29'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_30'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_31'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_32'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_33'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_34'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_35'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_36'
+INFO: [Synth 8-223] decloning instance 'inst/gpio_defaults_block_2' (gpio_defaults_block__parameterized0) to 'inst/gpio_defaults_block_37'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   33 Bit       Adders := 4     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 5     
+	   2 Input   30 Bit       Adders := 1     
+	   2 Input   24 Bit       Adders := 3     
+	   2 Input   16 Bit       Adders := 2     
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 5     
+	   3 Input    8 Bit       Adders := 2     
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 4     
+	   2 Input    4 Bit       Adders := 12    
+	   2 Input    3 Bit       Adders := 6     
+	   2 Input    2 Bit       Adders := 2     
+	   2 Input    1 Bit       Adders := 3     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 12    
++---Registers : 
+	               38 Bit    Registers := 1     
+	               32 Bit    Registers := 69    
+	               30 Bit    Registers := 4     
+	               28 Bit    Registers := 1     
+	               26 Bit    Registers := 1     
+	               24 Bit    Registers := 2     
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               13 Bit    Registers := 78    
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 23    
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 6     
+	                4 Bit    Registers := 16    
+	                3 Bit    Registers := 48    
+	                2 Bit    Registers := 20    
+	                1 Bit    Registers := 928   
++---RAMs : 
+	               8K Bit	(256 X 32 bit)          RAMs := 1     
+	               4K Bit	(128 X 32 bit)          RAMs := 1     
+	             1024 Bit	(32 X 32 bit)          RAMs := 1     
+	              512 Bit	(16 X 32 bit)          RAMs := 1     
+	              160 Bit	(16 X 10 bit)          RAMs := 2     
+	               56 Bit	(2 X 28 bit)          RAMs := 1     
++---Muxes : 
+	   6 Input   38 Bit        Muxes := 1     
+	   2 Input   38 Bit        Muxes := 2     
+	  97 Input   38 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 91    
+	   4 Input   32 Bit        Muxes := 20    
+	   3 Input   32 Bit        Muxes := 3     
+	   7 Input   32 Bit        Muxes := 2     
+	   5 Input   32 Bit        Muxes := 1     
+	   9 Input   32 Bit        Muxes := 2     
+	  10 Input   32 Bit        Muxes := 1     
+	   2 Input   31 Bit        Muxes := 1     
+	   2 Input   30 Bit        Muxes := 3     
+	   9 Input   30 Bit        Muxes := 1     
+	   2 Input   26 Bit        Muxes := 1     
+	  98 Input   26 Bit        Muxes := 1     
+	   2 Input   25 Bit        Muxes := 1     
+	  97 Input   24 Bit        Muxes := 1     
+	   2 Input   24 Bit        Muxes := 2     
+	   2 Input   17 Bit        Muxes := 1     
+	   2 Input   14 Bit        Muxes := 2     
+	  98 Input   13 Bit        Muxes := 38    
+	   4 Input   13 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 35    
+	   7 Input    8 Bit        Muxes := 3     
+	   4 Input    8 Bit        Muxes := 3     
+	   5 Input    8 Bit        Muxes := 1     
+	   3 Input    8 Bit        Muxes := 2     
+	  10 Input    8 Bit        Muxes := 2     
+	   2 Input    7 Bit        Muxes := 5     
+	   5 Input    7 Bit        Muxes := 1     
+	 113 Input    7 Bit        Muxes := 4     
+	   2 Input    6 Bit        Muxes := 1     
+	   9 Input    6 Bit        Muxes := 1     
+	   4 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 5     
+	   3 Input    5 Bit        Muxes := 1     
+	   4 Input    5 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 2     
+	   5 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 11    
+	   6 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 85    
+	   5 Input    3 Bit        Muxes := 2     
+	   7 Input    3 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 2     
+	   4 Input    3 Bit        Muxes := 1     
+	  97 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 13    
+	   7 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 3     
+	   9 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 1241  
+	   4 Input    1 Bit        Muxes := 31    
+	   3 Input    1 Bit        Muxes := 11    
+	   5 Input    1 Bit        Muxes := 3     
+	   7 Input    1 Bit        Muxes := 12    
+	   9 Input    1 Bit        Muxes := 9     
+	  97 Input    1 Bit        Muxes := 10    
+	  98 Input    1 Bit        Muxes := 1     
+	  10 Input    1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-7082] The signal IBusCachedPlugin_cache/banks_0_reg is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (4 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+INFO: [Synth 8-7082] The signal IBusCachedPlugin_cache/ways_0_tags_reg is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (1 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+INFO: [Synth 8-3971] The signal "inst/\soc/core /VexRiscv/RegFilePlugin_regFile_reg" was recognized as a true dual port RAM template.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_LDC) is unused and will be removed from module gpio_control_block__1.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_C) is unused and will be removed from module gpio_control_block__1.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_LDC) is unused and will be removed from module gpio_control_block__1.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_C) is unused and will be removed from module gpio_control_block__1.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_LDC) is unused and will be removed from module gpio_control_block__1.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_C) is unused and will be removed from module gpio_control_block__1.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_LDC) is unused and will be removed from module gpio_control_block__2.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_C) is unused and will be removed from module gpio_control_block__2.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_LDC) is unused and will be removed from module gpio_control_block__2.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_C) is unused and will be removed from module gpio_control_block__2.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_LDC) is unused and will be removed from module gpio_control_block__2.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_C) is unused and will be removed from module gpio_control_block__2.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_LDC) is unused and will be removed from module gpio_control_block__3.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_C) is unused and will be removed from module gpio_control_block__3.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_LDC) is unused and will be removed from module gpio_control_block__3.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_C) is unused and will be removed from module gpio_control_block__3.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_LDC) is unused and will be removed from module gpio_control_block__3.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_C) is unused and will be removed from module gpio_control_block__3.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_LDC) is unused and will be removed from module gpio_control_block__4.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_C) is unused and will be removed from module gpio_control_block__4.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_LDC) is unused and will be removed from module gpio_control_block__4.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_C) is unused and will be removed from module gpio_control_block__4.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_LDC) is unused and will be removed from module gpio_control_block__4.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_C) is unused and will be removed from module gpio_control_block__4.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_LDC) is unused and will be removed from module gpio_control_block__5.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_C) is unused and will be removed from module gpio_control_block__5.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_LDC) is unused and will be removed from module gpio_control_block__5.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_C) is unused and will be removed from module gpio_control_block__5.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_LDC) is unused and will be removed from module gpio_control_block__5.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_C) is unused and will be removed from module gpio_control_block__5.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_LDC) is unused and will be removed from module gpio_control_block__6.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_C) is unused and will be removed from module gpio_control_block__6.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_LDC) is unused and will be removed from module gpio_control_block__6.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_C) is unused and will be removed from module gpio_control_block__6.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_LDC) is unused and will be removed from module gpio_control_block__6.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_C) is unused and will be removed from module gpio_control_block__6.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_LDC) is unused and will be removed from module gpio_control_block__7.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_C) is unused and will be removed from module gpio_control_block__7.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_LDC) is unused and will be removed from module gpio_control_block__7.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_C) is unused and will be removed from module gpio_control_block__7.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_LDC) is unused and will be removed from module gpio_control_block__7.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_C) is unused and will be removed from module gpio_control_block__7.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_LDC) is unused and will be removed from module gpio_control_block__8.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_C) is unused and will be removed from module gpio_control_block__8.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_LDC) is unused and will be removed from module gpio_control_block__8.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_C) is unused and will be removed from module gpio_control_block__8.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_LDC) is unused and will be removed from module gpio_control_block__8.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_C) is unused and will be removed from module gpio_control_block__8.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_LDC) is unused and will be removed from module gpio_control_block__9.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_C) is unused and will be removed from module gpio_control_block__9.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_LDC) is unused and will be removed from module gpio_control_block__9.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_C) is unused and will be removed from module gpio_control_block__9.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_LDC) is unused and will be removed from module gpio_control_block__9.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_C) is unused and will be removed from module gpio_control_block__9.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_LDC) is unused and will be removed from module gpio_control_block__10.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_C) is unused and will be removed from module gpio_control_block__10.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_LDC) is unused and will be removed from module gpio_control_block__10.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_C) is unused and will be removed from module gpio_control_block__10.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_LDC) is unused and will be removed from module gpio_control_block__10.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_C) is unused and will be removed from module gpio_control_block__10.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_LDC) is unused and will be removed from module gpio_control_block__11.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_C) is unused and will be removed from module gpio_control_block__11.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_LDC) is unused and will be removed from module gpio_control_block__11.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_C) is unused and will be removed from module gpio_control_block__11.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_LDC) is unused and will be removed from module gpio_control_block__11.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_C) is unused and will be removed from module gpio_control_block__11.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_LDC) is unused and will be removed from module gpio_control_block__12.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_C) is unused and will be removed from module gpio_control_block__12.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_LDC) is unused and will be removed from module gpio_control_block__12.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_C) is unused and will be removed from module gpio_control_block__12.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_LDC) is unused and will be removed from module gpio_control_block__12.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_C) is unused and will be removed from module gpio_control_block__12.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_LDC) is unused and will be removed from module gpio_control_block__13.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_C) is unused and will be removed from module gpio_control_block__13.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_LDC) is unused and will be removed from module gpio_control_block__13.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_C) is unused and will be removed from module gpio_control_block__13.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_LDC) is unused and will be removed from module gpio_control_block__13.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_C) is unused and will be removed from module gpio_control_block__13.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_LDC) is unused and will be removed from module gpio_control_block__14.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_C) is unused and will be removed from module gpio_control_block__14.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_LDC) is unused and will be removed from module gpio_control_block__14.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_C) is unused and will be removed from module gpio_control_block__14.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_LDC) is unused and will be removed from module gpio_control_block__14.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_C) is unused and will be removed from module gpio_control_block__14.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_LDC) is unused and will be removed from module gpio_control_block__15.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_C) is unused and will be removed from module gpio_control_block__15.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_LDC) is unused and will be removed from module gpio_control_block__15.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_C) is unused and will be removed from module gpio_control_block__15.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_LDC) is unused and will be removed from module gpio_control_block__15.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_C) is unused and will be removed from module gpio_control_block__15.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[1]_LDC) is unused and will be removed from module gpio_control_block__16.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[1]_C) is unused and will be removed from module gpio_control_block__16.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_LDC) is unused and will be removed from module gpio_control_block__16.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_C) is unused and will be removed from module gpio_control_block__16.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_LDC) is unused and will be removed from module gpio_control_block__17.
+WARNING: [Synth 8-3332] Sequential element (gpio_dm_reg[0]_C) is unused and will be removed from module gpio_control_block__17.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_LDC) is unused and will be removed from module gpio_control_block__17.
+WARNING: [Synth 8-3332] Sequential element (mgmt_ena_reg_C) is unused and will be removed from module gpio_control_block__17.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_LDC) is unused and will be removed from module gpio_control_block__17.
+WARNING: [Synth 8-3332] Sequential element (gpio_outenb_reg_C) is unused and will be removed from module gpio_control_block__17.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 2923.484 ; gain = 48.859 ; free physical = 4409 ; free virtual = 10593
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++-------------+------------+---------------+----------------+
+|Module Name  | RTL Object | Depth x Width | Implemented As | 
++-------------+------------+---------------+----------------+
+|housekeeping | spiaddr    | 1024x7        | LUT            | 
+|housekeeping | spiaddr0   | 1024x7        | LUT            | 
+|housekeeping | spiaddr1   | 1024x7        | LUT            | 
+|housekeeping | spiaddr2   | 1024x7        | LUT            | 
++-------------+------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping Report (see note below)
++-------------------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name              | RTL Object                             | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst/\soc/core /RAM256   | RAM_reg                                | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|inst/\soc/core /RAM128   | RAM_reg                                | 128 x 32(READ_FIRST)   | W |   | 128 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|inst/\soc/core /VexRiscv | IBusCachedPlugin_cache/banks_0_reg     | 16 x 32(READ_FIRST)    | W |   | 16 x 32(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst/\soc/core /VexRiscv | IBusCachedPlugin_cache/ways_0_tags_reg | 2 x 28(READ_FIRST)     | W |   | 2 x 28(WRITE_FIRST)    |   | R | Port A and B     | 1      | 0      | 
++-------------------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++----------------+---------------+-----------+----------------------+-------------+
+|Module Name     | RTL Object    | Inference | Size (Depth x Width) | Primitives  | 
++----------------+---------------+-----------+----------------------+-------------+
+|inst/\soc/core  | storage_1_reg | Implied   | 16 x 8               | RAM32M x 2  | 
+|inst/\soc/core  | storage_reg   | Implied   | 16 x 8               | RAM32M x 2  | 
++----------------+---------------+-----------+----------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 2923.484 ; gain = 48.859 ; free physical = 5030 ; free virtual = 11203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:59 ; elapsed = 00:01:04 . Memory (MB): peak = 2923.484 ; gain = 48.859 ; free physical = 4986 ; free virtual = 11152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++-------------------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name              | RTL Object                             | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst/\soc/core /RAM256   | RAM_reg                                | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|inst/\soc/core /RAM128   | RAM_reg                                | 128 x 32(READ_FIRST)   | W |   | 128 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|inst/\soc/core /VexRiscv | IBusCachedPlugin_cache/banks_0_reg     | 16 x 32(READ_FIRST)    | W |   | 16 x 32(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst/\soc/core /VexRiscv | IBusCachedPlugin_cache/ways_0_tags_reg | 2 x 28(READ_FIRST)     | W |   | 2 x 28(WRITE_FIRST)    |   | R | Port A and B     | 1      | 0      | 
++-------------------------+----------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping Report
++----------------+---------------+-----------+----------------------+-------------+
+|Module Name     | RTL Object    | Inference | Size (Depth x Width) | Primitives  | 
++----------------+---------------+-----------+----------------------+-------------+
+|inst/\soc/core  | storage_1_reg | Implied   | 16 x 8               | RAM32M x 2  | 
+|inst/\soc/core  | storage_reg   | Implied   | 16 x 8               | RAM32M x 2  | 
++----------------+---------------+-----------+----------------------+-------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/soc/core/RAM256/RAM_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/soc/core/RAM128/RAM_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/soc/core/VexRiscv/IBusCachedPlugin_cache/banks_0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/soc/core/VexRiscv/IBusCachedPlugin_cache/ways_0_tags_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 2923.484 ; gain = 48.859 ; free physical = 4325 ; free virtual = 10482
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'padframei_0' to logic
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:07 ; elapsed = 00:01:12 . Memory (MB): peak = 2923.484 ; gain = 48.859 ; free physical = 3904 ; free virtual = 10061
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:07 ; elapsed = 00:01:12 . Memory (MB): peak = 2923.484 ; gain = 48.859 ; free physical = 3900 ; free virtual = 10057
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:08 ; elapsed = 00:01:13 . Memory (MB): peak = 2923.484 ; gain = 48.859 ; free physical = 3822 ; free virtual = 9979
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:08 ; elapsed = 00:01:13 . Memory (MB): peak = 2923.484 ; gain = 48.859 ; free physical = 3820 ; free virtual = 9977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:08 ; elapsed = 00:01:13 . Memory (MB): peak = 2923.484 ; gain = 48.859 ; free physical = 3652 ; free virtual = 9809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:08 ; elapsed = 00:01:13 . Memory (MB): peak = 2923.484 ; gain = 48.859 ; free physical = 3535 ; free virtual = 9692
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++---------------------+-----------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name          | RTL Name                                            | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++---------------------+-----------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|design_1_caravel_0_0 | inst/gpio_control_in_1[10]/shift_register_reg[10]   | 9      | 11    | YES          | NO                 | YES               | 11     | 0       | 
+|design_1_caravel_0_0 | inst/gpio_control_in_1a[5]/shift_register_reg[10]   | 9      | 6     | YES          | NO                 | YES               | 6      | 0       | 
+|design_1_caravel_0_0 | inst/gpio_control_bidir_1[1]/shift_register_reg[10] | 9      | 2     | YES          | NO                 | YES               | 2      | 0       | 
+|design_1_caravel_0_0 | inst/gpio_control_bidir_2[2]/shift_register_reg[10] | 9      | 3     | YES          | NO                 | YES               | 3      | 0       | 
+|design_1_caravel_0_0 | inst/gpio_control_in_2[15]/shift_register_reg[10]   | 9      | 16    | YES          | NO                 | YES               | 16     | 0       | 
++---------------------+-----------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   134|
+|2     |LUT1     |   184|
+|3     |LUT2     |   259|
+|4     |LUT3     |   278|
+|5     |LUT4     |   827|
+|6     |LUT5     |   875|
+|7     |LUT6     |  1762|
+|8     |MUXF7    |   169|
+|9     |MUXF8    |    47|
+|10    |RAM32M   |     4|
+|11    |RAMB18E1 |     6|
+|13    |SRL16E   |    38|
+|14    |FDCE     |   889|
+|15    |FDPE     |   271|
+|16    |FDRE     |  2627|
+|17    |FDSE     |    87|
+|18    |LDC      |    75|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:08 ; elapsed = 00:01:13 . Memory (MB): peak = 2923.484 ; gain = 48.859 ; free physical = 3461 ; free virtual = 9618
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 1123 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:05 ; elapsed = 00:01:10 . Memory (MB): peak = 2923.484 ; gain = 0.000 ; free physical = 3171 ; free virtual = 9328
+Synthesis Optimization Complete : Time (s): cpu = 00:01:08 ; elapsed = 00:01:13 . Memory (MB): peak = 2923.492 ; gain = 48.859 ; free physical = 3165 ; free virtual = 9322
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2923.492 ; gain = 0.000 ; free physical = 2756 ; free virtual = 8913
+INFO: [Netlist 29-17] Analyzing 435 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2923.492 ; gain = 0.000 ; free physical = 2615 ; free virtual = 8772
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 79 instances were transformed.
+  LDC => LDCE: 75 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
+
+Synth Design complete, checksum: cb35579
+INFO: [Common 17-83] Releasing license: Synthesis
+149 Infos, 338 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:19 ; elapsed = 00:01:20 . Memory (MB): peak = 2923.492 ; gain = 48.867 ; free physical = 2818 ; free virtual = 8976
+INFO: [Common 17-1381] The checkpoint '/home/josh/caravel-soc_fpga/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_caravel_0_0_synth_1/design_1_caravel_0_0.dcp' has been generated.
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Coretcl 2-1174] Renamed 50 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/josh/caravel-soc_fpga/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_caravel_0_0_synth_1/design_1_caravel_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_caravel_0_0_utilization_synth.rpt -pb design_1_caravel_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jun  2 19:19:18 2023...

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Fri Jun  2 19:17:03 2023
+# Process ID: 185747
+# Current directory: /home/josh/caravel-soc_fpga/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_read_romcode_0_0_synth_1
+# Command line: vivado -log design_1_read_romcode_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_read_romcode_0_0.tcl
+# Log file: /home/josh/caravel-soc_fpga/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_read_romcode_0_0_synth_1/design_1_read_romcode_0_0.vds
+# Journal file: /home/josh/caravel-soc_fpga/vivado/vvd_caravel_fpga/vvd_caravel_fpga.runs/design_1_read_romcode_0_0_synth_1/vivado.jou
+# Running On: josh-All-Series, OS: Linux, CPU Frequency: 900.000 MHz, CPU Physical cores: 4, Host memory: 16714 MB
+#-----------------------------------------------------------
+source design_1_read_romcode_0_0.tcl -notrace

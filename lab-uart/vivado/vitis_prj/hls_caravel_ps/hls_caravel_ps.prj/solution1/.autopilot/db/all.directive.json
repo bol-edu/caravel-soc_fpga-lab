@@ -1,0 +1,18 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "caravel_ps",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/home\/hls05\/temporary\/caravel_fpga_lite\/Caravel_FPGA_0_2\/project\/vitis_hls_project\/hls_caravel_ps\/run_hls.tcl",
+          "sourceLine": "42",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "caravel_ps"
+              }]
+          }
+        }]
+    }]}

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Tue Jun  6 15:52:04 2023
+# Process ID: 414836
+# Current directory: /home/josh/caravel-soc_fpga/vivado/vvd_caravel_fpga
+# Command line: vivado
+# Log file: /home/josh/caravel-soc_fpga/vivado/vvd_caravel_fpga/vivado.log
+# Journal file: /home/josh/caravel-soc_fpga/vivado/vvd_caravel_fpga/vivado.jou
+# Running On: josh-All-Series, OS: Linux, CPU Frequency: 800.000 MHz, CPU Physical cores: 4, Host memory: 16714 MB
+#-----------------------------------------------------------
+start_gui
