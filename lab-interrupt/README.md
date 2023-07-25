@@ -8,7 +8,7 @@ Offical Caravel Management SoC – [Interrupt (IRQ document)](https://caravel-mg
 ## Run IRQ Enabled counter_la Testbench
 Run XSIM simulation
 ```sh
-cp ~/caravel-soc_fpga-lab/lab-interrupt/testbench/counter_la
+cd ~/caravel-soc_fpga-lab/lab-interrupt/testbench/counter_la
 source run_xsim
 ```
 Validate the `USER_PROJ_IRQ0 Test passed` is printed
