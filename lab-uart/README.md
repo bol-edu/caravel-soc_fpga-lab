@@ -1,7 +1,7 @@
 # AXI UART Lite for Caravel
 AXI UART Lite details are explained in [pg142-axi-uartlite](https://docs.xilinx.com/v/u/en-US/pg142-axi-uartlite).
 
-## Design presentation
+## Design Presentation
 [Introduce UART, Interrupt, User BRAM by Willy, Josh](https://www.youtube.com/watch?v=o_KWWsHzoB4&t=28m55s)  
 [報告投影片](https://github.com/bol-edu/caravel-soc_fpga-lab/files/12157210/AXI_UART_Lite.for.Caravel.pptx)
 
