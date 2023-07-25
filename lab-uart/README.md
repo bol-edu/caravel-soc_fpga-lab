@@ -23,6 +23,8 @@ vivado vvd_caravel_fpga.xpr
 Click Open Block Design in left panel
 ![2023-07-25 11 31 57](https://github.com/bol-edu/caravel-soc_fpga-lab/assets/98332019/9bee2398-4f82-45c4-a0d9-7854a5258162)
 
+![2023-07-25 15 46 42](https://github.com/bol-edu/caravel-soc_fpga-lab/assets/98332019/554b6b49-f020-4416-b457-43b54e951e48)
+
 ## Run on FPGA
 1. connect to remote PYNQ-Z2
 2. upload these file
