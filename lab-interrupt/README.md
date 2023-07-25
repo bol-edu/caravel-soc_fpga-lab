@@ -1,5 +1,5 @@
 # User Project Interrupt Enabling and Handling
-Offical Caravel Management SoC – [Interrupt (IRQ document)](https://caravel-mgmt-soc-litex.readthedocs.io/en/latest/index.html#interrupts-irq).
+Offical Caravel Management SoC – [Interrupt (IRQ) document](https://caravel-mgmt-soc-litex.readthedocs.io/en/latest/index.html#interrupts-irq).
 
 ## Design Presentation
 [Introduce UART, Interrupt, User BRAM by Willy, Josh](https://www.youtube.com/watch?v=o_KWWsHzoB4&t=53m35s)  
