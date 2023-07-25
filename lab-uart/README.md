@@ -6,7 +6,7 @@ AXI UART Lite details are explained in [pg142-axi-uartlite](https://docs.xilinx.
 [報告投影片](https://github.com/bol-edu/caravel-soc_fpga-lab/files/12157210/AXI_UART_Lite.for.Caravel.pptx)
 
 ## Build AXI UART Lite Test Hex
-Generate counter_la_uart.hex after `source run_xsim`.
+Build `counter_la_uart.hex` after executing `source run_xsim`.
 ```sh
 git clone https://github.com/bol-edu/caravel-soc_fpga ~/caravel-soc_fpga
 cd ~/caravel-soc_fpga/testbench
@@ -22,3 +22,16 @@ vivado vvd_caravel_fpga.xpr
 ```
 Click Open Block Design in left panel
 ![2023-07-25 11 31 57](https://github.com/bol-edu/caravel-soc_fpga-lab/assets/98332019/9bee2398-4f82-45c4-a0d9-7854a5258162)
+
+## Run on FPGA
+1. connect to remote PYNQ-Z2
+2. upload these file
+```
+   caravel_fpga.bit
+   caravel_fpga.hwh
+   caravel_fpga_uart.ipynb
+   counter_la_uart.hex
+   uartlite.py
+```
+3. open caravel_fpga_uart.ipynb and run
+![Jupyter Notebook - 140 112 207 200](https://github.com/bol-edu/caravel-soc_fpga-lab/assets/98332019/9bbca7c1-cb0f-4b12-b2b6-8dd66083cb34)
