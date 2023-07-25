@@ -33,4 +33,4 @@
 -v ../../rtl/soc/caravel.v 	
 
 ## STD CELLS - they need to be below the defines.v files 
--v ../../cvc-pdk/sky130_sram_2kbyte_1rw1r_32x512_8.v
+#-v ../../cvc-pdk/sky130_sram_2kbyte_1rw1r_32x512_8.v
