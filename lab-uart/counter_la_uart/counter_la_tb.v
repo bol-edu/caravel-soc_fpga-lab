@@ -146,9 +146,9 @@ module counter_la_tb;
 		end
 		$display("%c[1;31m",27);
 		`ifdef GL
-			$display ("Monitor: Timeout, Test LA (GL) Failed");
+			//$display ("Monitor: Timeout, Test LA (GL) Failed");
 		`else
-			$display ("Monitor: Timeout, Test LA (RTL) Failed");
+			//$display ("Monitor: Timeout, Test LA (RTL) Failed");
 		`endif
 		$display("%c[0m",27);
 		$finish;
