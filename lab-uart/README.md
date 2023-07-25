@@ -34,4 +34,4 @@ Click Open Block Design in left panel
    uartlite.py
 ```
 3. open caravel_fpga_uart.ipynb and run
-![Jupyter Notebook - 140 112 207 200](https://github.com/bol-edu/caravel-soc_fpga-lab/assets/98332019/9bbca7c1-cb0f-4b12-b2b6-8dd66083cb34)
+<img src="https://github.com/bol-edu/caravel-soc_fpga-lab/assets/98332019/9bbca7c1-cb0f-4b12-b2b6-8dd66083cb34" width=75%>
