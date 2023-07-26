@@ -22,9 +22,9 @@ Labs to experiment Caravel SoC FPGA module design with Verilog & HLS.
 * [RISC-V GCC Toolchains rv32i-4.0.0](https://github.com/stnolting/riscv-gcc-prebuilt)
 
 ## Setup Toolchain
-Ubuntu 20.04+ and Xilinx Vitis reference the [HLS tools installation guide of course-lab_1](https://github.com/bol-edu/course-lab_1/blob/2022.1/HLS%20Tools%20Installation%20Guide%202022.1_ubuntu.md).
-
-GTKWave and RISC-V GCC Toolchains
+Get presetup Vitis Virtual Machine from course TA or setup following toolchains yourself.
+* Ubuntu 20.04+ and Xilinx Vitis [HLS tools installation guide](https://github.com/bol-edu/course-lab_1/blob/2022.1/HLS%20Tools%20Installation%20Guide%202022.1_ubuntu.md)
+* GTKWave and RISC-V GCC Toolchains
 ```console
 $ sudo apt update
 $ sudo apt install gtkwave git -y
