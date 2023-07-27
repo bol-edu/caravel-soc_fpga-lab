@@ -1,0 +1,51 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:724:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:738:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="or_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:752:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="xor_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/hls05/temporary/caravel_fpga_lite/Caravel_FPGA_0_2/project/vitis_hls_project/hls_caravel_ps/run_hls.tcl:42:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="caravel_ps" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=caravel_ps" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/caravel_ps.cpp:30:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="caravel_ps" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/caravel_ps.cpp:31:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="caravel_ps" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=ps_mprj_in" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/caravel_ps.cpp:32:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="caravel_ps" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=ps_mprj_out" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/caravel_ps.cpp:33:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="caravel_ps" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=ps_mprj_en" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/caravel_ps.cpp:34:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="caravel_ps" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_none port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/caravel_ps.cpp:37:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="caravel_ps" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port=mprj_in" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/caravel_ps.cpp:38:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="caravel_ps" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port=mprj_out" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/caravel_ps.cpp:39:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="caravel_ps" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port=mprj_en" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/caravel_ps.cpp:48:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="caravel_ps" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/caravel_ps.cpp:47:19" msg_body="Loop 'VITIS_LOOP_47_1' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_47_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/caravel_ps.cpp:27:0" msg_body="Unrolling loop 'VITIS_LOOP_47_1' (src/caravel_ps.cpp:47:19) in function 'caravel_ps' completely with a factor of 38">
+        <args Factor="38" LoopLoc="src/caravel_ps.cpp:47:19" LoopName="VITIS_LOOP_47_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="src/caravel_ps.cpp:27:0" msg_body="Aggregating scalar variable 'mprj_in' with compact=bit mode in 38-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="38" HwTyName="scalar" Name="mprj_in"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+
