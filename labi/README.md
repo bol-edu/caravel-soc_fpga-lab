@@ -20,7 +20,10 @@ source run_vivado.sh
 ```
 ## Run on FPGA
 1. connect to remote PYNQ-Z2
-2. create ipy_fpga folder on jupyter notebook and upload bitstream, hex and ipynb files to ipy_fpga folder  
-   a. counter bitstream should be tested with counter_wb.hex/counter_la.hex  
-   b. gcd bitstream should be tested with gcd_la.hex
-4. open caravel_fpga.ipynb and run (default loaded hex is counter_wb.hex in caravel_fpga.ipynb)
+2. create ipy_fpga folder on jupyter notebook and upload following bitstream, ipynb and hex files to ipy_fpga folder  
+   a. jupyter_notebooks_project/caravel_fpga.bit  
+   b. jupyter_notebooks_project/caravel_fpga.hwh  
+   c. jupyter_notebooks_project/caravel_fpga.ipynb  
+   d1. counter bitstream should be tested with jupyter_notebooks_project/counter_wb.hex or jupyter_notebooks_project/counter_la.hex  
+   d2. gcd bitstream should be tested with jupyter_notebooks_project/gcd_la.hex
+4. open caravel_fpga.ipynb and run (default loaded hex is counter_wb.hex assigned in caravel_fpga.ipynb)
