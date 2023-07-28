@@ -46,11 +46,11 @@ INFO: [Common 17-206] Exiting xsim at Tue Jul 25 15:52:22 2023...
 Generate Caravel SoC FPGA bitstream of [IRQ enabled counter](https://github.com/bol-edu/caravel-soc_fpga-lab/blob/main/lab-interrupt/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_example.counter.v).
 
 ```sh
-source run_vivado.sh
+source run_vivado
 ```
 ## Run on FPGA
 1. connect to remote PYNQ-Z2
-2. create ipy_fpga folder on jupyter notebook and upload following bitstream, ipynb and hex files to ipy_fpga folder  
+2. create ipy_irq folder on jupyter notebook and upload following bitstream, ipynb and hex files to ipy_irq folder  
    a. vivado/jupyter_notebooks_project/caravel_fpga.bit  
    b. vivado/jupyter_notebooks_project/caravel_fpga.hwh  
    c. vivado/jupyter_notebooks_project/caravel_fpga.ipynb  
@@ -59,4 +59,4 @@ source run_vivado.sh
 
 ## Appendix
 Modification is refered to [Add-user-project-irq0-test-related-co.patch](https://github.com/bol-edu/caravel-soc_fpga-lab/blob/main/lab-interrupt/Add-user-project-irq0-test-related-co.patch).
-![irq-josh](https://github.com/bol-edu/caravel-soc_fpga-lab/assets/98332019/2cf441bc-3ce1-4a84-9a95-f4ec81da4bfc)
+<img src="https://github.com/bol-edu/caravel-soc_fpga-lab/assets/98332019/2cf441bc-3ce1-4a84-9a95-f4ec81da4bfc" width=90%>
