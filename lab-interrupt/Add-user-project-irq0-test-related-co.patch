@@ -1,0 +1,239 @@
+From 682945effedcd95dd164592982742ee2e438c550 Mon Sep 17 00:00:00 2001
+From: joshsu <joshsu@vianextech.com>
+Date: Fri, 2 Jun 2023 19:13:56 +0800
+Subject: [PATCH] JOS-2023060202 Add user project irq0 test related codes
+
+Signed-off-by: joshsu <joshsu@vianextech.com>
+---
+ firmware/crt0_vex.S                              |  4 ++++
+ firmware/isr.c                                   | 16 ++++++++++++++++
+ rtl/user/user_proj_example.counter.v             | 10 +++++++++-
+ testbench/counter_la/counter_la.c                | 16 ++++++++++++++++
+ testbench/counter_la/counter_la_tb.v             |  4 ++++
+ testbench/counter_la/run_xsim                    |  5 +++--
+ .../rtl/user/user_proj_example.counter.v         | 10 +++++++++-
+ 7 files changed, 61 insertions(+), 4 deletions(-)
+
+diff --git a/firmware/crt0_vex.S b/firmware/crt0_vex.S
+index b82fca3..e6d2b4c 100644
+--- a/firmware/crt0_vex.S
++++ b/firmware/crt0_vex.S
+@@ -86,6 +86,10 @@ bss_done:
+   li a0, 0x880  //880 enable timer + external interrupt sources (until mstatus.MIE is set, they will never trigger an interrupt)
+   csrw mie,a0
+ 
++#ifdef USER_PROJ_IRQ0_EN
++  csrrs a0, mstatus, 0x8	//0x8 set mstatus.MIE
++#endif
++
+   call main
+ infinit_loop:
+   j infinit_loop
+diff --git a/firmware/isr.c b/firmware/isr.c
+index 8ac3da0..6b89642 100644
+--- a/firmware/isr.c
++++ b/firmware/isr.c
+@@ -13,8 +13,14 @@ void isr(void);
+ 
+ uint16_t flag;
+ 
++#ifdef USER_PROJ_IRQ0_EN
++uint32_t counter = 0xFFFF0000;
++#endif
++
+ void isr(void)
+ {
++
++#ifndef USER_PROJ_IRQ0_EN
+ //	__attribute__((unused)) unsigned int irqs;
+ //
+ //	irqs = irq_pending() & irq_getmask();
+@@ -39,6 +45,16 @@ void isr(void)
+ //        reg_la0_data = 0x20000;
+ //        flag = 1;
+ //    }
++#else
++    uint32_t irqs = irq_pending() & irq_getmask();
++
++    if ( irqs & (1 << USER_IRQ_0_INTERRUPT)) {
++        user_irq_0_ev_pending_write(1); //Clear Interrupt Pending Event
++        counter = counter - 0x10000;
++        reg_mprj_datal = counter;
++    }
++#endif
++
+     return;
+ 
+ //#ifndef UART_POLLING
+diff --git a/rtl/user/user_proj_example.counter.v b/rtl/user/user_proj_example.counter.v
+index 5475f4b..3a03d6e 100644
+--- a/rtl/user/user_proj_example.counter.v
++++ b/rtl/user/user_proj_example.counter.v
+@@ -94,7 +94,7 @@ module user_proj_example #(
+     assign io_oeb = {(`MPRJ_IO_PADS-1){rst}};
+ 
+     // IRQ
+-    assign irq = 3'b000;	// Unused
++    assign irq[2:1] = 2'b00;	// irq[2:1] Unused
+ 
+     // LA
+     assign la_data_out = {{(127-BITS){1'b0}}, count};
+@@ -116,6 +116,7 @@ module user_proj_example #(
+         .wstrb(wstrb),
+         .la_write(la_write),
+         .la_input(la_data_in[63:32]),
++        .irq(irq[0]),
+         .count(count)
+     );
+ 
+@@ -133,6 +134,7 @@ module counter #(
+     input [BITS-1:0] la_input,
+     output reg ready,
+     output reg [BITS-1:0] rdata,
++    output reg irq,
+     output reg [BITS-1:0] count
+ );
+     //reg ready;
+@@ -143,10 +145,16 @@ module counter #(
+         if (reset) begin
+             count <= 0;
+             ready <= 0;
++            irq <= 0;            
+         end else begin
+             ready <= 1'b0;
+             if (~|la_write) begin
+                 count <= count + 1;
++                if (count[15:0]==16'h8000) begin
++                    irq <= 1'b1;
++                end else begin
++                    irq <= 1'b0;
++                end                
+             end
+             if (valid && !ready) begin
+                 ready <= 1'b1;
+diff --git a/testbench/counter_la/counter_la.c b/testbench/counter_la/counter_la.c
+index 7c24db4..31bef89 100644
+--- a/testbench/counter_la/counter_la.c
++++ b/testbench/counter_la/counter_la.c
+@@ -18,6 +18,9 @@
+ // This include is relative to $CARAVEL_PATH (see Makefile)
+ #include <defs.h>
+ #include <stub.c>
++#ifdef USER_PROJ_IRQ0_EN
++#include <irq_vex.h>
++#endif
+ 
+ // --------------------------------------------------------
+ 
+@@ -32,6 +35,9 @@
+ void main()
+ {
+ 	int j;
++#ifdef USER_PROJ_IRQ0_EN	
++	int mask;
++#endif
+ 
+ 	/* Set up the housekeeping SPI to be connected internally so	*/
+ 	/* that external pin changes don't affect it.			*/
+@@ -126,5 +132,15 @@ void main()
+ 	//print("\n");
+ 	//print("Monitor: Test 1 Passed\n\n");	// Makes simulation very long!
+ 	reg_mprj_datal = 0xAB510000;
++	
++#ifdef USER_PROJ_IRQ0_EN	
++	// unmask USER_IRQ_0_INTERRUPT
++	mask = irq_getmask();
++	mask |= 1 << USER_IRQ_0_INTERRUPT;
++	irq_setmask(mask);
++	// enable user_irq_0_ev_enable
++	user_irq_0_ev_enable_write(1);	
++#endif
++
+ }
+ 
+diff --git a/testbench/counter_la/counter_la_tb.v b/testbench/counter_la/counter_la_tb.v
+index d65c320..7b9467b 100644
+--- a/testbench/counter_la/counter_la_tb.v
++++ b/testbench/counter_la/counter_la_tb.v
+@@ -160,6 +160,10 @@ module counter_la_tb;
+ 		wait(checkbits == 16'hAB41);
+ 		wait(checkbits == 16'hAB51);
+ 		$display("LA Test 2 passed");
++		`ifdef USER_PROJ_IRQ0_EN
++			wait(checkbits == 16'hFFFC);
++			$display("USER_PROJ_IRQ0 Test passed");
++		`endif 		
+ 		#10000;
+ 		$finish;
+ 	end
+diff --git a/testbench/counter_la/run_xsim b/testbench/counter_la/run_xsim
+index adcfc5c..26a24cd 100755
+--- a/testbench/counter_la/run_xsim
++++ b/testbench/counter_la/run_xsim
+@@ -3,7 +3,7 @@ rm -rf xsim.dir/ *.log *.pb *.jou *.wdb
+ 
+ riscv32-unknown-elf-gcc -Wl,--no-warn-rwx-segments -g \
+ 	-I../../firmware \
+-	-march=rv32i -mabi=ilp32 -D__vexriscv__ \
++	-march=rv32i -mabi=ilp32 -D__vexriscv__ -DUSER_PROJ_IRQ0_EN \
+ 	-Wl,-Bstatic,-T,../../firmware/sections.lds,--strip-discarded \
+ 	-ffreestanding -nostdlib -o counter_la.elf ../../firmware/crt0_vex.S ../../firmware/isr.c counter_la.c
+ riscv32-unknown-elf-objcopy -O verilog counter_la.elf counter_la.hex
+@@ -12,6 +12,7 @@ sed -ie 's/@10/@00/g' counter_la.hex
+ 
+ rm -f counter_la.elf counter_la.hexe
+ 
+-xvlog -d FUNCTIONAL -d SIM -d DUNIT_DELAY=#1 -d USE_POWER_PINS -f ./include.rtl.list.xsim counter_la_tb.v
++xvlog -d FUNCTIONAL -d SIM -d DUNIT_DELAY=#1 -d USE_POWER_PINS -f ./include.rtl.list.xsim counter_la_tb.v \
++	-d USER_PROJ_IRQ0_EN
+ xelab -top counter_la_tb -snapshot counter_la_tb_elab
+ xsim counter_la_tb_elab -R
+diff --git a/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_example.counter.v b/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_example.counter.v
+index bba620c..21b11e6 100644
+--- a/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_example.counter.v
++++ b/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_example.counter.v
+@@ -94,7 +94,7 @@ module user_proj_example #(
+     assign io_oeb = {(`MPRJ_IO_PADS-1){rst}};
+ 
+     // IRQ
+-    assign irq = 3'b000;	// Unused
++    assign irq[2:1] = 2'b00;	// Unused
+ 
+     // LA
+     assign la_data_out = {{(127-BITS){1'b0}}, count};
+@@ -116,6 +116,7 @@ module user_proj_example #(
+         .wstrb(wstrb),
+         .la_write(la_write),
+         .la_input(la_data_in[63:32]),
++        .irq(irq[0]),
+         .count(count)
+     );
+ 
+@@ -133,6 +134,7 @@ module counter #(
+     input [BITS-1:0] la_input,
+     output reg ready,
+     output reg [BITS-1:0] rdata,
++    output reg irq,
+     output reg [BITS-1:0] count
+ );
+     //reg ready;
+@@ -143,10 +145,16 @@ module counter #(
+         if (reset) begin
+             count <= 0;
+             ready <= 0;
++            irq <= 0;
+         end else begin
+             ready <= 1'b0;
+             if (~|la_write) begin
+                 count <= count + 1;
++                if (count[15:0]==16'h8000) begin
++                    irq <= 1'b1;
++                end else begin
++                    irq <= 1'b0;
++                end
+             end
+             if (valid && !ready) begin
+                 ready <= 1'b1;
+-- 
+2.25.1
+
