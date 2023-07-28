@@ -41,3 +41,18 @@ run: Time (s): cpu = 00:00:00.36 ; elapsed = 00:00:36 . Memory (MB): peak = 2666
 exit
 INFO: [Common 17-206] Exiting xsim at Tue Jul 25 15:52:22 2023...
 ```
+
+## Build Up Vivado Project for Caravel-FPGA and Generate Bitstream
+Generate Caravel SoC FPGA bitstream of [IRQ enabled counter](https://github.com/bol-edu/caravel-soc_fpga-lab/blob/main/lab-interrupt/vivado/vvd_srcs/caravel_soc/rtl/user/user_proj_example.counter.v).
+
+```sh
+source run_vivado.sh
+```
+## Run on FPGA
+1. connect to remote PYNQ-Z2
+2. create ipy_fpga folder on jupyter notebook and upload following bitstream, ipynb and hex files to ipy_fpga folder  
+   a. vivado/jupyter_notebooks_project/caravel_fpga.bit  
+   b. vivado/jupyter_notebooks_project/caravel_fpga.hwh  
+   c. vivado/jupyter_notebooks_project/caravel_fpga.ipynb  
+   d. testbench/counter_la/counter_la.hex     
+4. open caravel_fpga.ipynb and run
