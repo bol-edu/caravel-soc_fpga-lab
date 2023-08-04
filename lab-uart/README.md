@@ -27,7 +27,7 @@ Click Open Block Design in left panel
 
 ## Run on FPGA
 1. connect to remote PYNQ-Z2
-2. upload these files
+2. upload these files in release directory
 ```
    caravel_fpga.bit
    caravel_fpga.hwh
