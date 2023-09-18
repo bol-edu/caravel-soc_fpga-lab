@@ -130,7 +130,7 @@ module fir_tb
     initial begin
         error = 0; status_error = 0;
         sm_tready = 1;
-        wait (sm_tvalid);
+        while (~sm_tvalid) @(posedge axis_clk);
         for(k=0;k < data_length;k=k+1) begin
             sm(golden_list[k],k);
         end
@@ -218,7 +218,7 @@ module fir_tb
             while (!rvalid) @(posedge axis_clk);
             if( (rdata & mask) !== (exp_data & mask)) begin
                 $display("ERROR: exp = %d, rdata = %d", exp_data, rdata);
-                error_coef <= 1;
+                status_error <= 1;
             end else begin
                 $display("PASS: exp = %d, rdata = %d", exp_data, rdata);
             end
@@ -245,7 +245,9 @@ module fir_tb
         begin
             sm_tready <= 1;
             @(posedge axis_clk) 
-            wait(sm_tvalid);
+            while(~sm_tvalid) begin
+                @(posedge axis_clk);
+            end
             if (sm_tdata != in2) begin
                 $display("[ERROR] [Pattern %d] Golden answer: %d, Your answer: %d", pcnt, in2, sm_tdata);
                 error <= 1;
