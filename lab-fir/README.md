@@ -2,8 +2,8 @@
 ## Specification
 - Data_Width  32
 - Tape_Num    11
-- Data_Num    TBD
-Interface
+- Data_Num    To be determined by data size
+## Interface
 -- data_in  stream （Xn）
 -- data_out: stream ( Yn)
 -- coef[Tape_Num-1:0]  axilite
@@ -17,4 +17,5 @@ Operation
 - ap_start to initiate FIR engine (ap_start valid for one clock cycle)
 - Stream-in Xn. The rate is depending on the FIR processing speed. Use axi-stream valid/ready for flow control
 - Stream out Yn, the output rate depends on FIR processing speed.
-![image](https://github.com/bol-edu/caravel-soc_fpga-lab/assets/98332019/f9bb30f6-084a-41c3-8ce2-c50714077b61)
+
+![圖片](https://github.com/ZheChen-Bill/lab3_workbook/assets/88698677/b5413f7f-7840-4c4a-85b5-eb66905cc60e)
