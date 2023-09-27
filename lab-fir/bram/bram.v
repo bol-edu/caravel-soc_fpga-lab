@@ -1,3 +1,4 @@
+// bram behavior code (can't be synthesis)
 module bram 
 (
     CLK,
