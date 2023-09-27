@@ -48,8 +48,7 @@ module fir_tb
     wire                        sm_tlast;
     reg                         axis_clk;
     reg                         axis_rst_n;
-    reg                         ap_start;
-    wire                        ap_done;
+
     fir fir_DUT(
         .awready(awready),
         .wready(wready),
@@ -72,9 +71,8 @@ module fir_tb
         .sm_tdata(sm_tdata),
         .sm_tlast(sm_tlast),
         .axis_clk(axis_clk),
-        .axis_rst_n(axis_rst_n),
-        .ap_start(ap_start),
-        .ap_done(ap_done));
+        .axis_rst_n(axis_rst_n));
+
 
     reg signed [(pDATA_WIDTH-1):0] Din_list[0:(Data_Num-1)];
     reg signed [(pDATA_WIDTH-1):0] golden_list[0:(Data_Num-1)];
@@ -130,12 +128,13 @@ module fir_tb
     initial begin
         error = 0; status_error = 0;
         sm_tready = 1;
-        while (~sm_tvalid) @(posedge axis_clk);
+        wait (sm_tvalid);
         for(k=0;k < data_length;k=k+1) begin
             sm(golden_list[k],k);
         end
-        config_read_check(12'h00, 32'h04,32'h0000_0004); // check idle = 1
-        if (error == 0 & status_error == 0) begin
+        config_read_check(12'h00, 32'h02, 32'h0000_0002); // check ap_done = 1 (0x00 [bit 1])
+        config_read_check(12'h00, 32'h04, 32'h0000_0004); // check ap_idle = 1 (0x00 [bit 2])
+        if (error == 0 & error_coef == 0) begin
             $display("---------------------------------------------");
             $display("-----------Congratulations! Pass-------------");
         end
@@ -172,7 +171,9 @@ module fir_tb
         coef[10] =  32'd0;
     end
 
+    reg error_coef;
     initial begin
+        error_coef = 0;
         $display("----Start the coefficient input(AXI-lite)----");
         config_write(12'h10, data_length);
         for(k=0; k< Tape_Num; k=k+1) begin
@@ -187,8 +188,7 @@ module fir_tb
         arvalid <= 0;
         $display(" Tape programming done ...");
         $display(" Start FIR");
-        @(posedge axis_clk) ap_start <= 1;
-        @(posedge axis_clk) ap_start <= 0;
+        @(posedge axis_clk) config_write(12'h00, 32'h0000_0001);    // ap_start = 1
         $display("----End the coefficient input(AXI-lite)----");
     end
 
@@ -216,11 +216,11 @@ module fir_tb
             rready <= 1;
             @(posedge axis_clk);
             while (!rvalid) @(posedge axis_clk);
-            if( (rdata & mask) !== (exp_data & mask)) begin
+            if( (rdata & mask) != (exp_data & mask)) begin
                 $display("ERROR: exp = %d, rdata = %d", exp_data, rdata);
-                status_error <= 1;
+                error_coef <= 1;
             end else begin
-                $display("PASS: exp = %d, rdata = %d", exp_data, rdata);
+                $display("OK: exp = %d, rdata = %d", exp_data, rdata);
             end
         end
     endtask
@@ -245,15 +245,14 @@ module fir_tb
         begin
             sm_tready <= 1;
             @(posedge axis_clk) 
-            while(~sm_tvalid) begin
-                @(posedge axis_clk);
-            end
+            wait(sm_tvalid);
+            while(!sm_tvalid) @(posedge axis_clk);
             if (sm_tdata != in2) begin
                 $display("[ERROR] [Pattern %d] Golden answer: %d, Your answer: %d", pcnt, in2, sm_tdata);
                 error <= 1;
             end
             else begin
-//                $display("[PASS] [Pattern %d] Golden answer: %d, Your answer: %d", pcnt, in2, sm_tdata);
+                $display("[PASS] [Pattern %d] Golden answer: %d, Your answer: %d", pcnt, in2, sm_tdata);
             end
             @(posedge axis_clk);
         end
