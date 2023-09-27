@@ -25,9 +25,7 @@ module fir
     output  wire [(pDATA_WIDTH-1):0] sm_tdata, 
     output  wire                     sm_tlast, 
     input   wire                     axis_clk,
-    input   wire                     axis_rst_n,
-    input   wire                     ap_start,
-    output  wire                     ap_done
+    input   wire                     axis_rst_n
 );
 begin
 
