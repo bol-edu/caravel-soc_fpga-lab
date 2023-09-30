@@ -49,6 +49,22 @@ module fir_tb
     reg                         axis_clk;
     reg                         axis_rst_n;
 
+// ram for tap
+    wire [3:0]               tap_WE;
+    wire                     tap_EN;
+    wire [(pDATA_WIDTH-1):0] tap_Di;
+    wire [(pADDR_WIDTH-1):0] tap_A;
+    wire [(pDATA_WIDTH-1):0] tap_Do;
+
+// ram for data RAM
+    wire [3:0]               data_WE;
+    wire                     data_EN;
+    wire [(pDATA_WIDTH-1):0] data_Di;
+    wire [(pADDR_WIDTH-1):0] data_A;
+    wire [(pDATA_WIDTH-1):0] data_Do;
+
+
+
     fir fir_DUT(
         .awready(awready),
         .wready(wready),
@@ -70,9 +86,45 @@ module fir_tb
         .sm_tvalid(sm_tvalid),
         .sm_tdata(sm_tdata),
         .sm_tlast(sm_tlast),
-        .axis_clk(axis_clk),
-        .axis_rst_n(axis_rst_n));
 
+        // ram for tap
+        .tap_WE(tap_WE),
+        .tap_EN(tap_EN),
+        .tap_Di(tap_Di),
+        .tap_A(tap_A),
+        .tap_Do(tap_Do)
+
+        // ram for data
+        .tap_WE(data_WE),
+        .tap_EN(data_EN),
+        .tap_Di(data_Di),
+        .tap_A(data_A),
+        .tap_Do(data_Do)
+
+        .axis_clk(axis_clk),
+        .axis_rst_n(axis_rst_n)
+
+        );
+    
+    // RAM for tap
+    bram11 tap_RAM (
+        .CLK(axis_clk),
+        .WE(tap_WE),
+        .EN(tap_EN),
+        .Di(tap_Di),
+        .A(tap_A),
+        .Do(tap_Do)
+    );
+
+    // RAM for data: choose bram11 or bram12
+    bram11 data_RAM(
+        .CLK(axis_clk),
+        .WE(data_WE),
+        .EN(data_EN),
+        .Di(data_Di),
+        .A(data_A),
+        .Do(data_Do)
+    );
 
     reg signed [(pDATA_WIDTH-1):0] Din_list[0:(Data_Num-1)];
     reg signed [(pDATA_WIDTH-1):0] golden_list[0:(Data_Num-1)];
