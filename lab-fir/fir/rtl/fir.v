@@ -24,6 +24,21 @@ module fir
     output  wire                     sm_tvalid, 
     output  wire [(pDATA_WIDTH-1):0] sm_tdata, 
     output  wire                     sm_tlast, 
+    
+    // bram for tap RAM
+    output  wire [3:0]               tap_WE,
+    output  wire                     tap_EN,
+    output  wire [(pDATA_WIDTH-1):0] tap_Di,
+    output  wire [(pADDR_WIDTH-1):0] tap_A,
+    input   wire [(pDATA_WIDTH-1):0] tap_Do,
+
+    // bram for data RAM
+    output  wire [3:0]               data_WE,
+    output  wire                     data_EN,
+    output  wire [(pDATA_WIDTH-1):0] data_Di,
+    output  wire [(pADDR_WIDTH-1):0] data_A,
+    input   wire [(pDATA_WIDTH-1):0] data_Do,
+
     input   wire                     axis_clk,
     input   wire                     axis_rst_n
 );
