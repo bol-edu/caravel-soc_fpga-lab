@@ -92,14 +92,14 @@ module fir_tb
         .tap_EN(tap_EN),
         .tap_Di(tap_Di),
         .tap_A(tap_A),
-        .tap_Do(tap_Do)
+        .tap_Do(tap_Do),
 
         // ram for data
         .tap_WE(data_WE),
         .tap_EN(data_EN),
         .tap_Di(data_Di),
         .tap_A(data_A),
-        .tap_Do(data_Do)
+        .tap_Do(data_Do),
 
         .axis_clk(axis_clk),
         .axis_rst_n(axis_rst_n)
