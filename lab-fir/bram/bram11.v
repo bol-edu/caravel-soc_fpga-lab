@@ -25,7 +25,7 @@ module bram11
         r_A <= A;
     end
 
-    assign Do = 32{EN} & RAM[r_A>>2];    // read
+    assign Do = {32{EN}} & RAM[r_A>>2];    // read
 
     reg [31:0] Temp_D;
     always @(posedge CLK) begin
