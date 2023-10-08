@@ -14,7 +14,7 @@ module bram11
     input   wire    [3:0]   WE;
     input   wire            EN;
     input   wire    [31:0]  Di;
-    output  reg     [31:0]  Do;
+    output  wire     [31:0]  Do;
     input   wire    [11:0]   A; 
 
     //  11 words
