@@ -1,5 +1,5 @@
 // bram behavior code (can't be synthesis)
-// 11 words
+// 12 words
 module bram12 
 (
     CLK,
@@ -17,7 +17,7 @@ module bram12
     output  wire     [31:0]  Do;
     input   wire    [11:0]   A; 
 
-    //  11 words
+    //  12 words
 	reg [31:0] RAM[0:11];
     reg [11:0] r_A;
 
