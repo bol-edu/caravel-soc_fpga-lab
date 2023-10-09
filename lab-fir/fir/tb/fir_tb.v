@@ -229,13 +229,13 @@ module fir_tb
         $display("----Start the coefficient input(AXI-lite)----");
         config_write(12'h10, data_length);
         for(k=0; k< Tape_Num; k=k+1) begin
-            config_write(12'h20+k, coef[k]);
+            config_write(12'h20+4*k, coef[k]);
         end
         awvalid <= 0; wvalid <= 0;
         // read-back and check
         $display(" Check Coefficient ...");
         for(k=0; k < Tape_Num; k=k+1) begin
-            config_read_check(12'h20+k, coef[k], 32'hffffffff);
+            config_read_check(12'h20+4*k, coef[k], 32'hffffffff);
         end
         arvalid <= 0;
         $display(" Tape programming done ...");
