@@ -1,0 +1,215 @@
+
+
+================================================================
+== Vitis HLS Report for 'read_romcode'
+================================================================
+* Date:           Mon May 22 15:26:15 2023
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        hls_read_romcode.prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        2|        ?|  20.000 ns|         ?|    3|    ?|       no|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------------------------------+---------------------------------------+---------+---------+-----------+----------+-----+-----+---------+
+        |                                                 |                                       |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+        |                     Instance                    |                 Module                |   min   |   max   |    min    |    max   | min | max |   Type  |
+        +-------------------------------------------------+---------------------------------------+---------+---------+-----------+----------+-----+-----+---------+
+        |grp_read_romcode_Pipeline_VITIS_LOOP_31_1_fu_84  |read_romcode_Pipeline_VITIS_LOOP_31_1  |        4|        ?|  40.000 ns|         ?|    4|    ?|       no|
+        +-------------------------------------------------+---------------------------------------+---------+---------+-----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     47|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        0|    -|     961|   2468|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|    119|    -|
+|Register         |        -|    -|     150|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|    1111|   2634|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|       1|      4|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------------------------------+---------------------------------------+---------+----+-----+------+-----+
+    |                     Instance                    |                 Module                | BRAM_18K| DSP|  FF |  LUT | URAM|
+    +-------------------------------------------------+---------------------------------------+---------+----+-----+------+-----+
+    |BUS0_m_axi_U                                     |BUS0_m_axi                             |        0|   0|  743|  2152|    0|
+    |control_s_axi_U                                  |control_s_axi                          |        0|   0|  144|   232|    0|
+    |grp_read_romcode_Pipeline_VITIS_LOOP_31_1_fu_84  |read_romcode_Pipeline_VITIS_LOOP_31_1  |        0|   0|   74|    84|    0|
+    +-------------------------------------------------+---------------------------------------+---------+----+-----+------+-----+
+    |Total                                            |                                       |        0|   0|  961|  2468|    0|
+    +-------------------------------------------------+---------------------------------------+---------+----+-----+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |ap_block_state10_on_subcall_done  |       and|   0|  0|   2|           1|           1|
+    |ap_block_state2_io                |       and|   0|  0|   2|           1|           1|
+    |icmp_ln26_fu_98_p2                |      icmp|   0|  0|  18|          32|          12|
+    |icmp_ln31_fu_112_p2               |      icmp|   0|  0|  12|          12|           1|
+    |select_ln26_fu_104_p3             |    select|   0|  0|  13|           1|          13|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  47|          47|          28|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------+----+-----------+-----+-----------+
+    |      Name     | LUT| Input Size| Bits| Total Bits|
+    +---------------+----+-----------+-----+-----------+
+    |BUS0_ARADDR    |  14|          3|   64|        192|
+    |BUS0_ARLEN     |  14|          3|   32|         96|
+    |BUS0_ARVALID   |  14|          3|    1|          3|
+    |BUS0_RREADY    |   9|          2|    1|          2|
+    |BUS0_blk_n_AR  |   9|          2|    1|          2|
+    |ap_NS_fsm      |  59|         11|    1|         11|
+    +---------------+----+-----------+-----+-----------+
+    |Total          | 119|         24|  100|        306|
+    +---------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------------------+----+----+-----+-----------+
+    |                             Name                             | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                     |  10|   0|   10|          0|
+    |grp_read_romcode_Pipeline_VITIS_LOOP_31_1_fu_84_ap_start_reg  |   1|   0|    1|          0|
+    |icmp_ln31_reg_153                                             |   1|   0|    1|          0|
+    |romcode_read_reg_142                                          |  64|   0|   64|          0|
+    |select_ln26_reg_147                                           |  12|   0|   12|          0|
+    |trunc_ln1_reg_162                                             |  62|   0|   62|          0|
+    +--------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                         | 150|   0|  150|          0|
+    +--------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+---------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  | Source Object |    C Type    |
++-----------------------+-----+-----+------------+---------------+--------------+
+|s_axi_control_AWVALID  |   in|    1|       s_axi|        control|        scalar|
+|s_axi_control_AWREADY  |  out|    1|       s_axi|        control|        scalar|
+|s_axi_control_AWADDR   |   in|    6|       s_axi|        control|        scalar|
+|s_axi_control_WVALID   |   in|    1|       s_axi|        control|        scalar|
+|s_axi_control_WREADY   |  out|    1|       s_axi|        control|        scalar|
+|s_axi_control_WDATA    |   in|   32|       s_axi|        control|        scalar|
+|s_axi_control_WSTRB    |   in|    4|       s_axi|        control|        scalar|
+|s_axi_control_ARVALID  |   in|    1|       s_axi|        control|        scalar|
+|s_axi_control_ARREADY  |  out|    1|       s_axi|        control|        scalar|
+|s_axi_control_ARADDR   |   in|    6|       s_axi|        control|        scalar|
+|s_axi_control_RVALID   |  out|    1|       s_axi|        control|        scalar|
+|s_axi_control_RREADY   |   in|    1|       s_axi|        control|        scalar|
+|s_axi_control_RDATA    |  out|   32|       s_axi|        control|        scalar|
+|s_axi_control_RRESP    |  out|    2|       s_axi|        control|        scalar|
+|s_axi_control_BVALID   |  out|    1|       s_axi|        control|        scalar|
+|s_axi_control_BREADY   |   in|    1|       s_axi|        control|        scalar|
+|s_axi_control_BRESP    |  out|    2|       s_axi|        control|        scalar|
+|ap_clk                 |   in|    1|  ap_ctrl_hs|   read_romcode|  return value|
+|ap_rst_n               |   in|    1|  ap_ctrl_hs|   read_romcode|  return value|
+|interrupt              |  out|    1|  ap_ctrl_hs|   read_romcode|  return value|
+|m_axi_BUS0_AWVALID     |  out|    1|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_AWREADY     |   in|    1|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_AWADDR      |  out|   64|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_AWID        |  out|    1|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_AWLEN       |  out|    8|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_AWSIZE      |  out|    3|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_AWBURST     |  out|    2|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_AWLOCK      |  out|    2|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_AWCACHE     |  out|    4|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_AWPROT      |  out|    3|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_AWQOS       |  out|    4|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_AWREGION    |  out|    4|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_AWUSER      |  out|    1|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_WVALID      |  out|    1|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_WREADY      |   in|    1|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_WDATA       |  out|   32|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_WSTRB       |  out|    4|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_WLAST       |  out|    1|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_WID         |  out|    1|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_WUSER       |  out|    1|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_ARVALID     |  out|    1|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_ARREADY     |   in|    1|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_ARADDR      |  out|   64|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_ARID        |  out|    1|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_ARLEN       |  out|    8|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_ARSIZE      |  out|    3|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_ARBURST     |  out|    2|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_ARLOCK      |  out|    2|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_ARCACHE     |  out|    4|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_ARPROT      |  out|    3|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_ARQOS       |  out|    4|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_ARREGION    |  out|    4|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_ARUSER      |  out|    1|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_RVALID      |   in|    1|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_RREADY      |  out|    1|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_RDATA       |   in|   32|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_RLAST       |   in|    1|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_RID         |   in|    1|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_RUSER       |   in|    1|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_RRESP       |   in|    2|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_BVALID      |   in|    1|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_BREADY      |  out|    1|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_BRESP       |   in|    2|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_BID         |   in|    1|       m_axi|           BUS0|       pointer|
+|m_axi_BUS0_BUSER       |   in|    1|       m_axi|           BUS0|       pointer|
+|internal_bram_Addr_A   |  out|   32|        bram|  internal_bram|         array|
+|internal_bram_EN_A     |  out|    1|        bram|  internal_bram|         array|
+|internal_bram_WEN_A    |  out|    4|        bram|  internal_bram|         array|
+|internal_bram_Din_A    |  out|   32|        bram|  internal_bram|         array|
+|internal_bram_Dout_A   |   in|   32|        bram|  internal_bram|         array|
+|internal_bram_Clk_A    |  out|    1|        bram|  internal_bram|         array|
+|internal_bram_Rst_A    |  out|    1|        bram|  internal_bram|         array|
++-----------------------+-----+-----+------------+---------------+--------------+
+
