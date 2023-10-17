@@ -1,0 +1,21 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/hls05/temporary/caravel_fpga_lite/Caravel_FPGA_0_2/project/vitis_hls_project/hls_read_romcode/run_hls.tcl:42:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="read_romcode" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=read_romcode" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/read_romcode.cpp:19:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_romcode" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/read_romcode.cpp:21:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_romcode" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=romcode offset=slave max_read_burst_length=64 bundle=BUS0" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/read_romcode.cpp:22:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_romcode" ARG_PragmaIsValid="1" ARG_PragmaOptions="bram port=internal_bram" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/read_romcode.cpp:23:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_romcode" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=length" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/read_romcode.cpp:32:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="read_romcode" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+
