@@ -7,7 +7,7 @@ module bram12 (clk, we, re, waddr, raddr, wdi, rdo);
     input [ADDR_WIDTH-1:0]         waddr, raddr;
     input [BIT_WIDTH-1:0]          wdi;
     output reg [BIT_WIDTH-1:0]     rdo;
-    (* ram_style = "block" *) reg [BIT_WIDTH-1:0] RAM [SIZE-1:0];
+    reg [BIT_WIDTH-1:0] RAM [SIZE-1:0];
     
     always @(posedge clk)begin
         if(re) rdo <= RAM[raddr];
