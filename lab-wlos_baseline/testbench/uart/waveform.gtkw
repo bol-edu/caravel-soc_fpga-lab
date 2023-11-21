@@ -1,0 +1,125 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Sat Nov 18 03:20:21 2023
+[*]
+[dumpfile] "/home/ubuntu/Lab_UART_V2/testbench/uart/uart.vcd"
+[dumpfile_mtime] "Sat Nov 18 03:20:09 2023"
+[dumpfile_size] 158125230
+[savefile] "/home/ubuntu/Lab_UART_V2/testbench/uart/waveform.gtkw"
+[timestart] 1820400000
+[size] 3696 1830
+[pos] -1 -1
+*-26.000000 2630337500 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] uart_tb.
+[treeopen] uart_tb.uut.
+[treeopen] uart_tb.uut.mprj.
+[treeopen] uart_tb.uut.mprj.uart.
+[treeopen] uart_tb.uut.padframe.
+[treeopen] uart_tb.uut.soc.
+[treeopen] uart_tb.uut.soc.core.
+[treeopen] uart_tb.uut.soc.core.VexRiscv.
+[sst_width] 574
+[signals_width] 630
+[sst_expanded] 1
+[sst_vpaned_height] 1041
+@200
+-#uart_tb
+@28
+uart_tb.clock
+uart_tb.uart_tx
+@22
+uart_tb.mprj_io[37:0]
+uart_tb.checkbits[15:0]
+@200
+-#uart_tx
+@22
+uart_tb.uut.mprj.uart.transmission.state[3:0]
+uart_tb.uut.mprj.uart.transmission.clk_cnt[31:0]
+uart_tb.uut.mprj.uart.transmission.clk_div[31:0]
+@28
+uart_tb.uut.mprj.uart.transmission.tx_index[2:0]
+@22
+uart_tb.uut.mprj.uart.transmission.tx_data[7:0]
+@28
+uart_tb.uut.mprj.uart.transmission.tx_start
+uart_tb.uut.mprj.uart.transmission.detect_posedge_start[1:0]
+uart_tb.uut.mprj.uart.transmission.tx
+uart_tb.uut.mprj.uart.transmission.busy
+uart_tb.uut.mprj.uart.transmission.clear_req
+@200
+-#uart_rx
+@22
+uart_tb.uut.mprj.uart.receive.state[3:0]
+@28
+uart_tb.uut.mprj.uart.receive.rx_index[2:0]
+uart_tb.uut.mprj.uart.receive.rx
+@22
+uart_tb.uut.mprj.uart.receive.rx_data[7:0]
+@200
+-
+@28
+uart_tb.uut.mprj.uart.receive.frame_err
+@29
+uart_tb.uut.mprj.uart.receive.irq
+@200
+-#ISR
+@28
+uart_tb.uut.soc.core.gpioin0_gpioin0_irq
+uart_tb.uut.soc.core.gpioin0_gpioin0_pending
+uart_tb.uut.soc.core.gpioin0_gpioin0_status
+uart_tb.uut.soc.core.gpioin0_gpioin0_trigger
+@200
+-#uart_ctrl
+@28
+uart_tb.uut.mprj.uart.ctrl.i_tx_busy
+uart_tb.uut.mprj.uart.ctrl.i_tx_start_clear
+uart_tb.uut.mprj.uart.ctrl.tx_start_local
+uart_tb.uut.mprj.uart.ctrl.o_tx_start
+@22
+uart_tb.uut.mprj.uart.ctrl.o_wb_dat[31:0]
+@28
+uart_tb.uut.mprj.uart.ctrl.i_wb_valid
+@22
+uart_tb.uut.mprj.uart.ctrl.rx_buffer[31:0]
+@200
+-#tbuart
+@28
+uart_tb.tbuart.clk
+uart_tb.tbuart.ser_rx
+uart_tb.tbuart.rx_index[2:0]
+uart_tb.tbuart.recv_next_state[2:0]
+uart_tb.tbuart.recv_state[2:0]
+@22
+uart_tb.tbuart.recv_pattern[7:0]
+uart_tb.tbuart.recv_buf_data[79:0]
+@28
+uart_tb.tbuart.tx_start
+uart_tb.tbuart.ser_tx
+@200
+-#mprj
+@28
+uart_tb.uut.mprj.uart.wbs_ack_o
+uart_tb.uut.mprj.uart.wbs_we_i
+uart_tb.uut.mprj.uart.wbs_cyc_i
+uart_tb.uut.mprj.uart.wbs_stb_i
+@22
+uart_tb.uut.mprj.uart.wbs_adr_i[31:0]
+uart_tb.uut.mprj.uart.wbs_dat_i[31:0]
+uart_tb.uut.mprj.uart.wbs_dat_o[31:0]
+@200
+-#VexRiscV
+@22
+uart_tb.uut.soc.core.VexRiscv.execute_PC[31:0]
+@28
+uart_tb.uut.soc.core.VexRiscv.externalInterrupt
+uart_tb.uut.soc.core.VexRiscv.CsrPlugin_mstatus_MIE
+uart_tb.uut.soc.core.VexRiscv.CsrPlugin_mstatus_MPIE
+uart_tb.uut.soc.core.VexRiscv.CsrPlugin_mie_MEIE
+uart_tb.uut.soc.core.VexRiscv.CsrPlugin_mip_MEIP
+@200
+-
+-
+-
+-
+[pattern_trace] 1
+[pattern_trace] 0

@@ -99,6 +99,10 @@ bss_done:
   li a0, 0x880  //880 enable timer + external interrupt sources (until mstatus.MIE is set, they will never trigger an interrupt)
   csrw mie,a0
 
+#ifdef USER_PROJ_IRQ0_EN
+  csrrs a0, mstatus, 0x8	//0x8 set mstatus.MIE
+#endif
+
   call main
 infinit_loop:
   j infinit_loop
