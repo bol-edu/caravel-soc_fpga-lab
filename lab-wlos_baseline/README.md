@@ -1,6 +1,5 @@
 # WorkLoad Optimize SOC (WLOS) Baseline
 
-## Simulation with iverilog
 ### Simulation for matrix multiplication
 ```sh
 cd ~/caravel-soc_fpga-lab/lab-wlos_baseline/testbench/counter_la_mm
