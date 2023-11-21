@@ -34,16 +34,8 @@ void isr(void)
 
     if ( irqs & (1 << USER_IRQ_0_INTERRUPT)) {
         user_irq_0_ev_pending_write(1); //Clear Interrupt Pending Event
-        /*if((((reg_uart_stat>>5) | 0) == 0) && (((reg_uart_stat>>4) | 0) == 0)){
-            for(int i = 0; i < 1; i++)
-                asm volatile ("nop");
-
-            reg_mprj_datal = reg_rx_data << 16;
-        }*/
-        //reg_mprj_datal = uart_read() << 16;
         buf = uart_read();
         uart_write(buf);
-        reg_mprj_datal = buf << 16;
 
     }
 #endif
