@@ -149,7 +149,7 @@ void main()
 
 	//print("\n");
 	//print("Monitor: Test 1 Passed\n\n");	// Makes simulation very long!
-	//reg_mprj_datal = 0xAB510000;
+	reg_mprj_datal = 0xAB510000;
 
 #ifdef USER_PROJ_IRQ0_EN	
 	// unmask USER_IRQ_0_INTERRUPT
