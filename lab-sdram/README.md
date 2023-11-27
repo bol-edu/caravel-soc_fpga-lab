@@ -1,11 +1,4 @@
 # SDRAM Controller and SDRAM in Caravel User Project
-
-## SDRAM Controller
-
-## SDRAM
-
-## Caravel User project Interface - Wishbone
-
 ## Run User Project Memory Enabled counter_la Testbench
 Run iverilog simulation
 ```sh
