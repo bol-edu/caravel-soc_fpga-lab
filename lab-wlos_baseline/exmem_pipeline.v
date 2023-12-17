@@ -77,12 +77,6 @@ end
 
 
 // access bram - block ram 
-wire wstrb = we_fifo[0];
-wire valid = valid_fifo[0];
-wire wbs_dat_i = req_fifo[0][`DAT_POS];
-wire wbs_adr_i = req_fifo[0][`ADR_POS];
-wire [31:0] rdata;
-assign dat_o = rdata;
 wire [3:0] byte_we = req_fifo[0][`SEL_POS] & 4{we_fifo[0]};
 
     bram user_bram (
