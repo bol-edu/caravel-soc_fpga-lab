@@ -1,0 +1,2 @@
+verilog work ../../sdram_clk_gen.v
+verilog work ../example_design/sdram_clk_gen_exdes.v
