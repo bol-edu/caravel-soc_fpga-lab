@@ -349,24 +349,30 @@ module sdr (
         bwen = 4'b0000;
         bren = 4'b0000;
         if(Data_in_enable)begin//Data_in_enable||Data_out_enable
-            case(Bank_temp)
-                2'b00:begin
-                    bwen = 4'b0001;
-                    bren = 4'b0000;
-                end
-                2'b01:begin
-                    bwen = 4'b0010;
-                    bren = 4'b0000;
-                end
-                2'b10:begin
-                    bwen = 4'b0100;
-                    bren = 4'b0000;
-                end
-                2'b11:begin
-                    bwen = 4'b1000;
-                    bren = 4'b0000;
-                end
-            endcase
+            if (Command[2] == `PRECH) begin
+                bwen = 4'b0000;
+                bren = 4'b0000;
+            end
+            else begin
+                case(Bank_temp)
+                    2'b00:begin
+                        bwen = 4'b0001;
+                        bren = 4'b0000;
+                    end
+                    2'b01:begin
+                        bwen = 4'b0010;
+                        bren = 4'b0000;
+                    end
+                    2'b10:begin
+                        bwen = 4'b0100;
+                        bren = 4'b0000;
+                    end
+                    2'b11:begin
+                        bwen = 4'b1000;
+                        bren = 4'b0000;
+                    end
+                endcase
+            end
         end else if(Command[2] == `READ)begin//Data_out_enable, Command[1] == `READ
             case(Bank_temp)
                 2'b00:begin
@@ -393,8 +399,8 @@ module sdr (
         .clk(Sys_clk), 
         .we(bwen[0]), 
         .re(bren[0]), 
-        .waddr({Row[2:0], Col_brst[7:0]}), 
-        .raddr({Row[2:0], Col_brst[7:0]}), 
+        .waddr({Row[4:0], Col_brst[5:0]}), 
+        .raddr({Row[4:0], Col_brst[5:0]}), 
         .d(bdi[0]), 
         .q(bdq[0])
     );
@@ -403,8 +409,8 @@ module sdr (
         .clk(Sys_clk), 
         .we(bwen[1]), 
         .re(bren[1]), 
-        .waddr({Row[2:0], Col_brst[7:0]}), 
-        .raddr({Row[2:0], Col_brst[7:0]}), 
+        .waddr({Row[4:0], Col_brst[5:0]}), 
+        .raddr({Row[4:0], Col_brst[5:0]}), 
         .d(bdi[1]), 
         .q(bdq[1])
     );
@@ -413,8 +419,8 @@ module sdr (
         .clk(Sys_clk), 
         .we(bwen[2]), 
         .re(bren[2]), 
-        .waddr({Row[2:0], Col_brst[7:0]}), 
-        .raddr({Row[2:0], Col_brst[7:0]}), 
+        .waddr({Row[4:0], Col_brst[5:0]}), 
+        .raddr({Row[4:0], Col_brst[5:0]}), 
         .d(bdi[2]), 
         .q(bdq[2])
     );
@@ -423,8 +429,8 @@ module sdr (
         .clk(Sys_clk), 
         .we(bwen[3]), 
         .re(bren[3]), 
-        .waddr({Row[2:0], Col_brst[7:0]}), 
-        .raddr({Row[2:0], Col_brst[7:0]}), 
+        .waddr({Row[4:0], Col_brst[5:0]}), 
+        .raddr({Row[4:0], Col_brst[5:0]}), 
         .d(bdi[3]), 
         .q(bdq[3])
     );
