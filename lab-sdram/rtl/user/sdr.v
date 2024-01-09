@@ -87,7 +87,7 @@ module sdr (
     // address mapping scheme, need to reduce its size
     // Each Bank is 4KB (one BRAM) = 32bit * 1024
     // parameter mem_sizes = 2**(ROW_BITS+COL_BITS) - 1;
-    parameter mem_sizes = 1024;
+    parameter mem_sizes = 2048;
     
     // timing parameters  - in terms of # of tCK
     parameter tCK              =     6.0; // tCK    ns    Nominal Clock Cycle Time
@@ -130,7 +130,7 @@ module sdr (
     parameter BA_BITS           = 2;    // 4 banks
     parameter DQ_BITS           = 32;   // 32-bit
     parameter DM_BITS           = 4;    // 4 bytes
-    parameter COL_BITS          = 10;   // # of COL module sdr
+    parameter COL_BITS          = 11;   // # of COL module sdr
     
     
     
@@ -194,7 +194,7 @@ module sdr (
     reg       [ADDR_BITS - 1 : 0] B0_row_addr, B1_row_addr, B2_row_addr, B3_row_addr;
 
     reg        [ADDR_BITS - 1: 0] Mode_reg;
-    reg         [DQ_BITS - 1 : 0] Dq_reg, Dq_dqm;
+    reg         [DQ_BITS - 1 : 0] Dq_reg, Dq_dqm, Dq_dqm_1;
     reg        [COL_BITS - 1 : 0] Col_temp, Burst_counter;
 
     reg                           Act_b0, Act_b1, Act_b2, Act_b3;   // Bank Activate
@@ -393,8 +393,8 @@ module sdr (
         .clk(Sys_clk), 
         .we(bwen[0]), 
         .re(bren[0]), 
-        .waddr(Col_brst[9:0]), 
-        .raddr(Col_brst[9:0]), 
+        .waddr({Row[2:0], Col_brst[7:0]}), 
+        .raddr({Row[2:0], Col_brst[7:0]}), 
         .d(bdi[0]), 
         .q(bdq[0])
     );
@@ -403,8 +403,8 @@ module sdr (
         .clk(Sys_clk), 
         .we(bwen[1]), 
         .re(bren[1]), 
-        .waddr(Col_brst[9:0]), 
-        .raddr(Col_brst[9:0]), 
+        .waddr({Row[2:0], Col_brst[7:0]}), 
+        .raddr({Row[2:0], Col_brst[7:0]}), 
         .d(bdi[1]), 
         .q(bdq[1])
     );
@@ -413,8 +413,8 @@ module sdr (
         .clk(Sys_clk), 
         .we(bwen[2]), 
         .re(bren[2]), 
-        .waddr(Col_brst[9:0]), 
-        .raddr(Col_brst[9:0]), 
+        .waddr({Row[2:0], Col_brst[7:0]}), 
+        .raddr({Row[2:0], Col_brst[7:0]}), 
         .d(bdi[2]), 
         .q(bdq[2])
     );
@@ -423,8 +423,8 @@ module sdr (
         .clk(Sys_clk), 
         .we(bwen[3]), 
         .re(bren[3]), 
-        .waddr(Col_brst[9:0]), 
-        .raddr(Col_brst[9:0]), 
+        .waddr({Row[2:0], Col_brst[7:0]}), 
+        .raddr({Row[2:0], Col_brst[7:0]}), 
         .d(bdi[3]), 
         .q(bdq[3])
     );
@@ -574,6 +574,7 @@ module sdr (
                 bdi[i] <= {DQ_BITS{1'b0}};
             end
         end else begin
+            Dq_dqm_1 <= Dq_dqm;
             if (Active_enable === 1'b1) begin
                 // Activate an open bank can corrupt data
                 if ((Ba === 2'b00 && Act_b0 === 1'b1) || (Ba === 2'b01 && Act_b1 === 1'b1) ||
@@ -797,10 +798,10 @@ module sdr (
                 //end
                 if(Command[0] == `WRITE) begin
                     case (Bank_addr[0])
-                        2'b00 : bdi[0] <= Dq_dqm;//Bank0 [{Row, Col}] = Dq_dqm;
-                        2'b01 : bdi[1] <= Dq_dqm;//Bank1 [{Row, Col}] = Dq_dqm;
-                        2'b10 : bdi[2] <= Dq_dqm;//Bank2 [{Row, Col}] = Dq_dqm;
-                        2'b11 : bdi[3] <= Dq_dqm;//Bank3 [{Row, Col}] = Dq_dqm;
+                        2'b00 : bdi[0] <= Dq_dqm_1;//Bank0 [{Row, Col}] = Dq_dqm;
+                        2'b01 : bdi[1] <= Dq_dqm_1;//Bank1 [{Row, Col}] = Dq_dqm;
+                        2'b10 : bdi[2] <= Dq_dqm_1;//Bank2 [{Row, Col}] = Dq_dqm;
+                        2'b11 : bdi[3] <= Dq_dqm_1;//Bank3 [{Row, Col}] = Dq_dqm;
                     endcase
                 end  
             end 

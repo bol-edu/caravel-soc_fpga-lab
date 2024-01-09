@@ -299,7 +299,8 @@ module sdram_controller (
             ///// READ /////
             READ: begin
                 cmd_d = CMD_READ;
-                a_d = {2'b0, 1'b0, addr_q[7:0], 2'b0};
+                // a_d = {2'b0, 1'b0, addr_q[7:0], 2'b0};
+                a_d = {5'b0, addr_q[7:0]};
                 ba_d = addr_q[9:8];
                 state_d = WAIT;
 
@@ -323,7 +324,8 @@ module sdram_controller (
                 dq_d = data_q;
                 // data_d = data_q;
                 dq_en_d = 1'b1; // enable out bus
-                a_d = {2'b0, 1'b0, addr_q[7:0], 2'b00};
+                // a_d = {2'b0, 1'b0, addr_q[7:0], 2'b00};
+                a_d = {5'b0, addr_q[7:0]};
                 ba_d = addr_q[9:8];
 
                 state_d = IDLE;
