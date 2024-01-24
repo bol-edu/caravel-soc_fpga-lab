@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sat Jan 20 07:05:27 2024
+# Process ID: 2265
+# Current directory: /home/ubuntu/Desktop/final_uart_modified/rtl/user
+# Command line: vivado
+# Log file: /home/ubuntu/Desktop/final_uart_modified/rtl/user/vivado.log
+# Journal file: /home/ubuntu/Desktop/final_uart_modified/rtl/user/vivado.jou
+# Running On: ubuntu2004, OS: Linux, CPU Frequency: 2419.202 MHz, CPU Physical cores: 2, Host memory: 5669 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/ubuntu/Desktop/final_uart_modified/rtl/user/final_uart/final_uart.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1

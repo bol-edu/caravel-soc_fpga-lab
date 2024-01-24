@@ -1,0 +1,45 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Tue Jan 16 06:38:59 2024
+# Process ID: 2371
+# Current directory: /home/ubuntu/Desktop/rtl_code
+# Command line: vivado
+# Log file: /home/ubuntu/Desktop/rtl_code/vivado.log
+# Journal file: /home/ubuntu/Desktop/rtl_code/vivado.jou
+# Running On: ubuntu2004, OS: Linux, CPU Frequency: 2419.200 MHz, CPU Physical cores: 2, Host memory: 5669 MB
+#-----------------------------------------------------------
+start_gui
+create_project final_uart /home/ubuntu/Desktop/rtl_code/final_uart -part xc7z020clg400-1
+add_files -norecurse {/home/ubuntu/Desktop/rtl_code/bram11.v /home/ubuntu/Desktop/rtl_code/bram.v /home/ubuntu/Desktop/rtl_code/WB_Decode.v /home/ubuntu/Desktop/rtl_code/qsort_wrapper.v /home/ubuntu/Desktop/rtl_code/uart_ctrl.v /home/ubuntu/Desktop/rtl_code/uart_tx.v /home/ubuntu/Desktop/rtl_code/fir.v /home/ubuntu/Desktop/rtl_code/sync_fifo.v /home/ubuntu/Desktop/rtl_code/mm.v /home/ubuntu/Desktop/rtl_code/fir_wrapper.v /home/ubuntu/Desktop/rtl_code/qsort.v /home/ubuntu/Desktop/rtl_code/sdram_controller.v /home/ubuntu/Desktop/rtl_code/uart_rx.v /home/ubuntu/Desktop/rtl_code/exmem.v /home/ubuntu/Desktop/rtl_code/mm_wrapper.v /home/ubuntu/Desktop/rtl_code/user_project_wlos_wp.v /home/ubuntu/Desktop/rtl_code/uart.v /home/ubuntu/Desktop/rtl_code/sdr.v}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/WB_Decode.v] -no_script -reset -force -quiet
+remove_files  /home/ubuntu/Desktop/rtl_code/WB_Decode.v
+update_compile_order -fileset sources_1
+add_files -norecurse /home/ubuntu/Desktop/rtl_code/wb_decode.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/uart.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/mm_wrapper.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/qsort_wrapper.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/fir_wrapper.v] -no_script -reset -force -quiet
+remove_files  {/home/ubuntu/Desktop/rtl_code/uart.v /home/ubuntu/Desktop/rtl_code/mm_wrapper.v /home/ubuntu/Desktop/rtl_code/qsort_wrapper.v /home/ubuntu/Desktop/rtl_code/fir_wrapper.v}
+update_compile_order -fileset sources_1
+add_files -norecurse {/home/ubuntu/Desktop/rtl_code/uart_ctrl.v /home/ubuntu/Desktop/rtl_code/uart_tx.v /home/ubuntu/Desktop/rtl_code/uart_rx.v /home/ubuntu/Desktop/rtl_code/fifo.v}
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/fir.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/uart_tx.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/bram11.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/bram.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/uart_rx.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/mm.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/qsort.v] -no_script -reset -force -quiet
+remove_files  {/home/ubuntu/Desktop/rtl_code/fir.v /home/ubuntu/Desktop/rtl_code/uart_tx.v /home/ubuntu/Desktop/rtl_code/bram11.v /home/ubuntu/Desktop/rtl_code/bram.v /home/ubuntu/Desktop/rtl_code/uart_rx.v /home/ubuntu/Desktop/rtl_code/mm.v /home/ubuntu/Desktop/rtl_code/qsort.v}
+add_files -norecurse {/home/ubuntu/Desktop/rtl_code/uart_ctrl.v /home/ubuntu/Desktop/rtl_code/uart_tx.v /home/ubuntu/Desktop/rtl_code/uart_rx.v /home/ubuntu/Desktop/rtl_code/uart.v /home/ubuntu/Desktop/rtl_code/fifo.v}
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/sync_fifo.v] -no_script -reset -force -quiet
+remove_files  /home/ubuntu/Desktop/rtl_code/sync_fifo.v

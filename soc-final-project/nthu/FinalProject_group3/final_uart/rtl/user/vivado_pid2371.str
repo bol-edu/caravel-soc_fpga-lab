@@ -1,0 +1,480 @@
+/*
+
+Xilinx Vivado v2022.1 (64-bit) [Major: 2022, Minor: 1]
+SW Build: 3526262 on Mon Apr 18 15:47:01 MDT 2022
+IP Build: 3524634 on Mon Apr 18 20:55:01 MDT 2022
+
+Process ID (PID): 2371
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Tue Jan 16 06:39:29 EST 2024
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Ubuntu
+OS Version: 5.15.0-91-generic
+OS Architecture: amd64
+Available processors (cores): 2
+
+Display: 0
+Screen size: 1920x950
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.11 64-bit
+Java home: 	/tools/Xilinx/Vivado/2022.1/tps/lnx64/jre11.0.11_9
+Java executable: 	/tools/Xilinx/Vivado/2022.1/tps/lnx64/jre11.0.11_9/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Djdk.gtk.version=2, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m, -Xrs]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	ubuntu
+User home directory: /home/ubuntu
+User working directory: /home/ubuntu/Desktop/rtl_code
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /tools/Xilinx/Vivado
+HDI_APPROOT: /tools/Xilinx/Vivado/2022.1
+RDI_DATADIR: /tools/Xilinx/Vivado/2022.1/data
+RDI_BINDIR: /tools/Xilinx/Vivado/2022.1/bin
+
+Vivado preferences file: /home/ubuntu/.Xilinx/Vivado/2022.1/vivado.xml
+Vivado preferences directory: /home/ubuntu/.Xilinx/Vivado/2022.1/
+Vivado layouts directory: /home/ubuntu/.Xilinx/Vivado/2022.1/data/layouts
+PlanAhead jar file: 	/tools/Xilinx/Vivado/2022.1/lib/classes/planAhead.jar
+Vivado log file: 	/home/ubuntu/Desktop/rtl_code/vivado.log
+Vivado journal file: 	/home/ubuntu/Desktop/rtl_code/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-2371-ubuntu2004
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /tools/Xilinx/Vivado/2022.1/ids_lite/ISE
+XILINX_DSP: /tools/Xilinx/Vivado/2022.1/ids_lite/ISE
+XILINX_HLS: /tools/Xilinx/Vitis_HLS/2022.1
+XILINX_PLANAHEAD: /tools/Xilinx/Vivado/2022.1
+XILINX_SDK: /tools/Xilinx/Vitis/2022.1
+XILINX_VITIS: /tools/Xilinx/Vitis/2022.1
+XILINX_VIVADO: /tools/Xilinx/Vivado/2022.1
+XILINX_VIVADO_HLS: /tools/Xilinx/Vivado/2022.1
+
+
+GUI allocated memory:	370 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,895 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,777 MB. GUI used memory: 54 MB. Current time: 1/16/24, 6:39:30 AM EST
+selectButton(PAResourceEtoH.GettingStartedView_CREATE_NEW_PROJECT, "Create Project"); // y
+// Run Command: PAResourceCommand.PACommandNames_NEW_PROJECT
+selectButton("NEXT", "Next >"); // JButton
+// Elapsed time: 14 seconds
+setText(PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, "final_uart"); // aa
+selectButton("NEXT", "Next >"); // JButton
+// [GUI Memory]: 87 MB (+88674kb) [00:00:35]
+// [Engine Memory]: 1,784 MB (+1718860kb) [00:00:35]
+// [GUI Memory]: 98 MB (+7472kb) [00:00:35]
+selectButton("NEXT", "Next >"); // JButton
+// Elapsed time: 10 seconds
+setText("PAResourceEtoH.FPGAChooser_FPGA_TABLE_SEARCH_FIELD", "xc7z020"); // OverlayTextField
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7z020clg400-1 ; 400 ; 125 ; 53200 ; 106400 ; 140 ; 0 ; 220 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 2, "xc7z020clg400-1", 0); // r
+selectButton("NEXT", "Next >"); // JButton
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: create_project final_uart /home/ubuntu/Desktop/rtl_code/final_uart -part xc7z020clg400-1 
+// TclEventType: PROJECT_NEW
+// WARNING: HEventQueue.dispatchEvent() is taking  1822 ms.
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 104 MB (+722kb) [00:00:53]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 7556.125 ; gain = 53.035 ; free physical = 1361 ; free virtual = 4501 
+selectButton("FINISH", "Finish"); // JButton
+// 'g' command handler elapsed time: 36 seconds
+// [GUI Memory]: 112 MB (+2394kb) [00:00:54]
+dismissDialog("Create Project"); // bA
+dismissDialog("New Project"); // f
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // D
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+String[] filenames31467 = {"/home/ubuntu/Desktop/rtl_code/WB_Decode.v", "/home/ubuntu/Desktop/rtl_code/bram.v", "/home/ubuntu/Desktop/rtl_code/bram11.v", "/home/ubuntu/Desktop/rtl_code/exmem.v", "/home/ubuntu/Desktop/rtl_code/fir.v", "/home/ubuntu/Desktop/rtl_code/fir_wrapper.v", "/home/ubuntu/Desktop/rtl_code/mm.v", "/home/ubuntu/Desktop/rtl_code/mm_wrapper.v", "/home/ubuntu/Desktop/rtl_code/qsort.v", "/home/ubuntu/Desktop/rtl_code/qsort_wrapper.v", "/home/ubuntu/Desktop/rtl_code/sdr.v", "/home/ubuntu/Desktop/rtl_code/sdram_controller.v", "/home/ubuntu/Desktop/rtl_code/sync_fifo.v", "/home/ubuntu/Desktop/rtl_code/uart.v", "/home/ubuntu/Desktop/rtl_code/uart_ctrl.v", "/home/ubuntu/Desktop/rtl_code/uart_rx.v", "/home/ubuntu/Desktop/rtl_code/uart_tx.v", "/home/ubuntu/Desktop/rtl_code/user_project_wlos_wp.v"};
+setFileChooser(filenames31467);
+selectButton("FINISH", "Finish"); // JButton
+// 'g' command handler elapsed time: 19 seconds
+// [GUI Memory]: 125 MB (+8412kb) [00:01:17]
+// [Engine Memory]: 1,879 MB (+6170kb) [00:01:17]
+dismissDialog("Add Sources"); // c
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,931 MB. GUI used memory: 63 MB. Current time: 1/16/24, 6:40:45 AM EST
+// Elapsed time: 20 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v)]", 2, true, false, false, false, false, true); // D - Double Click - Node
+// Elapsed time: 18 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), WB_Decode : WB_Decode (WB_Decode.v)]", 3); // D
+// Elapsed time: 17 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, uart.v]", 3, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, exmem.v]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, exmem.v]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, exmem.v]", 2, false, false, false, false, false, true); // D - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,953 MB. GUI used memory: 66 MB. Current time: 1/16/24, 6:41:40 AM EST
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, uart.v]", 3, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, uart.v]", 3, false, false, false, false, false, true); // D - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "user_project_wlos_wp.v", 1); // m
+// Elapsed time: 437 seconds
+selectCodeEditor("user_project_wlos_wp.v", 195, 176); // be
+typeControlKey((HResource) null, "user_project_wlos_wp.v", 'v'); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,984 MB (+11469kb) [00:10:28]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,984 MB. GUI used memory: 67 MB. Current time: 1/16/24, 6:49:46 AM EST
+// Elapsed time: 54 seconds
+selectCodeEditor("user_project_wlos_wp.v", 306, 151); // be
+// Elapsed time: 16 seconds
+selectCodeEditor("user_project_wlos_wp.v", 90, 218); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 35 seconds
+selectCodeEditor("user_project_wlos_wp.v", 229, 190); // be
+selectCodeEditor("user_project_wlos_wp.v", 223, 123); // be
+// Elapsed time: 14 seconds
+selectCodeEditor("user_project_wlos_wp.v", 24, 250); // be
+selectCodeEditor("user_project_wlos_wp.v", 283, 219); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,018 MB. GUI used memory: 67 MB. Current time: 1/16/24, 6:51:41 AM EST
+// Elapsed time: 17 seconds
+selectCodeEditor("user_project_wlos_wp.v", 101, 141); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 22 seconds
+selectCodeEditor("user_project_wlos_wp.v", 257, 260); // be
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), WB_Decode : WB_Decode (WB_Decode.v)]", 5, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), WB_Decode : WB_Decode (WB_Decode.v)]", 5, true, false, false, false, false, true); // D - Double Click - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 2,040 MB. GUI used memory: 67 MB. Current time: 1/16/24, 6:52:16 AM EST
+selectCodeEditor("WB_Decode.v", 85, 7); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("WB_Decode.v", 76, 13); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "WB_Decode.v", 4, true, false); // m - Popup Trigger
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("WB_Decode.v", 472, 51); // be
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), WB_DECODE : wb_decode (WB_Decode.v)]", 5); // D
+// [Engine Memory]: 2,089 MB (+6608kb) [00:13:25]
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), WB_DECODE : wb_decode (WB_Decode.v)]", 5); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), WB_DECODE : wb_decode (WB_Decode.v)]", 5, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), WB_DECODE : wb_decode (WB_Decode.v)]", 5, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ao
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ao
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ao
+selectCodeEditor("WB_Decode.v", 582, 60); // be
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 25 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), WB_DECODE : wb_decode (WB_Decode.v)]", 5, true); // D - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), WB_DECODE : wb_decode (WB_Decode.v)]", 5); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), WB_DECODE : wb_decode (WB_Decode.v)]", 5, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ar
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // aE
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/WB_Decode.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  /home/ubuntu/Desktop/rtl_code/WB_Decode.v 
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // D
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// HMemoryUtils.trashcanNow. Engine heap size: 2,107 MB. GUI used memory: 82 MB. Current time: 1/16/24, 6:53:26 AM EST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_OR_CREATE_SOURCE_FILE, "Add"); // D
+selectMenuItem(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files..."); // ar
+setFileChooser("/home/ubuntu/Desktop/rtl_code/wb_decode.v");
+selectButton("FINISH", "Finish"); // JButton
+// 'g' command handler elapsed time: 11 seconds
+dismissDialog("Add Sources"); // c
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse /home/ubuntu/Desktop/rtl_code/wb_decode.v 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 52 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), WB_DECODE : wb_decode (wb_decode.v)]", 5); // D
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "exmem.v", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "user_project_wlos_wp.v", 1); // m
+selectCodeEditor("user_project_wlos_wp.v", 106, 179); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 13 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), WB_DECODE : wb_decode (wb_decode.v), fir_ip : fir_wrapper (fir_wrapper.v)]", 10); // D
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,172 MB. GUI used memory: 68 MB. Current time: 1/16/24, 6:54:51 AM EST
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v)]", 6); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart_ip : uart (uart.v)]", 8); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart_ip : uart (uart.v)]", 8); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, uart.v]", 3, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, uart.v]", 3, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("uart.v", 234, 23); // be
+// Elapsed time: 23 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "user_project_wlos_wp.v", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "uart.v", 3); // m
+selectCodeEditor("uart.v", 83, 279); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,206 MB. GUI used memory: 68 MB. Current time: 1/16/24, 6:55:51 AM EST
+// [Engine Memory]: 2,206 MB (+12565kb) [00:16:37]
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, exmem.v]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, exmem.v]", 2, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("exmem.v", 111, 272); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v)]", 2, true); // D - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "user_project_wlos_wp.v", 1); // m
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v)]", 3, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v)]", 3, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v)]", 3, true, false, false, false, false, true); // D - Double Click - Node
+// Elapsed time: 16 seconds
+selectCodeEditor("wb_decode.v", 160, 240); // be
+selectCodeEditor("wb_decode.v", 166, 234); // be
+// Elapsed time: 23 seconds
+selectCodeEditor("wb_decode.v", 23, 343); // be
+// Elapsed time: 21 seconds
+selectCodeEditor("wb_decode.v", 54, 148); // be
+// Elapsed time: 17 seconds
+selectCodeEditor("wb_decode.v", 134, 193); // be
+// Elapsed time: 18 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v)]", 3); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), mm_ip : mm_wrapper (mm_wrapper.v)]", 6); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), mm_ip : mm_wrapper (mm_wrapper.v), inst_mm : mm (mm.v)]", 7, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), mm_ip : mm_wrapper (mm_wrapper.v), inst_mm : mm (mm.v)]", 7, true, false, false, false, false, true); // D - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), mm_ip : mm_wrapper (mm_wrapper.v), inst_mm : mm (mm.v)]", 7); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), mm_ip : mm_wrapper (mm_wrapper.v), inst_mm : mm (mm.v), rowmulcol0 : RowMulCol (mm.v)]", 8, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), mm_ip : mm_wrapper (mm_wrapper.v), inst_mm : mm (mm.v), rowmulcol0 : RowMulCol (mm.v)]", 8, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 13 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), mm_ip : mm_wrapper (mm_wrapper.v), inst_mm : mm (mm.v)]", 7); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), mm_ip : mm_wrapper (mm_wrapper.v)]", 6); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), qsort_ip : qsort_wrapper (qsort_wrapper.v)]", 7, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart_ip : uart (uart.v)]", 5, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), mm_ip : mm_wrapper (mm_wrapper.v)]", 6, true, false, true, false, false, false); // D - Control Key - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), qsort_ip : qsort_wrapper (qsort_wrapper.v)]", 7, true, false, true, false, false, false); // D - Control Key - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), fir_ip : fir_wrapper (fir_wrapper.v)]", 8, true, false, true, false, false, false); // D - Control Key - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart_ip : uart (uart.v)]", 5, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ar
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // aE
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/uart.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/mm_wrapper.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/qsort_wrapper.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/fir_wrapper.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  {/home/ubuntu/Desktop/rtl_code/uart.v /home/ubuntu/Desktop/rtl_code/mm_wrapper.v /home/ubuntu/Desktop/rtl_code/qsort_wrapper.v /home/ubuntu/Desktop/rtl_code/fir_wrapper.v} 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,230 MB. GUI used memory: 69 MB. Current time: 1/16/24, 6:58:51 AM EST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart_ip : xil_defaultlib.uart]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v)]", 3, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v)]", 3, true, false, false, false, false, true); // D - Double Click - Node
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,262 MB. GUI used memory: 69 MB. Current time: 1/16/24, 6:59:16 AM EST
+// Elapsed time: 19 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v)]", 3); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart_ip : xil_defaultlib.uart]", 5, false); // D
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // D
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_OR_CREATE_SOURCE_FILE, "Add"); // D
+selectMenuItem(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files..."); // ar
+// Elapsed time: 21 seconds
+String[] filenames16706 = {"/home/ubuntu/Desktop/rtl_code/fifo.v", "/home/ubuntu/Desktop/rtl_code/uart_ctrl.v", "/home/ubuntu/Desktop/rtl_code/uart_rx.v", "/home/ubuntu/Desktop/rtl_code/uart_tx.v"};
+setFileChooser(filenames16706);
+selectButton("FINISH", "Finish"); // JButton
+// 'g' command handler elapsed time: 27 seconds
+dismissDialog("Add Sources"); // c
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse {/home/ubuntu/Desktop/rtl_code/uart_ctrl.v /home/ubuntu/Desktop/rtl_code/uart_tx.v /home/ubuntu/Desktop/rtl_code/uart_rx.v /home/ubuntu/Desktop/rtl_code/fifo.v} 
+// [GUI Memory]: 143 MB (+11673kb) [00:20:38]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,295 MB. GUI used memory: 69 MB. Current time: 1/16/24, 7:00:01 AM EST
+// Elapsed time: 13 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), exmem : exmem (exmem.v)]", 4); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, sync_fifo.v]", 2, false); // D
+// Elapsed time: 29 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart_ip : xil_defaultlib.uart]", 8, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), exmem : exmem (exmem.v), user_bram : sdr (sdr.v)]", 7, true); // D - Node
+// Elapsed time: 17 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), exmem : exmem (exmem.v), user_bram : sdr (sdr.v)]", 7); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), exmem : exmem (exmem.v), user_bram : sdr (sdr.v)]", 7); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), exmem : exmem (exmem.v)]", 5, true); // D - Node
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), exmem : exmem (exmem.v)]", 5); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v)]", 4, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v)]", 4, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, uart_transmission (uart_tx.v)]", 12, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fir (fir.v)]", 11, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, uart_transmission (uart_tx.v)]", 12, false, false, true, false, false, false); // D - Control Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bram11 (bram11.v)]", 10, false, false, true, false, false, false); // D - Control Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bram (bram.v)]", 9, false, false, true, false, false, false); // D - Control Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, uart_receive (uart_rx.v)]", 8, true, false, true, false, false, false); // D - Control Key - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, uart_receive (uart_rx.v)]", 8, true, false, true, false, false, false); // D - Control Key - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mm (mm.v)]", 7, true, false, true, false, false, false); // D - Control Key - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, qsort (qsort.v)]", 5, true, false, true, false, false, false); // D - Control Key - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bram (bram.v)]", 9, false, false, true, false, false, false); // D - Control Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, bram11 (bram11.v)]", 10, false, false, true, false, false, false); // D - Control Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, uart_transmission (uart_tx.v)]", 12, false, false, true, false, false, false); // D - Control Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mm (mm.v)]", 7, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ar
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // aE
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/fir.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/uart_tx.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/bram11.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/bram.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/uart_rx.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/mm.v] -no_script -reset -force -quiet 
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/qsort.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  {/home/ubuntu/Desktop/rtl_code/fir.v /home/ubuntu/Desktop/rtl_code/uart_tx.v /home/ubuntu/Desktop/rtl_code/bram11.v /home/ubuntu/Desktop/rtl_code/bram.v /home/ubuntu/Desktop/rtl_code/uart_rx.v /home/ubuntu/Desktop/rtl_code/mm.v /home/ubuntu/Desktop/rtl_code/qsort.v} 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v)]", 4, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v)]", 4, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), exmem : exmem (exmem.v)]", 5, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v)]", 4, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v)]", 4, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v)]", 4, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v)]", 4, true, false, false, false, false, true); // D - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ctrl (uart_ctrl.v)]", 7); // D
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // D
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+// Elapsed time: 27 seconds
+String[] filenames29306 = {"/home/ubuntu/Desktop/rtl_code/fifo.v", "/home/ubuntu/Desktop/rtl_code/uart.v", "/home/ubuntu/Desktop/rtl_code/uart_ctrl.v", "/home/ubuntu/Desktop/rtl_code/uart_rx.v", "/home/ubuntu/Desktop/rtl_code/uart_tx.v"};
+setFileChooser(filenames29306);
+selectButton("FINISH", "Finish"); // JButton
+// 'g' command handler elapsed time: 39 seconds
+dismissDialog("Add Sources"); // c
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse {/home/ubuntu/Desktop/rtl_code/uart_ctrl.v /home/ubuntu/Desktop/rtl_code/uart_tx.v /home/ubuntu/Desktop/rtl_code/uart_rx.v /home/ubuntu/Desktop/rtl_code/uart.v /home/ubuntu/Desktop/rtl_code/fifo.v} 
+// [Engine Memory]: 2,328 MB (+12579kb) [00:23:33]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,328 MB. GUI used memory: 69 MB. Current time: 1/16/24, 7:02:51 AM EST
+// Elapsed time: 10 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), exmem : exmem (exmem.v)]", 5); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), exmem : exmem (exmem.v)]", 5); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart_ip : uart (uart.v)]", 6, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart_ip : uart (uart.v)]", 6, true, false, false, false, false, true); // D - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart_ip : uart (uart.v), ctrl : ctrl (uart_ctrl.v)]", 9); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart_ip : uart (uart.v), ctrl : ctrl (uart_ctrl.v)]", 9, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart_ip : uart (uart.v), ctrl : ctrl (uart_ctrl.v)]", 9, true, false, false, false, false, true); // D - Double Click - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 2,350 MB. GUI used memory: 70 MB. Current time: 1/16/24, 7:03:06 AM EST
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, sync_fifo.v]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, sync_fifo.v]", 2, false, false, false, false, true, false); // D - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ar
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Remove Sources"); // aE
+// Tcl Message: export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/sync_fifo.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  /home/ubuntu/Desktop/rtl_code/sync_fifo.v 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v)]", 1); // D
+// Elapsed time: 47 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v)]", 2, true, false, false, false, false, true); // D - Double Click - Node
+// Elapsed time: 12 seconds
+selectCodeEditor("wb_decode.v", 213, 172); // be
+selectCodeEditor("wb_decode.v", 301, 176); // be
+// Elapsed time: 16 seconds
+selectCodeEditor("wb_decode.v", 447, 91); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 32 seconds
+selectCodeEditor("wb_decode.v", 209, 50); // be
+selectCodeEditor("wb_decode.v", 323, 176); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,404 MB. GUI used memory: 70 MB. Current time: 1/16/24, 7:05:26 AM EST
+selectCodeEditor("wb_decode.v", 43, 336); // be
+selectCodeEditor("wb_decode.v", 116, 77); // be
+selectCodeEditor("wb_decode.v", 351, 195); // be
+selectCodeEditor("wb_decode.v", 304, 196); // be
+selectCodeEditor("wb_decode.v", 304, 187); // be
+selectCodeEditor("wb_decode.v", 307, 187, false, false, false, false, true); // be - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectCodeEditor("wb_decode.v", 367, 158); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,437 MB. GUI used memory: 70 MB. Current time: 1/16/24, 7:06:21 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,437 MB. GUI used memory: 63 MB. Current time: 1/16/24, 7:36:23 AM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,437 MB. GUI used memory: 60 MB. Current time: 1/16/24, 8:06:25 AM EST
+// TclEventType: FILE_SET_CHANGE

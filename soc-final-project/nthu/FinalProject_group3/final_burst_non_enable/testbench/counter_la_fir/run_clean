@@ -1,0 +1,4 @@
+rm -rf ./gdb.debug ./gdbwave.debug
+rm -f *.vcd
+#rm -f *.vcd *.hex
+rm -f *.s *.o *.i *.out *.map

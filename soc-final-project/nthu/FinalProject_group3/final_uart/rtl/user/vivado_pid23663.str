@@ -1,0 +1,204 @@
+/*
+
+Xilinx Vivado v2022.1 (64-bit) [Major: 2022, Minor: 1]
+SW Build: 3526262 on Mon Apr 18 15:47:01 MDT 2022
+IP Build: 3524634 on Mon Apr 18 20:55:01 MDT 2022
+
+Process ID (PID): 23663
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Sat Jan 20 11:37:45 EST 2024
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Ubuntu
+OS Version: 5.15.0-91-generic
+OS Architecture: amd64
+Available processors (cores): 2
+
+Display: 0
+Screen size: 1920x950
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.11 64-bit
+Java home: 	/tools/Xilinx/Vivado/2022.1/tps/lnx64/jre11.0.11_9
+Java executable: 	/tools/Xilinx/Vivado/2022.1/tps/lnx64/jre11.0.11_9/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Djdk.gtk.version=2, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m, -Xrs]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	ubuntu
+User home directory: /home/ubuntu
+User working directory: /home/ubuntu/Desktop/final_uart_modified/rtl/user
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /tools/Xilinx/Vivado
+HDI_APPROOT: /tools/Xilinx/Vivado/2022.1
+RDI_DATADIR: /tools/Xilinx/Vivado/2022.1/data
+RDI_BINDIR: /tools/Xilinx/Vivado/2022.1/bin
+
+Vivado preferences file: /home/ubuntu/.Xilinx/Vivado/2022.1/vivado.xml
+Vivado preferences directory: /home/ubuntu/.Xilinx/Vivado/2022.1/
+Vivado layouts directory: /home/ubuntu/.Xilinx/Vivado/2022.1/data/layouts
+PlanAhead jar file: 	/tools/Xilinx/Vivado/2022.1/lib/classes/planAhead.jar
+Vivado log file: 	/home/ubuntu/Desktop/final_uart_modified/rtl/user/vivado.log
+Vivado journal file: 	/home/ubuntu/Desktop/final_uart_modified/rtl/user/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-23663-ubuntu2004
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /tools/Xilinx/Vivado/2022.1/ids_lite/ISE
+XILINX_DSP: /tools/Xilinx/Vivado/2022.1/ids_lite/ISE
+XILINX_HLS: /tools/Xilinx/Vitis_HLS/2022.1
+XILINX_PLANAHEAD: /tools/Xilinx/Vivado/2022.1
+XILINX_SDK: /tools/Xilinx/Vitis/2022.1
+XILINX_VITIS: /tools/Xilinx/Vitis/2022.1
+XILINX_VIVADO: /tools/Xilinx/Vivado/2022.1
+XILINX_VIVADO_HLS: /tools/Xilinx/Vivado/2022.1
+
+
+GUI allocated memory:	370 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,874 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/ubuntu/Desktop/final_uart_modified/rtl/user/final_uart/final_uart.xpr", 0); // r
+// [GUI Memory]: 103 MB (+105369kb) [00:00:13]
+// [Engine Memory]: 1,875 MB (+1814505kb) [00:00:13]
+// Opening Vivado Project: /home/ubuntu/Desktop/final_uart_modified/rtl/user/final_uart/final_uart.xpr. Version: Vivado v2022.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,774 MB. GUI used memory: 52 MB. Current time: 1/20/24, 11:37:47 AM EST
+// Tcl Message: open_project /home/ubuntu/Desktop/final_uart_modified/rtl/user/final_uart/final_uart.xpr 
+// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/ubuntu/Desktop/final_uart_modified/rtl/user/final_uart/final_uart.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// WARNING: HEventQueue.dispatchEvent() is taking  2633 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'. 
+// Project name: final_uart; location: /home/ubuntu/Desktop/final_uart_modified/rtl/user/final_uart; part: xc7z020clg400-1
+dismissDialog("Open Project"); // bA
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 125 MB (+17678kb) [00:00:22]
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v)]", 1); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v)]", 2); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart : uart (uart.v)]", 4); // D
+// PAPropertyPanels.initPanels (uart.v) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart : uart (uart.v)]", 4, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart : uart (uart.v)]", 4, true, false, false, false, false, true); // D - Double Click - Node
+selectCodeEditor("uart.v", 63, 243); // be
+// HMemoryUtils.trashcanNow. Engine heap size: 1,849 MB. GUI used memory: 63 MB. Current time: 1/20/24, 11:38:16 AM EST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 85 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart : uart (uart.v)]", 4); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart : uart (uart.v), receive : uart_receive (uart_rx.v)]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart : uart (uart.v), receive : uart_receive (uart_rx.v)]", 5, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("uart_rx.v", 246, 100); // be
+// Elapsed time: 60 seconds
+selectCodeEditor("uart_rx.v", 259, 279); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 29 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart : uart (uart.v), transmission : uart_transmission (uart_tx.v)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart : uart (uart.v), transmission : uart_transmission (uart_tx.v)]", 7, false, false, false, false, false, true); // D - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart : uart (uart.v), ctrl : ctrl (uart_ctrl.v)]", 9, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart : uart (uart.v), ctrl : ctrl (uart_ctrl.v)]", 9, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart : uart (uart.v), ctrl : ctrl (uart_ctrl.v)]", 9, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("uart_ctrl.v", 34, 270); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,924 MB. GUI used memory: 65 MB. Current time: 1/20/24, 11:41:26 AM EST
+// Elapsed time: 12 seconds
+selectCodeEditor("uart_ctrl.v", 236, 226); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 54 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart : uart (uart.v), transmission : uart_transmission (uart_tx.v)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart : uart (uart.v), transmission : uart_transmission (uart_tx.v)]", 7, false, false, false, false, true, false); // D - Popup Trigger
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart : uart (uart.v), transmission : uart_transmission (uart_tx.v)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart : uart (uart.v), transmission : uart_transmission (uart_tx.v)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart : uart (uart.v), transmission : uart_transmission (uart_tx.v)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, user_project_wrapper (user_project_wlos_wp.v), wb_decode : wb_decode (wb_decode.v), uart : uart (uart.v), transmission : uart_transmission (uart_tx.v)]", 7, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("uart_tx.v", 288, 131); // be
+selectCodeEditor("uart_tx.v", 102, 174); // be
+// Elapsed time: 35 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "uart_rx.v", 2); // m
+selectCodeEditor("uart_rx.v", 161, 145); // be
+// Elapsed time: 27 seconds
+selectCodeEditor("uart_rx.v", 189, 172); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,959 MB. GUI used memory: 66 MB. Current time: 1/20/24, 11:44:07 AM EST
+// Elapsed time: 22 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "uart.v", 1); // m
+selectCodeEditor("uart.v", 242, 158); // be
+// Elapsed time: 36 seconds
+selectCodeEditor("uart.v", 28, 252); // be
+selectCodeEditor("uart.v", 226, 158); // be
+typeControlKey((HResource) null, "uart.v", 'v'); // be
+selectCodeEditor("uart.v", 28, 274); // be
+selectCodeEditor("uart.v", 38, 248); // be
+typeControlKey((HResource) null, "uart.v", 'v'); // be
+selectCodeEditor("uart.v", 47, 326); // be
+selectCodeEditor("uart.v", 43, 333); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,977 MB (+8240kb) [00:07:57]
+// Elapsed time: 22 seconds
+selectCodeEditor("uart.v", 233, 218); // be
+selectCodeEditor("uart.v", 131, 205); // be
+selectCodeEditor("uart.v", 131, 205, false, false, false, false, true); // be - Double Click
+selectCodeEditor("uart.v", 139, 116); // be
+selectCodeEditor("uart.v", 139, 116, false, false, false, false, true); // be - Double Click
+selectCodeEditor("uart.v", 132, 135); // be
+selectCodeEditor("uart.v", 132, 135, false, false, false, false, true); // be - Double Click
+selectCodeEditor("uart.v", 139, 162); // be
+selectCodeEditor("uart.v", 139, 162, false, false, false, false, true); // be - Double Click
+selectCodeEditor("uart.v", 146, 179); // be
+selectCodeEditor("uart.v", 146, 179, false, false, false, false, true); // be - Double Click
+selectCodeEditor("uart.v", 145, 144); // be
+selectCodeEditor("uart.v", 145, 144, false, false, false, false, true); // be - Double Click
+// Elapsed time: 45 seconds
+selectCodeEditor("uart.v", 79, 181); // be
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "uart_rx.v", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "uart.v", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "uart_rx.v", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "uart_tx.v", 3); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "uart_ctrl.v", 4); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "uart.v", 1); // m
+selectCodeEditor("uart.v", 179, 31); // be
+selectCodeEditor("uart.v", 183, 22); // be
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,994 MB. GUI used memory: 66 MB. Current time: 1/20/24, 11:47:07 AM EST

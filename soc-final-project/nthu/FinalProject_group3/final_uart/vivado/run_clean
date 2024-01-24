@@ -1,0 +1,19 @@
+
+echo "start vivado project"
+
+
+# ----- remove vivado project if existed -----#
+
+if [ -d "./vvd_caravel_fpga/" ]
+then
+	rm -rf ./vvd_caravel_fpga/
+	echo "remove previous project"
+fi
+
+# ----- remove vivado project log files -----#
+rm -rf ./NA
+rm -rf ./.Xil
+rm -f timing_report.log
+rm -f vivado*.jou
+rm -f vivado*.log
+

@@ -1,0 +1,78 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Tue Jan 16 06:38:59 2024
+# Process ID: 2371
+# Current directory: /home/ubuntu/Desktop/rtl_code
+# Command line: vivado
+# Log file: /home/ubuntu/Desktop/rtl_code/vivado.log
+# Journal file: /home/ubuntu/Desktop/rtl_code/vivado.jou
+# Running On: ubuntu2004, OS: Linux, CPU Frequency: 2419.200 MHz, CPU Physical cores: 2, Host memory: 5669 MB
+#-----------------------------------------------------------
+start_gui
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+create_project final_uart /home/ubuntu/Desktop/rtl_code/final_uart -part xc7z020clg400-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 7556.125 ; gain = 53.035 ; free physical = 1361 ; free virtual = 4501
+add_files -norecurse {/home/ubuntu/Desktop/rtl_code/bram11.v /home/ubuntu/Desktop/rtl_code/bram.v /home/ubuntu/Desktop/rtl_code/WB_Decode.v /home/ubuntu/Desktop/rtl_code/qsort_wrapper.v /home/ubuntu/Desktop/rtl_code/uart_ctrl.v /home/ubuntu/Desktop/rtl_code/uart_tx.v /home/ubuntu/Desktop/rtl_code/fir.v /home/ubuntu/Desktop/rtl_code/sync_fifo.v /home/ubuntu/Desktop/rtl_code/mm.v /home/ubuntu/Desktop/rtl_code/fir_wrapper.v /home/ubuntu/Desktop/rtl_code/qsort.v /home/ubuntu/Desktop/rtl_code/sdram_controller.v /home/ubuntu/Desktop/rtl_code/uart_rx.v /home/ubuntu/Desktop/rtl_code/exmem.v /home/ubuntu/Desktop/rtl_code/mm_wrapper.v /home/ubuntu/Desktop/rtl_code/user_project_wlos_wp.v /home/ubuntu/Desktop/rtl_code/uart.v /home/ubuntu/Desktop/rtl_code/sdr.v}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/WB_Decode.v] -no_script -reset -force -quiet
+remove_files  /home/ubuntu/Desktop/rtl_code/WB_Decode.v
+update_compile_order -fileset sources_1
+add_files -norecurse /home/ubuntu/Desktop/rtl_code/wb_decode.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/uart.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/mm_wrapper.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/qsort_wrapper.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/fir_wrapper.v] -no_script -reset -force -quiet
+remove_files  {/home/ubuntu/Desktop/rtl_code/uart.v /home/ubuntu/Desktop/rtl_code/mm_wrapper.v /home/ubuntu/Desktop/rtl_code/qsort_wrapper.v /home/ubuntu/Desktop/rtl_code/fir_wrapper.v}
+update_compile_order -fileset sources_1
+add_files -norecurse {/home/ubuntu/Desktop/rtl_code/uart_ctrl.v /home/ubuntu/Desktop/rtl_code/uart_tx.v /home/ubuntu/Desktop/rtl_code/uart_rx.v /home/ubuntu/Desktop/rtl_code/fifo.v}
+WARNING: [filemgmt 56-12] File '/home/ubuntu/Desktop/rtl_code/uart_ctrl.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File '/home/ubuntu/Desktop/rtl_code/uart_tx.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File '/home/ubuntu/Desktop/rtl_code/uart_rx.v' cannot be added to the project because it already exists in the project, skipping this file
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/fir.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/uart_tx.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/bram11.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/bram.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/uart_rx.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/mm.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/qsort.v] -no_script -reset -force -quiet
+remove_files  {/home/ubuntu/Desktop/rtl_code/fir.v /home/ubuntu/Desktop/rtl_code/uart_tx.v /home/ubuntu/Desktop/rtl_code/bram11.v /home/ubuntu/Desktop/rtl_code/bram.v /home/ubuntu/Desktop/rtl_code/uart_rx.v /home/ubuntu/Desktop/rtl_code/mm.v /home/ubuntu/Desktop/rtl_code/qsort.v}
+add_files -norecurse {/home/ubuntu/Desktop/rtl_code/uart_ctrl.v /home/ubuntu/Desktop/rtl_code/uart_tx.v /home/ubuntu/Desktop/rtl_code/uart_rx.v /home/ubuntu/Desktop/rtl_code/uart.v /home/ubuntu/Desktop/rtl_code/fifo.v}
+WARNING: [filemgmt 56-12] File '/home/ubuntu/Desktop/rtl_code/uart_ctrl.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File '/home/ubuntu/Desktop/rtl_code/fifo.v' cannot be added to the project because it already exists in the project, skipping this file
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/ubuntu/Desktop/rtl_code/sync_fifo.v] -no_script -reset -force -quiet
+remove_files  /home/ubuntu/Desktop/rtl_code/sync_fifo.v

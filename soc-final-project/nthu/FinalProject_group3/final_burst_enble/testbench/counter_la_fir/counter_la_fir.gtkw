@@ -1,0 +1,140 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Wed Nov  8 09:04:40 2023
+[*]
+[dumpfile] "/home/ubuntu/Desktop/lab-caravel_fir/testbench/counter_la_fir/counter_la_fir.vcd"
+[dumpfile_mtime] "Wed Nov  8 08:57:43 2023"
+[dumpfile_size] 417823326
+[savefile] "/home/ubuntu/Desktop/lab-caravel_fir/testbench/counter_la_fir/counter_la_fir.gtkw"
+[timestart] 4859410000
+[size] 2048 1081
+[pos] -1 -1
+*-22.868891 4760187500 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] counter_la_fir_tb.
+[treeopen] counter_la_fir_tb.uut.
+[treeopen] counter_la_fir_tb.uut.housekeeping.
+[treeopen] counter_la_fir_tb.uut.mprj.
+[treeopen] counter_la_fir_tb.uut.mprj.mprj.
+[treeopen] counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.
+[sst_width] 313
+[signals_width] 220
+[sst_expanded] 1
+[sst_vpaned_height] 406
+@200
+-#wishbone bus
+@28
+counter_la_fir_tb.uut.mprj.wb_clk_i
+counter_la_fir_tb.uut.mprj.wb_rst_i
+@22
+counter_la_fir_tb.uut.mprj.wbs_adr_i[31:0]
+@28
+counter_la_fir_tb.uut.mprj.wbs_cyc_i
+counter_la_fir_tb.uut.mprj.wbs_stb_i
+@420
+counter_la_fir_tb.uut.mprj.wbs_dat_i[31:0]
+counter_la_fir_tb.uut.mprj.wbs_dat_o[31:0]
+@22
+counter_la_fir_tb.uut.mprj.wbs_sel_i[3:0]
+@28
+counter_la_fir_tb.uut.mprj.wbs_we_i
+counter_la_fir_tb.uut.mprj.wbs_ack_o
+@200
+-
+@22
+counter_la_fir_tb.mprj_io[37:0]
+@28
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.user_fir.ap_start
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.user_fir.ap_idle
+@29
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.user_fir.ap_done
+@28
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.user_fir.x_ready_reg
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.user_fir.y_valid_reg
+@200
+-#user bram
+@22
+counter_la_fir_tb.uut.mprj.mprj.user_bram.A0[31:0]
+counter_la_fir_tb.uut.mprj.mprj.user_bram.Di0[31:0]
+counter_la_fir_tb.uut.mprj.mprj.user_bram.Do0[31:0]
+@28
+counter_la_fir_tb.uut.mprj.mprj.user_bram.EN0
+@22
+counter_la_fir_tb.uut.mprj.mprj.user_bram.WE0[3:0]
+@200
+-
+-#axi-lite write
+@28
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.awready
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.awvalid
+@22
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.awaddr[11:0]
+@28
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.wvalid
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.wready
+@420
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.wdata[31:0]
+@200
+-
+-#axi-lite read
+@28
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.arvalid
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.arready
+@22
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.araddr[11:0]
+@28
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.rvalid
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.rready
+@22
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.rdata[31:0]
+@200
+-
+@22
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.fir_addr[11:0]
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.fir_dat_i[31:0]
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.fir_dat_o[31:0]
+@28
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.fir_en
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.fir_valid
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.fir_we
+@24
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.user_fir.fir_cs[1:0]
+@200
+-#axis slave
+@22
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.ss_tdata[31:0]
+@28
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.ss_tlast
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.ss_tready
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.ss_tvalid
+@200
+-#axis master
+@420
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.sm_tdata[31:0]
+@28
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.sm_tlast
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.sm_tready
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.sm_tvalid
+@200
+-#tap bram
+@22
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.tap_A[11:0]
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.tap_Di[31:0]
+@420
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.tap_Do[31:0]
+@28
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.tap_EN
+@22
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.tap_WE[3:0]
+@200
+-#data bram
+@22
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.user_fir.x_addr_init[7:0]
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.data_A[11:0]
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.data_Di[31:0]
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.data_Do[31:0]
+@28
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.data_EN
+@22
+counter_la_fir_tb.uut.mprj.mprj.user_wb2axi.data_WE[3:0]
+[pattern_trace] 1
+[pattern_trace] 0
