@@ -1,0 +1,5 @@
+iverilog -Ttyp -DFUNCTIONAL -DSIM -DUNIT_DELAY=#1 \
+	-f./include.rtl.list -o PATTERN_testbench.vvp PATTERN_testbench.v 
+
+vvp -l simulation.log PATTERN_testbench.vvp
+rm -f PATTERN_testbench.vvp

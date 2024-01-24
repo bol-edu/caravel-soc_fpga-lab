@@ -1,0 +1,425 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Thu Jan 18 21:00:21 2024
+[*]
+[dumpfile] "/home/ubuntu/final_project/Final_project_modification_after_presentation/testbench/counter_la_final/counter_la_final.vcd"
+[dumpfile_mtime] "Thu Jan 18 20:58:20 2024"
+[dumpfile_size] 62436564
+[savefile] "/home/ubuntu/final_project/Final_project_modification_after_presentation/testbench/counter_la_final/waveform-7--come_from_report-2_1130118~.gtkw"
+[timestart] 1165990000
+[size] 1848 903
+[pos] -1 -1
+*-17.744682 1166443000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] counter_la_final_tb.
+[treeopen] counter_la_final_tb.uut.
+[treeopen] counter_la_final_tb.uut.mprj.
+[treeopen] counter_la_final_tb.uut.mprj.WB_decoder_U0.
+[treeopen] counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.
+[treeopen] counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.
+[treeopen] counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_bram.
+[treeopen] counter_la_final_tb.uut.soc.core.
+[sst_width] 233
+[signals_width] 286
+[sst_expanded] 1
+[sst_vpaned_height] 371
+@200
+-global
+@28
+counter_la_final_tb.clock
+counter_la_final_tb.uut.mprj.wb_rst_i
+@22
+counter_la_final_tb.checkbits[15:0]
+@200
+-
+-WB_from/to_CPU
+@28
+counter_la_final_tb.uut.mprj.wbs_cyc_i
+counter_la_final_tb.uut.mprj.wbs_stb_i
+counter_la_final_tb.uut.mprj.wbs_we_i
+counter_la_final_tb.uut.mprj.WB_decoder_U0.wbs_sel_i[3:0]
+@22
+counter_la_final_tb.uut.mprj.wbs_adr_i[31:0]
+counter_la_final_tb.uut.mprj.wbs_dat_i[31:0]
+@28
+[color] 3
+counter_la_final_tb.uut.mprj.WB_decoder_U0.wbs_ack_o
+@22
+[color] 3
+counter_la_final_tb.uut.mprj.WB_decoder_U0.wbs_dat_o[31:0]
+@200
+-
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.wbs_cyc_WB_FIR
+counter_la_final_tb.uut.mprj.WB_decoder_U0.wbs_stb_WB_FIR
+counter_la_final_tb.uut.mprj.WB_decoder_U0.wbs_we_WB_FIR
+counter_la_final_tb.uut.mprj.WB_decoder_U0.wbs_sel_WB_FIR[3:0]
+@22
+counter_la_final_tb.uut.mprj.WB_decoder_U0.input_address_WB_FIR[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.input_data_WB_FIR[31:0]
+@28
+[color] 3
+counter_la_final_tb.uut.mprj.WB_decoder_U0.wbs_ack_WB_FIR
+@22
+[color] 3
+counter_la_final_tb.uut.mprj.WB_decoder_U0.output_data_WB_FIR[31:0]
+@200
+-
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.wbs_cyc_WB_MM
+counter_la_final_tb.uut.mprj.WB_decoder_U0.wbs_stb_WB_MM
+counter_la_final_tb.uut.mprj.WB_decoder_U0.wbs_we_WB_MM
+counter_la_final_tb.uut.mprj.WB_decoder_U0.wbs_sel_WB_MM[3:0]
+@22
+counter_la_final_tb.uut.mprj.WB_decoder_U0.input_address_WB_MM[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.input_data_WB_MM[31:0]
+@28
+[color] 3
+counter_la_final_tb.uut.mprj.WB_decoder_U0.wbs_ack_WB_MM
+@22
+[color] 3
+counter_la_final_tb.uut.mprj.WB_decoder_U0.output_data_WB_MM[31:0]
+@200
+-
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.wbs_cyc_SDRAM
+counter_la_final_tb.uut.mprj.WB_decoder_U0.wbs_stb_SDRAM
+counter_la_final_tb.uut.mprj.WB_decoder_U0.wbs_we_SDRAM
+counter_la_final_tb.uut.mprj.WB_decoder_U0.wbs_sel_SDRAM[3:0]
+@22
+counter_la_final_tb.uut.mprj.WB_decoder_U0.input_address_SDRAM[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.input_data_SDRAM[31:0]
+@28
+[color] 3
+counter_la_final_tb.uut.mprj.WB_decoder_U0.wbs_ack_SDRAM
+@22
+[color] 3
+counter_la_final_tb.uut.mprj.WB_decoder_U0.output_data_SDRAM[31:0]
+@200
+-
+-
+-DMA for FIR
+@24
+[color] 7
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.state_DMA_FIR[2:0]
+[color] 7
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.state_DMA_FIR_request_SDRAM[1:0]
+@22
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.FIR_base_address_buffer[22:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.input_buffer[31:0]
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.input_buffer_valid
+@24
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.output_buffer0[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.output_buffer1[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.output_buffer2[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.output_buffer3[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.output_buffer4[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.output_buffer5[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.output_buffer6[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.output_buffer7[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.output_buffer8[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.output_buffer9[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.output_buffer10[31:0]
+@200
+-
+-
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.wbs_cyc_DMA_to_FIR
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.wbs_stb_DMA_to_FIR
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.wbs_we_DMA_to_FIR
+@29
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.wbs_sel_DMA_to_FIR[3:0]
+@22
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.input_address_DMA_to_FIR[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.input_data_DMA_to_FIR[31:0]
+@28
+[color] 3
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.wbs_ack_FIR_to_DMA
+@22
+[color] 3
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.output_data_FIR_to_DMA[31:0]
+@200
+-
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.state_Stream_sm[2:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.state_Lite[2:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.state_Stream_sm[2:0]
+@24
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.fir_U0.state[2:0]
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.arvalid
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.arready
+@24
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.output_y_buffer[31:0]
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.Yn_valid_Xn_ready[1:0]
+@24
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.input_number_counter[6:0]
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.ss_tready
+@22
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.ss_tdata[31:0]
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.sm_tready
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.sm_tvalid
+@24
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.sm_tdata[31:0]
+@200
+-
+@28
+[color] 2
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_FIR_U0.fir_U0.ap_idle_done_start[3:0]
+@200
+-
+-
+-DMA for Matrix Multiplication
+@24
+[color] 7
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.state_DMA_MM[2:0]
+[color] 7
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.state_DMA_MM_request_SDRAM[1:0]
+@22
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.MM_base_address_A_buffer[22:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.MM_base_address_B_buffer[22:0]
+@24
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.input_number_counter_coarse[2:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.input_number_counter_fine[1:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.input_number_counter[1:0]
+@22
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.MM_input_buffer0[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.MM_input_buffer1[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.MM_input_buffer2[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.MM_input_buffer3[31:0]
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.input_buffer_valid
+@22
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.MM_output_buffer0[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.MM_output_buffer1[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.MM_output_buffer2[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.MM_output_buffer3[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.MM_output_buffer4[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.MM_output_buffer5[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.MM_output_buffer6[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.MM_output_buffer7[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.MM_output_buffer8[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.MM_output_buffer9[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.MM_output_buffer10[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.MM_output_buffer11[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.MM_output_buffer12[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.MM_output_buffer13[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.MM_output_buffer14[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.MM_output_buffer15[31:0]
+@200
+-
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.mm_U0.mm_start_whole
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.mm_U0.mm_done_whole
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.mm_U0.ss_tready
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.mm_U0.ss_tvalid
+@22
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.mm_U0.ss_tdata[31:0]
+@28
+[color] 3
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.mm_U0.sm_tready
+[color] 3
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.mm_U0.sm_tvalid
+@22
+[color] 3
+counter_la_final_tb.uut.mprj.WB_decoder_U0.DMA_MM_U0.mm_U0.sm_tdata[31:0]
+@200
+-
+-
+-SDRAM arbiter
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.FIR_in_valid
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.FIR_busy
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.FIR_rw
+@22
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.FIR_address[22:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.data_from_FIR[31:0]
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.FIR_prefetch_step
+[color] 3
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.FIR_out_valid
+@22
+[color] 3
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.data_to_FIR[31:0]
+@200
+-
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.MM_in_valid
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.MM_busy
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.MM_rw
+@22
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.MM_address[22:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.data_from_MM[31:0]
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.MM_prefetch_step
+[color] 3
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.MM_out_valid
+@22
+[color] 3
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.data_to_MM[31:0]
+@200
+-
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.CPU_in_valid
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.CPU_busy
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.CPU_rw
+@22
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.CPU_address[22:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.data_from_CPU[31:0]
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.CPU_prefetch_step
+[color] 3
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.CPU_out_valid
+@22
+[color] 3
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.data_to_CPU[31:0]
+@200
+-
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.controller_in_valid
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.controller_busy
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.controller_rw
+@22
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.controller_address[22:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.data_to_controller[31:0]
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.controller_prefetch_step
+[color] 3
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.controller_out_valid
+@22
+[color] 3
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.data_from_controller[31:0]
+@200
+-
+@24
+[color] 7
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.state_FIFO[1:0]
+[color] 7
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.state_FIR[1:0]
+[color] 7
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.state_MM[1:0]
+[color] 7
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.state_CPU[1:0]
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.request_FIR
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.request_MM
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.request_CPU
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.request_FIFO_2[2:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.request_FIFO_1[2:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.request_FIFO_0[2:0]
+@200
+-
+@24
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.prefetch_counter[1:0]
+@22
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.prefetch_address_FIR0[22:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.prefetch_address_FIR1[22:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.prefetch_address_FIR2[22:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.prefetch_buffer_FIR0[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.prefetch_buffer_FIR1[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.prefetch_buffer_FIR2[31:0]
+@200
+-
+@22
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.prefetch_address_MM0[22:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.prefetch_address_MM1[22:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.prefetch_address_MM2[22:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.prefetch_buffer_MM0[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.prefetch_buffer_MM1[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.prefetch_buffer_MM2[31:0]
+@200
+-
+@22
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.prefetch_address_CPU0[22:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.prefetch_address_CPU1[22:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.prefetch_address_CPU2[22:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.prefetch_buffer_CPU0[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.prefetch_buffer_CPU1[31:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_arbiter.prefetch_buffer_CPU2[31:0]
+@200
+-
+-
+-SDRAM controller
+@24
+[color] 7
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_controller.state_q[3:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_controller.prefetch_counter[1:0]
+@22
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_controller.addr[22:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_controller.Mapped_RA[12:0]
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_controller.Mapped_BA[1:0]
+@22
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_controller.Mapped_CA[7:0]
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_controller.in_valid
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_controller.busy
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_controller.rw
+@22
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_controller.data_in[31:0]
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_controller.prefetch_step
+[color] 3
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_controller.out_valid
+@22
+[color] 3
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_sdram_controller.data_out[31:0]
+@200
+-
+-SDRAM device
+-(Bank 0)
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_bram.Bank0.we
+@22
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_bram.Bank0.waddr[9:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_bram.Bank0.d[31:0]
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_bram.Bank0.re
+@22
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_bram.Bank0.raddr[9:0]
+[color] 3
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_bram.Bank0.q[31:0]
+@200
+-(Bank 1)
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_bram.Bank1.we
+@22
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_bram.Bank1.waddr[9:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_bram.Bank1.d[31:0]
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_bram.Bank1.re
+@22
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_bram.Bank1.raddr[9:0]
+[color] 3
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_bram.Bank1.q[31:0]
+@200
+-(Bank 2)
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_bram.Bank2.we
+@22
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_bram.Bank2.waddr[9:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_bram.Bank2.d[31:0]
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_bram.Bank2.re
+@22
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_bram.Bank2.raddr[9:0]
+[color] 3
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_bram.Bank2.q[31:0]
+@200
+-(Bank 3)
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_bram.Bank3.we
+@22
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_bram.Bank3.waddr[9:0]
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_bram.Bank3.d[31:0]
+@28
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_bram.Bank3.re
+@22
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_bram.Bank3.raddr[9:0]
+[color] 3
+counter_la_final_tb.uut.mprj.WB_decoder_U0.WB_to_controller_U0.user_bram.Bank3.q[31:0]
+[pattern_trace] 1
+[pattern_trace] 0

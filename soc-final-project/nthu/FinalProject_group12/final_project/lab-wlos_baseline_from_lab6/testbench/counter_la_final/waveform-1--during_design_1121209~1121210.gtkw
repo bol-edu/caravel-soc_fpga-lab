@@ -1,0 +1,44 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Sat Dec  9 23:16:50 2023
+[*]
+[dumpfile] "/home/ubuntu/lab_6/lab-wlos_baseline/testbench/lab6_integration/uart.vcd"
+[dumpfile_mtime] "Sat Dec  9 22:13:49 2023"
+[dumpfile_size] 354077693
+[savefile] "/home/ubuntu/lab_6/lab-wlos_baseline/testbench/lab6_integration/waveform-1--during_design_1121209~1121210.gtkw"
+[timestart] 5206000000
+[size] 1920 1009
+[pos] -1 -1
+*-28.859810 8487000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] uart_tb.
+[treeopen] uart_tb.uut.
+[treeopen] uart_tb.uut.mprj.
+[treeopen] uart_tb.uut.mprj.WB_decoder.
+[treeopen] uart_tb.uut.soc.core.
+[treeopen] uart_tb.uut.soc.core.VexRiscv.
+[sst_width] 295
+[signals_width] 222
+[sst_expanded] 1
+[sst_vpaned_height] 285
+@28
+uart_tb.clock
+uart_tb.RSTB
+uart_tb.tbuart.recv_pattern[7:0]
+@22
+>-800000
+uart_tb.checkbits[15:0]
+>0
+uart_tb.tbuart.tx_data[7:0]
+uart_tb.tbuart.tx_pattern[7:0]
+@28
+uart_tb.uart_rx
+@29
+uart_tb.tx_start
+@28
+uart_tb.uart_tx
+@22
+uart_tb.uut.mprj.WB_decoder.wbs_adr_i[31:0]
+@28
+uart_tb.uut.mprj.WB_decoder.uart.irq
+[pattern_trace] 1
+[pattern_trace] 0

@@ -1,0 +1,287 @@
+
+
+================================================================
+== Vitis HLS Report for 'caravel_ps'
+================================================================
+* Date:           Mon May 22 15:26:30 2023
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        hls_caravel_ps.prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  1.993 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.99>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%mprj_en_read = read i38 @_ssdm_op_Read.ap_none.i38, i38 %mprj_en" [src/caravel_ps.cpp:30]   --->   Operation 2 'read' 'mprj_en_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%mprj_out_read = read i38 @_ssdm_op_Read.ap_none.i38, i38 %mprj_out" [src/caravel_ps.cpp:30]   --->   Operation 3 'read' 'mprj_out_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (1.00ns)   --->   "%ps_mprj_in_read = read i38 @_ssdm_op_Read.s_axilite.i38, i38 %ps_mprj_in" [src/caravel_ps.cpp:30]   --->   Operation 4 'read' 'ps_mprj_in_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%p_Result_s = trunc i38 %mprj_en_read" [src/caravel_ps.cpp:30]   --->   Operation 5 'trunc' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specpipeline_ln30 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_0" [src/caravel_ps.cpp:30]   --->   Operation 6 'specpipeline' 'specpipeline_ln30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%spectopmodule_ln16 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_7" [src/caravel_ps.cpp:16]   --->   Operation 7 'spectopmodule' 'spectopmodule_ln16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln16 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_8, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0" [src/caravel_ps.cpp:16]   --->   Operation 8 'specinterface' 'specinterface_ln16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i38 %ps_mprj_in"   --->   Operation 9 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i38 %ps_mprj_in, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_2, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i38 %ps_mprj_in, void @empty_3, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i38 %ps_mprj_out"   --->   Operation 12 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i38 %ps_mprj_out, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_4, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i38 %ps_mprj_out, void @empty_3, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i38 %ps_mprj_en"   --->   Operation 15 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i38 %ps_mprj_en, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_5, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i38 %ps_mprj_en, void @empty_3, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i38 %mprj_in"   --->   Operation 18 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i38 %mprj_in, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i38 %mprj_out"   --->   Operation 20 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i38 %mprj_out, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i38 %mprj_en"   --->   Operation 22 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i38 %mprj_en, void @empty_6, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (1.00ns)   --->   "%write_ln43 = write void @_ssdm_op_Write.s_axilite.i38P0A, i38 %ps_mprj_out, i38 %mprj_out_read" [src/caravel_ps.cpp:43]   --->   Operation 24 'write' 'write_ln43' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 25 [1/1] (1.00ns)   --->   "%write_ln44 = write void @_ssdm_op_Write.s_axilite.i38P0A, i38 %ps_mprj_en, i38 %mprj_en_read" [src/caravel_ps.cpp:44]   --->   Operation 25 'write' 'write_ln44' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%trunc_ln825 = trunc i38 %mprj_out_read"   --->   Operation 26 'trunc' 'trunc_ln825' <Predicate = (p_Result_s)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%trunc_ln825_1 = trunc i38 %ps_mprj_in_read"   --->   Operation 27 'trunc' 'trunc_ln825_1' <Predicate = (!p_Result_s)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.99ns)   --->   "%p_Val2_s = select i1 %p_Result_s, i1 %trunc_ln825, i1 %trunc_ln825_1"   --->   Operation 28 'select' 'p_Val2_s' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%p_Result_2 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 1"   --->   Operation 29 'bitselect' 'p_Result_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 1"   --->   Operation 30 'bitselect' 'tmp' <Predicate = (p_Result_2)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%tmp_1 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 1"   --->   Operation 31 'bitselect' 'tmp_1' <Predicate = (!p_Result_2)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.99ns)   --->   "%p_Result_3 = select i1 %p_Result_2, i1 %tmp, i1 %tmp_1"   --->   Operation 32 'select' 'p_Result_3' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%p_Result_4 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 2"   --->   Operation 33 'bitselect' 'p_Result_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%tmp_3 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 2"   --->   Operation 34 'bitselect' 'tmp_3' <Predicate = (p_Result_4)> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_4 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 2"   --->   Operation 35 'bitselect' 'tmp_4' <Predicate = (!p_Result_4)> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.99ns)   --->   "%p_Result_5 = select i1 %p_Result_4, i1 %tmp_3, i1 %tmp_4"   --->   Operation 36 'select' 'p_Result_5' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%p_Result_6 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 3"   --->   Operation 37 'bitselect' 'p_Result_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%tmp_6 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 3"   --->   Operation 38 'bitselect' 'tmp_6' <Predicate = (p_Result_6)> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%tmp_7 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 3"   --->   Operation 39 'bitselect' 'tmp_7' <Predicate = (!p_Result_6)> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.99ns)   --->   "%p_Result_7 = select i1 %p_Result_6, i1 %tmp_6, i1 %tmp_7"   --->   Operation 40 'select' 'p_Result_7' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%p_Result_8 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 4"   --->   Operation 41 'bitselect' 'p_Result_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%tmp_9 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 4"   --->   Operation 42 'bitselect' 'tmp_9' <Predicate = (p_Result_8)> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%tmp_10 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 4"   --->   Operation 43 'bitselect' 'tmp_10' <Predicate = (!p_Result_8)> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.99ns)   --->   "%p_Result_9 = select i1 %p_Result_8, i1 %tmp_9, i1 %tmp_10"   --->   Operation 44 'select' 'p_Result_9' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%p_Result_10 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 5"   --->   Operation 45 'bitselect' 'p_Result_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%tmp_12 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 5"   --->   Operation 46 'bitselect' 'tmp_12' <Predicate = (p_Result_10)> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%tmp_13 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 5"   --->   Operation 47 'bitselect' 'tmp_13' <Predicate = (!p_Result_10)> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.99ns)   --->   "%p_Result_11 = select i1 %p_Result_10, i1 %tmp_12, i1 %tmp_13"   --->   Operation 48 'select' 'p_Result_11' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%p_Result_12 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 6"   --->   Operation 49 'bitselect' 'p_Result_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%tmp_15 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 6"   --->   Operation 50 'bitselect' 'tmp_15' <Predicate = (p_Result_12)> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%tmp_16 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 6"   --->   Operation 51 'bitselect' 'tmp_16' <Predicate = (!p_Result_12)> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.99ns)   --->   "%p_Result_13 = select i1 %p_Result_12, i1 %tmp_15, i1 %tmp_16"   --->   Operation 52 'select' 'p_Result_13' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%p_Result_14 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 7"   --->   Operation 53 'bitselect' 'p_Result_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%tmp_18 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 7"   --->   Operation 54 'bitselect' 'tmp_18' <Predicate = (p_Result_14)> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%tmp_19 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 7"   --->   Operation 55 'bitselect' 'tmp_19' <Predicate = (!p_Result_14)> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.99ns)   --->   "%p_Result_15 = select i1 %p_Result_14, i1 %tmp_18, i1 %tmp_19"   --->   Operation 56 'select' 'p_Result_15' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%p_Result_16 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 8"   --->   Operation 57 'bitselect' 'p_Result_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%tmp_21 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 8"   --->   Operation 58 'bitselect' 'tmp_21' <Predicate = (p_Result_16)> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%tmp_22 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 8"   --->   Operation 59 'bitselect' 'tmp_22' <Predicate = (!p_Result_16)> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.99ns)   --->   "%p_Result_17 = select i1 %p_Result_16, i1 %tmp_21, i1 %tmp_22"   --->   Operation 60 'select' 'p_Result_17' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%p_Result_18 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 9"   --->   Operation 61 'bitselect' 'p_Result_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%tmp_24 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 9"   --->   Operation 62 'bitselect' 'tmp_24' <Predicate = (p_Result_18)> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%tmp_25 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 9"   --->   Operation 63 'bitselect' 'tmp_25' <Predicate = (!p_Result_18)> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.99ns)   --->   "%p_Result_19 = select i1 %p_Result_18, i1 %tmp_24, i1 %tmp_25"   --->   Operation 64 'select' 'p_Result_19' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%p_Result_20 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 10"   --->   Operation 65 'bitselect' 'p_Result_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%tmp_27 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 10"   --->   Operation 66 'bitselect' 'tmp_27' <Predicate = (p_Result_20)> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%tmp_28 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 10"   --->   Operation 67 'bitselect' 'tmp_28' <Predicate = (!p_Result_20)> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.99ns)   --->   "%p_Result_21 = select i1 %p_Result_20, i1 %tmp_27, i1 %tmp_28"   --->   Operation 68 'select' 'p_Result_21' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%p_Result_22 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 11"   --->   Operation 69 'bitselect' 'p_Result_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%tmp_30 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 11"   --->   Operation 70 'bitselect' 'tmp_30' <Predicate = (p_Result_22)> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%tmp_31 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 11"   --->   Operation 71 'bitselect' 'tmp_31' <Predicate = (!p_Result_22)> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.99ns)   --->   "%p_Result_23 = select i1 %p_Result_22, i1 %tmp_30, i1 %tmp_31"   --->   Operation 72 'select' 'p_Result_23' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%p_Result_24 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 12"   --->   Operation 73 'bitselect' 'p_Result_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%tmp_33 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 12"   --->   Operation 74 'bitselect' 'tmp_33' <Predicate = (p_Result_24)> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%tmp_34 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 12"   --->   Operation 75 'bitselect' 'tmp_34' <Predicate = (!p_Result_24)> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.99ns)   --->   "%p_Result_25 = select i1 %p_Result_24, i1 %tmp_33, i1 %tmp_34"   --->   Operation 76 'select' 'p_Result_25' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%p_Result_26 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 13"   --->   Operation 77 'bitselect' 'p_Result_26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%tmp_36 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 13"   --->   Operation 78 'bitselect' 'tmp_36' <Predicate = (p_Result_26)> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%tmp_37 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 13"   --->   Operation 79 'bitselect' 'tmp_37' <Predicate = (!p_Result_26)> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.99ns)   --->   "%p_Result_27 = select i1 %p_Result_26, i1 %tmp_36, i1 %tmp_37"   --->   Operation 80 'select' 'p_Result_27' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%p_Result_28 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 14"   --->   Operation 81 'bitselect' 'p_Result_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%tmp_39 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 14"   --->   Operation 82 'bitselect' 'tmp_39' <Predicate = (p_Result_28)> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%tmp_40 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 14"   --->   Operation 83 'bitselect' 'tmp_40' <Predicate = (!p_Result_28)> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.99ns)   --->   "%p_Result_29 = select i1 %p_Result_28, i1 %tmp_39, i1 %tmp_40"   --->   Operation 84 'select' 'p_Result_29' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%p_Result_30 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 15"   --->   Operation 85 'bitselect' 'p_Result_30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%tmp_42 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 15"   --->   Operation 86 'bitselect' 'tmp_42' <Predicate = (p_Result_30)> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%tmp_43 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 15"   --->   Operation 87 'bitselect' 'tmp_43' <Predicate = (!p_Result_30)> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.99ns)   --->   "%p_Result_31 = select i1 %p_Result_30, i1 %tmp_42, i1 %tmp_43"   --->   Operation 88 'select' 'p_Result_31' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%p_Result_32 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 16"   --->   Operation 89 'bitselect' 'p_Result_32' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%tmp_45 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 16"   --->   Operation 90 'bitselect' 'tmp_45' <Predicate = (p_Result_32)> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%tmp_46 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 16"   --->   Operation 91 'bitselect' 'tmp_46' <Predicate = (!p_Result_32)> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.99ns)   --->   "%p_Result_33 = select i1 %p_Result_32, i1 %tmp_45, i1 %tmp_46"   --->   Operation 92 'select' 'p_Result_33' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%p_Result_34 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 17"   --->   Operation 93 'bitselect' 'p_Result_34' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%tmp_48 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 17"   --->   Operation 94 'bitselect' 'tmp_48' <Predicate = (p_Result_34)> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%tmp_49 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 17"   --->   Operation 95 'bitselect' 'tmp_49' <Predicate = (!p_Result_34)> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.99ns)   --->   "%p_Result_35 = select i1 %p_Result_34, i1 %tmp_48, i1 %tmp_49"   --->   Operation 96 'select' 'p_Result_35' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%p_Result_36 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 18"   --->   Operation 97 'bitselect' 'p_Result_36' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%tmp_51 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 18"   --->   Operation 98 'bitselect' 'tmp_51' <Predicate = (p_Result_36)> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%tmp_52 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 18"   --->   Operation 99 'bitselect' 'tmp_52' <Predicate = (!p_Result_36)> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.99ns)   --->   "%p_Result_37 = select i1 %p_Result_36, i1 %tmp_51, i1 %tmp_52"   --->   Operation 100 'select' 'p_Result_37' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%p_Result_38 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 19"   --->   Operation 101 'bitselect' 'p_Result_38' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "%tmp_54 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 19"   --->   Operation 102 'bitselect' 'tmp_54' <Predicate = (p_Result_38)> <Delay = 0.00>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%tmp_55 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 19"   --->   Operation 103 'bitselect' 'tmp_55' <Predicate = (!p_Result_38)> <Delay = 0.00>
+ST_1 : Operation 104 [1/1] (0.99ns)   --->   "%p_Result_39 = select i1 %p_Result_38, i1 %tmp_54, i1 %tmp_55"   --->   Operation 104 'select' 'p_Result_39' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%p_Result_40 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 20"   --->   Operation 105 'bitselect' 'p_Result_40' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%tmp_57 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 20"   --->   Operation 106 'bitselect' 'tmp_57' <Predicate = (p_Result_40)> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%tmp_58 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 20"   --->   Operation 107 'bitselect' 'tmp_58' <Predicate = (!p_Result_40)> <Delay = 0.00>
+ST_1 : Operation 108 [1/1] (0.99ns)   --->   "%p_Result_41 = select i1 %p_Result_40, i1 %tmp_57, i1 %tmp_58"   --->   Operation 108 'select' 'p_Result_41' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%p_Result_42 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 21"   --->   Operation 109 'bitselect' 'p_Result_42' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "%tmp_60 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 21"   --->   Operation 110 'bitselect' 'tmp_60' <Predicate = (p_Result_42)> <Delay = 0.00>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%tmp_61 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 21"   --->   Operation 111 'bitselect' 'tmp_61' <Predicate = (!p_Result_42)> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.99ns)   --->   "%p_Result_43 = select i1 %p_Result_42, i1 %tmp_60, i1 %tmp_61"   --->   Operation 112 'select' 'p_Result_43' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "%p_Result_44 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 22"   --->   Operation 113 'bitselect' 'p_Result_44' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "%tmp_63 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 22"   --->   Operation 114 'bitselect' 'tmp_63' <Predicate = (p_Result_44)> <Delay = 0.00>
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%tmp_64 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 22"   --->   Operation 115 'bitselect' 'tmp_64' <Predicate = (!p_Result_44)> <Delay = 0.00>
+ST_1 : Operation 116 [1/1] (0.99ns)   --->   "%p_Result_45 = select i1 %p_Result_44, i1 %tmp_63, i1 %tmp_64"   --->   Operation 116 'select' 'p_Result_45' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 117 [1/1] (0.00ns)   --->   "%p_Result_46 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 23"   --->   Operation 117 'bitselect' 'p_Result_46' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "%tmp_66 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 23"   --->   Operation 118 'bitselect' 'tmp_66' <Predicate = (p_Result_46)> <Delay = 0.00>
+ST_1 : Operation 119 [1/1] (0.00ns)   --->   "%tmp_67 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 23"   --->   Operation 119 'bitselect' 'tmp_67' <Predicate = (!p_Result_46)> <Delay = 0.00>
+ST_1 : Operation 120 [1/1] (0.99ns)   --->   "%p_Result_47 = select i1 %p_Result_46, i1 %tmp_66, i1 %tmp_67"   --->   Operation 120 'select' 'p_Result_47' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 121 [1/1] (0.00ns)   --->   "%p_Result_48 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 24"   --->   Operation 121 'bitselect' 'p_Result_48' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 122 [1/1] (0.00ns)   --->   "%tmp_69 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 24"   --->   Operation 122 'bitselect' 'tmp_69' <Predicate = (p_Result_48)> <Delay = 0.00>
+ST_1 : Operation 123 [1/1] (0.00ns)   --->   "%tmp_70 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 24"   --->   Operation 123 'bitselect' 'tmp_70' <Predicate = (!p_Result_48)> <Delay = 0.00>
+ST_1 : Operation 124 [1/1] (0.99ns)   --->   "%p_Result_49 = select i1 %p_Result_48, i1 %tmp_69, i1 %tmp_70"   --->   Operation 124 'select' 'p_Result_49' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 125 [1/1] (0.00ns)   --->   "%p_Result_50 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 25"   --->   Operation 125 'bitselect' 'p_Result_50' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 126 [1/1] (0.00ns)   --->   "%tmp_72 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 25"   --->   Operation 126 'bitselect' 'tmp_72' <Predicate = (p_Result_50)> <Delay = 0.00>
+ST_1 : Operation 127 [1/1] (0.00ns)   --->   "%tmp_73 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 25"   --->   Operation 127 'bitselect' 'tmp_73' <Predicate = (!p_Result_50)> <Delay = 0.00>
+ST_1 : Operation 128 [1/1] (0.99ns)   --->   "%p_Result_51 = select i1 %p_Result_50, i1 %tmp_72, i1 %tmp_73"   --->   Operation 128 'select' 'p_Result_51' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 129 [1/1] (0.00ns)   --->   "%p_Result_52 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 26"   --->   Operation 129 'bitselect' 'p_Result_52' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 130 [1/1] (0.00ns)   --->   "%tmp_75 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 26"   --->   Operation 130 'bitselect' 'tmp_75' <Predicate = (p_Result_52)> <Delay = 0.00>
+ST_1 : Operation 131 [1/1] (0.00ns)   --->   "%tmp_76 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 26"   --->   Operation 131 'bitselect' 'tmp_76' <Predicate = (!p_Result_52)> <Delay = 0.00>
+ST_1 : Operation 132 [1/1] (0.99ns)   --->   "%p_Result_53 = select i1 %p_Result_52, i1 %tmp_75, i1 %tmp_76"   --->   Operation 132 'select' 'p_Result_53' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 133 [1/1] (0.00ns)   --->   "%p_Result_54 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 27"   --->   Operation 133 'bitselect' 'p_Result_54' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 134 [1/1] (0.00ns)   --->   "%tmp_78 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 27"   --->   Operation 134 'bitselect' 'tmp_78' <Predicate = (p_Result_54)> <Delay = 0.00>
+ST_1 : Operation 135 [1/1] (0.00ns)   --->   "%tmp_79 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 27"   --->   Operation 135 'bitselect' 'tmp_79' <Predicate = (!p_Result_54)> <Delay = 0.00>
+ST_1 : Operation 136 [1/1] (0.99ns)   --->   "%p_Result_55 = select i1 %p_Result_54, i1 %tmp_78, i1 %tmp_79"   --->   Operation 136 'select' 'p_Result_55' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 137 [1/1] (0.00ns)   --->   "%p_Result_56 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 28"   --->   Operation 137 'bitselect' 'p_Result_56' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 138 [1/1] (0.00ns)   --->   "%tmp_81 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 28"   --->   Operation 138 'bitselect' 'tmp_81' <Predicate = (p_Result_56)> <Delay = 0.00>
+ST_1 : Operation 139 [1/1] (0.00ns)   --->   "%tmp_82 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 28"   --->   Operation 139 'bitselect' 'tmp_82' <Predicate = (!p_Result_56)> <Delay = 0.00>
+ST_1 : Operation 140 [1/1] (0.99ns)   --->   "%p_Result_57 = select i1 %p_Result_56, i1 %tmp_81, i1 %tmp_82"   --->   Operation 140 'select' 'p_Result_57' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 141 [1/1] (0.00ns)   --->   "%p_Result_58 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 29"   --->   Operation 141 'bitselect' 'p_Result_58' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 142 [1/1] (0.00ns)   --->   "%tmp_84 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 29"   --->   Operation 142 'bitselect' 'tmp_84' <Predicate = (p_Result_58)> <Delay = 0.00>
+ST_1 : Operation 143 [1/1] (0.00ns)   --->   "%tmp_85 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 29"   --->   Operation 143 'bitselect' 'tmp_85' <Predicate = (!p_Result_58)> <Delay = 0.00>
+ST_1 : Operation 144 [1/1] (0.99ns)   --->   "%p_Result_59 = select i1 %p_Result_58, i1 %tmp_84, i1 %tmp_85"   --->   Operation 144 'select' 'p_Result_59' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 145 [1/1] (0.00ns)   --->   "%p_Result_60 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 30"   --->   Operation 145 'bitselect' 'p_Result_60' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 146 [1/1] (0.00ns)   --->   "%tmp_87 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 30"   --->   Operation 146 'bitselect' 'tmp_87' <Predicate = (p_Result_60)> <Delay = 0.00>
+ST_1 : Operation 147 [1/1] (0.00ns)   --->   "%tmp_88 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 30"   --->   Operation 147 'bitselect' 'tmp_88' <Predicate = (!p_Result_60)> <Delay = 0.00>
+ST_1 : Operation 148 [1/1] (0.99ns)   --->   "%p_Result_61 = select i1 %p_Result_60, i1 %tmp_87, i1 %tmp_88"   --->   Operation 148 'select' 'p_Result_61' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 149 [1/1] (0.00ns)   --->   "%p_Result_62 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 31"   --->   Operation 149 'bitselect' 'p_Result_62' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 150 [1/1] (0.00ns)   --->   "%tmp_90 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 31"   --->   Operation 150 'bitselect' 'tmp_90' <Predicate = (p_Result_62)> <Delay = 0.00>
+ST_1 : Operation 151 [1/1] (0.00ns)   --->   "%tmp_91 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 31"   --->   Operation 151 'bitselect' 'tmp_91' <Predicate = (!p_Result_62)> <Delay = 0.00>
+ST_1 : Operation 152 [1/1] (0.99ns)   --->   "%p_Result_63 = select i1 %p_Result_62, i1 %tmp_90, i1 %tmp_91"   --->   Operation 152 'select' 'p_Result_63' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 153 [1/1] (0.00ns)   --->   "%p_Result_64 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 32"   --->   Operation 153 'bitselect' 'p_Result_64' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 154 [1/1] (0.00ns)   --->   "%tmp_93 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 32"   --->   Operation 154 'bitselect' 'tmp_93' <Predicate = (p_Result_64)> <Delay = 0.00>
+ST_1 : Operation 155 [1/1] (0.00ns)   --->   "%tmp_94 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 32"   --->   Operation 155 'bitselect' 'tmp_94' <Predicate = (!p_Result_64)> <Delay = 0.00>
+ST_1 : Operation 156 [1/1] (0.99ns)   --->   "%p_Result_65 = select i1 %p_Result_64, i1 %tmp_93, i1 %tmp_94"   --->   Operation 156 'select' 'p_Result_65' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 157 [1/1] (0.00ns)   --->   "%p_Result_66 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 33"   --->   Operation 157 'bitselect' 'p_Result_66' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 158 [1/1] (0.00ns)   --->   "%tmp_96 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 33"   --->   Operation 158 'bitselect' 'tmp_96' <Predicate = (p_Result_66)> <Delay = 0.00>
+ST_1 : Operation 159 [1/1] (0.00ns)   --->   "%tmp_97 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 33"   --->   Operation 159 'bitselect' 'tmp_97' <Predicate = (!p_Result_66)> <Delay = 0.00>
+ST_1 : Operation 160 [1/1] (0.99ns)   --->   "%p_Result_67 = select i1 %p_Result_66, i1 %tmp_96, i1 %tmp_97"   --->   Operation 160 'select' 'p_Result_67' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 161 [1/1] (0.00ns)   --->   "%p_Result_68 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 34"   --->   Operation 161 'bitselect' 'p_Result_68' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 162 [1/1] (0.00ns)   --->   "%tmp_99 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 34"   --->   Operation 162 'bitselect' 'tmp_99' <Predicate = (p_Result_68)> <Delay = 0.00>
+ST_1 : Operation 163 [1/1] (0.00ns)   --->   "%tmp_100 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 34"   --->   Operation 163 'bitselect' 'tmp_100' <Predicate = (!p_Result_68)> <Delay = 0.00>
+ST_1 : Operation 164 [1/1] (0.99ns)   --->   "%p_Result_69 = select i1 %p_Result_68, i1 %tmp_99, i1 %tmp_100"   --->   Operation 164 'select' 'p_Result_69' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 165 [1/1] (0.00ns)   --->   "%p_Result_70 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 35"   --->   Operation 165 'bitselect' 'p_Result_70' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 166 [1/1] (0.00ns)   --->   "%tmp_102 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 35"   --->   Operation 166 'bitselect' 'tmp_102' <Predicate = (p_Result_70)> <Delay = 0.00>
+ST_1 : Operation 167 [1/1] (0.00ns)   --->   "%tmp_103 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 35"   --->   Operation 167 'bitselect' 'tmp_103' <Predicate = (!p_Result_70)> <Delay = 0.00>
+ST_1 : Operation 168 [1/1] (0.99ns)   --->   "%p_Result_71 = select i1 %p_Result_70, i1 %tmp_102, i1 %tmp_103"   --->   Operation 168 'select' 'p_Result_71' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 169 [1/1] (0.00ns)   --->   "%p_Result_72 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 36"   --->   Operation 169 'bitselect' 'p_Result_72' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 170 [1/1] (0.00ns)   --->   "%tmp_105 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 36"   --->   Operation 170 'bitselect' 'tmp_105' <Predicate = (p_Result_72)> <Delay = 0.00>
+ST_1 : Operation 171 [1/1] (0.00ns)   --->   "%tmp_106 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 36"   --->   Operation 171 'bitselect' 'tmp_106' <Predicate = (!p_Result_72)> <Delay = 0.00>
+ST_1 : Operation 172 [1/1] (0.99ns)   --->   "%p_Result_73 = select i1 %p_Result_72, i1 %tmp_105, i1 %tmp_106"   --->   Operation 172 'select' 'p_Result_73' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 173 [1/1] (0.00ns)   --->   "%p_Result_74 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_en_read, i32 37"   --->   Operation 173 'bitselect' 'p_Result_74' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 174 [1/1] (0.00ns)   --->   "%tmp_108 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %mprj_out_read, i32 37"   --->   Operation 174 'bitselect' 'tmp_108' <Predicate = (p_Result_74)> <Delay = 0.00>
+ST_1 : Operation 175 [1/1] (0.00ns)   --->   "%tmp_109 = bitselect i1 @_ssdm_op_BitSelect.i1.i38.i32, i38 %ps_mprj_in_read, i32 37"   --->   Operation 175 'bitselect' 'tmp_109' <Predicate = (!p_Result_74)> <Delay = 0.00>
+ST_1 : Operation 176 [1/1] (0.99ns)   --->   "%p_Result_75 = select i1 %p_Result_74, i1 %tmp_108, i1 %tmp_109"   --->   Operation 176 'select' 'p_Result_75' <Predicate = true> <Delay = 0.99> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 177 [1/1] (0.00ns)   --->   "%p_Result_76 = bitconcatenate i38 @_ssdm_op_BitConcatenate.i38.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1.i1, i1 %p_Result_75, i1 %p_Result_73, i1 %p_Result_71, i1 %p_Result_69, i1 %p_Result_67, i1 %p_Result_65, i1 %p_Result_63, i1 %p_Result_61, i1 %p_Result_59, i1 %p_Result_57, i1 %p_Result_55, i1 %p_Result_53, i1 %p_Result_51, i1 %p_Result_49, i1 %p_Result_47, i1 %p_Result_45, i1 %p_Result_43, i1 %p_Result_41, i1 %p_Result_39, i1 %p_Result_37, i1 %p_Result_35, i1 %p_Result_33, i1 %p_Result_31, i1 %p_Result_29, i1 %p_Result_27, i1 %p_Result_25, i1 %p_Result_23, i1 %p_Result_21, i1 %p_Result_19, i1 %p_Result_17, i1 %p_Result_15, i1 %p_Result_13, i1 %p_Result_11, i1 %p_Result_9, i1 %p_Result_7, i1 %p_Result_5, i1 %p_Result_3, i1 %p_Val2_s"   --->   Operation 177 'bitconcatenate' 'p_Result_76' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 178 [1/1] (0.00ns)   --->   "%write_ln855 = write void @_ssdm_op_Write.ap_none.i38P0A, i38 %mprj_in, i38 %p_Result_76"   --->   Operation 178 'write' 'write_ln855' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 179 [1/1] (0.00ns)   --->   "%ret_ln53 = ret" [src/caravel_ps.cpp:53]   --->   Operation 179 'ret' 'ret_ln53' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.99ns
+The critical path consists of the following:
+	s_axi read operation ('ps_mprj_in_read', src/caravel_ps.cpp:30) on port 'ps_mprj_in' (src/caravel_ps.cpp:30) [9]  (1 ns)
+	'select' operation ('__Val2__') [33]  (0.993 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

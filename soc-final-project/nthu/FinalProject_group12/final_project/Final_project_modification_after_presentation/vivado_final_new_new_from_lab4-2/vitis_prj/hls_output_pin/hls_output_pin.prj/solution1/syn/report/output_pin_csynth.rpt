@@ -1,0 +1,124 @@
+
+
+================================================================
+== Vitis HLS Report for 'output_pin'
+================================================================
+* Date:           Mon May 22 15:26:02 2023
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        hls_output_pin.prj
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  1.000 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    1|    1|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       -|      -|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        0|    -|      37|     42|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|      -|    -|
+|Register         |        -|    -|       -|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      37|     42|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------+---------------+---------+----+----+----+-----+
+    |     Instance    |     Module    | BRAM_18K| DSP| FF | LUT| URAM|
+    +-----------------+---------------+---------+----+----+----+-----+
+    |control_s_axi_U  |control_s_axi  |        0|   0|  37|  42|    0|
+    +-----------------+---------------+---------+----+----+----+-----+
+    |Total            |               |        0|   0|  37|  42|    0|
+    +-----------------+---------------+---------+----+----+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+--------------+--------------+--------------+
+|       RTL Ports       | Dir | Bits|   Protocol   | Source Object|    C Type    |
++-----------------------+-----+-----+--------------+--------------+--------------+
+|s_axi_control_AWVALID  |   in|    1|         s_axi|       control|        scalar|
+|s_axi_control_AWREADY  |  out|    1|         s_axi|       control|        scalar|
+|s_axi_control_AWADDR   |   in|    5|         s_axi|       control|        scalar|
+|s_axi_control_WVALID   |   in|    1|         s_axi|       control|        scalar|
+|s_axi_control_WREADY   |  out|    1|         s_axi|       control|        scalar|
+|s_axi_control_WDATA    |   in|   32|         s_axi|       control|        scalar|
+|s_axi_control_WSTRB    |   in|    4|         s_axi|       control|        scalar|
+|s_axi_control_ARVALID  |   in|    1|         s_axi|       control|        scalar|
+|s_axi_control_ARREADY  |  out|    1|         s_axi|       control|        scalar|
+|s_axi_control_ARADDR   |   in|    5|         s_axi|       control|        scalar|
+|s_axi_control_RVALID   |  out|    1|         s_axi|       control|        scalar|
+|s_axi_control_RREADY   |   in|    1|         s_axi|       control|        scalar|
+|s_axi_control_RDATA    |  out|   32|         s_axi|       control|        scalar|
+|s_axi_control_RRESP    |  out|    2|         s_axi|       control|        scalar|
+|s_axi_control_BVALID   |  out|    1|         s_axi|       control|        scalar|
+|s_axi_control_BREADY   |   in|    1|         s_axi|       control|        scalar|
+|s_axi_control_BRESP    |  out|    2|         s_axi|       control|        scalar|
+|outpin                 |  out|    1|       ap_none|        outpin|       pointer|
+|ap_clk                 |   in|    1|  ap_ctrl_none|    output_pin|  return value|
+|ap_rst_n               |   in|    1|  ap_ctrl_none|    output_pin|  return value|
++-----------------------+-----+-----+--------------+--------------+--------------+
+

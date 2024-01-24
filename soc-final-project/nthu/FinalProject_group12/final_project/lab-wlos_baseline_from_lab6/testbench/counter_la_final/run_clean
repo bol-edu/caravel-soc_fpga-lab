@@ -1,0 +1,3 @@
+rm -rf xsim.dir/ *.log *.pb *.jou *.wdb
+rm -f *.vcd *.hex
+rm -f *.i *.o *.s *.out *.map

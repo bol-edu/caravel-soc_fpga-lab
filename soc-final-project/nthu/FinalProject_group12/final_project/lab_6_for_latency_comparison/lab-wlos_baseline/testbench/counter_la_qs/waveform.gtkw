@@ -1,0 +1,151 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Tue Jul 18 07:11:42 2023
+[*]
+[dumpfile] "/home/josh/my/caravel-soc/testbench/counter_la/counter_la.vcd"
+[dumpfile_mtime] "Tue Jul 18 07:01:53 2023"
+[dumpfile_size] 24536884
+[savefile] "/home/josh/my/caravel-soc/testbench/counter_la/waveform.gtkw"
+[timestart] 0
+[size] 1908 942
+[pos] 6060 129
+*-28.000000 638000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] counter_la_tb.
+[treeopen] counter_la_tb.uut.
+[treeopen] counter_la_tb.uut.mprj.
+[treeopen] counter_la_tb.uut.mprj.mprj.
+[treeopen] counter_la_tb.uut.padframe.
+[treeopen] counter_la_tb.uut.padframe.mprj_pads.
+[treeopen] counter_la_tb.uut.soc.
+[treeopen] counter_la_tb.uut.soc.core.
+[treeopen] counter_la_tb.uut.soc.core.VexRiscv.
+[sst_width] 292
+[signals_width] 404
+[sst_expanded] 1
+[sst_vpaned_height] 551
+@200
+-#counter_la_tb
+@28
+counter_la_tb.clock
+counter_la_tb.RSTB
+counter_la_tb.CSB
+counter_la_tb.gpio
+counter_la_tb.uart_tx
+@22
+counter_la_tb.mprj_io[37:0]
+counter_la_tb.checkbits[15:0]
+@28
+counter_la_tb.flash_clk
+counter_la_tb.flash_csb
+counter_la_tb.flash_io0
+counter_la_tb.flash_io1
+@200
+-
+-#uut(caravel)
+@28
+counter_la_tb.uut.mprj_ack_i_core
+counter_la_tb.uut.caravel_clk
+counter_la_tb.uut.caravel_rstn
+counter_la_tb.uut.clock
+counter_la_tb.uut.gpio
+counter_la_tb.uut.mprj_clock
+@22
+counter_la_tb.uut.mprj_dat_i_core[31:0]
+counter_la_tb.uut.mprj_dat_i_user[31:0]
+counter_la_tb.uut.mprj_dat_o_core[31:0]
+counter_la_tb.uut.mprj_dat_o_user[31:0]
+counter_la_tb.uut.mprj_io[37:0]
+counter_la_tb.uut.user_io_out[37:0]
+@200
+-
+-#soc
+@28
+counter_la_tb.uut.soc.mprj_ack_i
+counter_la_tb.uut.soc.core.shared_ack
+@22
+counter_la_tb.uut.soc.core.shared_adr[29:0]
+counter_la_tb.uut.soc.core.shared_dat_r[31:0]
+counter_la_tb.uut.soc.core.shared_dat_w[31:0]
+@28
+counter_la_tb.uut.soc.core.mgmtsoc_dbus_dbus_ack
+@22
+counter_la_tb.uut.soc.core.mgmtsoc_dbus_dbus_adr[29:0]
+counter_la_tb.uut.soc.core.mgmtsoc_dbus_dbus_dat_w[31:0]
+@200
+-
+-
+-#VexRiscV
+@22
+counter_la_tb.uut.soc.core.VexRiscv.execute_PC[31:0]
+counter_la_tb.uut.soc.core.VexRiscv.iBusWishbone_ADR[29:0]
+@28
+counter_la_tb.uut.soc.core.VexRiscv.iBusWishbone_ACK
+counter_la_tb.uut.soc.core.VexRiscv.iBusWishbone_CYC
+@22
+counter_la_tb.uut.soc.core.VexRiscv.iBusWishbone_DAT_MISO[31:0]
+counter_la_tb.uut.soc.core.VexRiscv.iBusWishbone_DAT_MOSI[31:0]
+counter_la_tb.uut.soc.core.VexRiscv.dBusWishbone_ADR[29:0]
+@28
+counter_la_tb.uut.soc.core.VexRiscv.dBusWishbone_ACK
+counter_la_tb.uut.soc.core.VexRiscv.dBusWishbone_CYC
+@22
+counter_la_tb.uut.soc.core.VexRiscv.dBusWishbone_DAT_MISO[31:0]
+counter_la_tb.uut.soc.core.VexRiscv.dBusWishbone_DAT_MOSI[31:0]
+@28
+counter_la_tb.uut.soc.core.VexRiscv.dBusWishbone_WE
+@200
+-
+-mprj
+@28
+counter_la_tb.uut.mprj.mprj.clk
+counter_la_tb.uut.mprj.mprj.decoded
+@22
+counter_la_tb.uut.mprj.mprj.delayed_count[15:0]
+counter_la_tb.uut.mprj.mprj.rdata[31:0]
+@28
+counter_la_tb.uut.mprj.mprj.ready
+counter_la_tb.uut.mprj.mprj.valid
+counter_la_tb.uut.mprj.mprj.wbs_ack_o
+counter_la_tb.uut.mprj.mprj.wbs_we_i
+counter_la_tb.uut.mprj.mprj.wbs_cyc_i
+counter_la_tb.uut.mprj.mprj.wbs_stb_i
+@22
+counter_la_tb.uut.mprj.mprj.wbs_adr_i[31:0]
+counter_la_tb.uut.mprj.mprj.wbs_dat_i[31:0]
+counter_la_tb.uut.mprj.mprj.wbs_dat_o[31:0]
+@28
+counter_la_tb.uut.mprj.mprj.wbs_stb_i
+@22
+counter_la_tb.uut.mprj.mprj.wstrb[3:0]
+@200
+-
+-User Bram
+@28
+counter_la_tb.uut.mprj.mprj.user_bram.CLK
+@22
+counter_la_tb.uut.mprj.mprj.user_bram.Di0[31:0]
+counter_la_tb.uut.mprj.mprj.user_bram.Do0[31:0]
+@28
+counter_la_tb.uut.mprj.mprj.user_bram.EN0
+@22
+counter_la_tb.uut.mprj.mprj.user_bram.WE0[3:0]
+counter_la_tb.uut.mprj.mprj.user_bram.A0[31:0]
+@200
+-
+-RAM256
+@28
+counter_la_tb.uut.soc.core.RAM256.CLK
+@22
+counter_la_tb.uut.soc.core.RAM256.A0[7:0]
+@28
+counter_la_tb.uut.soc.core.RAM256.EN0
+@22
+counter_la_tb.uut.soc.core.RAM256.WE0[3:0]
+counter_la_tb.uut.soc.core.RAM256.Di0[31:0]
+counter_la_tb.uut.soc.core.RAM256.Do0[31:0]
+@200
+-
+-
+-
+[pattern_trace] 1
+[pattern_trace] 0

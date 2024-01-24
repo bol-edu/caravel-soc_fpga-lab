@@ -1,0 +1,1 @@
+cp ../rtl/user/* ./vvd_srcs/caravel_soc/rtl/user
