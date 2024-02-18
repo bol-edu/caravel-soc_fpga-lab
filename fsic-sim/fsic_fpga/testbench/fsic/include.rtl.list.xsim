@@ -1,0 +1,61 @@
+## Headers
+../../rtl/header/defines.v
+../../rtl/header/user_defines.v
+
+## User project
+../../rtl/user/rtl/fsic.v
+../../rtl/user/rtl/user_project_wrapper.v
+../../rtl/user/axilite_axis/rtl/axi_ctrl_logic.sv
+../../rtl/user/axilite_axis/rtl/axil_axis.sv
+../../rtl/user/axilite_axis/rtl/axilite_master.sv
+../../rtl/user/axilite_axis/rtl/axilite_slave.sv
+../../rtl/user/axilite_axis/rtl/axis_master.sv
+../../rtl/user/axilite_axis/rtl/axis_slave.sv
+../../rtl/user/axis_switch/rtl/sw_caravel.v
+../../rtl/user/config_ctrl/rtl/config_ctrl.v
+../../rtl/user/fsic_clkrst/rtl/fsic_clkrst.v
+../../rtl/user/io_serdes/rtl/fsic_coreclk_phase_cnt.v
+../../rtl/user/io_serdes/rtl/fsic_io_serdes_rx.v
+../../rtl/user/io_serdes/rtl/io_serdes.v
+../../rtl/user/logic_analyzer/rtl/LogicAnalyzer.v
+../../rtl/user/logic_analyzer/rtl/Sram.v
+../../rtl/user/mprj_io/rtl/fsic_mprj_io.v
+../../rtl/user/user_subsys/rtl/user_subsys.v
+../../rtl/user/user_subsys/axil_slav/rtl/axil_slav.v
+../../rtl/user/user_subsys/axis_mstr/rtl/axis_mstr.v
+../../rtl/user/user_subsys/axis_slav/rtl/axis_slav.v
+../../rtl/user/user_subsys/irq_mux/rtl/irq_mux.v
+../../rtl/user/user_subsys/la_mux/rtl/la_mux.v
+../../rtl/user/user_subsys/user_prj/user_prj0/rtl/user_prj0.v
+../../rtl/user/user_subsys/user_prj/user_prj0/rtl/concat_EdgeDetect_Top_fsic.v
+../../rtl/user/user_subsys/user_prj/user_prj0/rtl/spram.v
+../../rtl/user/user_subsys/user_prj/user_prj1/rtl/user_prj1.v
+../../rtl/user/user_subsys/user_prj/user_prj2/rtl/user_prj2.v
+../../rtl/user/user_subsys/user_prj/user_prj3/rtl/user_prj3.v
+
+
+## VIP
+../../vip/tbuart.v
+../../vip/bram.v
+##../../vip/spiflash.v
+
+## DFFRAM Behavioral Model
+../../vip/RAM256.v
+../../vip/RAM128.v
+
+## Mgmt Core Wrapper
+../../rtl/soc-efabless/mgmt_core.v
+../../rtl/soc-efabless/mgmt_core_wrapper.v
+../../rtl/soc-efabless/VexRiscv_MinDebugCache.v
+
+## These blocks need to stay in RTL
+../../rtl/soc/mprj_io.v
+
+## These blocks only needed for RTL sims							     
+../../rtl/soc-efabless/housekeeping_spi.v
+../../rtl/soc/spiflash.v
+../../rtl/soc/chip_io.v
+../../rtl/soc/gpio_control_block.v
+../../rtl/soc/gpio_defaults_block.v
+../../rtl/soc/housekeeping.v
+../../rtl/soc/caravel.v

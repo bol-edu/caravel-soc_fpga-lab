@@ -1,0 +1,169 @@
+
+
+================================================================
+== Vitis HLS Report for 'sendoutstream'
+================================================================
+* Date:           Thu Dec 14 14:20:40 2023
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        userdma_upsb_1204_refine
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.612 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_149_1  |        ?|        ?|         ?|          -|          -|     ?|        no|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 5 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.61>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%p_phi_loc = alloca i64 1"   --->   Operation 6 'alloca' 'p_phi_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %in_en_clrsts, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (3.63ns)   --->   "%in_en_clrsts_read = read i1 @_ssdm_op_Read.ap_fifo.i1P0A, i1 %in_en_clrsts"   --->   Operation 8 'read' 'in_en_clrsts_read' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %sts_clear, void @ap_fifo_str, i32 0, i32 0, void @p_str, i32 0, i32 0, void @p_str, void @p_str, void @p_str, i32 2, i32 2, i32 16, i32 16, void @p_str, void @ScalarProp_str, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (3.63ns)   --->   "%sts_clear_read = read i1 @_ssdm_op_Read.ap_fifo.i1P0A, i1 %sts_clear"   --->   Operation 10 'read' 'sts_clear_read' <Predicate = true> <Delay = 3.63> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 3> <FIFO>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %outcount48, void @empty_14, i32 0, i32 0, void @empty_17, i32 0, i32 0, void @empty_17, void @empty_17, void @empty_17, i32 0, i32 0, i32 0, i32 0, void @empty_17, void @empty_17, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i40 %outbuf, void @empty_14, i32 0, i32 0, void @empty_17, i32 0, i32 0, void @empty_17, void @empty_17, void @empty_17, i32 0, i32 0, i32 0, i32 0, void @empty_17, void @empty_17, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %outStreamTop_V_last_V, i7 %outStreamTop_V_user_V, i4 %outStreamTop_V_strb_V, i4 %outStreamTop_V_keep_V, i32 %outStreamTop_V_data_V, void @empty_10, i32 1, i32 1, void @empty_22, i32 0, i32 0, void @empty_17, void @empty_17, void @empty_17, i32 0, i32 0, i32 0, i32 0, void @empty_17, void @empty_17, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%br_ln144 = br i1 %in_en_clrsts_read, void %VITIS_LOOP_151_2.preheader, void %if.then" [userdma.cpp:144]   --->   Operation 14 'br' 'br_ln144' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%out_val_last_V = alloca i32 1"   --->   Operation 15 'alloca' 'out_val_last_V' <Predicate = (!in_en_clrsts_read)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln142 = br void %VITIS_LOOP_151_2" [userdma.cpp:142]   --->   Operation 16 'br' 'br_ln142' <Predicate = (!in_en_clrsts_read)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln145 = br i1 %sts_clear_read, void %if.end, void %if.then1" [userdma.cpp:145]   --->   Operation 17 'br' 'br_ln145' <Predicate = (in_en_clrsts_read)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%write_ln146 = write void @_ssdm_op_Write.ap_auto.i1P0A, i1 %m2s_buf_sts, i1 0" [userdma.cpp:146]   --->   Operation 18 'write' 'write_ln146' <Predicate = (in_en_clrsts_read & sts_clear_read)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%br_ln146 = br void %if.end" [userdma.cpp:146]   --->   Operation 19 'br' 'br_ln146' <Predicate = (in_en_clrsts_read & sts_clear_read)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%br_ln148 = br void %if.end12" [userdma.cpp:148]   --->   Operation 20 'br' 'br_ln148' <Predicate = (in_en_clrsts_read)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 3.54>
+ST_2 : Operation 21 [1/1] (3.54ns)   --->   "%tmp = read i32 @_ssdm_op_Read.ap_fifo.volatile.i32P0A, i32 %outcount48" [C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 21 'read' 'tmp' <Predicate = true> <Delay = 3.54> <CoreInst = "FIFO_SRL">   --->   Core 81 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.54> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 8> <FIFO>
+
+State 3 <SV = 2> <Delay = 1.58>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%out_val_last_V_load = load i1 %out_val_last_V"   --->   Operation 22 'load' 'out_val_last_V_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 23 'wait' 'empty' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [2/2] (1.58ns)   --->   "%call_ln145 = call void @sendoutstream_Pipeline_VITIS_LOOP_151_2, i1 %out_val_last_V_load, i32 %tmp, i40 %outbuf, i32 %outStreamTop_V_data_V, i4 %outStreamTop_V_keep_V, i4 %outStreamTop_V_strb_V, i7 %outStreamTop_V_user_V, i1 %outStreamTop_V_last_V, i1 %p_phi_loc" [C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 24 'call' 'call_ln145' <Predicate = true> <Delay = 1.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 3.52>
+ST_4 : Operation 25 [1/2] (3.52ns)   --->   "%call_ln145 = call void @sendoutstream_Pipeline_VITIS_LOOP_151_2, i1 %out_val_last_V_load, i32 %tmp, i40 %outbuf, i32 %outStreamTop_V_data_V, i4 %outStreamTop_V_keep_V, i4 %outStreamTop_V_strb_V, i7 %outStreamTop_V_user_V, i1 %outStreamTop_V_last_V, i1 %p_phi_loc" [C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145]   --->   Operation 25 'call' 'call_ln145' <Predicate = true> <Delay = 3.52> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 26 [1/1] (0.00ns)   --->   "%specloopname_ln142 = specloopname void @_ssdm_op_SpecLoopName, void @empty_8" [userdma.cpp:142]   --->   Operation 26 'specloopname' 'specloopname_ln142' <Predicate = (!in_en_clrsts_read)> <Delay = 0.00>
+ST_5 : Operation 27 [1/1] (0.00ns)   --->   "%p_phi_loc_load = load i1 %p_phi_loc"   --->   Operation 27 'load' 'p_phi_loc_load' <Predicate = (!in_en_clrsts_read)> <Delay = 0.00>
+ST_5 : Operation 28 [1/1] (0.00ns)   --->   "%store_ln159 = store i1 %p_phi_loc_load, i1 %out_val_last_V" [userdma.cpp:159]   --->   Operation 28 'store' 'store_ln159' <Predicate = (!in_en_clrsts_read)> <Delay = 0.00>
+ST_5 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln159 = br i1 %p_phi_loc_load, void %VITIS_LOOP_151_2, void %if.then10" [userdma.cpp:159]   --->   Operation 29 'br' 'br_ln159' <Predicate = (!in_en_clrsts_read)> <Delay = 0.00>
+ST_5 : Operation 30 [1/1] (0.00ns)   --->   "%write_ln161 = write void @_ssdm_op_Write.ap_auto.i1P0A, i1 %m2s_buf_sts, i1 1" [userdma.cpp:161]   --->   Operation 30 'write' 'write_ln161' <Predicate = (!in_en_clrsts_read & p_phi_loc_load)> <Delay = 0.00>
+ST_5 : Operation 31 [1/1] (0.00ns)   --->   "%br_ln0 = br void %if.end12"   --->   Operation 31 'br' 'br_ln0' <Predicate = (!in_en_clrsts_read & p_phi_loc_load)> <Delay = 0.00>
+ST_5 : Operation 32 [1/1] (0.00ns)   --->   "%ret_ln164 = ret" [userdma.cpp:164]   --->   Operation 32 'ret' 'ret_ln164' <Predicate = (p_phi_loc_load) | (in_en_clrsts_read)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 4.61ns
+The critical path consists of the following:
+	fifo read operation ('sts_clear_read') on port 'sts_clear' [15]  (3.63 ns)
+	blocking operation 0.978 ns on control path)
+
+ <State 2>: 3.55ns
+The critical path consists of the following:
+	fifo read operation ('tmp', C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) on port 'outcount48' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) [26]  (3.55 ns)
+
+ <State 3>: 1.59ns
+The critical path consists of the following:
+	'load' operation ('out_val_last_V_load') on local variable 'out_val.last.V' [24]  (0 ns)
+	'call' operation ('call_ln145', C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) to 'sendoutstream_Pipeline_VITIS_LOOP_151_2' [28]  (1.59 ns)
+
+ <State 4>: 3.53ns
+The critical path consists of the following:
+	'call' operation ('call_ln145', C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/hls_stream_39.h:145) to 'sendoutstream_Pipeline_VITIS_LOOP_151_2' [28]  (3.53 ns)
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

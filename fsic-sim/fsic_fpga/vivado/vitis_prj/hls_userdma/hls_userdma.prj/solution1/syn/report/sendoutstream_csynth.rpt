@@ -1,0 +1,182 @@
+
+
+================================================================
+== Vitis HLS Report for 'sendoutstream'
+================================================================
+* Date:           Thu Dec 14 14:20:45 2023
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        userdma_upsb_1204_refine
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.612 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------------------------+-----------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                                    |                                         |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                      Instance                      |                  Module                 |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +----------------------------------------------------+-----------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_sendoutstream_Pipeline_VITIS_LOOP_151_2_fu_101  |sendoutstream_Pipeline_VITIS_LOOP_151_2  |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+        +----------------------------------------------------+-----------------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_149_1  |        ?|        ?|         ?|          -|          -|     ?|        no|
+        +--------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|      4|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|      39|    143|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     90|    -|
+|Register         |        -|    -|      43|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      82|    237|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------------------------+-----------------------------------------+---------+----+----+-----+-----+
+    |                      Instance                      |                  Module                 | BRAM_18K| DSP| FF | LUT | URAM|
+    +----------------------------------------------------+-----------------------------------------+---------+----+----+-----+-----+
+    |grp_sendoutstream_Pipeline_VITIS_LOOP_151_2_fu_101  |sendoutstream_Pipeline_VITIS_LOOP_151_2  |        0|   0|  39|  143|    0|
+    +----------------------------------------------------+-----------------------------------------+---------+----+----+-----+-----+
+    |Total                                               |                                         |        0|   0|  39|  143|    0|
+    +----------------------------------------------------+-----------------------------------------+---------+----+----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |                              Variable Name                             | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |grp_sendoutstream_Pipeline_VITIS_LOOP_151_2_fu_101_outStreamTop_TREADY  |       and|   0|  0|   2|           1|           1|
+    |ap_block_state1                                                         |        or|   0|  0|   2|           1|           1|
+    +------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                                                   |          |   0|  0|   4|           2|           2|
+    +------------------------------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------+----+-----------+-----+-----------+
+    |        Name        | LUT| Input Size| Bits| Total Bits|
+    +--------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm           |  31|          6|    1|          6|
+    |ap_done             |   9|          2|    1|          2|
+    |in_en_clrsts_blk_n  |   9|          2|    1|          2|
+    |m2s_buf_sts         |  14|          3|    1|          3|
+    |outbuf_read         |   9|          2|    1|          2|
+    |outcount48_blk_n    |   9|          2|    1|          2|
+    |sts_clear_blk_n     |   9|          2|    1|          2|
+    +--------------------+----+-----------+-----+-----------+
+    |Total               |  90|         19|    7|         19|
+    +--------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------------------------------+----+----+-----+-----------+
+    |                               Name                              | FF | LUT| Bits| Const Bits|
+    +-----------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                        |   5|   0|    5|          0|
+    |ap_done_reg                                                      |   1|   0|    1|          0|
+    |grp_sendoutstream_Pipeline_VITIS_LOOP_151_2_fu_101_ap_start_reg  |   1|   0|    1|          0|
+    |in_en_clrsts_read_reg_138                                        |   1|   0|    1|          0|
+    |m2s_buf_sts_preg                                                 |   1|   0|    1|          0|
+    |out_val_last_V_fu_70                                             |   1|   0|    1|          0|
+    |p_phi_loc_fu_66                                                  |   1|   0|    1|          0|
+    |tmp_reg_151                                                      |  32|   0|   32|          0|
+    +-----------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                            |  43|   0|   43|          0|
+    +-----------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------+-----+-----+------------+-----------------------+--------------+
+|          RTL Ports          | Dir | Bits|  Protocol  |     Source Object     |    C Type    |
++-----------------------------+-----+-----+------------+-----------------------+--------------+
+|ap_clk                       |   in|    1|  ap_ctrl_hs|          sendoutstream|  return value|
+|ap_rst                       |   in|    1|  ap_ctrl_hs|          sendoutstream|  return value|
+|ap_start                     |   in|    1|  ap_ctrl_hs|          sendoutstream|  return value|
+|ap_done                      |  out|    1|  ap_ctrl_hs|          sendoutstream|  return value|
+|ap_continue                  |   in|    1|  ap_ctrl_hs|          sendoutstream|  return value|
+|ap_idle                      |  out|    1|  ap_ctrl_hs|          sendoutstream|  return value|
+|ap_ready                     |  out|    1|  ap_ctrl_hs|          sendoutstream|  return value|
+|outbuf_dout                  |   in|   40|     ap_fifo|                 outbuf|       pointer|
+|outbuf_num_data_valid        |   in|    8|     ap_fifo|                 outbuf|       pointer|
+|outbuf_fifo_cap              |   in|    8|     ap_fifo|                 outbuf|       pointer|
+|outbuf_empty_n               |   in|    1|     ap_fifo|                 outbuf|       pointer|
+|outbuf_read                  |  out|    1|     ap_fifo|                 outbuf|       pointer|
+|outcount48_dout              |   in|   32|     ap_fifo|             outcount48|       pointer|
+|outcount48_num_data_valid    |   in|    4|     ap_fifo|             outcount48|       pointer|
+|outcount48_fifo_cap          |   in|    4|     ap_fifo|             outcount48|       pointer|
+|outcount48_empty_n           |   in|    1|     ap_fifo|             outcount48|       pointer|
+|outcount48_read              |  out|    1|     ap_fifo|             outcount48|       pointer|
+|in_en_clrsts_dout            |   in|    1|     ap_fifo|           in_en_clrsts|       pointer|
+|in_en_clrsts_num_data_valid  |   in|    2|     ap_fifo|           in_en_clrsts|       pointer|
+|in_en_clrsts_fifo_cap        |   in|    2|     ap_fifo|           in_en_clrsts|       pointer|
+|in_en_clrsts_empty_n         |   in|    1|     ap_fifo|           in_en_clrsts|       pointer|
+|in_en_clrsts_read            |  out|    1|     ap_fifo|           in_en_clrsts|       pointer|
+|m2s_buf_sts                  |  out|    1|      ap_vld|            m2s_buf_sts|       pointer|
+|m2s_buf_sts_ap_vld           |  out|    1|      ap_vld|            m2s_buf_sts|       pointer|
+|sts_clear_dout               |   in|    1|     ap_fifo|              sts_clear|       pointer|
+|sts_clear_num_data_valid     |   in|    3|     ap_fifo|              sts_clear|       pointer|
+|sts_clear_fifo_cap           |   in|    3|     ap_fifo|              sts_clear|       pointer|
+|sts_clear_empty_n            |   in|    1|     ap_fifo|              sts_clear|       pointer|
+|sts_clear_read               |  out|    1|     ap_fifo|              sts_clear|       pointer|
+|outStreamTop_TDATA           |  out|   32|        axis|  outStreamTop_V_data_V|       pointer|
+|outStreamTop_TVALID          |  out|    1|        axis|  outStreamTop_V_last_V|       pointer|
+|outStreamTop_TREADY          |   in|    1|        axis|  outStreamTop_V_last_V|       pointer|
+|outStreamTop_TLAST           |  out|    1|        axis|  outStreamTop_V_last_V|       pointer|
+|outStreamTop_TKEEP           |  out|    4|        axis|  outStreamTop_V_keep_V|       pointer|
+|outStreamTop_TSTRB           |  out|    4|        axis|  outStreamTop_V_strb_V|       pointer|
+|outStreamTop_TUSER           |  out|    7|        axis|  outStreamTop_V_user_V|       pointer|
++-----------------------------+-----+-----+------------+-----------------------+--------------+
+

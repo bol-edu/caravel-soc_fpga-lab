@@ -1,0 +1,33 @@
+## Headers
+../../rtl/header/defines.v
+../../rtl/header/user_defines.v
+
+## User project
+../../rtl/user/user_project_wrapper.v
+../../rtl/user/user_proj_example.gcd.v
+
+## VIP
+../../vip/tbuart.v
+../../vip/bram.v
+##../../vip/spiflash.v
+
+## DFFRAM Behavioral Model
+../../vip/RAM256.v
+../../vip/RAM128.v
+
+## Mgmt Core Wrapper
+../../rtl/soc-efabless/mgmt_core.v
+../../rtl/soc-efabless/mgmt_core_wrapper.v
+../../rtl/soc-efabless/VexRiscv_MinDebugCache.v
+
+## These blocks need to stay in RTL
+../../rtl/soc/mprj_io.v
+
+## These blocks only needed for RTL sims							     
+../../rtl/soc-efabless/housekeeping_spi.v
+../../rtl/soc/spiflash.v
+../../rtl/soc/chip_io.v
+../../rtl/soc/gpio_control_block.v
+../../rtl/soc/gpio_defaults_block.v
+../../rtl/soc/housekeeping.v
+../../rtl/soc/caravel.v

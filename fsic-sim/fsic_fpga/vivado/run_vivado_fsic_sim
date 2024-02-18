@@ -1,0 +1,40 @@
+
+echo "start vivado project"
+
+
+# ----- remove vivado project if existed -----#
+
+if [ -d "./vvd_caravel_fpga_sim/" ]
+then
+	rm -rf ./vvd_caravel_fpga_sim/
+	echo "remove previous project"
+fi
+
+# ----- remove vivado project log files -----#
+rm -rf ./NA
+rm -rf ./.Xil
+rm -f timing_report.log
+rm -f vivado*.jou
+rm -f vivado*.log
+
+# -----preprocess .coe file path -----#
+coepath="$PWD/fsic.coe"
+sed -i "/CONFIG.Coe_File/ d" vvd_caravel_fpga_fsic_sim.tcl
+sed -i "/CONFIG.Byte_Size/a CONFIG.Coe_File {$coepath} "'\\' vvd_caravel_fpga_fsic_sim.tcl
+sed -i '/$coekey/ s/^/   /' vvd_caravel_fpga_fsic_sim.tcl
+
+# ----- Re-build vivado project -----#
+
+vivado -source vvd_caravel_fpga_fsic_sim.tcl -mode tcl
+
+FILE="vivado.log"
+STRING="CRITICAL WARNING: [Timing 38-282]"
+
+if [ -f "$FILE" ]
+then
+	grep -F "$STRING" "$FILE" 
+fi
+
+echo "======================================================================"
+echo "                           vivado complete "
+echo "======================================================================"

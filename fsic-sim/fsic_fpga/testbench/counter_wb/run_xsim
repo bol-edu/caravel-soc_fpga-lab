@@ -1,0 +1,17 @@
+rm -f counter_wb.hex
+rm -rf xsim.dir/ *.log *.pb *.jou *.wdb
+
+riscv32-unknown-elf-gcc -Wl,--no-warn-rwx-segments -g \
+	-I../../firmware \
+	-march=rv32i -mabi=ilp32 -D__vexriscv__ \
+	-Wl,-Bstatic,-T,../../firmware/sections.lds,--strip-discarded \
+	-ffreestanding -nostdlib -o counter_wb.elf ../../firmware/crt0_vex.S ../../firmware/isr.c counter_wb.c
+riscv32-unknown-elf-objcopy -O verilog counter_wb.elf counter_wb.hex
+# to fix flash base address
+sed -ie 's/@10/@00/g' counter_wb.hex
+
+rm -f counter_wb.elf counter_wb.hexe
+
+xvlog -d FUNCTIONAL -d SIM -d DUNIT_DELAY=#1 -d USE_POWER_PINS -f ./include.rtl.list.xsim counter_wb_tb.v
+xelab -top counter_wb_tb -snapshot counter_wb_tb_elab
+xsim counter_wb_tb_elab -R

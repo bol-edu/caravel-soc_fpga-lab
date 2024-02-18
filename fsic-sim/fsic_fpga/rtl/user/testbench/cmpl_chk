@@ -1,0 +1,9 @@
+#!/bin/bash
+
+pushd . ; cd ../user_subsys/rtl ; ./gen_all ; popd
+
+echo -e "== Start XVLOG =="
+xvlog -f ../rtl/rtl.f 
+
+echo  -e "\n== Start XELAB =="
+xelab -debug typical -top FSIC -snapshot fsic_snapshot

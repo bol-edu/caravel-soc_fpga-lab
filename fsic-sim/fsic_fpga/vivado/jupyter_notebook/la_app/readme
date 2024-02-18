@@ -1,0 +1,38 @@
+//***********************************************************************************
+//
+//    File description
+//
+//***********************************************************************************
+chname.json¡GDefine channel name. It will show on GTKwave signals.
+output_new.vcd¡GGTKwave can load this file and show waveform.
+read_la_data.py¡GLoad raw data from hardware LA channel and translate to VCD file.
+simulate.log¡GThis is a raw data form hardware LA channel.
+readme¡GDescript tool file
+
+//***********************************************************************************
+//
+//    chname.json
+//    You can define what you want channel name.
+//
+//***********************************************************************************
+Total channel count maxinum value is 24 not include source clock channel.
+{                
+    "CLK":10,        Source clock name : Clock rate [unit is MHz]
+    "SPI_CLK":1,     Channel name define : channel count
+    "SPI_DIN":1, 
+    "SPI_DOUT":1,
+    "CH3":1,     
+    "CH4":4,     
+    "CH8":6,     
+    "CH16":10    
+}                
+
+//***********************************************************************************
+//
+//    How to use this tool
+//
+//***********************************************************************************
+Step 1¡GDefine what you want channel name chname.json file.
+Step 2¡GSave raw data to simulate.log
+Step 3¡GRun read_la_data.py and make output_new.vcd file.
+Step 4¡GUse GTKwave tool to open output_new.vcd file

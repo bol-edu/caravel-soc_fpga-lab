@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo -e "== Start XVLOG =="
+xvlog -f sub_modu.f ./fsic.vo
+
+echo  -e "\n== Start XELAB =="
+xelab -debug typical -top FSIC -snapshot fsic_snapshot

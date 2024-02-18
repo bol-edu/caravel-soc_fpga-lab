@@ -1,0 +1,267 @@
+
+
+================================================================
+== Synthesis Summary Report of 'userdma'
+================================================================
++ General Information: 
+    * Date:           Thu Dec 14 14:20:46 2023
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+    * Project:        userdma_upsb_1204_refine
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------------------------------------+------+------+---------+--------+----------+---------+------+----------+--------+----+-----------+------------+-----+
+    |                          Modules                         | Issue|      | Latency | Latency| Iteration|         | Trip |          |        |    |           |            |     |
+    |                          & Loops                         | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|  BRAM  | DSP|     FF    |     LUT    | URAM|
+    +----------------------------------------------------------+------+------+---------+--------+----------+---------+------+----------+--------+----+-----------+------------+-----+
+    |+ userdma*                                                |     -|  0.00|        -|       -|         -|        -|     -|  dataflow|  5 (1%)|   -|  4192 (3%)|  8119 (15%)|    -|
+    | + entry_proc                                             |     -|  3.67|        0|   0.000|         -|        0|     -|        no|       -|   -|    3 (~0%)|    47 (~0%)|    -|
+    | + getinstream                                            |     -|  0.69|        -|       -|         -|        -|     -|        no|       -|   -|  244 (~0%)|    544 (1%)|    -|
+    |  + getinstream_Pipeline_VITIS_LOOP_48_1                  |     -|  0.69|        -|       -|         -|        -|     -|        no|       -|   -|  140 (~0%)|   281 (~0%)|    -|
+    |   o VITIS_LOOP_48_1                                      |     -|  7.30|        -|       -|         2|        1|     -|       yes|       -|   -|          -|           -|    -|
+    | + paralleltostreamwithburst                              |     -|  0.00|        -|       -|         -|        -|     -|        no|       -|   -|  514 (~0%)|    984 (1%)|    -|
+    |  o VITIS_LOOP_99_1                                       |     -|  7.30|        -|       -|         -|        -|     -|        no|       -|   -|          -|           -|    -|
+    |   + paralleltostreamwithburst_Pipeline_VITIS_LOOP_107_2  |     -|  0.00|        -|       -|         -|        -|     -|        no|       -|   -|  139 (~0%)|   321 (~0%)|    -|
+    |    o VITIS_LOOP_107_2                                    |     -|  7.30|        -|       -|         3|        1|     -|       yes|       -|   -|          -|           -|    -|
+    | + streamtoparallelwithburst                              |     -|  0.00|        -|       -|         -|        -|     -|        no|       -|   -|  415 (~0%)|    764 (1%)|    -|
+    |  o VITIS_LOOP_20_1                                       |     -|  7.30|        -|       -|         -|        -|     -|        no|       -|   -|          -|           -|    -|
+    |   + streamtoparallelwithburst_Pipeline_VITIS_LOOP_23_2   |     -|  0.00|        -|       -|         -|        -|     -|        no|       -|   -|   69 (~0%)|   117 (~0%)|    -|
+    |    o VITIS_LOOP_23_2                                     |     -|  7.30|        -|       -|         3|        1|     -|       yes|       -|   -|          -|           -|    -|
+    | + sendoutstream                                          |     -|  2.69|        -|       -|         -|        -|     -|        no|       -|   -|   82 (~0%)|   237 (~0%)|    -|
+    |  o VITIS_LOOP_149_1                                      |     -|  7.30|        -|       -|         -|        -|     -|        no|       -|   -|          -|           -|    -|
+    |   + sendoutstream_Pipeline_VITIS_LOOP_151_2              |     -|  3.19|        -|       -|         -|        -|     -|        no|       -|   -|   39 (~0%)|   143 (~0%)|    -|
+    |    o VITIS_LOOP_151_2                                    |     -|  7.30|        -|       -|         2|        1|     -|       yes|       -|   -|          -|           -|    -|
+    +----------------------------------------------------------+------+------+---------+--------+----------+---------+------+----------+--------+----+-----------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface   | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|             | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_gmem0 | 32 -> 32   | 64            | 10      | slave  | 0        | 0         | 16           | 64           | 16          | 16          |
+| m_axi_gmem1 | 32 -> 32   | 64            | 10      | slave  | 0        | 0         | 16           | 64           | 16          | 16          |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 8             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register         | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL             | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER             | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER           | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR           | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | s2m_buf_sts      | 0x10   | 32    | R      | Data signal of s2m_buf_sts       |                                                                      |
+| s_axi_control | s2m_buf_sts_ctrl | 0x14   | 32    | R      | Control signal of s2m_buf_sts    | 0=s2m_buf_sts_ap_vld                                                 |
+| s_axi_control | s2m_sts_clear    | 0x20   | 32    | W      | Data signal of s2m_sts_clear     |                                                                      |
+| s_axi_control | s2m_len          | 0x28   | 32    | W      | Data signal of s2m_len           |                                                                      |
+| s_axi_control | s2m_enb_clrsts   | 0x30   | 32    | W      | Data signal of s2m_enb_clrsts    |                                                                      |
+| s_axi_control | s2mbuf_1         | 0x38   | 32    | W      | Data signal of s2mbuf            |                                                                      |
+| s_axi_control | s2mbuf_2         | 0x3c   | 32    | W      | Data signal of s2mbuf            |                                                                      |
+| s_axi_control | s2m_err          | 0x44   | 32    | R      | Data signal of s2m_err           |                                                                      |
+| s_axi_control | s2m_err_ctrl     | 0x48   | 32    | R      | Control signal of s2m_err        | 0=s2m_err_ap_vld                                                     |
+| s_axi_control | Img_width        | 0x54   | 32    | W      | Data signal of Img_width         |                                                                      |
+| s_axi_control | m2sbuf_1         | 0x5c   | 32    | W      | Data signal of m2sbuf            |                                                                      |
+| s_axi_control | m2sbuf_2         | 0x60   | 32    | W      | Data signal of m2sbuf            |                                                                      |
+| s_axi_control | m2s_buf_sts      | 0x68   | 32    | R      | Data signal of m2s_buf_sts       |                                                                      |
+| s_axi_control | m2s_buf_sts_ctrl | 0x6c   | 32    | R      | Control signal of m2s_buf_sts    | 0=m2s_buf_sts_ap_vld                                                 |
+| s_axi_control | m2s_sts_clear    | 0x78   | 32    | W      | Data signal of m2s_sts_clear     |                                                                      |
+| s_axi_control | m2s_len          | 0x80   | 32    | W      | Data signal of m2s_len           |                                                                      |
+| s_axi_control | m2s_enb_clrsts   | 0x88   | 32    | W      | Data signal of m2s_enb_clrsts    |                                                                      |
++---------------+------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* AXIS
++--------------+---------------+-------+-------+-------+--------+-------+-------+--------+
+| Interface    | Register Mode | TDATA | TKEEP | TLAST | TREADY | TSTRB | TUSER | TVALID |
++--------------+---------------+-------+-------+-------+--------+-------+-------+--------+
+| inStreamTop  | both          | 32    | 4     | 1     | 1      | 4     | 7     | 1      |
+| outStreamTop | both          | 32    | 4     | 1     | 1      | 4     | 7     | 1      |
++--------------+---------------+-------+-------+-------+--------+-------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------------+-----------+---------------------------------------------+
+| Argument       | Direction | Datatype                                    |
++----------------+-----------+---------------------------------------------+
+| inStreamTop    | in        | stream<hls::axis<ap_uint<32>, 7, 0, 0>, 0>& |
+| s2m_buf_sts    | out       | bool*                                       |
+| s2m_sts_clear  | in        | bool                                        |
+| s2m_len        | in        | ap_uint<32>                                 |
+| s2m_enb_clrsts | in        | ap_uint<1>                                  |
+| s2mbuf         | out       | ap_uint<32>*                                |
+| s2m_err        | out       | bool*                                       |
+| Img_width      | in        | ap_uint<32>                                 |
+| m2sbuf         | in        | ap_uint<32>*                                |
+| m2s_buf_sts    | out       | bool*                                       |
+| m2s_sts_clear  | in        | bool                                        |
+| m2s_len        | in        | int                                         |
+| m2s_enb_clrsts | in        | ap_uint<1>                                  |
+| outStreamTop   | out       | stream<hls::axis<ap_uint<32>, 7, 0, 0>, 0>& |
++----------------+-----------+---------------------------------------------+
+
+* SW-to-HW Mapping
++----------------+---------------+-----------+----------+--------------------------------------------+
+| Argument       | HW Interface  | HW Type   | HW Usage | HW Info                                    |
++----------------+---------------+-----------+----------+--------------------------------------------+
+| inStreamTop    | inStreamTop   | interface |          |                                            |
+| s2m_buf_sts    | s_axi_control | register  |          | name=s2m_buf_sts offset=0x10 range=32      |
+| s2m_buf_sts    | s_axi_control | register  |          | name=s2m_buf_sts_ctrl offset=0x14 range=32 |
+| s2m_sts_clear  | s_axi_control | register  |          | name=s2m_sts_clear offset=0x20 range=32    |
+| s2m_len        | s_axi_control | register  |          | name=s2m_len offset=0x28 range=32          |
+| s2m_enb_clrsts | s_axi_control | register  |          | name=s2m_enb_clrsts offset=0x30 range=32   |
+| s2mbuf         | m_axi_gmem0   | interface |          |                                            |
+| s2mbuf         | s_axi_control | register  | offset   | name=s2mbuf_1 offset=0x38 range=32         |
+| s2mbuf         | s_axi_control | register  | offset   | name=s2mbuf_2 offset=0x3c range=32         |
+| s2m_err        | s_axi_control | register  |          | name=s2m_err offset=0x44 range=32          |
+| s2m_err        | s_axi_control | register  |          | name=s2m_err_ctrl offset=0x48 range=32     |
+| Img_width      | s_axi_control | register  |          | name=Img_width offset=0x54 range=32        |
+| m2sbuf         | m_axi_gmem1   | interface |          |                                            |
+| m2sbuf         | s_axi_control | register  | offset   | name=m2sbuf_1 offset=0x5c range=32         |
+| m2sbuf         | s_axi_control | register  | offset   | name=m2sbuf_2 offset=0x60 range=32         |
+| m2s_buf_sts    | s_axi_control | register  |          | name=m2s_buf_sts offset=0x68 range=32      |
+| m2s_buf_sts    | s_axi_control | register  |          | name=m2s_buf_sts_ctrl offset=0x6c range=32 |
+| m2s_sts_clear  | s_axi_control | register  |          | name=m2s_sts_clear offset=0x78 range=32    |
+| m2s_len        | s_axi_control | interface |          |                                            |
+| m2s_enb_clrsts | s_axi_control | register  |          | name=m2s_enb_clrsts offset=0x88 range=32   |
+| outStreamTop   | outStreamTop  | interface |          |                                            |
++----------------+---------------+-----------+----------+--------------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+------------------+-----------+----------+-------+--------------------+
+| HW Interface | Loop             | Direction | Length   | Width | Location           |
++--------------+------------------+-----------+----------+-------+--------------------+
+| m_axi_gmem0  | VITIS_LOOP_23_2  | write     | variable | 32    | userdma.cpp:23:22  |
+| m_axi_gmem1  | VITIS_LOOP_107_2 | read      | variable | 32    | userdma.cpp:107:23 |
++--------------+------------------+-----------+----------+-------+--------------------+
+
+* Inferred Bursts and Widening Missed
++--------------+------------+------------------+-------------------------------------------------------------------------------------------------------+------------+--------------------+
+| HW Interface | Variable   | Loop             | Problem                                                                                               | Resolution | Location           |
++--------------+------------+------------------+-------------------------------------------------------------------------------------------------------+------------+--------------------+
+| m_axi_gmem0  | out_memory | VITIS_LOOP_23_2  | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | userdma.cpp:23:22  |
+| m_axi_gmem1  | in_memory  | VITIS_LOOP_107_2 | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 | 214-353    | userdma.cpp:107:23 |
++--------------+------------+------------------+-------------------------------------------------------------------------------------------------------+------------+--------------------+
+
+    * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++---------------------------------------------------------+-----+--------+-----------+-----+--------+---------+
+| Name                                                    | DSP | Pragma | Variable  | Op  | Impl   | Latency |
++---------------------------------------------------------+-----+--------+-----------+-----+--------+---------+
+| + userdma                                               | 0   |        |           |     |        |         |
+|  + getinstream                                          | 0   |        |           |     |        |         |
+|    sub_i_i52_fu_162_p2                                  | -   |        | sub_i_i52 | add | fabric | 0       |
+|    add_ln48_fu_174_p2                                   | -   |        | add_ln48  | add | fabric | 0       |
+|   + getinstream_Pipeline_VITIS_LOOP_48_1                | 0   |        |           |     |        |         |
+|     add_ln67_fu_194_p2                                  | -   |        | add_ln67  | add | fabric | 0       |
+|     count_4_fu_214_p2                                   | -   |        | count_4   | add | fabric | 0       |
+|     add_ln886_fu_220_p2                                 | -   |        | add_ln886 | add | fabric | 0       |
+|  + paralleltostreamwithburst                            | 0   |        |           |     |        |         |
+|    sub_i_i_fu_218_p2                                    | -   |        | sub_i_i   | add | fabric | 0       |
+|    sub_fu_254_p2                                        | -   |        | sub       | add | fabric | 0       |
+|    add_ln107_fu_272_p2                                  | -   |        | add_ln107 | add | fabric | 0       |
+|    add_ln132_fu_305_p2                                  | -   |        | add_ln132 | add | fabric | 0       |
+|   + paralleltostreamwithburst_Pipeline_VITIS_LOOP_107_2 | 0   |        |           |     |        |         |
+|     add_ln107_fu_169_p2                                 | -   |        | add_ln107 | add | fabric | 0       |
+|     add_ln125_fu_217_p2                                 | -   |        | add_ln125 | add | fabric | 0       |
+|     add_ln129_fu_237_p2                                 | -   |        | add_ln129 | add | fabric | 0       |
+|  + streamtoparallelwithburst                            | 0   |        |           |     |        |         |
+|    add_ln23_fu_194_p2                                   | -   |        | add_ln23  | add | fabric | 0       |
+|    add_ln28_fu_226_p2                                   | -   |        | add_ln28  | add | fabric | 0       |
+|    add_ln886_fu_236_p2                                  | -   |        | add_ln886 | add | fabric | 0       |
+|   + streamtoparallelwithburst_Pipeline_VITIS_LOOP_23_2  | 0   |        |           |     |        |         |
+|     add_ln23_fu_110_p2                                  | -   |        | add_ln23  | add | fabric | 0       |
+|  + sendoutstream                                        | 0   |        |           |     |        |         |
+|   + sendoutstream_Pipeline_VITIS_LOOP_151_2             | 0   |        |           |     |        |         |
+|     add_ln151_fu_144_p2                                 | -   |        | add_ln151 | add | fabric | 0       |
++---------------------------------------------------------+-----+--------+-----------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++----------------------+------+------+--------+------------------+---------+--------+---------+
+| Name                 | BRAM | URAM | Pragma | Variable         | Storage | Impl   | Latency |
++----------------------+------+------+--------+------------------+---------+--------+---------+
+| + userdma            | 5    | 0    |        |                  |         |        |         |
+|   m2s_enb_clrsts_c_U | -    | -    |        | m2s_enb_clrsts_c | fifo    | srl    | 0       |
+|   m2s_sts_clear_c_U  | -    | -    |        | m2s_sts_clear_c  | fifo    | srl    | 0       |
+|   s2mbuf_c_U         | -    | -    |        | s2mbuf_c         | fifo    | srl    | 0       |
+|   s2m_enb_clrsts_c_U | -    | -    |        | s2m_enb_clrsts_c | fifo    | srl    | 0       |
+|   s2m_len_c_U        | -    | -    |        | s2m_len_c        | fifo    | srl    | 0       |
+|   s2m_sts_clear_c_U  | -    | -    |        | s2m_sts_clear_c  | fifo    | srl    | 0       |
+|   inbuf_U            | 2    | -    |        | inbuf            | fifo    | memory | 0       |
+|   incount_U          | -    | -    |        | incount          | fifo    | srl    | 0       |
+|   outbuf_U           | 3    | -    |        | outbuf           | fifo    | memory | 0       |
+|   outcount_U         | -    | -    |        | outcount         | fifo    | srl    | 0       |
++----------------------+------+------+--------+------------------+---------+--------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+-----------------------------------------------------------------------------------------------+----------------------------------------------+
+| Type      | Options                                                                                       | Location                                     |
++-----------+-----------------------------------------------------------------------------------------------+----------------------------------------------+
+| pipeline  |                                                                                               | userdma.cpp:24 in streamtoparallelwithburst  |
+| pipeline  |                                                                                               | userdma.cpp:49 in getinstream                |
+| pipeline  |                                                                                               | userdma.cpp:108 in paralleltostreamwithburst |
+| pipeline  |                                                                                               | userdma.cpp:152 in sendoutstream             |
+| interface | axis register_mode=both register port=inStreamTop                                             | userdma.cpp:181 in userdma, inStreamTop      |
+| interface | m_axi max_write_burst_length=64 latency=10 depth=1024 bundle=gmem0 port=s2mbuf offset = slave | userdma.cpp:182 in userdma, s2mbuf           |
+| interface | s_axilite port = s2m_buf_sts bundle = control                                                 | userdma.cpp:183 in userdma                   |
+| interface | s_axilite port = s2m_sts_clear bundle = control                                               | userdma.cpp:184 in userdma                   |
+| interface | s_axilite port = s2m_len bundle = control                                                     | userdma.cpp:185 in userdma                   |
+| interface | s_axilite port = s2m_enb_clrsts bundle = control                                              | userdma.cpp:186 in userdma                   |
+| interface | s_axilite port = s2mbuf bundle = control                                                      | userdma.cpp:187 in userdma                   |
+| interface | s_axilite port = s2m_err bundle = control                                                     | userdma.cpp:188 in userdma                   |
+| interface | s_axilite port = Img_width bundle = control                                                   | userdma.cpp:189 in userdma                   |
+| interface | axis register_mode=both register port=outStreamTop                                            | userdma.cpp:190 in userdma, outStreamTop     |
+| interface | m_axi max_write_burst_length=64 latency=10 depth=1024 bundle=gmem1 port=m2sbuf offset = slave | userdma.cpp:191 in userdma, m2sbuf           |
+| interface | s_axilite port = m2s_buf_sts bundle = control                                                 | userdma.cpp:192 in userdma                   |
+| interface | s_axilite port = m2s_sts_clear bundle = control                                               | userdma.cpp:193 in userdma                   |
+| interface | s_axilite port = m2s_len bundle = control                                                     | userdma.cpp:194 in userdma                   |
+| interface | s_axilite port = m2s_enb_clrsts bundle = control                                              | userdma.cpp:195 in userdma                   |
+| interface | s_axilite port = m2sbuf bundle = control                                                      | userdma.cpp:196 in userdma                   |
+| interface | s_axilite port = return bundle = control                                                      | userdma.cpp:197 in userdma                   |
+| dataflow  |                                                                                               | userdma.cpp:199 in userdma                   |
++-----------+-----------------------------------------------------------------------------------------------+----------------------------------------------+
+
+

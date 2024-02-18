@@ -1,0 +1,3 @@
+current_fileset
+open_wave_database tb_fsic_xelab.wdb
+

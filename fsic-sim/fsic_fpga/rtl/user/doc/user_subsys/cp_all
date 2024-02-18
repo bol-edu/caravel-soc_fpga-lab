@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cp axil_slav.dummy_io.vd  ../../user_subsys/axil_slav/rtl
+cp axis_mstr.dummy_io.vd  ../../user_subsys/axis_mstr/rtl
+cp axis_slav.dummy_io.vd  ../../user_subsys/axis_slav/rtl 
+cp irq_mux.dummy_io.vd    ../../user_subsys/irq_mux/rtl
+cp la_mux.dummy_io.vd     ../../user_subsys/la_mux/rtl
+cp user_prj.dummy_io.vd   ../../user_subsys/user_prj/rtl

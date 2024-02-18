@@ -1,0 +1,33 @@
+#!/bin/csh -f
+
+# set noglob
+
+if($#argv <= 1) then
+        echo "Usage: pack_file filelist result"
+        echo " "
+        echo "Pack all file specified in the filelist into an aggreated result file"
+        echo " "
+        echo "Example:"
+        echo -n "         "
+        echo pack_file filelist.base result_all_file
+        exit 1
+endif
+
+# remove un-used line
+set all_file = `sed "/^[ |\t]*\/\//d" $1  | sed "/^[ |\t]*[\+|\-]/d"`
+
+# if (-e $2) then
+#  rm $2;
+# endif
+
+# touch $2;
+
+# echo $all_file
+
+cat  $all_file > $2
+
+# foreach one_file ($all_file)
+#  # do some pre-processing first
+#  echo $one_file
+#  cat $one_file >> $2
+# end

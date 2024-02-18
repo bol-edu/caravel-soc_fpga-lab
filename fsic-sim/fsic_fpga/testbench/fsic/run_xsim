@@ -1,0 +1,17 @@
+rm -f fsic.hex
+rm -rf xsim.dir/ *.log *.pb *.jou *.wdb
+
+riscv32-unknown-elf-gcc -Wl,--no-warn-rwx-segments -g \
+	-I../../firmware \
+	-march=rv32i -mabi=ilp32 -D__vexriscv__ \
+	-Wl,-Bstatic,-T,../../firmware/sections.lds,--strip-discarded \
+	-ffreestanding -nostdlib -o fsic.elf ../../firmware/crt0_vex.S ../../firmware/isr.c fsic.c
+riscv32-unknown-elf-objcopy -O verilog fsic.elf fsic.hex
+# to fix flash base address
+sed -ie 's/@10/@00/g' fsic.hex
+
+rm -f fsic.elf fsic.hexe
+
+xvlog -sv -d FUNCTIONAL -d SIM -d DUNIT_DELAY=#1 -d USE_POWER_PINS -d USER_PROJECT_SIDEBAND_SUPPORT -d USE_EDGEDETECT_IP -f ./include.rtl.list.xsim fsic_tb.v
+xelab -top fsic_tb -snapshot fsic_tb_elab --timescale 1ns/1ns
+xsim fsic_tb_elab -R

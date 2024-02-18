@@ -1,0 +1,13 @@
+#!/bin/bash
+
+  ./xls2vlog.py -i ./user_project_wrapper.xlsx -s USERproject_SUBSYStem
+  cp ./user_subsys/user_subsys.vo          ../user_subsys/rtl
+  cp ./user_subsys/axil_slav.dummy_io.vd   ../user_subsys/axil_slav/rtl
+  cp ./user_subsys/axis_mstr.dummy_io.vd   ../user_subsys/axis_mstr/rtl
+  cp ./user_subsys/axis_slav.dummy_io.vd   ../user_subsys/axis_slav/rtl
+  cp ./user_subsys/irq_mux.dummy_io.vd     ../user_subsys/irq_mux/rtl
+  cp ./user_subsys/la_mux.dummy_io.vd      ../user_subsys/la_mux/rtl
+  cp ./user_subsys/user_prj.dummy_io.vd    ../user_subsys/user_prj/rtl
+
+  cd ../user_subsys/rtl ; ./gen_all ; cd ../../doc
+# sed -i "" ../user_subsys/rtl/user_subsys.vo

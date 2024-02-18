@@ -1,0 +1,3 @@
+#!/bin/bash
+
+./pack_file rtl.f user_subsys.all.v

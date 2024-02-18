@@ -1,0 +1,180 @@
+
+
+================================================================
+== Vitis HLS Report for 'getinstream_Pipeline_VITIS_LOOP_48_1'
+================================================================
+* Date:           Thu Dec 14 14:20:41 2023
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        userdma_upsb_1204_refine
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.613 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_48_1  |        ?|        ?|         2|          1|          1|     ?|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    209|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     72|    -|
+|Register         |        -|    -|     140|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     140|    281|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln67_fu_194_p2                |         +|   0|  0|  39|          32|           1|
+    |add_ln886_fu_220_p2               |         +|   0|  0|  39|          32|           1|
+    |count_4_fu_214_p2                 |         +|   0|  0|  39|          32|           1|
+    |ap_block_state3_pp0_stage0_iter2  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln1065_fu_189_p2             |      icmp|   0|  0|  18|          33|          33|
+    |icmp_ln1073_fu_252_p2             |      icmp|   0|  0|  18|          32|          32|
+    |icmp_ln72_fu_236_p2               |      icmp|   0|  0|  16|          28|           1|
+    |ap_block_pp0_stage0_01001         |        or|   0|  0|   2|           1|           1|
+    |ap_block_state2_pp0_stage0_iter1  |        or|   0|  0|   2|           1|           1|
+    |select_ln1065_fu_200_p3           |    select|   0|  0|  32|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0| 209|         194|          75|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------+----+-----------+-----+-----------+
+    |               Name               | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                       |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1           |   9|          2|    1|          2|
+    |ap_loop_exit_ready_pp0_iter2_reg  |   9|          2|    1|          2|
+    |count_fu_72                       |   9|          2|   32|         64|
+    |empty_fu_76                       |   9|          2|   32|         64|
+    |inStreamTop_TDATA_blk_n           |   9|          2|    1|          2|
+    |inbuf_blk_n                       |   9|          2|    1|          2|
+    |incount47_blk_n                   |   9|          2|    1|          2|
+    +----------------------------------+----+-----------+-----+-----------+
+    |Total                             |  72|         16|   70|        140|
+    +----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+----+----+-----+-----------+
+    |               Name               | FF | LUT| Bits| Const Bits|
+    +----------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                         |   1|   0|    1|          0|
+    |ap_done_reg                       |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1           |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2           |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg  |   1|   0|    1|          0|
+    |count_4_reg_297                   |  32|   0|   32|          0|
+    |count_fu_72                       |  32|   0|   32|          0|
+    |empty_fu_76                       |  32|   0|   32|          0|
+    |icmp_ln1065_reg_292               |   1|   0|    1|          0|
+    |icmp_ln1073_reg_306               |   1|   0|    1|          0|
+    |icmp_ln72_reg_302                 |   1|   0|    1|          0|
+    |trunc_ln293_reg_287               |   4|   0|    4|          0|
+    |width_count                       |  32|   0|   32|          0|
+    +----------------------------------+----+----+-----+-----------+
+    |Total                             | 140|   0|  140|          0|
+    +----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+--------------------------------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  |             Source Object            |    C Type    |
++--------------------------+-----+-----+------------+--------------------------------------+--------------+
+|ap_clk                    |   in|    1|  ap_ctrl_hs|  getinstream_Pipeline_VITIS_LOOP_48_1|  return value|
+|ap_rst                    |   in|    1|  ap_ctrl_hs|  getinstream_Pipeline_VITIS_LOOP_48_1|  return value|
+|ap_start                  |   in|    1|  ap_ctrl_hs|  getinstream_Pipeline_VITIS_LOOP_48_1|  return value|
+|ap_done                   |  out|    1|  ap_ctrl_hs|  getinstream_Pipeline_VITIS_LOOP_48_1|  return value|
+|ap_idle                   |  out|    1|  ap_ctrl_hs|  getinstream_Pipeline_VITIS_LOOP_48_1|  return value|
+|ap_ready                  |  out|    1|  ap_ctrl_hs|  getinstream_Pipeline_VITIS_LOOP_48_1|  return value|
+|inStreamTop_TVALID        |   in|    1|        axis|                  inStreamTop_V_data_V|       pointer|
+|inStreamTop_TDATA         |   in|   32|        axis|                  inStreamTop_V_data_V|       pointer|
+|inbuf_din                 |  out|   33|     ap_fifo|                                 inbuf|       pointer|
+|inbuf_num_data_valid      |   in|    8|     ap_fifo|                                 inbuf|       pointer|
+|inbuf_fifo_cap            |   in|    8|     ap_fifo|                                 inbuf|       pointer|
+|inbuf_full_n              |   in|    1|     ap_fifo|                                 inbuf|       pointer|
+|inbuf_write               |  out|    1|     ap_fifo|                                 inbuf|       pointer|
+|incount47_din             |  out|   32|     ap_fifo|                             incount47|       pointer|
+|incount47_num_data_valid  |   in|    4|     ap_fifo|                             incount47|       pointer|
+|incount47_fifo_cap        |   in|    4|     ap_fifo|                             incount47|       pointer|
+|incount47_full_n          |   in|    1|     ap_fifo|                             incount47|       pointer|
+|incount47_write           |  out|    1|     ap_fifo|                             incount47|       pointer|
+|in_len_V_load             |   in|   32|     ap_none|                         in_len_V_load|        scalar|
+|inStreamTop_TREADY        |  out|    1|        axis|                  inStreamTop_V_last_V|       pointer|
+|inStreamTop_TLAST         |   in|    1|        axis|                  inStreamTop_V_last_V|       pointer|
+|inStreamTop_TKEEP         |   in|    4|        axis|                  inStreamTop_V_keep_V|       pointer|
+|inStreamTop_TSTRB         |   in|    4|        axis|                  inStreamTop_V_strb_V|       pointer|
+|inStreamTop_TUSER         |   in|    7|        axis|                  inStreamTop_V_user_V|       pointer|
+|sub_i_i52                 |   in|   33|     ap_none|                             sub_i_i52|        scalar|
+|in_s2m_len                |   in|   32|     ap_none|                            in_s2m_len|        scalar|
+|tmp_user_V_out            |  out|    4|      ap_vld|                        tmp_user_V_out|       pointer|
+|tmp_user_V_out_ap_vld     |  out|    1|      ap_vld|                        tmp_user_V_out|       pointer|
+|icmp_ln1065_out           |  out|    1|      ap_vld|                       icmp_ln1065_out|       pointer|
+|icmp_ln1065_out_ap_vld    |  out|    1|      ap_vld|                       icmp_ln1065_out|       pointer|
++--------------------------+-----+-----+------------+--------------------------------------+--------------+
+

@@ -1,0 +1,20 @@
+rm -f fsic.hex
+rm -rf xsim.dir/ *.log *.pb *.jou *.wdb
+
+riscv32-unknown-elf-gcc -Wl,--no-warn-rwx-segments -g \
+	-I../../firmware \
+	-march=rv32i -mabi=ilp32 -D__vexriscv__ \
+	-Wl,-Bstatic,-T,../../firmware/sections.lds,--strip-discarded \
+	-ffreestanding -nostdlib -o fsic.elf ../../firmware/crt0_vex.S ../../firmware/isr.c fsic.c
+riscv32-unknown-elf-objcopy -O verilog fsic.elf fsic.hex
+# to fix flash base address
+sed -ie 's/@10/@00/g' fsic.hex
+
+# to generate coe for block memory generator data initialization 
+cp fsic.hex fsic.pre
+xxd -r -p fsic.pre fsic.bin
+bin2coe -i fsic.bin -o fsic.coe -w 32 
+sed -i '3d' fsic.coe
+mv fsic.coe ../../vivado
+
+rm -f fsic.elf fsic.hexe fsic.pre* fsic.bin 

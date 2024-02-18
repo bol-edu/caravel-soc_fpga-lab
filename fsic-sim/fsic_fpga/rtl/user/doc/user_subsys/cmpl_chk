@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo -e "== Start XVLOG =="
+xvlog -f sub_modu.f ./user_subsys.vo
+
+echo  -e "\n== Start XELAB =="
+xelab -debug typical -top USER_SUBSYS -snapshot user_subsys_snapshot

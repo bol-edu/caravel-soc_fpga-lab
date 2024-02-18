@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# ./xls2vlog.py -i ./Interface-Definition.xlsx           -s FSIC_interface
+  ./xls2vlog.py -i ~/Downloads/Interface-Definition.xlsx -s FSIC_interface
+  cp ./fsic/fsic.vo ../rtl/fsic.vo

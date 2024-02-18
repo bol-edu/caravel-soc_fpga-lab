@@ -1,0 +1,143 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'sendoutstream_Pipeline_VITIS_LOOP_151_2'" level="0">
+<item name = "Date">Thu Dec 14 14:20:44 2023
+</item>
+<item name = "Version">2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)</item>
+<item name = "Project">userdma_upsb_1204_refine</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 4.110 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_151_2">?, ?, 2, 1, 1, ?, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 68, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 75, -</column>
+<column name="Register">-, -, 39, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln151_fu_144_p2">+, 0, 0, 38, 31, 1</column>
+<column name="ap_block_pp0_stage0_01001">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_pp0_stage0_11001">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state3_io">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln151_fu_139_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="ap_block_state3_pp0_stage0_iter1">or, 0, 0, 2, 1, 1</column>
+<column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
+<column name="ap_enable_reg_pp0_iter1">xor, 0, 0, 2, 2, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">25, 5, 1, 5</column>
+<column name="ap_enable_reg_pp0_iter1">14, 3, 1, 3</column>
+<column name="i_fu_66">9, 2, 31, 62</column>
+<column name="outStreamTop_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="outbuf_blk_n">9, 2, 1, 2</column>
+<column name="p_phi_reg_116">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">4, 0, 4, 0</column>
+<column name="ap_enable_reg_pp0_iter0">1, 0, 1, 0</column>
+<column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
+<column name="i_fu_66">31, 0, 31, 0</column>
+<column name="icmp_ln151_reg_197">1, 0, 1, 0</column>
+<column name="p_phi_reg_116">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, sendoutstream_Pipeline_VITIS_LOOP_151_2, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, sendoutstream_Pipeline_VITIS_LOOP_151_2, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, sendoutstream_Pipeline_VITIS_LOOP_151_2, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, sendoutstream_Pipeline_VITIS_LOOP_151_2, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, sendoutstream_Pipeline_VITIS_LOOP_151_2, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, sendoutstream_Pipeline_VITIS_LOOP_151_2, return value</column>
+<column name="out_val_last_V">in, 1, ap_none, out_val_last_V, scalar</column>
+<column name="tmp">in, 32, ap_none, tmp, scalar</column>
+<column name="outbuf_dout">in, 40, ap_fifo, outbuf, pointer</column>
+<column name="outbuf_num_data_valid">in, 8, ap_fifo, outbuf, pointer</column>
+<column name="outbuf_fifo_cap">in, 8, ap_fifo, outbuf, pointer</column>
+<column name="outbuf_empty_n">in, 1, ap_fifo, outbuf, pointer</column>
+<column name="outbuf_read">out, 1, ap_fifo, outbuf, pointer</column>
+<column name="outStreamTop_TDATA">out, 32, axis, outStreamTop_V_data_V, pointer</column>
+<column name="outStreamTop_TREADY">in, 1, axis, outStreamTop_V_data_V, pointer</column>
+<column name="outStreamTop_TVALID">out, 1, axis, outStreamTop_V_last_V, pointer</column>
+<column name="outStreamTop_TLAST">out, 1, axis, outStreamTop_V_last_V, pointer</column>
+<column name="outStreamTop_TKEEP">out, 4, axis, outStreamTop_V_keep_V, pointer</column>
+<column name="outStreamTop_TSTRB">out, 4, axis, outStreamTop_V_strb_V, pointer</column>
+<column name="outStreamTop_TUSER">out, 7, axis, outStreamTop_V_user_V, pointer</column>
+<column name="p_phi_out">out, 1, ap_vld, p_phi_out, pointer</column>
+<column name="p_phi_out_ap_vld">out, 1, ap_vld, p_phi_out, pointer</column>
+</table>
+</item>
+</section>
+</profile>

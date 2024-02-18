@@ -1,0 +1,9 @@
+#!/bin/bash
+
+cp axil_axis.dummy_io.vd  ../../axilite_axis/rtl
+cp axis_sw.dummy_io.vd    ../../axis_switch/rtl
+cp cfg_ctrl.dummy_io.vd      ../../config_ctrl/rtl
+cp fsic_clkrst.dummy_io.vd   ../../fsic_clkrst/rtl
+cp io_serdes.dummy_io.vd     ../../io_serdes/rtl
+cp logic_anlz.dummy_io.vd    ../../logic_analyzer/rtl
+cp mprj_io.dummy_io.vd       ../../mprj_io/rtl
