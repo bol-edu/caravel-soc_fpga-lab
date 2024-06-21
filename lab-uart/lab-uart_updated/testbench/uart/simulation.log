@@ -1,0 +1,26 @@
+Reading uart.hex
+uart.hex loaded into memory
+Memory 5 bytes = 0x6f 0x00 0x00 0x0b 0x13
+VCD info: dumpfile uart.vcd opened for output.
+LA Test 1 started
+tx data bit index 0: 1
+tx data bit index 1: 0
+tx data bit index 2: 1
+tx data bit index 3: 1
+tx data bit index 4: 1
+tx data bit index 5: 1
+tx data bit index 6: 0
+tx data bit index 7: 0
+tx complete 2
+rx data bit index 0: 1
+rx data bit index 1: 0
+rx data bit index 2: 1
+rx data bit index 3: 1
+rx data bit index 4: 1
+rx data bit index 5: 1
+rx data bit index 6: 0
+rx data bit index 7: 0
+recevied word  61
+[1;31m
+Monitor: Timeout, Test LA (RTL) Failed
+[0m

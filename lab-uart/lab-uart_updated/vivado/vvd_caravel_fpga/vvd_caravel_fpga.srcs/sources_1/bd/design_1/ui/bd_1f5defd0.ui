@@ -1,0 +1,23 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.808333",
+   "Default View_TopLeft":"-925,0",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port DDR_0 -pg 1 -lvl 3 -x 880 -y 20 -defaultsOSRD
+preplace port FIXED_IO_0 -pg 1 -lvl 3 -x 880 -y 40 -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 2 -x 640 -y 120 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 2 -x 640 -y 290 -defaultsOSRD
+preplace inst caravel_0 -pg 1 -lvl 2 -x 640 -y 630 -defaultsOSRD
+preplace inst caravel_ps_0 -pg 1 -lvl 2 -x 640 -y 440 -defaultsOSRD
+preplace inst output_pin_0 -pg 1 -lvl 2 -x 640 -y 800 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 2 -x 640 -y 970 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 1 -x 210 -y 200 -defaultsOSRD
+preplace inst read_romcode_0 -pg 1 -lvl 1 -x 210 -y 460 -defaultsOSRD
+preplace inst rst_ps7_0_10M -pg 1 -lvl 1 -x 210 -y 620 -defaultsOSRD
+levelinfo -pg 1 0 210 640 880
+pagesize -pg 1 -db -bbox -sgen 0 0 1010 1080
+"
+}
+
