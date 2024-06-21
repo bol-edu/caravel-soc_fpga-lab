@@ -1,0 +1,2 @@
+output_pin_control_s_axi
+output_pin
