@@ -1,0 +1,18 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "mmult",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/home\/ubuntu\/Desktop\/2024_Fall_NTU_AAHLS_SP\/LabB_Systolic_Array\/Vitis_HLS\/SA_propagating\/solution1\/csynth.tcl",
+          "sourceLine": "15",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "mmult"
+              }]
+          }
+        }]
+    }]}

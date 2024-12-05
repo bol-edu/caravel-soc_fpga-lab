@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# xsim v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Wed Dec  4 13:24:21 2024
+# Process ID: 19481
+# Current directory: /home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_broadcasting/solution1/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/mmult/xsim_script.tcl}
+# Log file: /home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_broadcasting/solution1/sim/verilog/xsim.log
+# Journal file: /home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_broadcasting/solution1/sim/verilog/xsim.jou
+# Running On: ubuntu2004, OS: Linux, CPU Frequency: 2688.000 MHz, CPU Physical cores: 10, Host memory: 25195 MB
+#-----------------------------------------------------------
+source xsim.dir/mmult/xsim_script.tcl
+# xsim {mmult} -autoloadwcfg -tclbatch {mmult.tcl}
+Time resolution is 1 ps
+source mmult.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [n/a] @ "125000"
+// RTL Simulation : 1 / 1 [n/a] @ "7025000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 7085 ns : File "/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_broadcasting/solution1/sim/verilog/mmult.autotb.v" Line 746
+## quit
+INFO: [Common 17-206] Exiting xsim at Wed Dec  4 13:24:24 2024...

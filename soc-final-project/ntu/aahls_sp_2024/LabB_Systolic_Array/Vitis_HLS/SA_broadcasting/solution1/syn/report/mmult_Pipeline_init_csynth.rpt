@@ -1,0 +1,168 @@
+
+
+================================================================
+== Vitis HLS Report for 'mmult_Pipeline_init'
+================================================================
+* Date:           Wed Dec  4 13:23:33 2024
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        SA_broadcasting
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu50-fsvh2104-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  1.094 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       18|       18|  0.180 us|  0.180 us|   18|   18|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- init    |       16|       16|         1|          1|          1|    16|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+--------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT  | URAM|
++---------------------+---------+------+---------+--------+-----+
+|DSP                  |        -|     -|        -|       -|    -|
+|Expression           |        -|     -|        0|      22|    -|
+|FIFO                 |        -|     -|        -|       -|    -|
+|Instance             |        -|     -|        -|       -|    -|
+|Memory               |        -|     -|        -|       -|    -|
+|Multiplexer          |        -|     -|        -|      27|    -|
+|Register             |        -|     -|        7|       -|    -|
++---------------------+---------+------+---------+--------+-----+
+|Total                |        0|     0|        7|      49|    0|
++---------------------+---------+------+---------+--------+-----+
+|Available SLR        |     1344|  2976|   871680|  435840|  320|
++---------------------+---------+------+---------+--------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|      ~0|    0|
++---------------------+---------+------+---------+--------+-----+
+|Available            |     2688|  5952|  1743360|  871680|  640|
++---------------------+---------+------+---------+--------+-----+
+|Utilization (%)      |        0|     0|       ~0|      ~0|    0|
++---------------------+---------+------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |add_ln52_fu_282_p2   |         +|   0|  0|  12|           5|           1|
+    |icmp_ln52_fu_276_p2  |      icmp|   0|  0|  10|           5|           6|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  22|          10|           7|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------+----+-----------+-----+-----------+
+    |         Name         | LUT| Input Size| Bits| Total Bits|
+    +----------------------+----+-----------+-----+-----------+
+    |ap_done_int           |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_3  |   9|          2|    5|         10|
+    |i_fu_88               |   9|          2|    5|         10|
+    +----------------------+----+-----------+-----+-----------+
+    |Total                 |  27|          6|   11|         22|
+    +----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+---+----+-----+-----------+
+    |     Name    | FF| LUT| Bits| Const Bits|
+    +-------------+---+----+-----+-----------+
+    |ap_CS_fsm    |  1|   0|    1|          0|
+    |ap_done_reg  |  1|   0|    1|          0|
+    |i_fu_88      |  5|   0|    5|          0|
+    +-------------+---+----+-----+-----------+
+    |Total        |  7|   0|    7|          0|
+    +-------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------------------+-----+-----+------------+--------------------------------+--------------+
+|               RTL Ports               | Dir | Bits|  Protocol  |          Source Object         |    C Type    |
++---------------------------------------+-----+-----+------------+--------------------------------+--------------+
+|ap_clk                                 |   in|    1|  ap_ctrl_hs|             mmult_Pipeline_init|  return value|
+|ap_rst                                 |   in|    1|  ap_ctrl_hs|             mmult_Pipeline_init|  return value|
+|ap_start                               |   in|    1|  ap_ctrl_hs|             mmult_Pipeline_init|  return value|
+|ap_done                                |  out|    1|  ap_ctrl_hs|             mmult_Pipeline_init|  return value|
+|ap_idle                                |  out|    1|  ap_ctrl_hs|             mmult_Pipeline_init|  return value|
+|ap_ready                               |  out|    1|  ap_ctrl_hs|             mmult_Pipeline_init|  return value|
+|arrayidx682_15_15_promoted_out         |  out|   32|      ap_vld|  arrayidx682_15_15_promoted_out|       pointer|
+|arrayidx682_15_15_promoted_out_ap_vld  |  out|    1|      ap_vld|  arrayidx682_15_15_promoted_out|       pointer|
+|arrayidx682_14_15_promoted_out         |  out|   32|      ap_vld|  arrayidx682_14_15_promoted_out|       pointer|
+|arrayidx682_14_15_promoted_out_ap_vld  |  out|    1|      ap_vld|  arrayidx682_14_15_promoted_out|       pointer|
+|arrayidx682_13_15_promoted_out         |  out|   32|      ap_vld|  arrayidx682_13_15_promoted_out|       pointer|
+|arrayidx682_13_15_promoted_out_ap_vld  |  out|    1|      ap_vld|  arrayidx682_13_15_promoted_out|       pointer|
+|arrayidx682_12_15_promoted_out         |  out|   32|      ap_vld|  arrayidx682_12_15_promoted_out|       pointer|
+|arrayidx682_12_15_promoted_out_ap_vld  |  out|    1|      ap_vld|  arrayidx682_12_15_promoted_out|       pointer|
+|arrayidx682_11_15_promoted_out         |  out|   32|      ap_vld|  arrayidx682_11_15_promoted_out|       pointer|
+|arrayidx682_11_15_promoted_out_ap_vld  |  out|    1|      ap_vld|  arrayidx682_11_15_promoted_out|       pointer|
+|arrayidx682_10_15_promoted_out         |  out|   32|      ap_vld|  arrayidx682_10_15_promoted_out|       pointer|
+|arrayidx682_10_15_promoted_out_ap_vld  |  out|    1|      ap_vld|  arrayidx682_10_15_promoted_out|       pointer|
+|arrayidx682_9_15_promoted_out          |  out|   32|      ap_vld|   arrayidx682_9_15_promoted_out|       pointer|
+|arrayidx682_9_15_promoted_out_ap_vld   |  out|    1|      ap_vld|   arrayidx682_9_15_promoted_out|       pointer|
+|arrayidx682_8_15_promoted_out          |  out|   32|      ap_vld|   arrayidx682_8_15_promoted_out|       pointer|
+|arrayidx682_8_15_promoted_out_ap_vld   |  out|    1|      ap_vld|   arrayidx682_8_15_promoted_out|       pointer|
+|arrayidx682_7_15_promoted_out          |  out|   32|      ap_vld|   arrayidx682_7_15_promoted_out|       pointer|
+|arrayidx682_7_15_promoted_out_ap_vld   |  out|    1|      ap_vld|   arrayidx682_7_15_promoted_out|       pointer|
+|arrayidx682_6_15_promoted_out          |  out|   32|      ap_vld|   arrayidx682_6_15_promoted_out|       pointer|
+|arrayidx682_6_15_promoted_out_ap_vld   |  out|    1|      ap_vld|   arrayidx682_6_15_promoted_out|       pointer|
+|arrayidx682_5_15_promoted_out          |  out|   32|      ap_vld|   arrayidx682_5_15_promoted_out|       pointer|
+|arrayidx682_5_15_promoted_out_ap_vld   |  out|    1|      ap_vld|   arrayidx682_5_15_promoted_out|       pointer|
+|arrayidx682_4_15_promoted_out          |  out|   32|      ap_vld|   arrayidx682_4_15_promoted_out|       pointer|
+|arrayidx682_4_15_promoted_out_ap_vld   |  out|    1|      ap_vld|   arrayidx682_4_15_promoted_out|       pointer|
+|arrayidx682_3_15_promoted_out          |  out|   32|      ap_vld|   arrayidx682_3_15_promoted_out|       pointer|
+|arrayidx682_3_15_promoted_out_ap_vld   |  out|    1|      ap_vld|   arrayidx682_3_15_promoted_out|       pointer|
+|arrayidx682_2_15_promoted_out          |  out|   32|      ap_vld|   arrayidx682_2_15_promoted_out|       pointer|
+|arrayidx682_2_15_promoted_out_ap_vld   |  out|    1|      ap_vld|   arrayidx682_2_15_promoted_out|       pointer|
+|arrayidx682_1_15_promoted_out          |  out|   32|      ap_vld|   arrayidx682_1_15_promoted_out|       pointer|
+|arrayidx682_1_15_promoted_out_ap_vld   |  out|    1|      ap_vld|   arrayidx682_1_15_promoted_out|       pointer|
+|arrayidx682_15322_promoted_out         |  out|   32|      ap_vld|  arrayidx682_15322_promoted_out|       pointer|
+|arrayidx682_15322_promoted_out_ap_vld  |  out|    1|      ap_vld|  arrayidx682_15322_promoted_out|       pointer|
++---------------------------------------+-----+-----+------------+--------------------------------+--------------+
+

@@ -1,0 +1,6 @@
+<VitisHLS:BurstInfo>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="NonSimpleMemoryAccessMissed" src_info="SA_broadcasting/src/mmult.cpp:69:24" msg_id="214-227" msg_severity="INFO" msg_body="Volatile or Atomic access cannot be transformed" resolution="214-227" ID="for.body15.load.12" BundleName="gmem0" VarName="a" ParentFunc="mmult"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="NonSimpleMemoryAccessMissed" src_info="SA_broadcasting/src/mmult.cpp:88:24" msg_id="214-227" msg_severity="INFO" msg_body="Volatile or Atomic access cannot be transformed" resolution="214-227" ID="for.body35.load.12" BundleName="gmem1" VarName="b" ParentFunc="mmult"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="NonSimpleMemoryAccessMissed" src_info="SA_broadcasting/src/mmult.cpp:133:16" msg_id="214-227" msg_severity="INFO" msg_body="Volatile or Atomic access cannot be transformed" resolution="214-227" ID="for.body111.store.285" BundleName="gmem2" VarName="c" ParentFunc="mmult"/>
+</VitisHLS:BurstInfo>
+

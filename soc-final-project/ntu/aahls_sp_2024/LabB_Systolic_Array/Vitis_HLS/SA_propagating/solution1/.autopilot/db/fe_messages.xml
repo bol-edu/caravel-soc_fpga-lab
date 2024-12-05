@@ -1,0 +1,132 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_propagating/solution1/csynth.tcl:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="mmult" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=mmult" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SA_propagating/src/mmult_explicit.cpp:25:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mmult" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=a offset=slave bundle=gmem0 depth=256" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SA_propagating/src/mmult_explicit.cpp:26:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mmult" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=b offset=slave bundle=gmem1 depth=256" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SA_propagating/src/mmult_explicit.cpp:27:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mmult" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=c offset=slave bundle=gmem2 depth=256" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SA_propagating/src/mmult_explicit.cpp:30:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mmult" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=a bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SA_propagating/src/mmult_explicit.cpp:31:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mmult" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=b bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SA_propagating/src/mmult_explicit.cpp:32:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mmult" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=c bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SA_propagating/src/mmult_explicit.cpp:33:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mmult" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=a_row bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SA_propagating/src/mmult_explicit.cpp:34:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mmult" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=a_col bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SA_propagating/src/mmult_explicit.cpp:35:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mmult" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=b_col bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SA_propagating/src/mmult_explicit.cpp:36:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mmult" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SA_propagating/src/mmult_explicit.cpp:45:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mmult" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = localA dim = 2 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SA_propagating/src/mmult_explicit.cpp:48:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mmult" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = localB dim = 1 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SA_propagating/src/mmult_explicit.cpp:51:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mmult" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = localC dim = 0 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SA_propagating/src/mmult_explicit.cpp:55:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mmult" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = inA dim=0 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SA_propagating/src/mmult_explicit.cpp:58:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mmult" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = inB dim=0 complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SA_propagating/src/mmult_explicit.cpp:63:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mmult" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SA_propagating/src/mmult_explicit.cpp:75:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mmult" ARG_PragmaIsValid="1" ARG_PragmaOptions="min = c_size* c_size max = c_size * c_size" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SA_propagating/src/mmult_explicit.cpp:94:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mmult" ARG_PragmaIsValid="1" ARG_PragmaOptions="min = c_size * c_size max = c_size * c_size" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="SA_propagating/src/mmult_explicit.cpp:113:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="mmult" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="SA_propagating/src/mmult_explicit.cpp:117:20" msg_body="Loop 'VITIS_LOOP_117_6' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_117_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="SA_propagating/src/mmult_explicit.cpp:118:22" msg_body="Loop 'VITIS_LOOP_118_7' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_118_7"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="SA_propagating/src/mmult_explicit.cpp:123:21" msg_body="Loop 'VITIS_LOOP_123_8' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_123_8"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="SA_propagating/src/mmult_explicit.cpp:124:22" msg_body="Loop 'VITIS_LOOP_124_9' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_124_9"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="SA_propagating/src/mmult_explicit.cpp:132:22" msg_body="Loop 'VITIS_LOOP_132_10' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_132_10"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="SA_propagating/src/mmult_explicit.cpp:139:22" msg_body="Loop 'VITIS_LOOP_139_11' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_139_11"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="SA_propagating/src/mmult_explicit.cpp:148:22" msg_body="Loop 'VITIS_LOOP_148_12' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_148_12"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="SA_propagating/src/mmult_explicit.cpp:149:23" msg_body="Loop 'VITIS_LOOP_149_13' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_149_13"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="SA_propagating/src/mmult_explicit.cpp:64:19" msg_body="Loop 'VITIS_LOOP_64_1' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_64_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="SA_propagating/src/mmult_explicit.cpp:23:0" msg_body="Unrolling loop 'VITIS_LOOP_117_6' (SA_propagating/src/mmult_explicit.cpp:117:20) in function 'mmult' completely with a factor of 16">
+        <args Factor="16" LoopLoc="SA_propagating/src/mmult_explicit.cpp:117:20" LoopName="VITIS_LOOP_117_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="SA_propagating/src/mmult_explicit.cpp:23:0" msg_body="Unrolling loop 'VITIS_LOOP_118_7' (SA_propagating/src/mmult_explicit.cpp:118:22) in function 'mmult' completely with a factor of 15">
+        <args Factor="15" LoopLoc="SA_propagating/src/mmult_explicit.cpp:118:22" LoopName="VITIS_LOOP_118_7"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="SA_propagating/src/mmult_explicit.cpp:23:0" msg_body="Unrolling loop 'VITIS_LOOP_123_8' (SA_propagating/src/mmult_explicit.cpp:123:21) in function 'mmult' completely with a factor of 15">
+        <args Factor="15" LoopLoc="SA_propagating/src/mmult_explicit.cpp:123:21" LoopName="VITIS_LOOP_123_8"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="SA_propagating/src/mmult_explicit.cpp:23:0" msg_body="Unrolling loop 'VITIS_LOOP_124_9' (SA_propagating/src/mmult_explicit.cpp:124:22) in function 'mmult' completely with a factor of 16">
+        <args Factor="16" LoopLoc="SA_propagating/src/mmult_explicit.cpp:124:22" LoopName="VITIS_LOOP_124_9"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="SA_propagating/src/mmult_explicit.cpp:23:0" msg_body="Unrolling loop 'VITIS_LOOP_132_10' (SA_propagating/src/mmult_explicit.cpp:132:22) in function 'mmult' completely with a factor of 16">
+        <args Factor="16" LoopLoc="SA_propagating/src/mmult_explicit.cpp:132:22" LoopName="VITIS_LOOP_132_10"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="SA_propagating/src/mmult_explicit.cpp:23:0" msg_body="Unrolling loop 'VITIS_LOOP_139_11' (SA_propagating/src/mmult_explicit.cpp:139:22) in function 'mmult' completely with a factor of 16">
+        <args Factor="16" LoopLoc="SA_propagating/src/mmult_explicit.cpp:139:22" LoopName="VITIS_LOOP_139_11"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="SA_propagating/src/mmult_explicit.cpp:23:0" msg_body="Unrolling loop 'VITIS_LOOP_148_12' (SA_propagating/src/mmult_explicit.cpp:148:22) in function 'mmult' completely with a factor of 16">
+        <args Factor="16" LoopLoc="SA_propagating/src/mmult_explicit.cpp:148:22" LoopName="VITIS_LOOP_148_12"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="SA_propagating/src/mmult_explicit.cpp:23:0" msg_body="Unrolling loop 'VITIS_LOOP_149_13' (SA_propagating/src/mmult_explicit.cpp:149:23) in function 'mmult' completely with a factor of 16">
+        <args Factor="16" LoopLoc="SA_propagating/src/mmult_explicit.cpp:149:23" LoopName="VITIS_LOOP_149_13"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="SA_propagating/src/mmult_explicit.cpp:23:0" msg_body="Unrolling loop 'VITIS_LOOP_64_1' (SA_propagating/src/mmult_explicit.cpp:64:19) in function 'mmult' completely with a factor of 16">
+        <args Factor="16" LoopLoc="SA_propagating/src/mmult_explicit.cpp:64:19" LoopName="VITIS_LOOP_64_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="SA_propagating/src/mmult_explicit.cpp:44:9" msg_body="Applying array_partition to 'localA': Complete partitioning on dimension 2.">
+        <args Dim="2" Mode="Complete" UOName="localA"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="SA_propagating/src/mmult_explicit.cpp:47:6" msg_body="Applying array_partition to 'localB': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="localB"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="SA_propagating/src/mmult_explicit.cpp:50:6" msg_body="Applying array_partition to 'localC': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="localC"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="SA_propagating/src/mmult_explicit.cpp:54:6" msg_body="Applying array_partition to 'inA': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="inA"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="SA_propagating/src/mmult_explicit.cpp:57:6" msg_body="Applying array_partition to 'inB': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="inB"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

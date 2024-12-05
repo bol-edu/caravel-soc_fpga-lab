@@ -1,0 +1,6 @@
+   Build using "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/bin/g++"
+   Compiling mmultTester.cpp_pre.cpp.tb.cpp
+   Compiling apatb_mmult.cpp
+   Compiling mmult.cpp_pre.cpp.tb.cpp
+   Compiling apatb_mmult_ir.ll
+   Generating cosim.tv.exe

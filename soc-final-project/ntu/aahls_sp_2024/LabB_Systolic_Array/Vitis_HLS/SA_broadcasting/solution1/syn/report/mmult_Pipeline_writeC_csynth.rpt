@@ -1,0 +1,481 @@
+
+
+================================================================
+== Vitis HLS Report for 'mmult_Pipeline_writeC'
+================================================================
+* Date:           Wed Dec  4 13:23:39 2024
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        SA_broadcasting
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu50-fsvh2104-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- writeC  |        ?|        ?|         2|          1|          1|     ?|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+--------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT  | URAM|
++---------------------+---------+------+---------+--------+-----+
+|DSP                  |        -|     -|        -|       -|    -|
+|Expression           |        -|     -|        0|     227|    -|
+|FIFO                 |        -|     -|        -|       -|    -|
+|Instance             |        -|     -|        0|    1105|    -|
+|Memory               |        -|     -|        -|       -|    -|
+|Multiplexer          |        -|     -|        -|     111|    -|
+|Register             |        -|     -|      137|       -|    -|
++---------------------+---------+------+---------+--------+-----+
+|Total                |        0|     0|      137|    1443|    0|
++---------------------+---------+------+---------+--------+-----+
+|Available SLR        |     1344|  2976|   871680|  435840|  320|
++---------------------+---------+------+---------+--------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|      ~0|    0|
++---------------------+---------+------+---------+--------+-----+
+|Available            |     2688|  5952|  1743360|  871680|  640|
++---------------------+---------+------+---------+--------+-----+
+|Utilization (%)      |        0|     0|       ~0|      ~0|    0|
++---------------------+---------+------+---------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------+-----------------+---------+----+---+----+-----+
+    |       Instance       |      Module     | BRAM_18K| DSP| FF| LUT| URAM|
+    +----------------------+-----------------+---------+----+---+----+-----+
+    |mux_1632_32_1_1_U653  |mux_1632_32_1_1  |        0|   0|  0|  65|    0|
+    |mux_1632_32_1_1_U654  |mux_1632_32_1_1  |        0|   0|  0|  65|    0|
+    |mux_1632_32_1_1_U655  |mux_1632_32_1_1  |        0|   0|  0|  65|    0|
+    |mux_1632_32_1_1_U656  |mux_1632_32_1_1  |        0|   0|  0|  65|    0|
+    |mux_1632_32_1_1_U657  |mux_1632_32_1_1  |        0|   0|  0|  65|    0|
+    |mux_1632_32_1_1_U658  |mux_1632_32_1_1  |        0|   0|  0|  65|    0|
+    |mux_1632_32_1_1_U659  |mux_1632_32_1_1  |        0|   0|  0|  65|    0|
+    |mux_1632_32_1_1_U660  |mux_1632_32_1_1  |        0|   0|  0|  65|    0|
+    |mux_1632_32_1_1_U661  |mux_1632_32_1_1  |        0|   0|  0|  65|    0|
+    |mux_1632_32_1_1_U662  |mux_1632_32_1_1  |        0|   0|  0|  65|    0|
+    |mux_1632_32_1_1_U663  |mux_1632_32_1_1  |        0|   0|  0|  65|    0|
+    |mux_1632_32_1_1_U664  |mux_1632_32_1_1  |        0|   0|  0|  65|    0|
+    |mux_1632_32_1_1_U665  |mux_1632_32_1_1  |        0|   0|  0|  65|    0|
+    |mux_1632_32_1_1_U666  |mux_1632_32_1_1  |        0|   0|  0|  65|    0|
+    |mux_1632_32_1_1_U667  |mux_1632_32_1_1  |        0|   0|  0|  65|    0|
+    |mux_1632_32_1_1_U668  |mux_1632_32_1_1  |        0|   0|  0|  65|    0|
+    |mux_1632_32_1_1_U669  |mux_1632_32_1_1  |        0|   0|  0|  65|    0|
+    +----------------------+-----------------+---------+----+---+----+-----+
+    |Total                 |                 |        0|   0|  0|1105|    0|
+    +----------------------+-----------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |add_ln126_fu_2188_p2       |         +|   0|  0|  39|          32|           1|
+    |add_ln130_fu_2205_p2       |         +|   0|  0|  39|          32|           1|
+    |j_2_fu_2617_p2             |         +|   0|  0|  39|          32|           1|
+    |ap_block_pp0_stage0_11001  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln126_fu_2183_p2      |      icmp|   0|  0|  20|          32|          32|
+    |icmp_ln129_fu_2200_p2      |      icmp|   0|  0|  20|          32|          32|
+    |i_1_fu_2211_p3             |    select|   0|  0|  32|           1|          32|
+    |j_1_fu_2219_p3             |    select|   0|  0|  32|           1|           1|
+    |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
+    |ap_enable_reg_pp0_iter1    |       xor|   0|  0|   2|           2|           1|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |Total                      |          |   0|  0| 227|         166|         104|
+    +---------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                |  43|          8|    1|          8|
+    |ap_enable_reg_pp0_iter1  |  14|          3|    1|          3|
+    |gmem2_blk_n_AW           |   9|          2|    1|          2|
+    |gmem2_blk_n_B            |   9|          2|    1|          2|
+    |gmem2_blk_n_W            |   9|          2|    1|          2|
+    |i_fu_566                 |   9|          2|   32|         64|
+    |j_fu_570                 |   9|          2|   32|         64|
+    |loc_fu_574               |   9|          2|   32|         64|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    | 111|         23|  101|        209|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   7|   0|    7|          0|
+    |ap_enable_reg_pp0_iter0  |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |i_fu_566                 |  32|   0|   32|          0|
+    |j_fu_570                 |  32|   0|   32|          0|
+    |loc_fu_574               |  32|   0|   32|          0|
+    |tmp_15_reg_3958          |  32|   0|   32|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    | 137|   0|  137|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+-----------------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  |     Source Object     |    C Type    |
++----------------------+-----+-----+------------+-----------------------+--------------+
+|ap_clk                |   in|    1|  ap_ctrl_hs|  mmult_Pipeline_writeC|  return value|
+|ap_rst                |   in|    1|  ap_ctrl_hs|  mmult_Pipeline_writeC|  return value|
+|ap_start              |   in|    1|  ap_ctrl_hs|  mmult_Pipeline_writeC|  return value|
+|ap_done               |  out|    1|  ap_ctrl_hs|  mmult_Pipeline_writeC|  return value|
+|ap_idle               |  out|    1|  ap_ctrl_hs|  mmult_Pipeline_writeC|  return value|
+|ap_ready              |  out|    1|  ap_ctrl_hs|  mmult_Pipeline_writeC|  return value|
+|m_axi_gmem2_AWVALID   |  out|    1|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_AWREADY   |   in|    1|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_AWADDR    |  out|   64|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_AWID      |  out|    1|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_AWLEN     |  out|   32|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_AWSIZE    |  out|    3|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_AWBURST   |  out|    2|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_AWLOCK    |  out|    2|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_AWCACHE   |  out|    4|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_AWPROT    |  out|    3|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_AWQOS     |  out|    4|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_AWREGION  |  out|    4|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_AWUSER    |  out|    1|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_WVALID    |  out|    1|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_WREADY    |   in|    1|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_WDATA     |  out|   32|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_WSTRB     |  out|    4|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_WLAST     |  out|    1|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_WID       |  out|    1|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_WUSER     |  out|    1|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_ARVALID   |  out|    1|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_ARREADY   |   in|    1|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_ARADDR    |  out|   64|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_ARID      |  out|    1|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_ARLEN     |  out|   32|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_ARSIZE    |  out|    3|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_ARBURST   |  out|    2|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_ARLOCK    |  out|    2|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_ARCACHE   |  out|    4|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_ARPROT    |  out|    3|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_ARQOS     |  out|    4|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_ARREGION  |  out|    4|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_ARUSER    |  out|    1|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_RVALID    |   in|    1|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_RREADY    |  out|    1|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_RDATA     |   in|   32|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_RLAST     |   in|    1|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_RID       |   in|    1|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_RFIFONUM  |   in|    9|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_RUSER     |   in|    1|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_RRESP     |   in|    2|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_BVALID    |   in|    1|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_BREADY    |  out|    1|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_BRESP     |   in|    2|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_BID       |   in|    1|       m_axi|                  gmem2|       pointer|
+|m_axi_gmem2_BUSER     |   in|    1|       m_axi|                  gmem2|       pointer|
+|sext_ln133_1          |   in|   62|     ap_none|           sext_ln133_1|        scalar|
+|mul108                |   in|   32|     ap_none|                 mul108|        scalar|
+|b_col                 |   in|   32|     ap_none|                  b_col|        scalar|
+|mux_case_0            |   in|   32|     ap_none|             mux_case_0|        scalar|
+|mux_case_1            |   in|   32|     ap_none|             mux_case_1|        scalar|
+|mux_case_2            |   in|   32|     ap_none|             mux_case_2|        scalar|
+|mux_case_3            |   in|   32|     ap_none|             mux_case_3|        scalar|
+|mux_case_4            |   in|   32|     ap_none|             mux_case_4|        scalar|
+|mux_case_5            |   in|   32|     ap_none|             mux_case_5|        scalar|
+|mux_case_6            |   in|   32|     ap_none|             mux_case_6|        scalar|
+|mux_case_7            |   in|   32|     ap_none|             mux_case_7|        scalar|
+|mux_case_8            |   in|   32|     ap_none|             mux_case_8|        scalar|
+|mux_case_9            |   in|   32|     ap_none|             mux_case_9|        scalar|
+|mux_case_10           |   in|   32|     ap_none|            mux_case_10|        scalar|
+|mux_case_11           |   in|   32|     ap_none|            mux_case_11|        scalar|
+|mux_case_12           |   in|   32|     ap_none|            mux_case_12|        scalar|
+|mux_case_13           |   in|   32|     ap_none|            mux_case_13|        scalar|
+|mux_case_14           |   in|   32|     ap_none|            mux_case_14|        scalar|
+|mux_case_15           |   in|   32|     ap_none|            mux_case_15|        scalar|
+|mux_case_01883        |   in|   32|     ap_none|         mux_case_01883|        scalar|
+|mux_case_11884        |   in|   32|     ap_none|         mux_case_11884|        scalar|
+|mux_case_21885        |   in|   32|     ap_none|         mux_case_21885|        scalar|
+|mux_case_31886        |   in|   32|     ap_none|         mux_case_31886|        scalar|
+|mux_case_41887        |   in|   32|     ap_none|         mux_case_41887|        scalar|
+|mux_case_51888        |   in|   32|     ap_none|         mux_case_51888|        scalar|
+|mux_case_61889        |   in|   32|     ap_none|         mux_case_61889|        scalar|
+|mux_case_71890        |   in|   32|     ap_none|         mux_case_71890|        scalar|
+|mux_case_81891        |   in|   32|     ap_none|         mux_case_81891|        scalar|
+|mux_case_91892        |   in|   32|     ap_none|         mux_case_91892|        scalar|
+|mux_case_101893       |   in|   32|     ap_none|        mux_case_101893|        scalar|
+|mux_case_111894       |   in|   32|     ap_none|        mux_case_111894|        scalar|
+|mux_case_121895       |   in|   32|     ap_none|        mux_case_121895|        scalar|
+|mux_case_131896       |   in|   32|     ap_none|        mux_case_131896|        scalar|
+|mux_case_141897       |   in|   32|     ap_none|        mux_case_141897|        scalar|
+|mux_case_151898       |   in|   32|     ap_none|        mux_case_151898|        scalar|
+|mux_case_01900        |   in|   32|     ap_none|         mux_case_01900|        scalar|
+|mux_case_11901        |   in|   32|     ap_none|         mux_case_11901|        scalar|
+|mux_case_21902        |   in|   32|     ap_none|         mux_case_21902|        scalar|
+|mux_case_31903        |   in|   32|     ap_none|         mux_case_31903|        scalar|
+|mux_case_41904        |   in|   32|     ap_none|         mux_case_41904|        scalar|
+|mux_case_51905        |   in|   32|     ap_none|         mux_case_51905|        scalar|
+|mux_case_61906        |   in|   32|     ap_none|         mux_case_61906|        scalar|
+|mux_case_71907        |   in|   32|     ap_none|         mux_case_71907|        scalar|
+|mux_case_81908        |   in|   32|     ap_none|         mux_case_81908|        scalar|
+|mux_case_91909        |   in|   32|     ap_none|         mux_case_91909|        scalar|
+|mux_case_101910       |   in|   32|     ap_none|        mux_case_101910|        scalar|
+|mux_case_111911       |   in|   32|     ap_none|        mux_case_111911|        scalar|
+|mux_case_121912       |   in|   32|     ap_none|        mux_case_121912|        scalar|
+|mux_case_131913       |   in|   32|     ap_none|        mux_case_131913|        scalar|
+|mux_case_141914       |   in|   32|     ap_none|        mux_case_141914|        scalar|
+|mux_case_151915       |   in|   32|     ap_none|        mux_case_151915|        scalar|
+|mux_case_01917        |   in|   32|     ap_none|         mux_case_01917|        scalar|
+|mux_case_11918        |   in|   32|     ap_none|         mux_case_11918|        scalar|
+|mux_case_21919        |   in|   32|     ap_none|         mux_case_21919|        scalar|
+|mux_case_31920        |   in|   32|     ap_none|         mux_case_31920|        scalar|
+|mux_case_41921        |   in|   32|     ap_none|         mux_case_41921|        scalar|
+|mux_case_51922        |   in|   32|     ap_none|         mux_case_51922|        scalar|
+|mux_case_61923        |   in|   32|     ap_none|         mux_case_61923|        scalar|
+|mux_case_71924        |   in|   32|     ap_none|         mux_case_71924|        scalar|
+|mux_case_81925        |   in|   32|     ap_none|         mux_case_81925|        scalar|
+|mux_case_91926        |   in|   32|     ap_none|         mux_case_91926|        scalar|
+|mux_case_101927       |   in|   32|     ap_none|        mux_case_101927|        scalar|
+|mux_case_111928       |   in|   32|     ap_none|        mux_case_111928|        scalar|
+|mux_case_121929       |   in|   32|     ap_none|        mux_case_121929|        scalar|
+|mux_case_131930       |   in|   32|     ap_none|        mux_case_131930|        scalar|
+|mux_case_141931       |   in|   32|     ap_none|        mux_case_141931|        scalar|
+|mux_case_151932       |   in|   32|     ap_none|        mux_case_151932|        scalar|
+|mux_case_01934        |   in|   32|     ap_none|         mux_case_01934|        scalar|
+|mux_case_11935        |   in|   32|     ap_none|         mux_case_11935|        scalar|
+|mux_case_21936        |   in|   32|     ap_none|         mux_case_21936|        scalar|
+|mux_case_31937        |   in|   32|     ap_none|         mux_case_31937|        scalar|
+|mux_case_41938        |   in|   32|     ap_none|         mux_case_41938|        scalar|
+|mux_case_51939        |   in|   32|     ap_none|         mux_case_51939|        scalar|
+|mux_case_61940        |   in|   32|     ap_none|         mux_case_61940|        scalar|
+|mux_case_71941        |   in|   32|     ap_none|         mux_case_71941|        scalar|
+|mux_case_81942        |   in|   32|     ap_none|         mux_case_81942|        scalar|
+|mux_case_91943        |   in|   32|     ap_none|         mux_case_91943|        scalar|
+|mux_case_101944       |   in|   32|     ap_none|        mux_case_101944|        scalar|
+|mux_case_111945       |   in|   32|     ap_none|        mux_case_111945|        scalar|
+|mux_case_121946       |   in|   32|     ap_none|        mux_case_121946|        scalar|
+|mux_case_131947       |   in|   32|     ap_none|        mux_case_131947|        scalar|
+|mux_case_141948       |   in|   32|     ap_none|        mux_case_141948|        scalar|
+|mux_case_151949       |   in|   32|     ap_none|        mux_case_151949|        scalar|
+|mux_case_01951        |   in|   32|     ap_none|         mux_case_01951|        scalar|
+|mux_case_11952        |   in|   32|     ap_none|         mux_case_11952|        scalar|
+|mux_case_21953        |   in|   32|     ap_none|         mux_case_21953|        scalar|
+|mux_case_31954        |   in|   32|     ap_none|         mux_case_31954|        scalar|
+|mux_case_41955        |   in|   32|     ap_none|         mux_case_41955|        scalar|
+|mux_case_51956        |   in|   32|     ap_none|         mux_case_51956|        scalar|
+|mux_case_61957        |   in|   32|     ap_none|         mux_case_61957|        scalar|
+|mux_case_71958        |   in|   32|     ap_none|         mux_case_71958|        scalar|
+|mux_case_81959        |   in|   32|     ap_none|         mux_case_81959|        scalar|
+|mux_case_91960        |   in|   32|     ap_none|         mux_case_91960|        scalar|
+|mux_case_101961       |   in|   32|     ap_none|        mux_case_101961|        scalar|
+|mux_case_111962       |   in|   32|     ap_none|        mux_case_111962|        scalar|
+|mux_case_121963       |   in|   32|     ap_none|        mux_case_121963|        scalar|
+|mux_case_131964       |   in|   32|     ap_none|        mux_case_131964|        scalar|
+|mux_case_141965       |   in|   32|     ap_none|        mux_case_141965|        scalar|
+|mux_case_151966       |   in|   32|     ap_none|        mux_case_151966|        scalar|
+|mux_case_01968        |   in|   32|     ap_none|         mux_case_01968|        scalar|
+|mux_case_11969        |   in|   32|     ap_none|         mux_case_11969|        scalar|
+|mux_case_21970        |   in|   32|     ap_none|         mux_case_21970|        scalar|
+|mux_case_31971        |   in|   32|     ap_none|         mux_case_31971|        scalar|
+|mux_case_41972        |   in|   32|     ap_none|         mux_case_41972|        scalar|
+|mux_case_51973        |   in|   32|     ap_none|         mux_case_51973|        scalar|
+|mux_case_61974        |   in|   32|     ap_none|         mux_case_61974|        scalar|
+|mux_case_71975        |   in|   32|     ap_none|         mux_case_71975|        scalar|
+|mux_case_81976        |   in|   32|     ap_none|         mux_case_81976|        scalar|
+|mux_case_91977        |   in|   32|     ap_none|         mux_case_91977|        scalar|
+|mux_case_101978       |   in|   32|     ap_none|        mux_case_101978|        scalar|
+|mux_case_111979       |   in|   32|     ap_none|        mux_case_111979|        scalar|
+|mux_case_121980       |   in|   32|     ap_none|        mux_case_121980|        scalar|
+|mux_case_131981       |   in|   32|     ap_none|        mux_case_131981|        scalar|
+|mux_case_141982       |   in|   32|     ap_none|        mux_case_141982|        scalar|
+|mux_case_151983       |   in|   32|     ap_none|        mux_case_151983|        scalar|
+|mux_case_01985        |   in|   32|     ap_none|         mux_case_01985|        scalar|
+|mux_case_11986        |   in|   32|     ap_none|         mux_case_11986|        scalar|
+|mux_case_21987        |   in|   32|     ap_none|         mux_case_21987|        scalar|
+|mux_case_31988        |   in|   32|     ap_none|         mux_case_31988|        scalar|
+|mux_case_41989        |   in|   32|     ap_none|         mux_case_41989|        scalar|
+|mux_case_51990        |   in|   32|     ap_none|         mux_case_51990|        scalar|
+|mux_case_61991        |   in|   32|     ap_none|         mux_case_61991|        scalar|
+|mux_case_71992        |   in|   32|     ap_none|         mux_case_71992|        scalar|
+|mux_case_81993        |   in|   32|     ap_none|         mux_case_81993|        scalar|
+|mux_case_91994        |   in|   32|     ap_none|         mux_case_91994|        scalar|
+|mux_case_101995       |   in|   32|     ap_none|        mux_case_101995|        scalar|
+|mux_case_111996       |   in|   32|     ap_none|        mux_case_111996|        scalar|
+|mux_case_121997       |   in|   32|     ap_none|        mux_case_121997|        scalar|
+|mux_case_131998       |   in|   32|     ap_none|        mux_case_131998|        scalar|
+|mux_case_141999       |   in|   32|     ap_none|        mux_case_141999|        scalar|
+|mux_case_152000       |   in|   32|     ap_none|        mux_case_152000|        scalar|
+|mux_case_02002        |   in|   32|     ap_none|         mux_case_02002|        scalar|
+|mux_case_12003        |   in|   32|     ap_none|         mux_case_12003|        scalar|
+|mux_case_22004        |   in|   32|     ap_none|         mux_case_22004|        scalar|
+|mux_case_32005        |   in|   32|     ap_none|         mux_case_32005|        scalar|
+|mux_case_42006        |   in|   32|     ap_none|         mux_case_42006|        scalar|
+|mux_case_52007        |   in|   32|     ap_none|         mux_case_52007|        scalar|
+|mux_case_62008        |   in|   32|     ap_none|         mux_case_62008|        scalar|
+|mux_case_72009        |   in|   32|     ap_none|         mux_case_72009|        scalar|
+|mux_case_82010        |   in|   32|     ap_none|         mux_case_82010|        scalar|
+|mux_case_92011        |   in|   32|     ap_none|         mux_case_92011|        scalar|
+|mux_case_102012       |   in|   32|     ap_none|        mux_case_102012|        scalar|
+|mux_case_112013       |   in|   32|     ap_none|        mux_case_112013|        scalar|
+|mux_case_122014       |   in|   32|     ap_none|        mux_case_122014|        scalar|
+|mux_case_132015       |   in|   32|     ap_none|        mux_case_132015|        scalar|
+|mux_case_142016       |   in|   32|     ap_none|        mux_case_142016|        scalar|
+|mux_case_152017       |   in|   32|     ap_none|        mux_case_152017|        scalar|
+|mux_case_02019        |   in|   32|     ap_none|         mux_case_02019|        scalar|
+|mux_case_12020        |   in|   32|     ap_none|         mux_case_12020|        scalar|
+|mux_case_22021        |   in|   32|     ap_none|         mux_case_22021|        scalar|
+|mux_case_32022        |   in|   32|     ap_none|         mux_case_32022|        scalar|
+|mux_case_42023        |   in|   32|     ap_none|         mux_case_42023|        scalar|
+|mux_case_52024        |   in|   32|     ap_none|         mux_case_52024|        scalar|
+|mux_case_62025        |   in|   32|     ap_none|         mux_case_62025|        scalar|
+|mux_case_72026        |   in|   32|     ap_none|         mux_case_72026|        scalar|
+|mux_case_82027        |   in|   32|     ap_none|         mux_case_82027|        scalar|
+|mux_case_92028        |   in|   32|     ap_none|         mux_case_92028|        scalar|
+|mux_case_102029       |   in|   32|     ap_none|        mux_case_102029|        scalar|
+|mux_case_112030       |   in|   32|     ap_none|        mux_case_112030|        scalar|
+|mux_case_122031       |   in|   32|     ap_none|        mux_case_122031|        scalar|
+|mux_case_132032       |   in|   32|     ap_none|        mux_case_132032|        scalar|
+|mux_case_142033       |   in|   32|     ap_none|        mux_case_142033|        scalar|
+|mux_case_152034       |   in|   32|     ap_none|        mux_case_152034|        scalar|
+|mux_case_02036        |   in|   32|     ap_none|         mux_case_02036|        scalar|
+|mux_case_12037        |   in|   32|     ap_none|         mux_case_12037|        scalar|
+|mux_case_22038        |   in|   32|     ap_none|         mux_case_22038|        scalar|
+|mux_case_32039        |   in|   32|     ap_none|         mux_case_32039|        scalar|
+|mux_case_42040        |   in|   32|     ap_none|         mux_case_42040|        scalar|
+|mux_case_52041        |   in|   32|     ap_none|         mux_case_52041|        scalar|
+|mux_case_62042        |   in|   32|     ap_none|         mux_case_62042|        scalar|
+|mux_case_72043        |   in|   32|     ap_none|         mux_case_72043|        scalar|
+|mux_case_82044        |   in|   32|     ap_none|         mux_case_82044|        scalar|
+|mux_case_92045        |   in|   32|     ap_none|         mux_case_92045|        scalar|
+|mux_case_102046       |   in|   32|     ap_none|        mux_case_102046|        scalar|
+|mux_case_112047       |   in|   32|     ap_none|        mux_case_112047|        scalar|
+|mux_case_122048       |   in|   32|     ap_none|        mux_case_122048|        scalar|
+|mux_case_132049       |   in|   32|     ap_none|        mux_case_132049|        scalar|
+|mux_case_142050       |   in|   32|     ap_none|        mux_case_142050|        scalar|
+|mux_case_152051       |   in|   32|     ap_none|        mux_case_152051|        scalar|
+|mux_case_02053        |   in|   32|     ap_none|         mux_case_02053|        scalar|
+|mux_case_12054        |   in|   32|     ap_none|         mux_case_12054|        scalar|
+|mux_case_22055        |   in|   32|     ap_none|         mux_case_22055|        scalar|
+|mux_case_32056        |   in|   32|     ap_none|         mux_case_32056|        scalar|
+|mux_case_42057        |   in|   32|     ap_none|         mux_case_42057|        scalar|
+|mux_case_52058        |   in|   32|     ap_none|         mux_case_52058|        scalar|
+|mux_case_62059        |   in|   32|     ap_none|         mux_case_62059|        scalar|
+|mux_case_72060        |   in|   32|     ap_none|         mux_case_72060|        scalar|
+|mux_case_82061        |   in|   32|     ap_none|         mux_case_82061|        scalar|
+|mux_case_92062        |   in|   32|     ap_none|         mux_case_92062|        scalar|
+|mux_case_102063       |   in|   32|     ap_none|        mux_case_102063|        scalar|
+|mux_case_112064       |   in|   32|     ap_none|        mux_case_112064|        scalar|
+|mux_case_122065       |   in|   32|     ap_none|        mux_case_122065|        scalar|
+|mux_case_132066       |   in|   32|     ap_none|        mux_case_132066|        scalar|
+|mux_case_142067       |   in|   32|     ap_none|        mux_case_142067|        scalar|
+|mux_case_152068       |   in|   32|     ap_none|        mux_case_152068|        scalar|
+|mux_case_02070        |   in|   32|     ap_none|         mux_case_02070|        scalar|
+|mux_case_12071        |   in|   32|     ap_none|         mux_case_12071|        scalar|
+|mux_case_22072        |   in|   32|     ap_none|         mux_case_22072|        scalar|
+|mux_case_32073        |   in|   32|     ap_none|         mux_case_32073|        scalar|
+|mux_case_42074        |   in|   32|     ap_none|         mux_case_42074|        scalar|
+|mux_case_52075        |   in|   32|     ap_none|         mux_case_52075|        scalar|
+|mux_case_62076        |   in|   32|     ap_none|         mux_case_62076|        scalar|
+|mux_case_72077        |   in|   32|     ap_none|         mux_case_72077|        scalar|
+|mux_case_82078        |   in|   32|     ap_none|         mux_case_82078|        scalar|
+|mux_case_92079        |   in|   32|     ap_none|         mux_case_92079|        scalar|
+|mux_case_102080       |   in|   32|     ap_none|        mux_case_102080|        scalar|
+|mux_case_112081       |   in|   32|     ap_none|        mux_case_112081|        scalar|
+|mux_case_122082       |   in|   32|     ap_none|        mux_case_122082|        scalar|
+|mux_case_132083       |   in|   32|     ap_none|        mux_case_132083|        scalar|
+|mux_case_142084       |   in|   32|     ap_none|        mux_case_142084|        scalar|
+|mux_case_152085       |   in|   32|     ap_none|        mux_case_152085|        scalar|
+|mux_case_02087        |   in|   32|     ap_none|         mux_case_02087|        scalar|
+|mux_case_12088        |   in|   32|     ap_none|         mux_case_12088|        scalar|
+|mux_case_22089        |   in|   32|     ap_none|         mux_case_22089|        scalar|
+|mux_case_32090        |   in|   32|     ap_none|         mux_case_32090|        scalar|
+|mux_case_42091        |   in|   32|     ap_none|         mux_case_42091|        scalar|
+|mux_case_52092        |   in|   32|     ap_none|         mux_case_52092|        scalar|
+|mux_case_62093        |   in|   32|     ap_none|         mux_case_62093|        scalar|
+|mux_case_72094        |   in|   32|     ap_none|         mux_case_72094|        scalar|
+|mux_case_82095        |   in|   32|     ap_none|         mux_case_82095|        scalar|
+|mux_case_92096        |   in|   32|     ap_none|         mux_case_92096|        scalar|
+|mux_case_102097       |   in|   32|     ap_none|        mux_case_102097|        scalar|
+|mux_case_112098       |   in|   32|     ap_none|        mux_case_112098|        scalar|
+|mux_case_122099       |   in|   32|     ap_none|        mux_case_122099|        scalar|
+|mux_case_132100       |   in|   32|     ap_none|        mux_case_132100|        scalar|
+|mux_case_142101       |   in|   32|     ap_none|        mux_case_142101|        scalar|
+|mux_case_152102       |   in|   32|     ap_none|        mux_case_152102|        scalar|
+|mux_case_02104        |   in|   32|     ap_none|         mux_case_02104|        scalar|
+|mux_case_12105        |   in|   32|     ap_none|         mux_case_12105|        scalar|
+|mux_case_22106        |   in|   32|     ap_none|         mux_case_22106|        scalar|
+|mux_case_32107        |   in|   32|     ap_none|         mux_case_32107|        scalar|
+|mux_case_42108        |   in|   32|     ap_none|         mux_case_42108|        scalar|
+|mux_case_52109        |   in|   32|     ap_none|         mux_case_52109|        scalar|
+|mux_case_62110        |   in|   32|     ap_none|         mux_case_62110|        scalar|
+|mux_case_72111        |   in|   32|     ap_none|         mux_case_72111|        scalar|
+|mux_case_82112        |   in|   32|     ap_none|         mux_case_82112|        scalar|
+|mux_case_92113        |   in|   32|     ap_none|         mux_case_92113|        scalar|
+|mux_case_102114       |   in|   32|     ap_none|        mux_case_102114|        scalar|
+|mux_case_112115       |   in|   32|     ap_none|        mux_case_112115|        scalar|
+|mux_case_122116       |   in|   32|     ap_none|        mux_case_122116|        scalar|
+|mux_case_132117       |   in|   32|     ap_none|        mux_case_132117|        scalar|
+|mux_case_142118       |   in|   32|     ap_none|        mux_case_142118|        scalar|
+|mux_case_152119       |   in|   32|     ap_none|        mux_case_152119|        scalar|
+|mux_case_02121        |   in|   32|     ap_none|         mux_case_02121|        scalar|
+|mux_case_12122        |   in|   32|     ap_none|         mux_case_12122|        scalar|
+|mux_case_22123        |   in|   32|     ap_none|         mux_case_22123|        scalar|
+|mux_case_32124        |   in|   32|     ap_none|         mux_case_32124|        scalar|
+|mux_case_42125        |   in|   32|     ap_none|         mux_case_42125|        scalar|
+|mux_case_52126        |   in|   32|     ap_none|         mux_case_52126|        scalar|
+|mux_case_62127        |   in|   32|     ap_none|         mux_case_62127|        scalar|
+|mux_case_72128        |   in|   32|     ap_none|         mux_case_72128|        scalar|
+|mux_case_82129        |   in|   32|     ap_none|         mux_case_82129|        scalar|
+|mux_case_92130        |   in|   32|     ap_none|         mux_case_92130|        scalar|
+|mux_case_102131       |   in|   32|     ap_none|        mux_case_102131|        scalar|
+|mux_case_112132       |   in|   32|     ap_none|        mux_case_112132|        scalar|
+|mux_case_122133       |   in|   32|     ap_none|        mux_case_122133|        scalar|
+|mux_case_132134       |   in|   32|     ap_none|        mux_case_132134|        scalar|
+|mux_case_142135       |   in|   32|     ap_none|        mux_case_142135|        scalar|
+|mux_case_152136       |   in|   32|     ap_none|        mux_case_152136|        scalar|
+|c                     |   in|   64|     ap_none|                      c|        scalar|
++----------------------+-----+-----+------------+-----------------------+--------------+
+

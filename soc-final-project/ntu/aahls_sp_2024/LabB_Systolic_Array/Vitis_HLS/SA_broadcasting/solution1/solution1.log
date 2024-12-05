@@ -1,0 +1,863 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcu50-fsvh2104-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcu50-fsvh2104-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.461 GB.
+INFO: [HLS 200-10] Analyzing design file 'SA_broadcasting/src/mmult.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.73 seconds. CPU system time: 0.55 seconds. Elapsed time: 4.99 seconds; current allocated memory: 462.512 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-186] Unrolling loop 'systolic2' (SA_broadcasting/src/mmult.cpp:92:9) in function 'mmult' completely with a factor of 16 (SA_broadcasting/src/mmult.cpp:19:0)
+INFO: [HLS 214-186] Unrolling loop 'systolic3' (SA_broadcasting/src/mmult.cpp:95:13) in function 'mmult' completely with a factor of 16 (SA_broadcasting/src/mmult.cpp:19:0)
+INFO: [HLS 214-248] Applying array_partition to 'localA': Complete partitioning on dimension 1. (SA_broadcasting/src/mmult.cpp:39:9)
+INFO: [HLS 214-248] Applying array_partition to 'localB': Complete partitioning on dimension 2. (SA_broadcasting/src/mmult.cpp:42:6)
+INFO: [HLS 214-248] Applying array_partition to 'localC': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (SA_broadcasting/src/mmult.cpp:45:6)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 8.28 seconds. CPU system time: 0.98 seconds. Elapsed time: 9.86 seconds; current allocated memory: 463.379 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 463.379 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 2.56 seconds. CPU system time: 0 seconds. Elapsed time: 2.66 seconds; current allocated memory: 484.129 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 2.82 seconds. CPU system time: 0 seconds. Elapsed time: 2.83 seconds; current allocated memory: 488.152 MB.
+INFO: [XFORM 203-510] Pipelining loop 'readA' (SA_broadcasting/src/mmult.cpp:51) in function 'mmult' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'readB' (SA_broadcasting/src/mmult.cpp:70) in function 'mmult' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'systolic1' (SA_broadcasting/src/mmult.cpp:89) in function 'mmult' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'writeC' (SA_broadcasting/src/mmult.cpp:115) in function 'mmult' automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (SA_broadcasting/src/mmult.cpp:90:9) to (SA_broadcasting/src/mmult.cpp:89:5) in function 'mmult'... converting 1025 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 5.6 seconds. CPU system time: 0 seconds. Elapsed time: 5.64 seconds; current allocated memory: 539.195 MB.
+INFO: [HLS 200-472] Inferring partial write operation for 'localA' (SA_broadcasting/src/mmult.cpp:58:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'localB' (SA_broadcasting/src/mmult.cpp:77:22)
+INFO: [HLS 200-444] Inferring multiple bus burst write of variable length on port 'gmem2' (SA_broadcasting/src/mmult.cpp:121:16). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'gmem1' (SA_broadcasting/src/mmult.cpp:77:24). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'gmem0' (SA_broadcasting/src/mmult.cpp:58:24). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.47 seconds. CPU system time: 0 seconds. Elapsed time: 0.48 seconds; current allocated memory: 563.324 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'mmult' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_readA' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'readA'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'readA'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.49 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.54 seconds; current allocated memory: 563.324 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 563.324 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_readB' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'readB'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'readB'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 563.324 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 563.324 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_systolic1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'systolic1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'systolic1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.24 seconds. CPU system time: 0 seconds. Elapsed time: 2.26 seconds; current allocated memory: 566.652 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.37 seconds. CPU system time: 0 seconds. Elapsed time: 1.36 seconds; current allocated memory: 566.652 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_writeC' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcu50-fsvh2104-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcu50-fsvh2104-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./SA_broadcasting/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name mmult mmult 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 462.598 MB.
+INFO: [HLS 200-10] Analyzing design file 'SA_broadcasting/src/mmult.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.55 seconds. CPU system time: 0.44 seconds. Elapsed time: 4 seconds; current allocated memory: 462.598 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-186] Unrolling loop 'systolic2' (SA_broadcasting/src/mmult.cpp:92:9) in function 'mmult' completely with a factor of 16 (SA_broadcasting/src/mmult.cpp:19:0)
+INFO: [HLS 214-186] Unrolling loop 'systolic3' (SA_broadcasting/src/mmult.cpp:95:13) in function 'mmult' completely with a factor of 16 (SA_broadcasting/src/mmult.cpp:19:0)
+INFO: [HLS 214-248] Applying array_partition to 'localA': Complete partitioning on dimension 1. (SA_broadcasting/src/mmult.cpp:39:9)
+INFO: [HLS 214-248] Applying array_partition to 'localB': Complete partitioning on dimension 2. (SA_broadcasting/src/mmult.cpp:42:6)
+INFO: [HLS 214-248] Applying array_partition to 'localC': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (SA_broadcasting/src/mmult.cpp:45:6)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 9.21 seconds. CPU system time: 0.71 seconds. Elapsed time: 9.94 seconds; current allocated memory: 463.531 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 463.531 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 3.06 seconds. CPU system time: 0 seconds. Elapsed time: 3.06 seconds; current allocated memory: 484.180 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 3.08 seconds. CPU system time: 0 seconds. Elapsed time: 3.08 seconds; current allocated memory: 488.262 MB.
+INFO: [XFORM 203-510] Pipelining loop 'readA' (SA_broadcasting/src/mmult.cpp:51) in function 'mmult' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'readB' (SA_broadcasting/src/mmult.cpp:70) in function 'mmult' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'systolic1' (SA_broadcasting/src/mmult.cpp:89) in function 'mmult' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'writeC' (SA_broadcasting/src/mmult.cpp:115) in function 'mmult' automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (SA_broadcasting/src/mmult.cpp:90:9) to (SA_broadcasting/src/mmult.cpp:89:5) in function 'mmult'... converting 1025 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 5.14 seconds. CPU system time: 0 seconds. Elapsed time: 5.1 seconds; current allocated memory: 540.328 MB.
+INFO: [HLS 200-472] Inferring partial write operation for 'localA' (SA_broadcasting/src/mmult.cpp:58:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'localB' (SA_broadcasting/src/mmult.cpp:77:22)
+INFO: [HLS 200-444] Inferring multiple bus burst write of variable length on port 'gmem2' (SA_broadcasting/src/mmult.cpp:121:16). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'gmem1' (SA_broadcasting/src/mmult.cpp:77:24). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'gmem0' (SA_broadcasting/src/mmult.cpp:58:24). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.33 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 567.332 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'mmult' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_readA' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'readA'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'readA'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.55 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.56 seconds; current allocated memory: 567.332 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 567.332 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_readB' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'readB'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'readB'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 567.332 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 567.332 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_systolic1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'systolic1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'systolic1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.58 seconds. CPU system time: 0 seconds. Elapsed time: 2.59 seconds; current allocated memory: 568.480 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.33 seconds. CPU system time: 0 seconds. Elapsed time: 1.33 seconds; current allocated memory: 568.480 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_writeC' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcu50-fsvh2104-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcu50-fsvh2104-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./SA_broadcasting/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name mmult mmult 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.461 GB.
+INFO: [HLS 200-10] Analyzing design file 'SA_broadcasting/src/mmult.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 4.26 seconds. CPU system time: 0.47 seconds. Elapsed time: 4.09 seconds; current allocated memory: 462.598 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-186] Unrolling loop 'systolic2' (SA_broadcasting/src/mmult.cpp:92:9) in function 'mmult' completely with a factor of 16 (SA_broadcasting/src/mmult.cpp:19:0)
+INFO: [HLS 214-186] Unrolling loop 'systolic3' (SA_broadcasting/src/mmult.cpp:95:13) in function 'mmult' completely with a factor of 16 (SA_broadcasting/src/mmult.cpp:19:0)
+INFO: [HLS 214-248] Applying array_partition to 'localA': Complete partitioning on dimension 1. (SA_broadcasting/src/mmult.cpp:39:9)
+INFO: [HLS 214-248] Applying array_partition to 'localB': Complete partitioning on dimension 2. (SA_broadcasting/src/mmult.cpp:42:6)
+INFO: [HLS 214-248] Applying array_partition to 'localC': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (SA_broadcasting/src/mmult.cpp:45:6)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'readA'(SA_broadcasting/src/mmult.cpp:51:5) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (SA_broadcasting/src/mmult.cpp:51:5)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'readB'(SA_broadcasting/src/mmult.cpp:70:5) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (SA_broadcasting/src/mmult.cpp:70:5)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 32 in loop 'writeC'(SA_broadcasting/src/mmult.cpp:115:5) has been inferred on bundle 'gmem2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (SA_broadcasting/src/mmult.cpp:115:5)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 10.34 seconds. CPU system time: 0.47 seconds. Elapsed time: 10.79 seconds; current allocated memory: 463.699 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 463.699 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.65 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.65 seconds; current allocated memory: 484.430 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.62 seconds. CPU system time: 0 seconds. Elapsed time: 0.61 seconds; current allocated memory: 488.504 MB.
+INFO: [XFORM 203-510] Pipelining loop 'readA' (SA_broadcasting/src/mmult.cpp:51) in function 'mmult' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'readB' (SA_broadcasting/src/mmult.cpp:70) in function 'mmult' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'systolic1' (SA_broadcasting/src/mmult.cpp:89) in function 'mmult' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'writeC' (SA_broadcasting/src/mmult.cpp:115) in function 'mmult' automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (SA_broadcasting/src/mmult.cpp:90:9) to (SA_broadcasting/src/mmult.cpp:89:5) in function 'mmult'... converting 1025 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 3.2 seconds. CPU system time: 0 seconds. Elapsed time: 3.21 seconds; current allocated memory: 540.773 MB.
+INFO: [HLS 200-472] Inferring partial write operation for 'localA' (SA_broadcasting/src/mmult.cpp:58:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'localB' (SA_broadcasting/src/mmult.cpp:77:22)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.37 seconds. CPU system time: 0 seconds. Elapsed time: 0.36 seconds; current allocated memory: 565.684 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'mmult' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_readA' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'readA'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'readA'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.48 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.52 seconds; current allocated memory: 565.684 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 565.684 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_readB' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'readB'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, loop 'readB'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 565.684 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 565.684 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_systolic1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'systolic1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'systolic1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.4 seconds. CPU system time: 0.03 seconds. Elapsed time: 2.48 seconds; current allocated memory: 567.410 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.33 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.37 seconds; current allocated memory: 567.410 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_writeC' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'writeC'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'writeC'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.57 seconds. CPU system time: 0.04 seconds. Elapsed time: 2.61 seconds; current allocated memory: 567.410 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 567.410 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.37 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.37 seconds; current allocated memory: 569.453 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.93 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.95 seconds; current allocated memory: 569.453 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mmult_Pipeline_readA' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'mmult_Pipeline_readA' pipeline 'readA' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_readA/m_axi_gmem0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_readA/m_axi_gmem0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_readA/m_axi_gmem0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_readA/m_axi_gmem0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_readA/m_axi_gmem0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_readA/m_axi_gmem0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_readA/m_axi_gmem0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_readA/m_axi_gmem0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_readA/m_axi_gmem0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_readA/m_axi_gmem0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_readA/m_axi_gmem0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_readA/m_axi_gmem0_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mmult_Pipeline_readA'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.09 seconds; current allocated memory: 569.453 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mmult_Pipeline_readB' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'mmult_Pipeline_readB' pipeline 'readB' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_readB/m_axi_gmem1_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_readB/m_axi_gmem1_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_readB/m_axi_gmem1_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_readB/m_axi_gmem1_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_readB/m_axi_gmem1_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_readB/m_axi_gmem1_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_readB/m_axi_gmem1_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_readB/m_axi_gmem1_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_readB/m_axi_gmem1_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_readB/m_axi_gmem1_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_readB/m_axi_gmem1_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_readB/m_axi_gmem1_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mmult_Pipeline_readB'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.26 seconds; current allocated memory: 570.043 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mmult_Pipeline_systolic1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'mmult_Pipeline_systolic1' pipeline 'systolic1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'mmult_Pipeline_systolic1' is 8192, found 2 HDL expressions with this fanout: ((1'b0 == ap_block_pp0_stage0_11001) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0)), ((icmp_ln89_fu_4110_p2 == 1'd1) & (1'b0 == ap_block_pp0_stage0_01001) & (1'b1 == ap_CS_fsm_pp0_stage0))
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_1_1': 256 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mmult_Pipeline_systolic1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.4 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.43 seconds; current allocated memory: 587.086 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mmult_Pipeline_writeC' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'mmult_Pipeline_writeC' pipeline 'writeC' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_writeC/m_axi_gmem2_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_writeC/m_axi_gmem2_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_writeC/m_axi_gmem2_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_writeC/m_axi_gmem2_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_writeC/m_axi_gmem2_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_writeC/m_axi_gmem2_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_writeC/m_axi_gmem2_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_writeC/m_axi_gmem2_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_writeC/m_axi_gmem2_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_writeC/m_axi_gmem2_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_writeC/m_axi_gmem2_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'mmult_Pipeline_writeC/m_axi_gmem2_AWUSER' to 0.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcu50-fsvh2104-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcu50-fsvh2104-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./SA_broadcasting/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name mmult mmult 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.461 GB.
+INFO: [HLS 200-10] Analyzing design file 'SA_broadcasting/src/mmult.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.96 seconds. CPU system time: 0.48 seconds. Elapsed time: 3.84 seconds; current allocated memory: 462.598 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-186] Unrolling loop 'systolic2' (SA_broadcasting/src/mmult.cpp:92:9) in function 'mmult' completely with a factor of 16 (SA_broadcasting/src/mmult.cpp:19:0)
+INFO: [HLS 214-186] Unrolling loop 'systolic3' (SA_broadcasting/src/mmult.cpp:95:13) in function 'mmult' completely with a factor of 16 (SA_broadcasting/src/mmult.cpp:19:0)
+INFO: [HLS 214-248] Applying array_partition to 'localA': Complete partitioning on dimension 1. (SA_broadcasting/src/mmult.cpp:39:9)
+INFO: [HLS 214-248] Applying array_partition to 'localB': Complete partitioning on dimension 2. (SA_broadcasting/src/mmult.cpp:42:6)
+INFO: [HLS 214-248] Applying array_partition to 'localC': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (SA_broadcasting/src/mmult.cpp:45:6)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 8.44 seconds. CPU system time: 0.33 seconds. Elapsed time: 8.79 seconds; current allocated memory: 463.500 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 463.500 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 2.53 seconds. CPU system time: 0 seconds. Elapsed time: 2.53 seconds; current allocated memory: 484.223 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 2.74 seconds. CPU system time: 0 seconds. Elapsed time: 2.74 seconds; current allocated memory: 488.227 MB.
+INFO: [XFORM 203-510] Pipelining loop 'readA' (SA_broadcasting/src/mmult.cpp:51) in function 'mmult' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'readB' (SA_broadcasting/src/mmult.cpp:70) in function 'mmult' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'systolic1' (SA_broadcasting/src/mmult.cpp:89) in function 'mmult' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'writeC' (SA_broadcasting/src/mmult.cpp:115) in function 'mmult' automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (SA_broadcasting/src/mmult.cpp:90:9) to (SA_broadcasting/src/mmult.cpp:89:5) in function 'mmult'... converting 1025 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 4.99 seconds. CPU system time: 0 seconds. Elapsed time: 4.99 seconds; current allocated memory: 539.301 MB.
+INFO: [HLS 200-472] Inferring partial write operation for 'localA' (SA_broadcasting/src/mmult.cpp:58:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'localB' (SA_broadcasting/src/mmult.cpp:77:22)
+INFO: [HLS 200-444] Inferring multiple bus burst write of variable length on port 'gmem2' (SA_broadcasting/src/mmult.cpp:121:16). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'gmem1' (SA_broadcasting/src/mmult.cpp:77:24). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'gmem0' (SA_broadcasting/src/mmult.cpp:58:24). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.33 seconds. CPU system time: 0 seconds. Elapsed time: 0.33 seconds; current allocated memory: 565.305 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'mmult' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_readA' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'readA'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'readA'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.49 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.5 seconds; current allocated memory: 565.305 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 565.305 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_readB' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'readB'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'readB'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 565.305 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 565.305 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_systolic1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'systolic1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'systolic1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.27 seconds; current allocated memory: 568.184 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.33 seconds. CPU system time: 0 seconds. Elapsed time: 1.34 seconds; current allocated memory: 568.184 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_writeC' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcu50-fsvh2104-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcu50-fsvh2104-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./SA_broadcasting/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name mmult mmult 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.461 GB.
+INFO: [HLS 200-10] Analyzing design file 'SA_broadcasting/src/mmult.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.73 seconds. CPU system time: 0.2 seconds. Elapsed time: 0.47 seconds; current allocated memory: 1.461 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-186] Unrolling loop 'systolic2' (SA_broadcasting/src/mmult.cpp:94:9) in function 'mmult' completely with a factor of 16 (SA_broadcasting/src/mmult.cpp:20:0)
+INFO: [HLS 214-186] Unrolling loop 'systolic3' (SA_broadcasting/src/mmult.cpp:97:13) in function 'mmult' completely with a factor of 16 (SA_broadcasting/src/mmult.cpp:20:0)
+INFO: [HLS 214-248] Applying array_partition to 'localA': Complete partitioning on dimension 1. (SA_broadcasting/src/mmult.cpp:41:9)
+INFO: [HLS 214-248] Applying array_partition to 'localB': Complete partitioning on dimension 2. (SA_broadcasting/src/mmult.cpp:44:6)
+INFO: [HLS 214-248] Applying array_partition to 'localC': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (SA_broadcasting/src/mmult.cpp:47:6)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 9.26 seconds. CPU system time: 0.42 seconds. Elapsed time: 9.46 seconds; current allocated memory: 463.027 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 463.027 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 2 seconds. CPU system time: 0.67 seconds. Elapsed time: 2.51 seconds; current allocated memory: 482.867 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 2 seconds. CPU system time: 0.8 seconds. Elapsed time: 2.75 seconds; current allocated memory: 486.410 MB.
+INFO: [XFORM 203-510] Pipelining loop 'readA' (SA_broadcasting/src/mmult.cpp:53) in function 'mmult' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'readB' (SA_broadcasting/src/mmult.cpp:72) in function 'mmult' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'systolic1' (SA_broadcasting/src/mmult.cpp:91) in function 'mmult' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'writeC' (SA_broadcasting/src/mmult.cpp:117) in function 'mmult' automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (SA_broadcasting/src/mmult.cpp:92:9) to (SA_broadcasting/src/mmult.cpp:91:5) in function 'mmult'... converting 1025 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 5.03 seconds. CPU system time: 0.49 seconds. Elapsed time: 5.52 seconds; current allocated memory: 538.535 MB.
+INFO: [HLS 200-472] Inferring partial write operation for 'localA' (SA_broadcasting/src/mmult.cpp:60:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'localB' (SA_broadcasting/src/mmult.cpp:79:22)
+INFO: [HLS 200-444] Inferring multiple bus burst write of variable length on port 'gmem2' (SA_broadcasting/src/mmult.cpp:123:16). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'gmem1' (SA_broadcasting/src/mmult.cpp:79:24). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'gmem0' (SA_broadcasting/src/mmult.cpp:60:24). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.41 seconds. CPU system time: 0 seconds. Elapsed time: 0.43 seconds; current allocated memory: 561.141 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'mmult' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_readA' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'readA'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'readA'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.5 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.51 seconds; current allocated memory: 561.141 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 561.141 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_readB' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'readB'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'readB'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 561.141 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 561.141 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_systolic1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'systolic1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'systolic1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.8 seconds. CPU system time: 0 seconds. Elapsed time: 2.8 seconds; current allocated memory: 563.316 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.46 seconds. CPU system time: 0 seconds. Elapsed time: 1.46 seconds; current allocated memory: 563.316 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_writeC' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcu50-fsvh2104-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcu50-fsvh2104-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./SA_broadcasting/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name mmult mmult 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.461 GB.
+INFO: [HLS 200-10] Analyzing design file 'SA_broadcasting/src/mmult.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.7 seconds. CPU system time: 0.25 seconds. Elapsed time: 0.48 seconds; current allocated memory: 1.461 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-186] Unrolling loop 'systolic2' (SA_broadcasting/src/mmult.cpp:94:9) in function 'mmult' completely with a factor of 16 (SA_broadcasting/src/mmult.cpp:20:0)
+INFO: [HLS 214-186] Unrolling loop 'systolic3' (SA_broadcasting/src/mmult.cpp:97:13) in function 'mmult' completely with a factor of 16 (SA_broadcasting/src/mmult.cpp:20:0)
+INFO: [HLS 214-248] Applying array_partition to 'localA': Complete partitioning on dimension 1. (SA_broadcasting/src/mmult.cpp:41:9)
+INFO: [HLS 214-248] Applying array_partition to 'localB': Complete partitioning on dimension 2. (SA_broadcasting/src/mmult.cpp:44:6)
+INFO: [HLS 214-248] Applying array_partition to 'localC': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (SA_broadcasting/src/mmult.cpp:47:6)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 9.27 seconds. CPU system time: 0.4 seconds. Elapsed time: 9.57 seconds; current allocated memory: 463.059 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 463.059 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 2.53 seconds. CPU system time: 0 seconds. Elapsed time: 2.53 seconds; current allocated memory: 482.797 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 2.92 seconds. CPU system time: 0 seconds. Elapsed time: 2.93 seconds; current allocated memory: 486.426 MB.
+INFO: [XFORM 203-510] Pipelining loop 'systolic1' (SA_broadcasting/src/mmult.cpp:91) in function 'mmult' automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (SA_broadcasting/src/mmult.cpp:92:9) to (SA_broadcasting/src/mmult.cpp:91:5) in function 'mmult'... converting 1025 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 5.53 seconds. CPU system time: 0 seconds. Elapsed time: 5.53 seconds; current allocated memory: 538.562 MB.
+INFO: [HLS 200-472] Inferring partial write operation for 'localA' (SA_broadcasting/src/mmult.cpp:60:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'localB' (SA_broadcasting/src/mmult.cpp:79:22)
+INFO: [HLS 200-444] Inferring multiple bus burst write of variable length on port 'gmem2' (SA_broadcasting/src/mmult.cpp:124:16). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'gmem1' (SA_broadcasting/src/mmult.cpp:79:24). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'gmem0' (SA_broadcasting/src/mmult.cpp:60:24). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.36 seconds. CPU system time: 0 seconds. Elapsed time: 0.39 seconds; current allocated memory: 560.828 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'mmult' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_readA' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'readA'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'readA'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.5 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.54 seconds; current allocated memory: 560.828 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 560.828 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_readB' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'readB'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'readB'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 560.828 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 560.828 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_systolic1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'systolic1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'systolic1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.46 seconds. CPU system time: 0 seconds. Elapsed time: 2.46 seconds; current allocated memory: 563.582 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.25 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.29 seconds; current allocated memory: 563.582 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_writeC' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'writeC'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'writeC'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.56 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.57 seconds; current allocated memory: 563.582 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xcu50-fsvh2104-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xcu50-fsvh2104-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: source ./SA_broadcasting/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name mmult mmult 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.1 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.461 GB.
+INFO: [HLS 200-10] Analyzing design file 'SA_broadcasting/src/mmult.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.72 seconds. CPU system time: 0.31 seconds. Elapsed time: 0.51 seconds; current allocated memory: 1.461 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_54_1' is marked as complete unroll implied by the pipeline pragma (SA_broadcasting/src/mmult.cpp:54:19)
+INFO: [HLS 214-186] Unrolling loop 'systolic2' (SA_broadcasting/src/mmult.cpp:103:9) in function 'mmult' completely with a factor of 16 (SA_broadcasting/src/mmult.cpp:20:0)
+INFO: [HLS 214-186] Unrolling loop 'systolic3' (SA_broadcasting/src/mmult.cpp:106:13) in function 'mmult' completely with a factor of 16 (SA_broadcasting/src/mmult.cpp:20:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_54_1' (SA_broadcasting/src/mmult.cpp:54:19) in function 'mmult' completely with a factor of 16 (SA_broadcasting/src/mmult.cpp:20:0)
+INFO: [HLS 214-248] Applying array_partition to 'localA': Complete partitioning on dimension 1. (SA_broadcasting/src/mmult.cpp:41:9)
+INFO: [HLS 214-248] Applying array_partition to 'localB': Complete partitioning on dimension 2. (SA_broadcasting/src/mmult.cpp:44:6)
+INFO: [HLS 214-248] Applying array_partition to 'localC': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (SA_broadcasting/src/mmult.cpp:47:6)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 10.26 seconds. CPU system time: 0.39 seconds. Elapsed time: 10.6 seconds; current allocated memory: 463.047 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 463.047 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 3.25 seconds. CPU system time: 0 seconds. Elapsed time: 3.25 seconds; current allocated memory: 490.113 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 3.15 seconds. CPU system time: 0 seconds. Elapsed time: 3.15 seconds; current allocated memory: 493.152 MB.
+INFO: [XFORM 203-510] Pipelining loop 'systolic1' (SA_broadcasting/src/mmult.cpp:100) in function 'mmult' automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (SA_broadcasting/src/mmult.cpp:101:9) to (SA_broadcasting/src/mmult.cpp:100:5) in function 'mmult'... converting 1025 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 6.18 seconds. CPU system time: 0 seconds. Elapsed time: 6.18 seconds; current allocated memory: 545.961 MB.
+INFO: [HLS 200-472] Inferring partial write operation for 'localA' (SA_broadcasting/src/mmult.cpp:69:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'localB' (SA_broadcasting/src/mmult.cpp:88:22)
+INFO: [HLS 200-444] Inferring multiple bus burst write of variable length on port 'gmem2' (SA_broadcasting/src/mmult.cpp:133:16). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'gmem1' (SA_broadcasting/src/mmult.cpp:88:24). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'gmem0' (SA_broadcasting/src/mmult.cpp:69:24). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.43 seconds. CPU system time: 0 seconds. Elapsed time: 0.43 seconds; current allocated memory: 581.965 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'mmult' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_init' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'init'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'init'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.69 seconds. CPU system time: 0 seconds. Elapsed time: 0.69 seconds; current allocated memory: 581.965 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 581.965 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_readA' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'readA'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'readA'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 581.965 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 581.965 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_readB' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'readB'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'readB'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 581.965 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 581.965 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_systolic1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'systolic1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'systolic1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.5 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.51 seconds; current allocated memory: 587.070 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.29 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.31 seconds; current allocated memory: 587.070 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult_Pipeline_writeC' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'writeC'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'writeC'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.58 seconds. CPU system time: 0.03 seconds. Elapsed time: 2.61 seconds; current allocated memory: 587.070 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.09 seconds; current allocated memory: 587.070 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.41 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.44 seconds; current allocated memory: 589.688 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.96 seconds. CPU system time: 0.11 seconds. Elapsed time: 1.06 seconds; current allocated memory: 589.688 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mmult_Pipeline_init' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mmult_Pipeline_init'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.8 seconds. CPU system time: 0.14 seconds. Elapsed time: 1.95 seconds; current allocated memory: 589.688 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mmult_Pipeline_readA' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mmult_Pipeline_readA'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.09 seconds; current allocated memory: 589.688 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mmult_Pipeline_readB' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mmult_Pipeline_readB'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.13 seconds; current allocated memory: 589.688 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mmult_Pipeline_systolic1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'mmult_Pipeline_systolic1' pipeline 'systolic1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'mmult_Pipeline_systolic1' is 8223, found 2 HDL expressions with this fanout: ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0)), (ap_loop_init == 1'b1)
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_1_1': 256 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mmult_Pipeline_systolic1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.39 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.43 seconds; current allocated memory: 607.309 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mmult_Pipeline_writeC' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mux_1632_32_1_1': 17 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mmult_Pipeline_writeC'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 5.16 seconds. CPU system time: 0.47 seconds. Elapsed time: 5.65 seconds; current allocated memory: 648.969 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mmult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mmult/gmem0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mmult/gmem1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mmult/gmem2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mmult/a' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mmult/b' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mmult/c' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mmult/a_row' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mmult/a_col' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mmult/b_col' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'mmult' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'a', 'b', 'c', 'a_row', 'a_col', 'b_col' to AXI-Lite port control.
+INFO: [RTGEN 206-104] Estimated max fanout for 'mmult' is 8192, found 2 HDL expressions with this fanout: ((icmp_ln100_fu_4985_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state4)), ((icmp_ln100_reg_7815 == 1'd1) & (1'b1 == ap_CS_fsm_state6))
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mmult'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.35 seconds. CPU system time: 0.07 seconds. Elapsed time: 0.45 seconds; current allocated memory: 665.754 MB.
+INFO: [RTMG 210-278] Implementing memory 'mmult_localA_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 4.75 seconds. CPU system time: 0 seconds. Elapsed time: 4.74 seconds; current allocated memory: 683.469 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.53 seconds. CPU system time: 0 seconds. Elapsed time: 1.54 seconds; current allocated memory: 703.672 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for mmult.
+INFO: [VLOG 209-307] Generating Verilog RTL for mmult.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================

@@ -1,0 +1,1330 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "/tools/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/bin/g++"
+   Compiling mmult_explicit.cpp_pre.cpp.tb.cpp
+   Compiling mmultTester.cpp_pre.cpp.tb.cpp
+   Compiling apatb_mmult.cpp
+   Compiling apatb_mmult_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM-323] Starting verilog simulation. 
+INFO: [COSIM-15] Starting XSIM ...
+INFO: [COSIM-316] Starting C post checking ...
+Matrix A:
+3 6 7 5 3 5 6 2 9 1 2 7 0 9 3 6 
+0 6 2 6 1 8 7 9 2 0 2 3 7 5 9 2 
+2 8 9 7 3 6 1 2 9 3 1 9 4 7 8 4 
+5 0 3 6 1 0 6 3 2 0 6 1 5 5 4 7 
+6 5 6 9 3 7 4 5 2 5 4 7 4 4 3 0 
+7 8 6 8 8 4 3 1 4 9 2 0 6 8 9 2 
+6 6 4 9 5 0 4 8 7 1 7 2 7 2 2 6 
+1 0 6 1 5 9 4 9 0 9 1 7 7 1 1 5 
+9 7 7 6 7 3 6 5 6 3 9 4 8 1 2 9 
+3 9 0 8 8 5 0 9 6 3 8 5 6 1 1 5 
+9 8 4 8 1 0 3 0 4 4 4 4 7 6 3 1 
+7 5 9 6 2 1 7 8 5 7 4 1 8 5 9 7 
+5 3 8 8 3 1 8 9 6 4 3 3 3 8 6 0 
+4 8 8 8 9 7 7 6 4 3 0 3 0 9 2 5 
+4 0 5 9 4 6 9 2 2 4 7 7 5 4 8 1 
+2 8 9 3 6 8 0 2 1 0 5 1 1 0 8 5 
+
+Matrix B:
+0 6 4 6 2 5 8 6 2 8 4 7 2 4 0 6 
+2 9 9 0 8 1 3 1 1 0 3 4 0 3 9 1 
+9 6 9 3 3 8 0 5 6 6 4 0 0 4 6 2 
+6 7 5 6 9 8 7 2 8 2 9 9 6 0 2 7 
+6 1 3 2 1 5 9 9 1 4 9 1 0 7 5 8 
+7 0 4 8 0 4 2 9 6 1 0 4 2 2 2 0 
+5 5 2 9 0 2 8 3 8 0 4 0 9 1 9 6 
+2 5 4 4 9 9 3 6 0 5 0 2 9 4 3 5 
+1 7 4 3 1 4 6 9 4 2 2 6 4 1 2 8 
+8 9 2 8 8 8 6 8 3 8 3 3 3 8 0 4 
+7 6 8 9 0 6 8 7 9 0 3 3 3 7 3 2 
+6 5 2 6 5 8 7 9 6 0 4 1 0 4 8 7 
+0 8 6 2 4 7 9 3 9 2 8 3 0 1 7 8 
+9 1 5 4 9 2 5 7 4 9 9 4 5 9 3 5 
+7 0 8 1 9 9 7 8 2 5 3 4 9 0 2 0 
+1 9 6 2 1 2 0 7 3 1 1 9 0 5 6 7 
+
+localA[0][0] = 3
+localA[0][1] = 6
+localA[0][2] = 7
+localA[0][3] = 5
+localA[0][4] = 3
+localA[0][5] = 5
+localA[0][6] = 6
+localA[0][7] = 2
+localA[0][8] = 9
+localA[0][9] = 1
+localA[0][10] = 2
+localA[0][11] = 7
+localA[0][12] = 0
+localA[0][13] = 9
+localA[0][14] = 3
+localA[0][15] = 6
+localA[1][0] = 0
+localA[1][1] = 6
+localA[1][2] = 2
+localA[1][3] = 6
+localA[1][4] = 1
+localA[1][5] = 8
+localA[1][6] = 7
+localA[1][7] = 9
+localA[1][8] = 2
+localA[1][9] = 0
+localA[1][10] = 2
+localA[1][11] = 3
+localA[1][12] = 7
+localA[1][13] = 5
+localA[1][14] = 9
+localA[1][15] = 2
+localA[2][0] = 2
+localA[2][1] = 8
+localA[2][2] = 9
+localA[2][3] = 7
+localA[2][4] = 3
+localA[2][5] = 6
+localA[2][6] = 1
+localA[2][7] = 2
+localA[2][8] = 9
+localA[2][9] = 3
+localA[2][10] = 1
+localA[2][11] = 9
+localA[2][12] = 4
+localA[2][13] = 7
+localA[2][14] = 8
+localA[2][15] = 4
+localA[3][0] = 5
+localA[3][1] = 0
+localA[3][2] = 3
+localA[3][3] = 6
+localA[3][4] = 1
+localA[3][5] = 0
+localA[3][6] = 6
+localA[3][7] = 3
+localA[3][8] = 2
+localA[3][9] = 0
+localA[3][10] = 6
+localA[3][11] = 1
+localA[3][12] = 5
+localA[3][13] = 5
+localA[3][14] = 4
+localA[3][15] = 7
+localA[4][0] = 6
+localA[4][1] = 5
+localA[4][2] = 6
+localA[4][3] = 9
+localA[4][4] = 3
+localA[4][5] = 7
+localA[4][6] = 4
+localA[4][7] = 5
+localA[4][8] = 2
+localA[4][9] = 5
+localA[4][10] = 4
+localA[4][11] = 7
+localA[4][12] = 4
+localA[4][13] = 4
+localA[4][14] = 3
+localA[4][15] = 0
+localA[5][0] = 7
+localA[5][1] = 8
+localA[5][2] = 6
+localA[5][3] = 8
+localA[5][4] = 8
+localA[5][5] = 4
+localA[5][6] = 3
+localA[5][7] = 1
+localA[5][8] = 4
+localA[5][9] = 9
+localA[5][10] = 2
+localA[5][11] = 0
+localA[5][12] = 6
+localA[5][13] = 8
+localA[5][14] = 9
+localA[5][15] = 2
+localA[6][0] = 6
+localA[6][1] = 6
+localA[6][2] = 4
+localA[6][3] = 9
+localA[6][4] = 5
+localA[6][5] = 0
+localA[6][6] = 4
+localA[6][7] = 8
+localA[6][8] = 7
+localA[6][9] = 1
+localA[6][10] = 7
+localA[6][11] = 2
+localA[6][12] = 7
+localA[6][13] = 2
+localA[6][14] = 2
+localA[6][15] = 6
+localA[7][0] = 1
+localA[7][1] = 0
+localA[7][2] = 6
+localA[7][3] = 1
+localA[7][4] = 5
+localA[7][5] = 9
+localA[7][6] = 4
+localA[7][7] = 9
+localA[7][8] = 0
+localA[7][9] = 9
+localA[7][10] = 1
+localA[7][11] = 7
+localA[7][12] = 7
+localA[7][13] = 1
+localA[7][14] = 1
+localA[7][15] = 5
+localA[8][0] = 9
+localA[8][1] = 7
+localA[8][2] = 7
+localA[8][3] = 6
+localA[8][4] = 7
+localA[8][5] = 3
+localA[8][6] = 6
+localA[8][7] = 5
+localA[8][8] = 6
+localA[8][9] = 3
+localA[8][10] = 9
+localA[8][11] = 4
+localA[8][12] = 8
+localA[8][13] = 1
+localA[8][14] = 2
+localA[8][15] = 9
+localA[9][0] = 3
+localA[9][1] = 9
+localA[9][2] = 0
+localA[9][3] = 8
+localA[9][4] = 8
+localA[9][5] = 5
+localA[9][6] = 0
+localA[9][7] = 9
+localA[9][8] = 6
+localA[9][9] = 3
+localA[9][10] = 8
+localA[9][11] = 5
+localA[9][12] = 6
+localA[9][13] = 1
+localA[9][14] = 1
+localA[9][15] = 5
+localA[10][0] = 9
+localA[10][1] = 8
+localA[10][2] = 4
+localA[10][3] = 8
+localA[10][4] = 1
+localA[10][5] = 0
+localA[10][6] = 3
+localA[10][7] = 0
+localA[10][8] = 4
+localA[10][9] = 4
+localA[10][10] = 4
+localA[10][11] = 4
+localA[10][12] = 7
+localA[10][13] = 6
+localA[10][14] = 3
+localA[10][15] = 1
+localA[11][0] = 7
+localA[11][1] = 5
+localA[11][2] = 9
+localA[11][3] = 6
+localA[11][4] = 2
+localA[11][5] = 1
+localA[11][6] = 7
+localA[11][7] = 8
+localA[11][8] = 5
+localA[11][9] = 7
+localA[11][10] = 4
+localA[11][11] = 1
+localA[11][12] = 8
+localA[11][13] = 5
+localA[11][14] = 9
+localA[11][15] = 7
+localA[12][0] = 5
+localA[12][1] = 3
+localA[12][2] = 8
+localA[12][3] = 8
+localA[12][4] = 3
+localA[12][5] = 1
+localA[12][6] = 8
+localA[12][7] = 9
+localA[12][8] = 6
+localA[12][9] = 4
+localA[12][10] = 3
+localA[12][11] = 3
+localA[12][12] = 3
+localA[12][13] = 8
+localA[12][14] = 6
+localA[12][15] = 0
+localA[13][0] = 4
+localA[13][1] = 8
+localA[13][2] = 8
+localA[13][3] = 8
+localA[13][4] = 9
+localA[13][5] = 7
+localA[13][6] = 7
+localA[13][7] = 6
+localA[13][8] = 4
+localA[13][9] = 3
+localA[13][10] = 0
+localA[13][11] = 3
+localA[13][12] = 0
+localA[13][13] = 9
+localA[13][14] = 2
+localA[13][15] = 5
+localA[14][0] = 4
+localA[14][1] = 0
+localA[14][2] = 5
+localA[14][3] = 9
+localA[14][4] = 4
+localA[14][5] = 6
+localA[14][6] = 9
+localA[14][7] = 2
+localA[14][8] = 2
+localA[14][9] = 4
+localA[14][10] = 7
+localA[14][11] = 7
+localA[14][12] = 5
+localA[14][13] = 4
+localA[14][14] = 8
+localA[14][15] = 1
+localA[15][0] = 2
+localA[15][1] = 8
+localA[15][2] = 9
+localA[15][3] = 3
+localA[15][4] = 6
+localA[15][5] = 8
+localA[15][6] = 0
+localA[15][7] = 2
+localA[15][8] = 1
+localA[15][9] = 0
+localA[15][10] = 5
+localA[15][11] = 1
+localA[15][12] = 1
+localA[15][13] = 0
+localA[15][14] = 8
+localA[15][15] = 5
+localB[0][0] = 0
+localB[0][1] = 6
+localB[0][2] = 4
+localB[0][3] = 6
+localB[0][4] = 2
+localB[0][5] = 5
+localB[0][6] = 8
+localB[0][7] = 6
+localB[0][8] = 2
+localB[0][9] = 8
+localB[0][10] = 4
+localB[0][11] = 7
+localB[0][12] = 2
+localB[0][13] = 4
+localB[0][14] = 0
+localB[0][15] = 6
+localB[1][0] = 2
+localB[1][1] = 9
+localB[1][2] = 9
+localB[1][3] = 0
+localB[1][4] = 8
+localB[1][5] = 1
+localB[1][6] = 3
+localB[1][7] = 1
+localB[1][8] = 1
+localB[1][9] = 0
+localB[1][10] = 3
+localB[1][11] = 4
+localB[1][12] = 0
+localB[1][13] = 3
+localB[1][14] = 9
+localB[1][15] = 1
+localB[2][0] = 9
+localB[2][1] = 6
+localB[2][2] = 9
+localB[2][3] = 3
+localB[2][4] = 3
+localB[2][5] = 8
+localB[2][6] = 0
+localB[2][7] = 5
+localB[2][8] = 6
+localB[2][9] = 6
+localB[2][10] = 4
+localB[2][11] = 0
+localB[2][12] = 0
+localB[2][13] = 4
+localB[2][14] = 6
+localB[2][15] = 2
+localB[3][0] = 6
+localB[3][1] = 7
+localB[3][2] = 5
+localB[3][3] = 6
+localB[3][4] = 9
+localB[3][5] = 8
+localB[3][6] = 7
+localB[3][7] = 2
+localB[3][8] = 8
+localB[3][9] = 2
+localB[3][10] = 9
+localB[3][11] = 9
+localB[3][12] = 6
+localB[3][13] = 0
+localB[3][14] = 2
+localB[3][15] = 7
+localB[4][0] = 6
+localB[4][1] = 1
+localB[4][2] = 3
+localB[4][3] = 2
+localB[4][4] = 1
+localB[4][5] = 5
+localB[4][6] = 9
+localB[4][7] = 9
+localB[4][8] = 1
+localB[4][9] = 4
+localB[4][10] = 9
+localB[4][11] = 1
+localB[4][12] = 0
+localB[4][13] = 7
+localB[4][14] = 5
+localB[4][15] = 8
+localB[5][0] = 7
+localB[5][1] = 0
+localB[5][2] = 4
+localB[5][3] = 8
+localB[5][4] = 0
+localB[5][5] = 4
+localB[5][6] = 2
+localB[5][7] = 9
+localB[5][8] = 6
+localB[5][9] = 1
+localB[5][10] = 0
+localB[5][11] = 4
+localB[5][12] = 2
+localB[5][13] = 2
+localB[5][14] = 2
+localB[5][15] = 0
+localB[6][0] = 5
+localB[6][1] = 5
+localB[6][2] = 2
+localB[6][3] = 9
+localB[6][4] = 0
+localB[6][5] = 2
+localB[6][6] = 8
+localB[6][7] = 3
+localB[6][8] = 8
+localB[6][9] = 0
+localB[6][10] = 4
+localB[6][11] = 0
+localB[6][12] = 9
+localB[6][13] = 1
+localB[6][14] = 9
+localB[6][15] = 6
+localB[7][0] = 2
+localB[7][1] = 5
+localB[7][2] = 4
+localB[7][3] = 4
+localB[7][4] = 9
+localB[7][5] = 9
+localB[7][6] = 3
+localB[7][7] = 6
+localB[7][8] = 0
+localB[7][9] = 5
+localB[7][10] = 0
+localB[7][11] = 2
+localB[7][12] = 9
+localB[7][13] = 4
+localB[7][14] = 3
+localB[7][15] = 5
+localB[8][0] = 1
+localB[8][1] = 7
+localB[8][2] = 4
+localB[8][3] = 3
+localB[8][4] = 1
+localB[8][5] = 4
+localB[8][6] = 6
+localB[8][7] = 9
+localB[8][8] = 4
+localB[8][9] = 2
+localB[8][10] = 2
+localB[8][11] = 6
+localB[8][12] = 4
+localB[8][13] = 1
+localB[8][14] = 2
+localB[8][15] = 8
+localB[9][0] = 8
+localB[9][1] = 9
+localB[9][2] = 2
+localB[9][3] = 8
+localB[9][4] = 8
+localB[9][5] = 8
+localB[9][6] = 6
+localB[9][7] = 8
+localB[9][8] = 3
+localB[9][9] = 8
+localB[9][10] = 3
+localB[9][11] = 3
+localB[9][12] = 3
+localB[9][13] = 8
+localB[9][14] = 0
+localB[9][15] = 4
+localB[10][0] = 7
+localB[10][1] = 6
+localB[10][2] = 8
+localB[10][3] = 9
+localB[10][4] = 0
+localB[10][5] = 6
+localB[10][6] = 8
+localB[10][7] = 7
+localB[10][8] = 9
+localB[10][9] = 0
+localB[10][10] = 3
+localB[10][11] = 3
+localB[10][12] = 3
+localB[10][13] = 7
+localB[10][14] = 3
+localB[10][15] = 2
+localB[11][0] = 6
+localB[11][1] = 5
+localB[11][2] = 2
+localB[11][3] = 6
+localB[11][4] = 5
+localB[11][5] = 8
+localB[11][6] = 7
+localB[11][7] = 9
+localB[11][8] = 6
+localB[11][9] = 0
+localB[11][10] = 4
+localB[11][11] = 1
+localB[11][12] = 0
+localB[11][13] = 4
+localB[11][14] = 8
+localB[11][15] = 7
+localB[12][0] = 0
+localB[12][1] = 8
+localB[12][2] = 6
+localB[12][3] = 2
+localB[12][4] = 4
+localB[12][5] = 7
+localB[12][6] = 9
+localB[12][7] = 3
+localB[12][8] = 9
+localB[12][9] = 2
+localB[12][10] = 8
+localB[12][11] = 3
+localB[12][12] = 0
+localB[12][13] = 1
+localB[12][14] = 7
+localB[12][15] = 8
+localB[13][0] = 9
+localB[13][1] = 1
+localB[13][2] = 5
+localB[13][3] = 4
+localB[13][4] = 9
+localB[13][5] = 2
+localB[13][6] = 5
+localB[13][7] = 7
+localB[13][8] = 4
+localB[13][9] = 9
+localB[13][10] = 9
+localB[13][11] = 4
+localB[13][12] = 5
+localB[13][13] = 9
+localB[13][14] = 3
+localB[13][15] = 5
+localB[14][0] = 7
+localB[14][1] = 0
+localB[14][2] = 8
+localB[14][3] = 1
+localB[14][4] = 9
+localB[14][5] = 9
+localB[14][6] = 7
+localB[14][7] = 8
+localB[14][8] = 2
+localB[14][9] = 5
+localB[14][10] = 3
+localB[14][11] = 4
+localB[14][12] = 9
+localB[14][13] = 0
+localB[14][14] = 2
+localB[14][15] = 0
+localB[15][0] = 1
+localB[15][1] = 9
+localB[15][2] = 6
+localB[15][3] = 2
+localB[15][4] = 1
+localB[15][5] = 2
+localB[15][6] = 0
+localB[15][7] = 7
+localB[15][8] = 3
+localB[15][9] = 1
+localB[15][10] = 1
+localB[15][11] = 9
+localB[15][12] = 0
+localB[15][13] = 5
+localB[15][14] = 6
+localB[15][15] = 7
+Correct at index 0: HW=373, Ref=373
+Correct at index 1: HW=374, Ref=374
+Correct at index 2: HW=376, Ref=376
+Correct at index 3: HW=323, Ref=323
+Correct at index 4: HW=307, Ref=307
+Correct at index 5: HW=351, Ref=351
+Correct at index 6: HW=359, Ref=359
+Correct at index 7: HW=466, Ref=466
+Correct at index 8: HW=334, Ref=334
+Correct at index 9: HW=231, Ref=231
+Correct at index 10: HW=305, Ref=305
+Correct at index 11: HW=289, Ref=289
+Correct at index 12: HW=235, Ref=235
+Correct at index 13: HW=273, Ref=273
+Correct at index 14: HW=340, Ref=340
+Correct at index 15: HW=359, Ref=359
+Correct at index 16: HW=325, Ref=325
+Correct at index 17: HW=309, Ref=309
+Correct at index 18: HW=368, Ref=368
+Correct at index 19: HW=296, Ref=296
+Correct at index 20: HW=363, Ref=363
+Correct at index 21: HW=390, Ref=390
+Correct at index 22: HW=368, Ref=368
+Correct at index 23: HW=385, Ref=385
+Correct at index 24: HW=322, Ref=322
+Correct at index 25: HW=191, Ref=191
+Correct at index 26: HW=269, Ref=269
+Correct at index 27: HW=245, Ref=245
+Correct at index 28: HW=316, Ref=316
+Correct at index 29: HW=182, Ref=182
+Correct at index 30: HW=317, Ref=317
+Correct at index 31: HW=283, Ref=283
+Correct at index 32: HW=425, Ref=425
+Correct at index 33: HW=421, Ref=421
+Correct at index 34: HW=454, Ref=454
+Correct at index 35: HW=318, Ref=318
+Correct at index 36: HW=412, Ref=412
+Correct at index 37: HW=465, Ref=465
+Correct at index 38: HW=412, Ref=412
+Correct at index 39: HW=521, Ref=521
+Correct at index 40: HW=369, Ref=369
+Correct at index 41: HW=269, Ref=269
+Correct at index 42: HW=351, Ref=351
+Correct at index 43: HW=323, Ref=323
+Correct at index 44: HW=240, Ref=240
+Correct at index 45: HW=273, Ref=273
+Correct at index 46: HW=364, Ref=364
+Correct at index 47: HW=371, Ref=371
+Correct at index 48: HW=235, Ref=235
+Correct at index 49: HW=299, Ref=299
+Correct at index 50: HW=291, Ref=291
+Correct at index 51: HW=257, Ref=257
+Correct at index 52: HW=216, Ref=216
+Correct at index 53: HW=288, Ref=288
+Correct at index 54: HW=313, Ref=313
+Correct at index 55: HW=302, Ref=302
+Correct at index 56: HW=287, Ref=287
+Correct at index 57: HW=175, Ref=175
+Correct at index 58: HW=249, Ref=249
+Correct at index 59: HW=241, Ref=241
+Correct at index 60: HW=214, Ref=214
+Correct at index 61: HW=190, Ref=190
+Correct at index 62: HW=228, Ref=228
+Correct at index 63: HW=286, Ref=286
+Correct at index 64: HW=384, Ref=384
+Correct at index 65: HW=382, Ref=382
+Correct at index 66: HW=365, Ref=365
+Correct at index 67: HW=377, Ref=377
+Correct at index 68: HW=355, Ref=355
+Correct at index 69: HW=442, Ref=442
+Correct at index 70: HW=414, Ref=414
+Correct at index 71: HW=434, Ref=434
+Correct at index 72: HW=361, Ref=361
+Correct at index 73: HW=249, Ref=249
+Correct at index 74: HW=323, Ref=323
+Correct at index 75: HW=270, Ref=270
+Correct at index 76: HW=243, Ref=243
+Correct at index 77: HW=260, Ref=260
+Correct at index 78: HW=297, Ref=297
+Correct at index 79: HW=334, Ref=334
+Correct at index 80: HW=438, Ref=438
+Correct at index 81: HW=429, Ref=429
+Correct at index 82: HW=454, Ref=454
+Correct at index 83: HW=346, Ref=346
+Correct at index 84: HW=440, Ref=440
+Correct at index 85: HW=469, Ref=469
+Correct at index 86: HW=494, Ref=494
+Correct at index 87: HW=501, Ref=501
+Correct at index 88: HW=349, Ref=349
+Correct at index 89: HW=360, Ref=360
+Correct at index 90: HW=422, Ref=422
+Correct at index 91: HW=340, Ref=340
+Correct at index 92: HW=276, Ref=276
+Correct at index 93: HW=325, Ref=325
+Correct at index 94: HW=312, Ref=312
+Correct at index 95: HW=379, Ref=379
+Correct at index 96: HW=282, Ref=282
+Correct at index 97: HW=464, Ref=464
+Correct at index 98: HW=408, Ref=408
+Correct at index 99: HW=320, Ref=320
+Correct at index 100: HW=325, Ref=325
+Correct at index 101: HW=422, Ref=422
+Correct at index 102: HW=435, Ref=435
+Correct at index 103: HW=416, Ref=416
+Correct at index 104: HW=350, Ref=350
+Correct at index 105: HW=220, Ref=220
+Correct at index 106: HW=332, Ref=332
+Correct at index 107: HW=327, Ref=327
+Correct at index 108: HW=254, Ref=254
+Correct at index 109: HW=256, Ref=256
+Correct at index 110: HW=327, Ref=327
+Correct at index 111: HW=413, Ref=413
+Correct at index 112: HW=333, Ref=333
+Correct at index 113: HW=343, Ref=343
+Correct at index 114: HW=283, Ref=283
+Correct at index 115: HW=336, Ref=336
+Correct at index 116: HW=273, Ref=273
+Correct at index 117: HW=415, Ref=415
+Correct at index 118: HW=323, Ref=323
+Correct at index 119: HW=443, Ref=443
+Correct at index 120: HW=299, Ref=299
+Correct at index 121: HW=225, Ref=225
+Correct at index 122: HW=229, Ref=229
+Correct at index 123: HW=186, Ref=186
+Correct at index 124: HW=187, Ref=187
+Correct at index 125: HW=269, Ref=269
+Correct at index 126: HW=287, Ref=287
+Correct at index 127: HW=317, Ref=317
+Correct at index 128: HW=365, Ref=365
+Correct at index 129: HW=552, Ref=552
+Correct at index 130: HW=490, Ref=490
+Correct at index 131: HW=410, Ref=410
+Correct at index 132: HW=319, Ref=319
+Correct at index 133: HW=488, Ref=488
+Correct at index 134: HW=512, Ref=512
+Correct at index 135: HW=533, Ref=533
+Correct at index 136: HW=433, Ref=433
+Correct at index 137: HW=262, Ref=262
+Correct at index 138: HW=378, Ref=378
+Correct at index 139: HW=367, Ref=367
+Correct at index 140: HW=242, Ref=242
+Correct at index 141: HW=337, Ref=337
+Correct at index 142: HW=415, Ref=415
+Correct at index 143: HW=472, Ref=472
+Correct at index 144: HW=304, Ref=304
+Correct at index 145: HW=444, Ref=444
+Correct at index 146: HW=396, Ref=396
+Correct at index 147: HW=329, Ref=329
+Correct at index 148: HW=341, Ref=341
+Correct at index 149: HW=428, Ref=428
+Correct at index 150: HW=435, Ref=435
+Correct at index 151: HW=461, Ref=461
+Correct at index 152: HW=327, Ref=327
+Correct at index 153: HW=189, Ref=189
+Correct at index 154: HW=313, Ref=313
+Correct at index 155: HW=320, Ref=320
+Correct at index 156: HW=216, Ref=216
+Correct at index 157: HW=287, Ref=287
+Correct at index 158: HW=327, Ref=327
+Correct at index 159: HW=391, Ref=391
+Correct at index 160: HW=285, Ref=285
+Correct at index 161: HW=401, Ref=401
+Correct at index 162: HW=359, Ref=359
+Correct at index 163: HW=290, Ref=290
+Correct at index 164: HW=333, Ref=333
+Correct at index 165: HW=354, Ref=354
+Correct at index 166: HW=407, Ref=407
+Correct at index 167: HW=342, Ref=342
+Correct at index 168: HW=323, Ref=323
+Correct at index 169: HW=240, Ref=240
+Correct at index 170: HW=337, Ref=337
+Correct at index 171: HW=286, Ref=286
+Correct at index 172: HW=190, Ref=190
+Correct at index 173: HW=232, Ref=232
+Correct at index 174: HW=275, Ref=275
+Correct at index 175: HW=329, Ref=329
+Correct at index 176: HW=407, Ref=407
+Correct at index 177: HW=519, Ref=519
+Correct at index 178: HW=495, Ref=495
+Correct at index 179: HW=384, Ref=384
+Correct at index 180: HW=440, Ref=440
+Correct at index 181: HW=529, Ref=529
+Correct at index 182: HW=484, Ref=484
+Correct at index 183: HW=518, Ref=518
+Correct at index 184: HW=399, Ref=399
+Correct at index 185: HW=350, Ref=350
+Correct at index 186: HW=369, Ref=369
+Correct at index 187: HW=352, Ref=352
+Correct at index 188: HW=346, Ref=346
+Correct at index 189: HW=315, Ref=315
+Correct at index 190: HW=371, Ref=371
+Correct at index 191: HW=426, Ref=426
+Correct at index 192: HW=400, Ref=400
+Correct at index 193: HW=392, Ref=392
+Correct at index 194: HW=392, Ref=392
+Correct at index 195: HW=363, Ref=363
+Correct at index 196: HW=405, Ref=405
+Correct at index 197: HW=461, Ref=461
+Correct at index 198: HW=439, Ref=439
+Correct at index 199: HW=450, Ref=450
+Correct at index 200: HW=350, Ref=350
+Correct at index 201: HW=314, Ref=314
+Correct at index 202: HW=351, Ref=351
+Correct at index 203: HW=269, Ref=269
+Correct at index 204: HW=352, Ref=352
+Correct at index 205: HW=274, Ref=274
+Correct at index 206: HW=309, Ref=309
+Correct at index 207: HW=377, Ref=377
+Correct at index 208: HW=432, Ref=432
+Correct at index 209: HW=398, Ref=398
+Correct at index 210: HW=412, Ref=412
+Correct at index 211: HW=359, Ref=359
+Correct at index 212: HW=378, Ref=378
+Correct at index 213: HW=407, Ref=407
+Correct at index 214: HW=403, Ref=403
+Correct at index 215: HW=490, Ref=490
+Correct at index 216: HW=333, Ref=333
+Correct at index 217: HW=297, Ref=297
+Correct at index 218: HW=374, Ref=374
+Correct at index 219: HW=306, Ref=306
+Correct at index 220: HW=275, Ref=275
+Correct at index 221: HW=326, Ref=326
+Correct at index 222: HW=369, Ref=369
+Correct at index 223: HW=393, Ref=393
+Correct at index 224: HW=432, Ref=432
+Correct at index 225: HW=356, Ref=356
+Correct at index 226: HW=374, Ref=374
+Correct at index 227: HW=417, Ref=417
+Correct at index 228: HW=324, Ref=324
+Correct at index 229: HW=467, Ref=467
+Correct at index 230: HW=483, Ref=483
+Correct at index 231: HW=472, Ref=472
+Correct at index 232: HW=427, Ref=427
+Correct at index 233: HW=235, Ref=235
+Correct at index 234: HW=355, Ref=355
+Correct at index 235: HW=265, Ref=265
+Correct at index 236: HW=306, Ref=306
+Correct at index 237: HW=250, Ref=250
+Correct at index 238: HW=317, Ref=317
+Correct at index 239: HW=355, Ref=355
+Correct at index 240: HW=314, Ref=314
+Correct at index 241: HW=270, Ref=270
+Correct at index 242: HW=380, Ref=380
+Correct at index 243: HW=215, Ref=215
+Correct at index 244: HW=233, Ref=233
+Correct at index 245: HW=325, Ref=325
+Correct at index 246: HW=255, Ref=255
+Correct at index 247: HW=364, Ref=364
+Correct at index 248: HW=239, Ref=239
+Correct at index 249: HW=167, Ref=167
+Correct at index 250: HW=207, Ref=207
+Correct at index 251: HW=217, Ref=217
+Correct at index 252: HW=147, Ref=147
+Correct at index 253: HW=200, Ref=200
+Correct at index 254: HW=262, Ref=262
+Correct at index 255: HW=185, Ref=185
+Test Passed
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2022.1/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_mmult_top glbl -Oenable_linking_all_libraries -prj mmult.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_0_20 -L floating_point_v7_1_14 --lib ieee_proposed=./ieee_proposed -s mmult 
+Multi-threading is on. Using 8 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_propagating/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_propagating/solution1/sim/verilog/mmult_mul_32s_32s_32_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mmult_mul_32s_32s_32_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_propagating/solution1/sim/verilog/mmult_gmem0_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mmult_gmem0_m_axi
+INFO: [VRFC 10-311] analyzing module mmult_gmem0_m_axi_load
+INFO: [VRFC 10-311] analyzing module mmult_gmem0_m_axi_store
+INFO: [VRFC 10-311] analyzing module mmult_gmem0_m_axi_flushManager
+INFO: [VRFC 10-311] analyzing module mmult_gmem0_m_axi_read
+INFO: [VRFC 10-311] analyzing module mmult_gmem0_m_axi_write
+INFO: [VRFC 10-311] analyzing module mmult_gmem0_m_axi_throttle
+INFO: [VRFC 10-311] analyzing module mmult_gmem0_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module mmult_gmem0_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module mmult_gmem0_m_axi_srl
+INFO: [VRFC 10-311] analyzing module mmult_gmem0_m_axi_mem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_propagating/solution1/sim/verilog/mmult_localA_RAM_AUTO_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mmult_localA_RAM_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_propagating/solution1/sim/verilog/mmult_mux_1632_32_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mmult_mux_1632_32_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_propagating/solution1/sim/verilog/mmult.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mmult
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_propagating/solution1/sim/verilog/AESL_axi_slave_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_propagating/solution1/sim/verilog/mmult_mmult_Pipeline_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mmult_mmult_Pipeline_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_propagating/solution1/sim/verilog/mmult_gmem1_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mmult_gmem1_m_axi
+INFO: [VRFC 10-311] analyzing module mmult_gmem1_m_axi_load
+INFO: [VRFC 10-311] analyzing module mmult_gmem1_m_axi_store
+INFO: [VRFC 10-311] analyzing module mmult_gmem1_m_axi_flushManager
+INFO: [VRFC 10-311] analyzing module mmult_gmem1_m_axi_read
+INFO: [VRFC 10-311] analyzing module mmult_gmem1_m_axi_write
+INFO: [VRFC 10-311] analyzing module mmult_gmem1_m_axi_throttle
+INFO: [VRFC 10-311] analyzing module mmult_gmem1_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module mmult_gmem1_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module mmult_gmem1_m_axi_srl
+INFO: [VRFC 10-311] analyzing module mmult_gmem1_m_axi_mem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_propagating/solution1/sim/verilog/mmult_mux_166_32_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mmult_mux_166_32_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_propagating/solution1/sim/verilog/AESL_axi_master_gmem0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_master_gmem0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_propagating/solution1/sim/verilog/mmult_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mmult_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_propagating/solution1/sim/verilog/mmult_mmult_Pipeline_readB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mmult_mmult_Pipeline_readB
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_propagating/solution1/sim/verilog/mmult_mmult_Pipeline_readA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mmult_mmult_Pipeline_readA
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_propagating/solution1/sim/verilog/mmult.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_mmult_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_propagating/solution1/sim/verilog/AESL_axi_master_gmem1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_master_gmem1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_propagating/solution1/sim/verilog/mmult_gmem2_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mmult_gmem2_m_axi
+INFO: [VRFC 10-311] analyzing module mmult_gmem2_m_axi_load
+INFO: [VRFC 10-311] analyzing module mmult_gmem2_m_axi_store
+INFO: [VRFC 10-311] analyzing module mmult_gmem2_m_axi_flushManager
+INFO: [VRFC 10-311] analyzing module mmult_gmem2_m_axi_read
+INFO: [VRFC 10-311] analyzing module mmult_gmem2_m_axi_write
+INFO: [VRFC 10-311] analyzing module mmult_gmem2_m_axi_throttle
+INFO: [VRFC 10-311] analyzing module mmult_gmem2_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module mmult_gmem2_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module mmult_gmem2_m_axi_srl
+INFO: [VRFC 10-311] analyzing module mmult_gmem2_m_axi_mem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_propagating/solution1/sim/verilog/mmult_control_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mmult_control_s_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_propagating/solution1/sim/verilog/mmult_mux_164_32_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mmult_mux_164_32_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_propagating/solution1/sim/verilog/AESL_axi_master_gmem2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_master_gmem2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_propagating/solution1/sim/verilog/mmult_mmult_Pipeline_writeC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mmult_mmult_Pipeline_writeC
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_propagating/solution1/sim/verilog/mmult_mmult_Pipeline_systolic1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mmult_mmult_Pipeline_systolic1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_propagating/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.mmult_localA_RAM_AUTO_1R1W
+Compiling module xil_defaultlib.mmult_flow_control_loop_pipe_seq...
+Compiling module xil_defaultlib.mmult_mmult_Pipeline_init
+Compiling module xil_defaultlib.mmult_mmult_Pipeline_readA
+Compiling module xil_defaultlib.mmult_mmult_Pipeline_readB
+Compiling module xil_defaultlib.mmult_mux_166_32_1_1(ID=1,din16_...
+Compiling module xil_defaultlib.mmult_mux_164_32_1_1(ID=1,din16_...
+Compiling module xil_defaultlib.mmult_mul_32s_32s_32_1_1(NUM_STA...
+Compiling module xil_defaultlib.mmult_mmult_Pipeline_systolic1
+Compiling module xil_defaultlib.mmult_mux_1632_32_1_1(ID=1)
+Compiling module xil_defaultlib.mmult_mmult_Pipeline_writeC
+Compiling module xil_defaultlib.mmult_control_s_axi
+Compiling module xil_defaultlib.mmult_gmem0_m_axi_srl(DATA_WIDTH...
+Compiling module xil_defaultlib.mmult_gmem0_m_axi_fifo(DATA_WIDT...
+Compiling module xil_defaultlib.mmult_gmem0_m_axi_mem(MEM_STYLE=...
+Compiling module xil_defaultlib.mmult_gmem0_m_axi_fifo(MEM_STYLE...
+Compiling module xil_defaultlib.mmult_gmem0_m_axi_srl(DATA_WIDTH...
+Compiling module xil_defaultlib.mmult_gmem0_m_axi_fifo(DATA_WIDT...
+Compiling module xil_defaultlib.mmult_gmem0_m_axi_srl(DATA_WIDTH...
+Compiling module xil_defaultlib.mmult_gmem0_m_axi_fifo(DATA_WIDT...
+Compiling module xil_defaultlib.mmult_gmem0_m_axi_store(NUM_WRIT...
+Compiling module xil_defaultlib.mmult_gmem0_m_axi_mem(MEM_STYLE=...
+Compiling module xil_defaultlib.mmult_gmem0_m_axi_fifo(MEM_STYLE...
+Compiling module xil_defaultlib.mmult_gmem0_m_axi_load(NUM_READ_...
+Compiling module xil_defaultlib.mmult_gmem0_m_axi_reg_slice(DATA...
+Compiling module xil_defaultlib.mmult_gmem0_m_axi_srl(DATA_WIDTH...
+Compiling module xil_defaultlib.mmult_gmem0_m_axi_fifo(DATA_WIDT...
+Compiling module xil_defaultlib.mmult_gmem0_m_axi_reg_slice(DATA...
+Compiling module xil_defaultlib.mmult_gmem0_m_axi_srl(DATA_WIDTH...
+Compiling module xil_defaultlib.mmult_gmem0_m_axi_fifo(DATA_WIDT...
+Compiling module xil_defaultlib.mmult_gmem0_m_axi_srl(DATA_WIDTH...
+Compiling module xil_defaultlib.mmult_gmem0_m_axi_fifo(DATA_WIDT...
+Compiling module xil_defaultlib.mmult_gmem0_m_axi_throttle(CONSE...
+Compiling module xil_defaultlib.mmult_gmem0_m_axi_reg_slice(DATA...
+Compiling module xil_defaultlib.mmult_gmem0_m_axi_write(CONSERVA...
+Compiling module xil_defaultlib.mmult_gmem0_m_axi_reg_slice(DATA...
+Compiling module xil_defaultlib.mmult_gmem0_m_axi_read(C_USER_VA...
+Compiling module xil_defaultlib.mmult_gmem0_m_axi(CONSERVATIVE=1...
+Compiling module xil_defaultlib.mmult_gmem1_m_axi_srl(DATA_WIDTH...
+Compiling module xil_defaultlib.mmult_gmem1_m_axi_fifo(DATA_WIDT...
+Compiling module xil_defaultlib.mmult_gmem1_m_axi_mem(MEM_STYLE=...
+Compiling module xil_defaultlib.mmult_gmem1_m_axi_fifo(MEM_STYLE...
+Compiling module xil_defaultlib.mmult_gmem1_m_axi_srl(DATA_WIDTH...
+Compiling module xil_defaultlib.mmult_gmem1_m_axi_fifo(DATA_WIDT...
+Compiling module xil_defaultlib.mmult_gmem1_m_axi_srl(DATA_WIDTH...
+Compiling module xil_defaultlib.mmult_gmem1_m_axi_fifo(DATA_WIDT...
+Compiling module xil_defaultlib.mmult_gmem1_m_axi_store(NUM_WRIT...
+Compiling module xil_defaultlib.mmult_gmem1_m_axi_mem(MEM_STYLE=...
+Compiling module xil_defaultlib.mmult_gmem1_m_axi_fifo(MEM_STYLE...
+Compiling module xil_defaultlib.mmult_gmem1_m_axi_load(NUM_READ_...
+Compiling module xil_defaultlib.mmult_gmem1_m_axi_reg_slice(DATA...
+Compiling module xil_defaultlib.mmult_gmem1_m_axi_srl(DATA_WIDTH...
+Compiling module xil_defaultlib.mmult_gmem1_m_axi_fifo(DATA_WIDT...
+Compiling module xil_defaultlib.mmult_gmem1_m_axi_reg_slice(DATA...
+Compiling module xil_defaultlib.mmult_gmem1_m_axi_srl(DATA_WIDTH...
+Compiling module xil_defaultlib.mmult_gmem1_m_axi_fifo(DATA_WIDT...
+Compiling module xil_defaultlib.mmult_gmem1_m_axi_srl(DATA_WIDTH...
+Compiling module xil_defaultlib.mmult_gmem1_m_axi_fifo(DATA_WIDT...
+Compiling module xil_defaultlib.mmult_gmem1_m_axi_throttle(CONSE...
+Compiling module xil_defaultlib.mmult_gmem1_m_axi_reg_slice(DATA...
+Compiling module xil_defaultlib.mmult_gmem1_m_axi_write(CONSERVA...
+Compiling module xil_defaultlib.mmult_gmem1_m_axi_reg_slice(DATA...
+Compiling module xil_defaultlib.mmult_gmem1_m_axi_read(C_USER_VA...
+Compiling module xil_defaultlib.mmult_gmem1_m_axi(CONSERVATIVE=1...
+Compiling module xil_defaultlib.mmult_gmem2_m_axi_srl(DATA_WIDTH...
+Compiling module xil_defaultlib.mmult_gmem2_m_axi_fifo(DATA_WIDT...
+Compiling module xil_defaultlib.mmult_gmem2_m_axi_mem(MEM_STYLE=...
+Compiling module xil_defaultlib.mmult_gmem2_m_axi_fifo(MEM_STYLE...
+Compiling module xil_defaultlib.mmult_gmem2_m_axi_srl(DATA_WIDTH...
+Compiling module xil_defaultlib.mmult_gmem2_m_axi_fifo(DATA_WIDT...
+Compiling module xil_defaultlib.mmult_gmem2_m_axi_srl(DATA_WIDTH...
+Compiling module xil_defaultlib.mmult_gmem2_m_axi_fifo(DATA_WIDT...
+Compiling module xil_defaultlib.mmult_gmem2_m_axi_store(NUM_WRIT...
+Compiling module xil_defaultlib.mmult_gmem2_m_axi_mem(MEM_STYLE=...
+Compiling module xil_defaultlib.mmult_gmem2_m_axi_fifo(MEM_STYLE...
+Compiling module xil_defaultlib.mmult_gmem2_m_axi_load(NUM_READ_...
+Compiling module xil_defaultlib.mmult_gmem2_m_axi_reg_slice(DATA...
+Compiling module xil_defaultlib.mmult_gmem2_m_axi_srl(DATA_WIDTH...
+Compiling module xil_defaultlib.mmult_gmem2_m_axi_fifo(DATA_WIDT...
+Compiling module xil_defaultlib.mmult_gmem2_m_axi_reg_slice(DATA...
+Compiling module xil_defaultlib.mmult_gmem2_m_axi_srl(DATA_WIDTH...
+Compiling module xil_defaultlib.mmult_gmem2_m_axi_fifo(DATA_WIDT...
+Compiling module xil_defaultlib.mmult_gmem2_m_axi_srl(DATA_WIDTH...
+Compiling module xil_defaultlib.mmult_gmem2_m_axi_fifo(DATA_WIDT...
+Compiling module xil_defaultlib.mmult_gmem2_m_axi_throttle(CONSE...
+Compiling module xil_defaultlib.mmult_gmem2_m_axi_reg_slice(DATA...
+Compiling module xil_defaultlib.mmult_gmem2_m_axi_write(CONSERVA...
+Compiling module xil_defaultlib.mmult_gmem2_m_axi_reg_slice(DATA...
+Compiling module xil_defaultlib.mmult_gmem2_m_axi_read(C_USER_VA...
+Compiling module xil_defaultlib.mmult_gmem2_m_axi(CONSERVATIVE=1...
+Compiling module xil_defaultlib.mmult
+Compiling module xil_defaultlib.AESL_axi_master_gmem0
+Compiling module xil_defaultlib.AESL_axi_master_gmem1
+Compiling module xil_defaultlib.AESL_axi_master_gmem2
+Compiling module xil_defaultlib.AESL_axi_slave_control
+Compiling module xil_defaultlib.nodf_module_intf
+Compiling module xil_defaultlib.pp_loop_intf(FSM_WIDTH=9)
+Compiling module xil_defaultlib.pp_loop_intf(FSM_WIDTH=7)
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_mmult_top
+Compiling module work.glbl
+Built simulation snapshot mmult
+
+****** xsim v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/mmult/xsim_script.tcl
+# xsim {mmult} -autoloadwcfg -tclbatch {mmult.tcl}
+Time resolution is 1 ps
+source mmult.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [n/a] @ "125000"
+// RTL Simulation : 1 / 1 [n/a] @ "7385000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 7445 ns : File "/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS/SA_propagating/solution1/sim/verilog/mmult.autotb.v" Line 746
+## quit
+INFO: [Common 17-206] Exiting xsim at Wed Dec  4 13:27:21 2024...
+Matrix A:
+3 6 7 5 3 5 6 2 9 1 2 7 0 9 3 6 
+0 6 2 6 1 8 7 9 2 0 2 3 7 5 9 2 
+2 8 9 7 3 6 1 2 9 3 1 9 4 7 8 4 
+5 0 3 6 1 0 6 3 2 0 6 1 5 5 4 7 
+6 5 6 9 3 7 4 5 2 5 4 7 4 4 3 0 
+7 8 6 8 8 4 3 1 4 9 2 0 6 8 9 2 
+6 6 4 9 5 0 4 8 7 1 7 2 7 2 2 6 
+1 0 6 1 5 9 4 9 0 9 1 7 7 1 1 5 
+9 7 7 6 7 3 6 5 6 3 9 4 8 1 2 9 
+3 9 0 8 8 5 0 9 6 3 8 5 6 1 1 5 
+9 8 4 8 1 0 3 0 4 4 4 4 7 6 3 1 
+7 5 9 6 2 1 7 8 5 7 4 1 8 5 9 7 
+5 3 8 8 3 1 8 9 6 4 3 3 3 8 6 0 
+4 8 8 8 9 7 7 6 4 3 0 3 0 9 2 5 
+4 0 5 9 4 6 9 2 2 4 7 7 5 4 8 1 
+2 8 9 3 6 8 0 2 1 0 5 1 1 0 8 5 
+
+Matrix B:
+0 6 4 6 2 5 8 6 2 8 4 7 2 4 0 6 
+2 9 9 0 8 1 3 1 1 0 3 4 0 3 9 1 
+9 6 9 3 3 8 0 5 6 6 4 0 0 4 6 2 
+6 7 5 6 9 8 7 2 8 2 9 9 6 0 2 7 
+6 1 3 2 1 5 9 9 1 4 9 1 0 7 5 8 
+7 0 4 8 0 4 2 9 6 1 0 4 2 2 2 0 
+5 5 2 9 0 2 8 3 8 0 4 0 9 1 9 6 
+2 5 4 4 9 9 3 6 0 5 0 2 9 4 3 5 
+1 7 4 3 1 4 6 9 4 2 2 6 4 1 2 8 
+8 9 2 8 8 8 6 8 3 8 3 3 3 8 0 4 
+7 6 8 9 0 6 8 7 9 0 3 3 3 7 3 2 
+6 5 2 6 5 8 7 9 6 0 4 1 0 4 8 7 
+0 8 6 2 4 7 9 3 9 2 8 3 0 1 7 8 
+9 1 5 4 9 2 5 7 4 9 9 4 5 9 3 5 
+7 0 8 1 9 9 7 8 2 5 3 4 9 0 2 0 
+1 9 6 2 1 2 0 7 3 1 1 9 0 5 6 7 
+
+Correct at index 0: HW=373, Ref=373
+Correct at index 1: HW=374, Ref=374
+Correct at index 2: HW=376, Ref=376
+Correct at index 3: HW=323, Ref=323
+Correct at index 4: HW=307, Ref=307
+Correct at index 5: HW=351, Ref=351
+Correct at index 6: HW=359, Ref=359
+Correct at index 7: HW=466, Ref=466
+Correct at index 8: HW=334, Ref=334
+Correct at index 9: HW=231, Ref=231
+Correct at index 10: HW=305, Ref=305
+Correct at index 11: HW=289, Ref=289
+Correct at index 12: HW=235, Ref=235
+Correct at index 13: HW=273, Ref=273
+Correct at index 14: HW=340, Ref=340
+Correct at index 15: HW=359, Ref=359
+Correct at index 16: HW=325, Ref=325
+Correct at index 17: HW=309, Ref=309
+Correct at index 18: HW=368, Ref=368
+Correct at index 19: HW=296, Ref=296
+Correct at index 20: HW=363, Ref=363
+Correct at index 21: HW=390, Ref=390
+Correct at index 22: HW=368, Ref=368
+Correct at index 23: HW=385, Ref=385
+Correct at index 24: HW=322, Ref=322
+Correct at index 25: HW=191, Ref=191
+Correct at index 26: HW=269, Ref=269
+Correct at index 27: HW=245, Ref=245
+Correct at index 28: HW=316, Ref=316
+Correct at index 29: HW=182, Ref=182
+Correct at index 30: HW=317, Ref=317
+Correct at index 31: HW=283, Ref=283
+Correct at index 32: HW=425, Ref=425
+Correct at index 33: HW=421, Ref=421
+Correct at index 34: HW=454, Ref=454
+Correct at index 35: HW=318, Ref=318
+Correct at index 36: HW=412, Ref=412
+Correct at index 37: HW=465, Ref=465
+Correct at index 38: HW=412, Ref=412
+Correct at index 39: HW=521, Ref=521
+Correct at index 40: HW=369, Ref=369
+Correct at index 41: HW=269, Ref=269
+Correct at index 42: HW=351, Ref=351
+Correct at index 43: HW=323, Ref=323
+Correct at index 44: HW=240, Ref=240
+Correct at index 45: HW=273, Ref=273
+Correct at index 46: HW=364, Ref=364
+Correct at index 47: HW=371, Ref=371
+Correct at index 48: HW=235, Ref=235
+Correct at index 49: HW=299, Ref=299
+Correct at index 50: HW=291, Ref=291
+Correct at index 51: HW=257, Ref=257
+Correct at index 52: HW=216, Ref=216
+Correct at index 53: HW=288, Ref=288
+Correct at index 54: HW=313, Ref=313
+Correct at index 55: HW=302, Ref=302
+Correct at index 56: HW=287, Ref=287
+Correct at index 57: HW=175, Ref=175
+Correct at index 58: HW=249, Ref=249
+Correct at index 59: HW=241, Ref=241
+Correct at index 60: HW=214, Ref=214
+Correct at index 61: HW=190, Ref=190
+Correct at index 62: HW=228, Ref=228
+Correct at index 63: HW=286, Ref=286
+Correct at index 64: HW=384, Ref=384
+Correct at index 65: HW=382, Ref=382
+Correct at index 66: HW=365, Ref=365
+Correct at index 67: HW=377, Ref=377
+Correct at index 68: HW=355, Ref=355
+Correct at index 69: HW=442, Ref=442
+Correct at index 70: HW=414, Ref=414
+Correct at index 71: HW=434, Ref=434
+Correct at index 72: HW=361, Ref=361
+Correct at index 73: HW=249, Ref=249
+Correct at index 74: HW=323, Ref=323
+Correct at index 75: HW=270, Ref=270
+Correct at index 76: HW=243, Ref=243
+Correct at index 77: HW=260, Ref=260
+Correct at index 78: HW=297, Ref=297
+Correct at index 79: HW=334, Ref=334
+Correct at index 80: HW=438, Ref=438
+Correct at index 81: HW=429, Ref=429
+Correct at index 82: HW=454, Ref=454
+Correct at index 83: HW=346, Ref=346
+Correct at index 84: HW=440, Ref=440
+Correct at index 85: HW=469, Ref=469
+Correct at index 86: HW=494, Ref=494
+Correct at index 87: HW=501, Ref=501
+Correct at index 88: HW=349, Ref=349
+Correct at index 89: HW=360, Ref=360
+Correct at index 90: HW=422, Ref=422
+Correct at index 91: HW=340, Ref=340
+Correct at index 92: HW=276, Ref=276
+Correct at index 93: HW=325, Ref=325
+Correct at index 94: HW=312, Ref=312
+Correct at index 95: HW=379, Ref=379
+Correct at index 96: HW=282, Ref=282
+Correct at index 97: HW=464, Ref=464
+Correct at index 98: HW=408, Ref=408
+Correct at index 99: HW=320, Ref=320
+Correct at index 100: HW=325, Ref=325
+Correct at index 101: HW=422, Ref=422
+Correct at index 102: HW=435, Ref=435
+Correct at index 103: HW=416, Ref=416
+Correct at index 104: HW=350, Ref=350
+Correct at index 105: HW=220, Ref=220
+Correct at index 106: HW=332, Ref=332
+Correct at index 107: HW=327, Ref=327
+Correct at index 108: HW=254, Ref=254
+Correct at index 109: HW=256, Ref=256
+Correct at index 110: HW=327, Ref=327
+Correct at index 111: HW=413, Ref=413
+Correct at index 112: HW=333, Ref=333
+Correct at index 113: HW=343, Ref=343
+Correct at index 114: HW=283, Ref=283
+Correct at index 115: HW=336, Ref=336
+Correct at index 116: HW=273, Ref=273
+Correct at index 117: HW=415, Ref=415
+Correct at index 118: HW=323, Ref=323
+Correct at index 119: HW=443, Ref=443
+Correct at index 120: HW=299, Ref=299
+Correct at index 121: HW=225, Ref=225
+Correct at index 122: HW=229, Ref=229
+Correct at index 123: HW=186, Ref=186
+Correct at index 124: HW=187, Ref=187
+Correct at index 125: HW=269, Ref=269
+Correct at index 126: HW=287, Ref=287
+Correct at index 127: HW=317, Ref=317
+Correct at index 128: HW=365, Ref=365
+Correct at index 129: HW=552, Ref=552
+Correct at index 130: HW=490, Ref=490
+Correct at index 131: HW=410, Ref=410
+Correct at index 132: HW=319, Ref=319
+Correct at index 133: HW=488, Ref=488
+Correct at index 134: HW=512, Ref=512
+Correct at index 135: HW=533, Ref=533
+Correct at index 136: HW=433, Ref=433
+Correct at index 137: HW=262, Ref=262
+Correct at index 138: HW=378, Ref=378
+Correct at index 139: HW=367, Ref=367
+Correct at index 140: HW=242, Ref=242
+Correct at index 141: HW=337, Ref=337
+Correct at index 142: HW=415, Ref=415
+Correct at index 143: HW=472, Ref=472
+Correct at index 144: HW=304, Ref=304
+Correct at index 145: HW=444, Ref=444
+Correct at index 146: HW=396, Ref=396
+Correct at index 147: HW=329, Ref=329
+Correct at index 148: HW=341, Ref=341
+Correct at index 149: HW=428, Ref=428
+Correct at index 150: HW=435, Ref=435
+Correct at index 151: HW=461, Ref=461
+Correct at index 152: HW=327, Ref=327
+Correct at index 153: HW=189, Ref=189
+Correct at index 154: HW=313, Ref=313
+Correct at index 155: HW=320, Ref=320
+Correct at index 156: HW=216, Ref=216
+Correct at index 157: HW=287, Ref=287
+Correct at index 158: HW=327, Ref=327
+Correct at index 159: HW=391, Ref=391
+Correct at index 160: HW=285, Ref=285
+Correct at index 161: HW=401, Ref=401
+Correct at index 162: HW=359, Ref=359
+Correct at index 163: HW=290, Ref=290
+Correct at index 164: HW=333, Ref=333
+Correct at index 165: HW=354, Ref=354
+Correct at index 166: HW=407, Ref=407
+Correct at index 167: HW=342, Ref=342
+Correct at index 168: HW=323, Ref=323
+Correct at index 169: HW=240, Ref=240
+Correct at index 170: HW=337, Ref=337
+Correct at index 171: HW=286, Ref=286
+Correct at index 172: HW=190, Ref=190
+Correct at index 173: HW=232, Ref=232
+Correct at index 174: HW=275, Ref=275
+Correct at index 175: HW=329, Ref=329
+Correct at index 176: HW=407, Ref=407
+Correct at index 177: HW=519, Ref=519
+Correct at index 178: HW=495, Ref=495
+Correct at index 179: HW=384, Ref=384
+Correct at index 180: HW=440, Ref=440
+Correct at index 181: HW=529, Ref=529
+Correct at index 182: HW=484, Ref=484
+Correct at index 183: HW=518, Ref=518
+Correct at index 184: HW=399, Ref=399
+Correct at index 185: HW=350, Ref=350
+Correct at index 186: HW=369, Ref=369
+Correct at index 187: HW=352, Ref=352
+Correct at index 188: HW=346, Ref=346
+Correct at index 189: HW=315, Ref=315
+Correct at index 190: HW=371, Ref=371
+Correct at index 191: HW=426, Ref=426
+Correct at index 192: HW=400, Ref=400
+Correct at index 193: HW=392, Ref=392
+Correct at index 194: HW=392, Ref=392
+Correct at index 195: HW=363, Ref=363
+Correct at index 196: HW=405, Ref=405
+Correct at index 197: HW=461, Ref=461
+Correct at index 198: HW=439, Ref=439
+Correct at index 199: HW=450, Ref=450
+Correct at index 200: HW=350, Ref=350
+Correct at index 201: HW=314, Ref=314
+Correct at index 202: HW=351, Ref=351
+Correct at index 203: HW=269, Ref=269
+Correct at index 204: HW=352, Ref=352
+Correct at index 205: HW=274, Ref=274
+Correct at index 206: HW=309, Ref=309
+Correct at index 207: HW=377, Ref=377
+Correct at index 208: HW=432, Ref=432
+Correct at index 209: HW=398, Ref=398
+Correct at index 210: HW=412, Ref=412
+Correct at index 211: HW=359, Ref=359
+Correct at index 212: HW=378, Ref=378
+Correct at index 213: HW=407, Ref=407
+Correct at index 214: HW=403, Ref=403
+Correct at index 215: HW=490, Ref=490
+Correct at index 216: HW=333, Ref=333
+Correct at index 217: HW=297, Ref=297
+Correct at index 218: HW=374, Ref=374
+Correct at index 219: HW=306, Ref=306
+Correct at index 220: HW=275, Ref=275
+Correct at index 221: HW=326, Ref=326
+Correct at index 222: HW=369, Ref=369
+Correct at index 223: HW=393, Ref=393
+Correct at index 224: HW=432, Ref=432
+Correct at index 225: HW=356, Ref=356
+Correct at index 226: HW=374, Ref=374
+Correct at index 227: HW=417, Ref=417
+Correct at index 228: HW=324, Ref=324
+Correct at index 229: HW=467, Ref=467
+Correct at index 230: HW=483, Ref=483
+Correct at index 231: HW=472, Ref=472
+Correct at index 232: HW=427, Ref=427
+Correct at index 233: HW=235, Ref=235
+Correct at index 234: HW=355, Ref=355
+Correct at index 235: HW=265, Ref=265
+Correct at index 236: HW=306, Ref=306
+Correct at index 237: HW=250, Ref=250
+Correct at index 238: HW=317, Ref=317
+Correct at index 239: HW=355, Ref=355
+Correct at index 240: HW=314, Ref=314
+Correct at index 241: HW=270, Ref=270
+Correct at index 242: HW=380, Ref=380
+Correct at index 243: HW=215, Ref=215
+Correct at index 244: HW=233, Ref=233
+Correct at index 245: HW=325, Ref=325
+Correct at index 246: HW=255, Ref=255
+Correct at index 247: HW=364, Ref=364
+Correct at index 248: HW=239, Ref=239
+Correct at index 249: HW=167, Ref=167
+Correct at index 250: HW=207, Ref=207
+Correct at index 251: HW=217, Ref=217
+Correct at index 252: HW=147, Ref=147
+Correct at index 253: HW=200, Ref=200
+Correct at index 254: HW=262, Ref=262
+Correct at index 255: HW=185, Ref=185
+Test Passed
+INFO: [COSIM-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.

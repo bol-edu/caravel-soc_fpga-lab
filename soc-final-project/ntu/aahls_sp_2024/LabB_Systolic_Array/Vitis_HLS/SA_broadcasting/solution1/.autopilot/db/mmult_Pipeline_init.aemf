@@ -1,0 +1,1317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1733336613647">
+  <ports id="1" name="arrayidx682_15_15_promoted_out" type="PortType" coreId="2147483647" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="2" name="arrayidx682_14_15_promoted_out" type="PortType" coreId="3621216858" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="3" name="arrayidx682_13_15_promoted_out" type="PortType" coreId="2586315104" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="4" name="arrayidx682_12_15_promoted_out" type="PortType" coreId="0" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="5" name="arrayidx682_11_15_promoted_out" type="PortType" coreId="107" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="6" name="arrayidx682_10_15_promoted_out" type="PortType" coreId="0" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="7" name="arrayidx682_9_15_promoted_out" type="PortType" coreId="2641627744" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="8" name="arrayidx682_8_15_promoted_out" type="PortType" coreId="2641614112" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="9" name="arrayidx682_7_15_promoted_out" type="PortType" coreId="2621775280" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="10" name="arrayidx682_6_15_promoted_out" type="PortType" coreId="2621781104" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="11" name="arrayidx682_5_15_promoted_out" type="PortType" coreId="2587280464" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="12" name="arrayidx682_4_15_promoted_out" type="PortType" coreId="2621773520" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="13" name="arrayidx682_3_15_promoted_out" type="PortType" coreId="2643142208" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="14" name="arrayidx682_2_15_promoted_out" type="PortType" coreId="2621790080" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="15" name="arrayidx682_1_15_promoted_out" type="PortType" coreId="2635502416" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="16" name="arrayidx682_15322_promoted_out" type="PortType" coreId="2643150160" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="153" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="154" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="155" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="156" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.1/@node_objs.1"/>
+  <edges id="157" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.1/@node_objs.2"/>
+  <edges id="158" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.1/@node_objs.3"/>
+  <edges id="159" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.1/@node_objs.4"/>
+  <edges id="160" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.1/@node_objs.5"/>
+  <edges id="161" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.1/@node_objs.6"/>
+  <edges id="162" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.1/@node_objs.7"/>
+  <edges id="163" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.1/@node_objs.8"/>
+  <edges id="164" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.1/@node_objs.9"/>
+  <edges id="165" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.1/@node_objs.10"/>
+  <edges id="166" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.1/@node_objs.11"/>
+  <edges id="167" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.1/@node_objs.12"/>
+  <edges id="168" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.1/@node_objs.13"/>
+  <edges id="169" source_obj="//@blocks.0/@node_objs.15" sink_obj="//@blocks.1/@node_objs.14"/>
+  <edges id="170" source_obj="//@blocks.0/@node_objs.16" sink_obj="//@blocks.1/@node_objs.15"/>
+  <edges id="173" source_obj="//@blocks.1/@node_objs.16" sink_obj="//@ports.0"/>
+  <edges id="174" source_obj="//@blocks.1/@node_objs.15" sink_obj="//@blocks.1/@node_objs.16"/>
+  <edges id="176" source_obj="//@blocks.1/@node_objs.17" sink_obj="//@ports.1"/>
+  <edges id="177" source_obj="//@blocks.1/@node_objs.14" sink_obj="//@blocks.1/@node_objs.17"/>
+  <edges id="179" source_obj="//@blocks.1/@node_objs.18" sink_obj="//@ports.2"/>
+  <edges id="180" source_obj="//@blocks.1/@node_objs.13" sink_obj="//@blocks.1/@node_objs.18"/>
+  <edges id="182" source_obj="//@blocks.1/@node_objs.19" sink_obj="//@ports.3"/>
+  <edges id="183" source_obj="//@blocks.1/@node_objs.12" sink_obj="//@blocks.1/@node_objs.19"/>
+  <edges id="185" source_obj="//@blocks.1/@node_objs.20" sink_obj="//@ports.4"/>
+  <edges id="186" source_obj="//@blocks.1/@node_objs.11" sink_obj="//@blocks.1/@node_objs.20"/>
+  <edges id="188" source_obj="//@blocks.1/@node_objs.21" sink_obj="//@ports.5"/>
+  <edges id="189" source_obj="//@blocks.1/@node_objs.10" sink_obj="//@blocks.1/@node_objs.21"/>
+  <edges id="191" source_obj="//@blocks.1/@node_objs.22" sink_obj="//@ports.6"/>
+  <edges id="192" source_obj="//@blocks.1/@node_objs.9" sink_obj="//@blocks.1/@node_objs.22"/>
+  <edges id="194" source_obj="//@blocks.1/@node_objs.23" sink_obj="//@ports.7"/>
+  <edges id="195" source_obj="//@blocks.1/@node_objs.8" sink_obj="//@blocks.1/@node_objs.23"/>
+  <edges id="197" source_obj="//@blocks.1/@node_objs.24" sink_obj="//@ports.8"/>
+  <edges id="198" source_obj="//@blocks.1/@node_objs.7" sink_obj="//@blocks.1/@node_objs.24"/>
+  <edges id="200" source_obj="//@blocks.1/@node_objs.25" sink_obj="//@ports.9"/>
+  <edges id="201" source_obj="//@blocks.1/@node_objs.6" sink_obj="//@blocks.1/@node_objs.25"/>
+  <edges id="203" source_obj="//@blocks.1/@node_objs.26" sink_obj="//@ports.10"/>
+  <edges id="204" source_obj="//@blocks.1/@node_objs.5" sink_obj="//@blocks.1/@node_objs.26"/>
+  <edges id="206" source_obj="//@blocks.1/@node_objs.27" sink_obj="//@ports.11"/>
+  <edges id="207" source_obj="//@blocks.1/@node_objs.4" sink_obj="//@blocks.1/@node_objs.27"/>
+  <edges id="209" source_obj="//@blocks.1/@node_objs.28" sink_obj="//@ports.12"/>
+  <edges id="210" source_obj="//@blocks.1/@node_objs.3" sink_obj="//@blocks.1/@node_objs.28"/>
+  <edges id="212" source_obj="//@blocks.1/@node_objs.29" sink_obj="//@ports.13"/>
+  <edges id="213" source_obj="//@blocks.1/@node_objs.2" sink_obj="//@blocks.1/@node_objs.29"/>
+  <edges id="215" source_obj="//@blocks.1/@node_objs.30" sink_obj="//@ports.14"/>
+  <edges id="216" source_obj="//@blocks.1/@node_objs.1" sink_obj="//@blocks.1/@node_objs.30"/>
+  <edges id="218" source_obj="//@blocks.1/@node_objs.31" sink_obj="//@ports.15"/>
+  <edges id="219" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@blocks.1/@node_objs.31"/>
+  <edges id="220" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="221" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="224" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="227" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="228" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="229" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="230" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.18/@node_objs.0"/>
+  <edges id="231" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.18/@node_objs.0"/>
+  <edges id="232" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.18/@node_objs.1"/>
+  <edges id="233" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="234" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="235" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.17" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="238" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.16" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="241" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="244" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.14" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="247" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.13" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="250" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.12" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="253" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="256" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="259" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="262" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="265" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="268" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="271" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="274" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="277" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="280" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="283" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.15/@node_objs.0"/>
+  <edges id="284" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.18" sink_obj="//@regions.0/@basic_blocks.15/@node_objs.1"/>
+  <edges id="286" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.14/@node_objs.0"/>
+  <edges id="287" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.18" sink_obj="//@regions.0/@basic_blocks.14/@node_objs.1"/>
+  <edges id="289" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.13/@node_objs.0"/>
+  <edges id="290" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.18" sink_obj="//@regions.0/@basic_blocks.13/@node_objs.1"/>
+  <edges id="292" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.12/@node_objs.0"/>
+  <edges id="293" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.18" sink_obj="//@regions.0/@basic_blocks.12/@node_objs.1"/>
+  <edges id="295" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.11/@node_objs.0"/>
+  <edges id="296" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.18" sink_obj="//@regions.0/@basic_blocks.11/@node_objs.1"/>
+  <edges id="298" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.0"/>
+  <edges id="299" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.18" sink_obj="//@regions.0/@basic_blocks.10/@node_objs.1"/>
+  <edges id="301" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.0"/>
+  <edges id="302" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.18" sink_obj="//@regions.0/@basic_blocks.9/@node_objs.1"/>
+  <edges id="304" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.8/@node_objs.0"/>
+  <edges id="305" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.18" sink_obj="//@regions.0/@basic_blocks.8/@node_objs.1"/>
+  <edges id="307" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.0"/>
+  <edges id="308" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.18" sink_obj="//@regions.0/@basic_blocks.7/@node_objs.1"/>
+  <edges id="310" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.0"/>
+  <edges id="311" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.18" sink_obj="//@regions.0/@basic_blocks.6/@node_objs.1"/>
+  <edges id="313" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.0"/>
+  <edges id="314" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.18" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.1"/>
+  <edges id="316" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.0"/>
+  <edges id="317" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.18" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.1"/>
+  <edges id="319" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.0"/>
+  <edges id="320" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.18" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.1"/>
+  <edges id="322" source_obj="//@blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
+  <edges id="323" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.18" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.1"/>
+  <edges id="325" source_obj="//@blocks.0/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.17/@node_objs.0"/>
+  <edges id="326" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.18" sink_obj="//@regions.0/@basic_blocks.17/@node_objs.1"/>
+  <edges id="328" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.16/@node_objs.0"/>
+  <edges id="329" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.18" sink_obj="//@regions.0/@basic_blocks.16/@node_objs.1"/>
+  <edges id="349" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="350" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="351" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="352" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.17"/>
+  <edges id="353" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.16"/>
+  <edges id="354" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.15"/>
+  <edges id="355" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.14"/>
+  <edges id="356" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.13"/>
+  <edges id="357" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.12"/>
+  <edges id="358" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.11"/>
+  <edges id="359" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.10"/>
+  <edges id="360" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.9"/>
+  <edges id="361" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.8"/>
+  <edges id="362" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.7"/>
+  <edges id="363" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.6"/>
+  <edges id="364" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.5"/>
+  <edges id="365" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.4"/>
+  <edges id="366" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.3"/>
+  <edges id="367" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2"/>
+  <edges id="368" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.18"/>
+  <edges id="369" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.18"/>
+  <edges id="370" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.18"/>
+  <edges id="371" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.18"/>
+  <edges id="372" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.6" sink_obj="//@regions.0/@basic_blocks.18"/>
+  <edges id="373" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.7" sink_obj="//@regions.0/@basic_blocks.18"/>
+  <edges id="374" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.8" sink_obj="//@regions.0/@basic_blocks.18"/>
+  <edges id="375" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.9" sink_obj="//@regions.0/@basic_blocks.18"/>
+  <edges id="376" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.10" sink_obj="//@regions.0/@basic_blocks.18"/>
+  <edges id="377" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.11" sink_obj="//@regions.0/@basic_blocks.18"/>
+  <edges id="378" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.12" sink_obj="//@regions.0/@basic_blocks.18"/>
+  <edges id="379" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.13" sink_obj="//@regions.0/@basic_blocks.18"/>
+  <edges id="380" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.14" sink_obj="//@regions.0/@basic_blocks.18"/>
+  <edges id="381" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.15" sink_obj="//@regions.0/@basic_blocks.18"/>
+  <edges id="382" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.16" sink_obj="//@regions.0/@basic_blocks.18"/>
+  <edges id="383" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.17" sink_obj="//@regions.0/@basic_blocks.18"/>
+  <edges id="384" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.18" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="385" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="386" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.18/@node_objs.0"/>
+  <edges id="387" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.18/@node_objs.0"/>
+  <blocks id="36" name="newFuncRoot" type="BlockType">
+    <controlOutputObjs>for.inc</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="i" originalName="i" coreId="1479148024" bitwidth="5" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="arrayidx682_15322_promoted" coreId="713637088" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="arrayidx682_1_15_promoted" coreId="713637088" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="arrayidx682_2_15_promoted" coreId="713637088" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="arrayidx682_3_15_promoted" coreId="713637088" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="arrayidx682_4_15_promoted" coreId="713637088" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="arrayidx682_5_15_promoted" coreId="713637088" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="arrayidx682_6_15_promoted" coreId="2621785600" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="arrayidx682_7_15_promoted" coreId="2641627744" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="arrayidx682_8_15_promoted" coreId="2641627744" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="arrayidx682_9_15_promoted" coreId="2621775152" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="arrayidx682_10_15_promoted" coreId="2641627744" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="arrayidx682_11_15_promoted" coreId="2641627744" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="arrayidx682_12_15_promoted" coreId="0" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="arrayidx682_13_15_promoted" coreId="2641627744" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="arrayidx682_14_15_promoted" coreId="2643147104" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="arrayidx682_15_15_promoted" coreId="2643142720" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="i_write_ln0" coreId="176" opcode="store" m_display="0" m_delay="0.38" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="br_ln0" coreId="2641627744" opcode="br" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <controlInputObjs>for.inc</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="132" name="readA.exitStub" type="BlockType">
+    <controlInputObjs>for.inc</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="99" name="arrayidx682_15322_promoted_load" coreId="2641611064" bitwidth="32" opcode="load" m_display="0" m_topoIndex="60" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="100" name="arrayidx682_1_15_promoted_load" coreId="784" bitwidth="32" opcode="load" m_display="0" m_topoIndex="61" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="101" name="arrayidx682_2_15_promoted_load" coreId="0" bitwidth="32" opcode="load" m_display="0" m_topoIndex="62" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="102" name="arrayidx682_3_15_promoted_load" coreId="2587287432" bitwidth="32" opcode="load" m_display="0" m_topoIndex="63" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="103" name="arrayidx682_4_15_promoted_load" coreId="1819113532" bitwidth="32" opcode="load" m_display="0" m_topoIndex="64" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="104" name="arrayidx682_5_15_promoted_load" coreId="1397508187" bitwidth="32" opcode="load" m_display="0" m_topoIndex="65" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="105" name="arrayidx682_6_15_promoted_load" coreId="176" bitwidth="32" opcode="load" m_display="0" m_topoIndex="66" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="106" name="arrayidx682_7_15_promoted_load" coreId="2587289648" bitwidth="32" opcode="load" m_display="0" m_topoIndex="67" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="107" name="arrayidx682_8_15_promoted_load" coreId="608" bitwidth="32" opcode="load" m_display="0" m_topoIndex="68" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="108" name="arrayidx682_9_15_promoted_load" coreId="1599294536" bitwidth="32" opcode="load" m_display="0" m_topoIndex="69" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="109" name="arrayidx682_10_15_promoted_load" coreId="2587292176" bitwidth="32" opcode="load" m_display="0" m_topoIndex="70" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="110" name="arrayidx682_11_15_promoted_load" coreId="2641623360" bitwidth="32" opcode="load" m_display="0" m_topoIndex="71" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="111" name="arrayidx682_12_15_promoted_load" coreId="0" bitwidth="32" opcode="load" m_display="0" m_topoIndex="72" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="112" name="arrayidx682_13_15_promoted_load" coreId="2587294120" bitwidth="32" opcode="load" m_display="0" m_topoIndex="73" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="113" name="arrayidx682_14_15_promoted_load" coreId="1431261768" bitwidth="32" opcode="load" m_display="0" m_topoIndex="74" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="114" name="arrayidx682_15_15_promoted_load" coreId="0" bitwidth="32" opcode="load" m_display="0" m_topoIndex="75" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="115" name="arrayidx682_15_15_promoted_out_write_ln0" coreId="1" opcode="write" m_display="0" m_topoIndex="76" m_clusterGroupNumber="-1">
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>arrayidx682_15_15_promoted_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="116" name="arrayidx682_14_15_promoted_out_write_ln0" coreId="0" opcode="write" m_display="0" m_topoIndex="77" m_clusterGroupNumber="-1">
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>arrayidx682_14_15_promoted_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="117" name="arrayidx682_13_15_promoted_out_write_ln0" coreId="0" opcode="write" m_display="0" m_topoIndex="78" m_clusterGroupNumber="-1">
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>arrayidx682_13_15_promoted_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="118" name="arrayidx682_12_15_promoted_out_write_ln0" coreId="0" opcode="write" m_display="0" m_topoIndex="79" m_clusterGroupNumber="-1">
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>arrayidx682_12_15_promoted_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="119" name="arrayidx682_11_15_promoted_out_write_ln0" coreId="0" opcode="write" m_display="0" m_topoIndex="80" m_clusterGroupNumber="-1">
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>arrayidx682_11_15_promoted_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="120" name="arrayidx682_10_15_promoted_out_write_ln0" coreId="2590251984" opcode="write" m_display="0" m_topoIndex="81" m_clusterGroupNumber="-1">
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>arrayidx682_10_15_promoted_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="121" name="arrayidx682_9_15_promoted_out_write_ln0" coreId="24" opcode="write" m_display="0" m_topoIndex="82" m_clusterGroupNumber="-1">
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>arrayidx682_9_15_promoted_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="122" name="arrayidx682_8_15_promoted_out_write_ln0" coreId="1" opcode="write" m_display="0" m_topoIndex="83" m_clusterGroupNumber="-1">
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>arrayidx682_8_15_promoted_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="123" name="arrayidx682_7_15_promoted_out_write_ln0" coreId="1" opcode="write" m_display="0" m_topoIndex="84" m_clusterGroupNumber="-1">
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>arrayidx682_7_15_promoted_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="124" name="arrayidx682_6_15_promoted_out_write_ln0" coreId="1" opcode="write" m_display="0" m_topoIndex="85" m_clusterGroupNumber="-1">
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>arrayidx682_6_15_promoted_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="125" name="arrayidx682_5_15_promoted_out_write_ln0" coreId="1" opcode="write" m_display="0" m_topoIndex="86" m_clusterGroupNumber="-1">
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>arrayidx682_5_15_promoted_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="126" name="arrayidx682_4_15_promoted_out_write_ln0" coreId="1" opcode="write" m_display="0" m_topoIndex="87" m_clusterGroupNumber="-1">
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>arrayidx682_4_15_promoted_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="127" name="arrayidx682_3_15_promoted_out_write_ln0" coreId="1" opcode="write" m_display="0" m_topoIndex="88" m_clusterGroupNumber="-1">
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>arrayidx682_3_15_promoted_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="128" name="arrayidx682_2_15_promoted_out_write_ln0" coreId="1" opcode="write" m_display="0" m_topoIndex="89" m_clusterGroupNumber="-1">
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>arrayidx682_2_15_promoted_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="129" name="arrayidx682_1_15_promoted_out_write_ln0" coreId="1" opcode="write" m_display="0" m_topoIndex="90" m_clusterGroupNumber="-1">
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>arrayidx682_1_15_promoted_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="130" name="arrayidx682_15322_promoted_out_write_ln0" coreId="1" opcode="write" m_display="0" m_topoIndex="91" m_clusterGroupNumber="-1">
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>arrayidx682_15322_promoted_out</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="131" name="_ln0" coreId="0" opcode="ret" m_display="0" m_topoIndex="92" m_clusterGroupNumber="-1"/>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="451" pipe_depth="1" RegionName="init">
+    <basic_blocks id="42" name="for.inc" type="BlockType">
+      <controlInputObjs>newFuncRoot</controlInputObjs>
+      <controlInputObjs>arrayidx68.15.exit</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>readA.exitStub</controlOutputObjs>
+      <controlOutputObjs>for.inc.split</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="i_3" lineNumber="55" originalName="i" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="0" contextFuncName="mmult" bitwidth="5" opcode="load" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="icmp_ln52" lineNumber="52" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." rtlName="icmp_ln52_fu_276_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="mmult" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.63" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="52" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="add_ln52" lineNumber="52" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." rtlName="add_ln52_fu_282_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="mmult" bitwidth="5" opcode="add" m_display="0" m_delay="0.7" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="52" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="br_ln52" lineNumber="52" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="0" contextFuncName="mmult" opcode="br" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="52" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>for.inc.split</controlInputObjs>
+        <controlInputObjs>readA.exitStub</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="SA_broadcasting/src/mmult.cpp">
+        <validLinenumbers>55</validLinenumbers>
+        <validLinenumbers>52</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="47" name="for.inc.split" type="BlockType">
+      <controlInputObjs>for.inc</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.case.15</controlOutputObjs>
+      <controlOutputObjs>for.inc.split.arrayidx68.15.exit_crit_edge</controlOutputObjs>
+      <controlOutputObjs>for.inc.split.arrayidx68.15.exit_crit_edge1</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.case.2</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.case.3</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.case.4</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.case.5</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.case.6</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.case.7</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.case.8</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.case.9</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.case.10</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.case.11</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.case.12</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.case.13</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.case.14</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="trunc_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="0" contextFuncName="mmult" bitwidth="4" opcode="trunc" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>switch</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="2643151632" contextFuncName="mmult" opcode="switch" m_display="0" m_delay="0.34" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <controlInputObjs>arrayidx68.15.case.15</controlInputObjs>
+        <controlInputObjs>for.inc.split.arrayidx68.15.exit_crit_edge</controlInputObjs>
+        <controlInputObjs>for.inc.split.arrayidx68.15.exit_crit_edge1</controlInputObjs>
+        <controlInputObjs>arrayidx68.15.case.2</controlInputObjs>
+        <controlInputObjs>arrayidx68.15.case.3</controlInputObjs>
+        <controlInputObjs>arrayidx68.15.case.4</controlInputObjs>
+        <controlInputObjs>arrayidx68.15.case.5</controlInputObjs>
+        <controlInputObjs>arrayidx68.15.case.6</controlInputObjs>
+        <controlInputObjs>arrayidx68.15.case.7</controlInputObjs>
+        <controlInputObjs>arrayidx68.15.case.8</controlInputObjs>
+        <controlInputObjs>arrayidx68.15.case.9</controlInputObjs>
+        <controlInputObjs>arrayidx68.15.case.10</controlInputObjs>
+        <controlInputObjs>arrayidx68.15.case.11</controlInputObjs>
+        <controlInputObjs>arrayidx68.15.case.12</controlInputObjs>
+        <controlInputObjs>arrayidx68.15.case.13</controlInputObjs>
+        <controlInputObjs>arrayidx68.15.case.14</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <fileValidLineNumbers fileName="SA_broadcasting/src/mmult.cpp">
+        <validLinenumbers>55</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="50" name="arrayidx68.15.case.14" type="BlockType">
+      <controlInputObjs>for.inc.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="arrayidx682_14_15_promoted_write_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="4294967295" contextFuncName="mmult" opcode="store" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="br_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="2643147824" contextFuncName="mmult" opcode="br" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <controlInputObjs>arrayidx68.15.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="SA_broadcasting/src/mmult.cpp">
+        <validLinenumbers>55</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="53" name="arrayidx68.15.case.13" type="BlockType">
+      <controlInputObjs>for.inc.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="arrayidx682_13_15_promoted_write_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="176" contextFuncName="mmult" opcode="store" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="br_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="2600135440" contextFuncName="mmult" opcode="br" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <controlInputObjs>arrayidx68.15.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="SA_broadcasting/src/mmult.cpp">
+        <validLinenumbers>55</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="56" name="arrayidx68.15.case.12" type="BlockType">
+      <controlInputObjs>for.inc.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="arrayidx682_12_15_promoted_write_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="2600136744" contextFuncName="mmult" opcode="store" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="br_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="2587294768" contextFuncName="mmult" opcode="br" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <controlInputObjs>arrayidx68.15.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="SA_broadcasting/src/mmult.cpp">
+        <validLinenumbers>55</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="59" name="arrayidx68.15.case.11" type="BlockType">
+      <controlInputObjs>for.inc.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="arrayidx682_11_15_promoted_write_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="0" contextFuncName="mmult" opcode="store" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="br_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="2641622408" contextFuncName="mmult" opcode="br" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <controlInputObjs>arrayidx68.15.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="SA_broadcasting/src/mmult.cpp">
+        <validLinenumbers>55</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="62" name="arrayidx68.15.case.10" type="BlockType">
+      <controlInputObjs>for.inc.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="arrayidx682_10_15_promoted_write_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="2641624592" contextFuncName="mmult" opcode="store" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="br_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="2621782256" contextFuncName="mmult" opcode="br" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <controlInputObjs>arrayidx68.15.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="SA_broadcasting/src/mmult.cpp">
+        <validLinenumbers>55</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="65" name="arrayidx68.15.case.9" type="BlockType">
+      <controlInputObjs>for.inc.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="arrayidx682_9_15_promoted_write_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="2621783744" contextFuncName="mmult" opcode="store" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="64" name="br_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="2641623712" contextFuncName="mmult" opcode="br" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <controlInputObjs>arrayidx68.15.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="SA_broadcasting/src/mmult.cpp">
+        <validLinenumbers>55</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="68" name="arrayidx68.15.case.8" type="BlockType">
+      <controlInputObjs>for.inc.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="arrayidx682_8_15_promoted_write_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="2621788400" contextFuncName="mmult" opcode="store" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="br_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="2621789456" contextFuncName="mmult" opcode="br" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <controlInputObjs>arrayidx68.15.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="SA_broadcasting/src/mmult.cpp">
+        <validLinenumbers>55</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="71" name="arrayidx68.15.case.7" type="BlockType">
+      <controlInputObjs>for.inc.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="arrayidx682_7_15_promoted_write_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="2621789520" contextFuncName="mmult" opcode="store" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="br_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="574454132" contextFuncName="mmult" opcode="br" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <controlInputObjs>arrayidx68.15.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="SA_broadcasting/src/mmult.cpp">
+        <validLinenumbers>55</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="74" name="arrayidx68.15.case.6" type="BlockType">
+      <controlInputObjs>for.inc.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="arrayidx682_6_15_promoted_write_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="2641611584" contextFuncName="mmult" opcode="store" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="br_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="0" contextFuncName="mmult" opcode="br" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <controlInputObjs>arrayidx68.15.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="SA_broadcasting/src/mmult.cpp">
+        <validLinenumbers>55</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="77" name="arrayidx68.15.case.5" type="BlockType">
+      <controlInputObjs>for.inc.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="arrayidx682_5_15_promoted_write_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="2641610976" contextFuncName="mmult" opcode="store" m_display="0" m_topoIndex="44" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="br_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="2618573712" contextFuncName="mmult" opcode="br" m_display="0" m_topoIndex="45" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <controlInputObjs>arrayidx68.15.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="SA_broadcasting/src/mmult.cpp">
+        <validLinenumbers>55</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="80" name="arrayidx68.15.case.4" type="BlockType">
+      <controlInputObjs>for.inc.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="78" name="arrayidx682_4_15_promoted_write_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="2600150288" contextFuncName="mmult" opcode="store" m_display="0" m_topoIndex="46" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="79" name="br_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="2600149568" contextFuncName="mmult" opcode="br" m_display="0" m_topoIndex="47" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <controlInputObjs>arrayidx68.15.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="SA_broadcasting/src/mmult.cpp">
+        <validLinenumbers>55</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="83" name="arrayidx68.15.case.3" type="BlockType">
+      <controlInputObjs>for.inc.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="81" name="arrayidx682_3_15_promoted_write_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="2600153360" contextFuncName="mmult" opcode="store" m_display="0" m_topoIndex="48" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="br_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="2621788560" contextFuncName="mmult" opcode="br" m_display="0" m_topoIndex="49" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <controlInputObjs>arrayidx68.15.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="SA_broadcasting/src/mmult.cpp">
+        <validLinenumbers>55</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="86" name="arrayidx68.15.case.2" type="BlockType">
+      <controlInputObjs>for.inc.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="84" name="arrayidx682_2_15_promoted_write_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="2600141344" contextFuncName="mmult" opcode="store" m_display="0" m_topoIndex="50" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="85" name="br_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="2605222880" contextFuncName="mmult" opcode="br" m_display="0" m_topoIndex="51" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <controlInputObjs>arrayidx68.15.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="SA_broadcasting/src/mmult.cpp">
+        <validLinenumbers>55</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="89" name="for.inc.split.arrayidx68.15.exit_crit_edge1" type="BlockType">
+      <controlInputObjs>for.inc.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="87" name="arrayidx682_1_15_promoted_write_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="0" contextFuncName="mmult" opcode="store" m_display="0" m_topoIndex="52" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="88" name="br_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="1397508187" contextFuncName="mmult" opcode="br" m_display="0" m_topoIndex="53" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <controlInputObjs>arrayidx68.15.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="SA_broadcasting/src/mmult.cpp">
+        <validLinenumbers>55</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="92" name="for.inc.split.arrayidx68.15.exit_crit_edge" type="BlockType">
+      <controlInputObjs>for.inc.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="90" name="arrayidx682_15322_promoted_write_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="2587285344" contextFuncName="mmult" opcode="store" m_display="0" m_topoIndex="54" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="91" name="br_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="2587285344" contextFuncName="mmult" opcode="br" m_display="0" m_topoIndex="55" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <controlInputObjs>arrayidx68.15.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="SA_broadcasting/src/mmult.cpp">
+        <validLinenumbers>55</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="95" name="arrayidx68.15.case.15" type="BlockType">
+      <controlInputObjs>for.inc.split</controlInputObjs>
+      <controlOutputObjs>switch</controlOutputObjs>
+      <controlOutputObjs>arrayidx68.15.exit</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="93" name="arrayidx682_15_15_promoted_write_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="2605230256" contextFuncName="mmult" opcode="store" m_display="0" m_topoIndex="56" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="94" name="br_ln55" lineNumber="55" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="1835875187" contextFuncName="mmult" opcode="br" m_display="0" m_topoIndex="57" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="55" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <controlInputObjs>arrayidx68.15.exit</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="SA_broadcasting/src/mmult.cpp">
+        <validLinenumbers>55</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="98" name="arrayidx68.15.exit" type="BlockType">
+      <controlInputObjs>arrayidx68.15.case.14</controlInputObjs>
+      <controlInputObjs>arrayidx68.15.case.13</controlInputObjs>
+      <controlInputObjs>arrayidx68.15.case.12</controlInputObjs>
+      <controlInputObjs>arrayidx68.15.case.11</controlInputObjs>
+      <controlInputObjs>arrayidx68.15.case.10</controlInputObjs>
+      <controlInputObjs>arrayidx68.15.case.9</controlInputObjs>
+      <controlInputObjs>arrayidx68.15.case.8</controlInputObjs>
+      <controlInputObjs>arrayidx68.15.case.7</controlInputObjs>
+      <controlInputObjs>arrayidx68.15.case.6</controlInputObjs>
+      <controlInputObjs>arrayidx68.15.case.5</controlInputObjs>
+      <controlInputObjs>arrayidx68.15.case.4</controlInputObjs>
+      <controlInputObjs>arrayidx68.15.case.3</controlInputObjs>
+      <controlInputObjs>arrayidx68.15.case.2</controlInputObjs>
+      <controlInputObjs>for.inc.split.arrayidx68.15.exit_crit_edge1</controlInputObjs>
+      <controlInputObjs>for.inc.split.arrayidx68.15.exit_crit_edge</controlInputObjs>
+      <controlInputObjs>arrayidx68.15.case.15</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.inc</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="96" name="i_write_ln52" lineNumber="52" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="543716455" contextFuncName="mmult" opcode="store" m_display="0" m_delay="0.38" m_topoIndex="58" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="52" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="97" name="br_ln52" lineNumber="52" fileName="SA_broadcasting/src/mmult.cpp" fileDirectory=".." coreId="1953391988" contextFuncName="mmult" opcode="br" m_display="0" m_topoIndex="59" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="SA_broadcasting/src/mmult.cpp" linenumber="52" fileDirectory="/home/ubuntu/Desktop/2024_Fall_NTU_AAHLS_SP/LabB_Systolic_Array/Vitis_HLS" functionName="mmult"/>
+        <controlInputObjs>for.inc</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="SA_broadcasting/src/mmult.cpp">
+        <validLinenumbers>52</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <regnodes realName="arrayidx682_8_15_promoted_reg_496">
+    <nodeIds>26</nodeIds>
+  </regnodes>
+  <regnodes realName="arrayidx682_14_15_promoted_reg_532">
+    <nodeIds>32</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_441">
+    <nodeIds>17</nodeIds>
+  </regnodes>
+  <regnodes realName="arrayidx682_12_15_promoted_reg_520">
+    <nodeIds>30</nodeIds>
+  </regnodes>
+  <regnodes realName="arrayidx682_13_15_promoted_reg_526">
+    <nodeIds>31</nodeIds>
+  </regnodes>
+  <regnodes realName="arrayidx682_4_15_promoted_reg_472">
+    <nodeIds>22</nodeIds>
+  </regnodes>
+  <regnodes realName="arrayidx682_5_15_promoted_reg_478">
+    <nodeIds>23</nodeIds>
+  </regnodes>
+  <regnodes realName="arrayidx682_7_15_promoted_reg_490">
+    <nodeIds>25</nodeIds>
+  </regnodes>
+  <regnodes realName="arrayidx682_6_15_promoted_reg_484">
+    <nodeIds>24</nodeIds>
+  </regnodes>
+  <regnodes realName="arrayidx682_2_15_promoted_reg_460">
+    <nodeIds>20</nodeIds>
+  </regnodes>
+  <regnodes realName="arrayidx682_15322_promoted_reg_448">
+    <nodeIds>18</nodeIds>
+  </regnodes>
+  <regnodes realName="arrayidx682_9_15_promoted_reg_502">
+    <nodeIds>27</nodeIds>
+  </regnodes>
+  <regnodes realName="arrayidx682_11_15_promoted_reg_514">
+    <nodeIds>29</nodeIds>
+  </regnodes>
+  <regnodes realName="arrayidx682_1_15_promoted_reg_454">
+    <nodeIds>19</nodeIds>
+  </regnodes>
+  <regnodes realName="arrayidx682_10_15_promoted_reg_508">
+    <nodeIds>28</nodeIds>
+  </regnodes>
+  <regnodes realName="arrayidx682_3_15_promoted_reg_466">
+    <nodeIds>21</nodeIds>
+  </regnodes>
+  <regnodes realName="arrayidx682_15_15_promoted_reg_538">
+    <nodeIds>33</nodeIds>
+  </regnodes>
+  <expressionNodes realName="arrayidx682_1_15_promoted_fu_96">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="arrayidx682_3_15_promoted_fu_104">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="arrayidx682_15_15_promoted_fu_152">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_88">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="arrayidx682_2_15_promoted_fu_100">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="arrayidx682_11_15_promoted_fu_136">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln55_fu_288">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="arrayidx682_15322_promoted_fu_92">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="arrayidx682_6_15_promoted_fu_116">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="arrayidx682_14_15_promoted_fu_148">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="arrayidx682_4_15_promoted_fu_108">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="arrayidx682_9_15_promoted_fu_128">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="arrayidx682_8_15_promoted_fu_124">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="arrayidx682_10_15_promoted_fu_132">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="arrayidx682_13_15_promoted_fu_144">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln52_fu_282">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="arrayidx682_12_15_promoted_fu_140">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="arrayidx682_5_15_promoted_fu_112">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="arrayidx682_7_15_promoted_fu_120">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln52_fu_276">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="store_ln55_store_fu_332">
+    <nodeIds>72</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln55_store_fu_297">
+    <nodeIds>51</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln55_store_fu_292">
+    <nodeIds>48</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_226">
+    <nodeIds>125</nodeIds>
+  </ioNodes>
+  <ioNodes realName="i_3_load_fu_273">
+    <nodeIds>37</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_184">
+    <nodeIds>119</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_261">
+    <nodeIds>130</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln55_store_fu_327">
+    <nodeIds>69</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln55_store_fu_367">
+    <nodeIds>93</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln55_store_fu_322">
+    <nodeIds>66</nodeIds>
+  </ioNodes>
+  <ioNodes realName="arrayidx682_15322_promoted_load_load_fu_377">
+    <nodeIds>99</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln55_store_fu_342">
+    <nodeIds>78</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_219">
+    <nodeIds>124</nodeIds>
+  </ioNodes>
+  <ioNodes realName="arrayidx682_14_15_promoted_load_load_fu_433">
+    <nodeIds>113</nodeIds>
+  </ioNodes>
+  <ioNodes realName="arrayidx682_11_15_promoted_load_load_fu_421">
+    <nodeIds>110</nodeIds>
+  </ioNodes>
+  <ioNodes realName="arrayidx682_13_15_promoted_load_load_fu_429">
+    <nodeIds>112</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_177">
+    <nodeIds>118</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_254">
+    <nodeIds>129</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_212">
+    <nodeIds>123</nodeIds>
+  </ioNodes>
+  <ioNodes realName="arrayidx682_10_15_promoted_load_load_fu_417">
+    <nodeIds>109</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_170">
+    <nodeIds>117</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln52_store_fu_372">
+    <nodeIds>96</nodeIds>
+  </ioNodes>
+  <ioNodes realName="arrayidx682_7_15_promoted_load_load_fu_405">
+    <nodeIds>106</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln55_store_fu_337">
+    <nodeIds>75</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_205">
+    <nodeIds>122</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln55_store_fu_352">
+    <nodeIds>84</nodeIds>
+  </ioNodes>
+  <ioNodes realName="arrayidx682_3_15_promoted_load_load_fu_389">
+    <nodeIds>102</nodeIds>
+  </ioNodes>
+  <ioNodes realName="arrayidx682_9_15_promoted_load_load_fu_413">
+    <nodeIds>108</nodeIds>
+  </ioNodes>
+  <ioNodes realName="arrayidx682_1_15_promoted_load_load_fu_381">
+    <nodeIds>100</nodeIds>
+  </ioNodes>
+  <ioNodes realName="arrayidx682_4_15_promoted_load_load_fu_393">
+    <nodeIds>103</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln0_store_fu_268">
+    <nodeIds>34</nodeIds>
+  </ioNodes>
+  <ioNodes realName="arrayidx682_8_15_promoted_load_load_fu_409">
+    <nodeIds>107</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_247">
+    <nodeIds>128</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_163">
+    <nodeIds>116</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_240">
+    <nodeIds>127</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln55_store_fu_307">
+    <nodeIds>57</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln55_store_fu_347">
+    <nodeIds>81</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln55_store_fu_302">
+    <nodeIds>54</nodeIds>
+  </ioNodes>
+  <ioNodes realName="arrayidx682_12_15_promoted_load_load_fu_425">
+    <nodeIds>111</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln55_store_fu_362">
+    <nodeIds>90</nodeIds>
+  </ioNodes>
+  <ioNodes realName="arrayidx682_15_15_promoted_load_load_fu_437">
+    <nodeIds>114</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_198">
+    <nodeIds>121</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_156">
+    <nodeIds>115</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_233">
+    <nodeIds>126</nodeIds>
+  </ioNodes>
+  <ioNodes realName="arrayidx682_6_15_promoted_load_load_fu_401">
+    <nodeIds>105</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln0_write_fu_191">
+    <nodeIds>120</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln55_store_fu_317">
+    <nodeIds>63</nodeIds>
+  </ioNodes>
+  <ioNodes realName="arrayidx682_5_15_promoted_load_load_fu_397">
+    <nodeIds>104</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln55_store_fu_357">
+    <nodeIds>87</nodeIds>
+  </ioNodes>
+  <ioNodes realName="arrayidx682_2_15_promoted_load_load_fu_385">
+    <nodeIds>101</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln55_store_fu_312">
+    <nodeIds>60</nodeIds>
+  </ioNodes>
+  <ioPorts name="arrayidx682_10_15_promoted_out">
+    <contents name="write">
+      <nodeIds>120</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="arrayidx682_11_15_promoted_out">
+    <contents name="write">
+      <nodeIds>119</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="arrayidx682_12_15_promoted_out">
+    <contents name="write">
+      <nodeIds>118</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="arrayidx682_13_15_promoted_out">
+    <contents name="write">
+      <nodeIds>117</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="arrayidx682_14_15_promoted_out">
+    <contents name="write">
+      <nodeIds>116</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="arrayidx682_15322_promoted_out">
+    <contents name="write">
+      <nodeIds>130</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="arrayidx682_15_15_promoted_out">
+    <contents name="write">
+      <nodeIds>115</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="arrayidx682_1_15_promoted_out">
+    <contents name="write">
+      <nodeIds>129</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="arrayidx682_2_15_promoted_out">
+    <contents name="write">
+      <nodeIds>128</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="arrayidx682_3_15_promoted_out">
+    <contents name="write">
+      <nodeIds>127</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="arrayidx682_4_15_promoted_out">
+    <contents name="write">
+      <nodeIds>126</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="arrayidx682_5_15_promoted_out">
+    <contents name="write">
+      <nodeIds>125</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="arrayidx682_6_15_promoted_out">
+    <contents name="write">
+      <nodeIds>124</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="arrayidx682_7_15_promoted_out">
+    <contents name="write">
+      <nodeIds>123</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="arrayidx682_8_15_promoted_out">
+    <contents name="write">
+      <nodeIds>122</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="arrayidx682_9_15_promoted_out">
+    <contents name="write">
+      <nodeIds>121</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="87" stage="1" latency="1"/>
+      <operations id="88" stage="1" latency="1"/>
+      <operations id="90" stage="1" latency="1"/>
+      <operations id="91" stage="1" latency="1"/>
+      <operations id="93" stage="1" latency="1"/>
+      <operations id="94" stage="1" latency="1"/>
+      <operations id="96" stage="1" latency="1"/>
+      <operations id="97" stage="1" latency="1"/>
+      <operations id="99" stage="1" latency="1"/>
+      <operations id="100" stage="1" latency="1"/>
+      <operations id="101" stage="1" latency="1"/>
+      <operations id="102" stage="1" latency="1"/>
+      <operations id="103" stage="1" latency="1"/>
+      <operations id="104" stage="1" latency="1"/>
+      <operations id="105" stage="1" latency="1"/>
+      <operations id="106" stage="1" latency="1"/>
+      <operations id="107" stage="1" latency="1"/>
+      <operations id="108" stage="1" latency="1"/>
+      <operations id="109" stage="1" latency="1"/>
+      <operations id="110" stage="1" latency="1"/>
+      <operations id="111" stage="1" latency="1"/>
+      <operations id="112" stage="1" latency="1"/>
+      <operations id="113" stage="1" latency="1"/>
+      <operations id="114" stage="1" latency="1"/>
+      <operations id="115" stage="1" latency="1"/>
+      <operations id="116" stage="1" latency="1"/>
+      <operations id="117" stage="1" latency="1"/>
+      <operations id="118" stage="1" latency="1"/>
+      <operations id="119" stage="1" latency="1"/>
+      <operations id="120" stage="1" latency="1"/>
+      <operations id="121" stage="1" latency="1"/>
+      <operations id="122" stage="1" latency="1"/>
+      <operations id="123" stage="1" latency="1"/>
+      <operations id="124" stage="1" latency="1"/>
+      <operations id="125" stage="1" latency="1"/>
+      <operations id="126" stage="1" latency="1"/>
+      <operations id="127" stage="1" latency="1"/>
+      <operations id="128" stage="1" latency="1"/>
+      <operations id="129" stage="1" latency="1"/>
+      <operations id="130" stage="1" latency="1"/>
+      <operations id="131" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="mmult_Pipeline_init" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="18" mMaxLatency="18">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>36</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="init" mII="1" mDepth="1" mMinTripCount="16" mMaxTripCount="16" mMinLatency="16" mMaxLatency="16" mType="1">
+      <basicBlocks>42</basicBlocks>
+      <basicBlocks>47</basicBlocks>
+      <basicBlocks>50</basicBlocks>
+      <basicBlocks>53</basicBlocks>
+      <basicBlocks>56</basicBlocks>
+      <basicBlocks>59</basicBlocks>
+      <basicBlocks>62</basicBlocks>
+      <basicBlocks>65</basicBlocks>
+      <basicBlocks>68</basicBlocks>
+      <basicBlocks>71</basicBlocks>
+      <basicBlocks>74</basicBlocks>
+      <basicBlocks>77</basicBlocks>
+      <basicBlocks>80</basicBlocks>
+      <basicBlocks>83</basicBlocks>
+      <basicBlocks>86</basicBlocks>
+      <basicBlocks>89</basicBlocks>
+      <basicBlocks>92</basicBlocks>
+      <basicBlocks>95</basicBlocks>
+      <basicBlocks>98</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>132</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

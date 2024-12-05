@@ -1,0 +1,21 @@
+<pragmas>
+<pragma file="SA_propagating/src/mmult_explicit.cpp" line="113" pragmaType="pipeline" parentfunction="mmult" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="SA_propagating/src/mmult_explicit.cpp" line="94" pragmaType="loop_tripcount" parentfunction="mmult" min="256" max="256" avg="256"/>
+<pragma file="SA_propagating/src/mmult_explicit.cpp" line="75" pragmaType="loop_tripcount" parentfunction="mmult" min="256" max="256" avg="256"/>
+<pragma file="SA_propagating/src/mmult_explicit.cpp" line="63" pragmaType="pipeline" parentfunction="mmult" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="SA_propagating/src/mmult_explicit.cpp" line="25" pragmaType="interface" parentfunction="mmult" mode="m_axi" port="a" bundle="gmem0" offset="slave" name="" depth="256" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+<pragma file="SA_propagating/src/mmult_explicit.cpp" line="26" pragmaType="interface" parentfunction="mmult" mode="m_axi" port="b" bundle="gmem1" offset="slave" name="" depth="256" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+<pragma file="SA_propagating/src/mmult_explicit.cpp" line="27" pragmaType="interface" parentfunction="mmult" mode="m_axi" port="c" bundle="gmem2" offset="slave" name="" depth="256" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+<pragma file="SA_propagating/src/mmult_explicit.cpp" line="30" pragmaType="interface" parentfunction="mmult" mode="s_axilite" port="a" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="SA_propagating/src/mmult_explicit.cpp" line="31" pragmaType="interface" parentfunction="mmult" mode="s_axilite" port="b" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="SA_propagating/src/mmult_explicit.cpp" line="32" pragmaType="interface" parentfunction="mmult" mode="s_axilite" port="c" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="SA_propagating/src/mmult_explicit.cpp" line="33" pragmaType="interface" parentfunction="mmult" mode="s_axilite" port="a_row" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="SA_propagating/src/mmult_explicit.cpp" line="34" pragmaType="interface" parentfunction="mmult" mode="s_axilite" port="a_col" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="SA_propagating/src/mmult_explicit.cpp" line="35" pragmaType="interface" parentfunction="mmult" mode="s_axilite" port="b_col" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="SA_propagating/src/mmult_explicit.cpp" line="36" pragmaType="interface" parentfunction="mmult" mode="s_axilite" port="" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="SA_propagating/src/mmult_explicit.cpp" line="45" pragmaType="array_partition" parentfunction="mmult" dim="2" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="SA_propagating/src/mmult_explicit.cpp" line="48" pragmaType="array_partition" parentfunction="mmult" dim="1" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="SA_propagating/src/mmult_explicit.cpp" line="51" pragmaType="array_partition" parentfunction="mmult" dim="0" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="SA_propagating/src/mmult_explicit.cpp" line="55" pragmaType="array_partition" parentfunction="mmult" dim="0" factor="0" mode="complete" dynamic="0" variable=""/>
+<pragma file="SA_propagating/src/mmult_explicit.cpp" line="58" pragmaType="array_partition" parentfunction="mmult" dim="0" factor="0" mode="complete" dynamic="0" variable=""/>
+</pragmas>

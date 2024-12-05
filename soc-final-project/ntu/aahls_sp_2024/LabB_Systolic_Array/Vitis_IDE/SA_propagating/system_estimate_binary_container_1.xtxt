@@ -1,0 +1,54 @@
+===============================================================================
+Version:    v++ v2022.1 (64-bit)
+Build:      SW Build 3524075 on 2022-04-13-17:42:45
+Copyright:  Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Created:    Thu Dec  5 05:40:24 2024
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             binary_container_1
+Target Device:           xilinx:u50:gen3x16_xdma_5:202210.1
+Target Clock:            300.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library      Compute Units
+-----------  ----  ------------------  ------------------  -------------
+mmult        c     fpga0:OCL_REGION_0  binary_container_1  1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     binary_container_1
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name               Target Frequency  Estimated Frequency
+------------  -----------  ------------------------  ----------------  -------------------
+mmult_1       mmult        mmult_Pipeline_init       300.300293        914.076782
+mmult_1       mmult        mmult_Pipeline_readA      300.300293        411.015198
+mmult_1       mmult        mmult_Pipeline_readB      300.300293        411.015198
+mmult_1       mmult        mmult_Pipeline_systolic1  300.300293        436.490631
+mmult_1       mmult        mmult_Pipeline_writeC     300.300293        411.015198
+mmult_1       mmult        mmult                     300.300293        411.015198
+
+Latency Information
+Compute Unit  Kernel Name  Module Name               Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+------------  -----------  ------------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+mmult_1       mmult        mmult_Pipeline_init       18              18             18            18              59.994 ns        59.994 ns       59.994 ns
+mmult_1       mmult        mmult_Pipeline_readA      328             328            328           328             1.093 us         1.093 us        1.093 us
+mmult_1       mmult        mmult_Pipeline_readB      328             328            328           328             1.093 us         1.093 us        1.093 us
+mmult_1       mmult        mmult_Pipeline_systolic1  50              50             50            50              0.167 us         0.167 us        0.167 us
+mmult_1       mmult        mmult_Pipeline_writeC     undef           undef          undef         undef           undef            undef           undef
+mmult_1       mmult        mmult                     undef           undef          undef         undef           undef            undef           undef
+
+Area Information
+Compute Unit  Kernel Name  Module Name               FF     LUT    DSP  BRAM  URAM
+------------  -----------  ------------------------  -----  -----  ---  ----  ----
+mmult_1       mmult        mmult_Pipeline_init       7      49     0    0     0
+mmult_1       mmult        mmult_Pipeline_readA      203    621    0    0     0
+mmult_1       mmult        mmult_Pipeline_readB      203    621    0    0     0
+mmult_1       mmult        mmult_Pipeline_systolic1  74694  32553  0    0     0
+mmult_1       mmult        mmult_Pipeline_writeC     200    1718   0    0     0
+mmult_1       mmult        mmult                     96362  45003  0    0     0
+-------------------------------------------------------------------------------

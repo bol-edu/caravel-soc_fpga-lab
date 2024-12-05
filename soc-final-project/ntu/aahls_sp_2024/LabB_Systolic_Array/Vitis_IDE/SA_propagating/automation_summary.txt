@@ -1,0 +1,67 @@
+====================================================================
+Version:    xcd v2022.1 (64-bit)
+Copyright:  Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Created:    Thu Dec  5 05:40:23 2024
+====================================================================
+
+1. Kernel and compute unit information
+======================================
+
+Compute Unit: mmult_1
+Kernel: mmult
+Base Address: 0x1400000
+Clock Pin: ap_clk
+Reset Pin: ap_rst_n
+
+2. Interface Connections
+========================
+
+IP to Compute Unit
+------------------
+Source Pin: SLR0/M01_AXI
+Destination Pin: mmult_1/s_axi_control
+
+Compute Unit to IP
+------------------
+Source Pin: mmult_1/m_axi_gmem0
+Destination Pin: hmss_0/S01_AXI
+
+Source Pin: mmult_1/m_axi_gmem1
+Destination Pin: hmss_0/S02_AXI
+
+Source Pin: mmult_1/m_axi_gmem2
+Destination Pin: hmss_0/S03_AXI
+
+3. Clock Connections
+====================
+
+Compute Unit: mmult_1
+Clock ID: 0
+Clock Frequency: 300.000000 MHz
+Source Pin: ulp_ucs/aclk_kernel_00
+Destination Pin: mmult_1/ap_clk
+
+Clock Instance: ulp_ucs
+Source Pin: ii_level0_wire/ulp_m_aclk_ctrl_00
+Destination Pin: ulp_ucs/aclk_ctrl
+
+Clock Instance: ulp_ucs
+Source Pin: ii_level0_wire/ulp_m_aclk_freerun_ref_00
+Destination Pin: ulp_ucs/aclk_freerun
+
+Clock Instance: ulp_ucs
+Source Pin: ii_level0_wire/ulp_m_aclk_freerun_ref_00
+Destination Pin: ulp_ucs/aclk_hbm_refclk
+
+Clock Instance: ulp_ucs
+Source Pin: ii_level0_wire/ulp_m_aclk_pcie_00
+Destination Pin: ulp_ucs/aclk_pcie
+
+4. Reset Connections
+====================
+
+Compute Unit: mmult_1
+Source Pin: proc_sys_reset_kernel_slr0/peripheral_aresetn
+Destination Pin: mmult_1/ap_rst_n
+Associated Clock Pin: mmult_1/ap_clk
+
