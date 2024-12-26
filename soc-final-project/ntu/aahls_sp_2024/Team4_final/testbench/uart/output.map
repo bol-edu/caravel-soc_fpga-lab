@@ -1,0 +1,263 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+vexriscv_debug   0x00000000f00f0000 0x0000000000000100
+dff              0x0000000000000000 0x0000000000000400
+dff2             0x0000000000000400 0x0000000000000200
+flash            0x0000000010000000 0x0000000001000000
+mprj             0x0000000030000000 0x0000000000100000
+mprjram          0x0000000038000000 0x0000000000400000
+hk               0x0000000026000000 0x0000000000100000
+csr              0x00000000f0000000 0x0000000000010000
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+                0x0000000000000000                __DYNAMIC = 0x0
+
+.text           0x0000000010000000      0x870
+                0x0000000010000000                _ftext = .
+ *crt0*(.text)
+ .text          0x0000000010000000      0x148 uart.elf-crt0_vex.o
+                0x0000000010000000                _start
+                0x0000000010000020                trap_entry
+ *crt0*(.text)
+ *(.text.isr)
+                0x0000000010000148                _etext = .
+ .text          0x0000000010000148      0x15c uart.elf-isr.o
+                0x0000000010000238                isr
+ .text          0x00000000100002a4       0x38 uart.elf-uart.o
+ .text          0x00000000100002dc      0x594 uart.elf-counter_la_uart_wi_irq.o
+                0x00000000100003cc                main
+                0x00000000100007fc                delay
+ .text          0x0000000010000870        0x0 uart.elf-fir.o
+ .text          0x0000000010000870        0x0 uart.elf-mm.o
+ .text          0x0000000010000870        0x0 uart.elf-qsort.o
+
+.mprj           0x0000000010000870      0x1ec
+ .mprj          0x0000000010000870      0x1ec uart.elf-uart.o
+                0x0000000010000870                uart_write
+                0x00000000100008b8                uart_write_char
+                0x0000000010000920                uart_write_string
+                0x0000000010000974                uart_read_char
+                0x00000000100009e8                uart_read
+
+.rela.dyn       0x0000000010000a5c        0x0
+ .rela.text     0x0000000010000a5c        0x0 uart.elf-crt0_vex.o
+
+.rodata         0x0000000010000a5c        0x4
+                0x0000000010000a60                . = ALIGN (0x8)
+ *fill*         0x0000000010000a5c        0x4 
+                0x0000000010000a60                _frodata = .
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ *(.rodata1)
+                0x0000000010000a60                . = ALIGN (0x8)
+                0x0000000010000a60                _erodata = .
+
+.data           0x0000000000000000       0xd8 load address 0x0000000010000a60
+                0x0000000000000000                . = ALIGN (0x8)
+                0x0000000000000000                _fdata = .
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x0000000000000000        0x0 uart.elf-crt0_vex.o
+ .data          0x0000000000000000        0x0 uart.elf-isr.o
+ .data          0x0000000000000000        0x0 uart.elf-uart.o
+ .data          0x0000000000000000        0x0 uart.elf-counter_la_uart_wi_irq.o
+ .data          0x0000000000000000       0x2c uart.elf-fir.o
+                0x0000000000000000                taps
+ .data          0x000000000000002c       0x80 uart.elf-mm.o
+                0x000000000000002c                A
+                0x000000000000006c                B
+ .data          0x00000000000000ac       0x28 uart.elf-qsort.o
+                0x00000000000000ac                Q
+ *(.data1)
+                0x00000000000000e0                _gp = ALIGN (0x10)
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x00000000000000d4        0x4 uart.elf-isr.o
+                0x00000000000000d4                counter
+                0x00000000000000d8                . = ALIGN (0x8)
+                0x00000000000000d8                _edata = .
+
+.bss            0x00000000000000d8      0x270 load address 0x0000000010000b38
+                0x00000000000000d8                . = ALIGN (0x8)
+                0x00000000000000d8                _fbss = .
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ .sbss          0x00000000000000d8        0x4 uart.elf-fir.o
+                0x00000000000000d8                temp
+ *(.scommon)
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x00000000000000dc        0x0 uart.elf-crt0_vex.o
+ .bss           0x00000000000000dc        0x0 uart.elf-isr.o
+ .bss           0x00000000000000dc        0x0 uart.elf-uart.o
+ .bss           0x00000000000000dc        0x0 uart.elf-counter_la_uart_wi_irq.o
+ .bss           0x00000000000000dc      0x200 uart.elf-fir.o
+                0x00000000000000dc                inputbuffer
+                0x00000000000001dc                outputsignal
+ .bss           0x00000000000002dc       0x40 uart.elf-mm.o
+                0x00000000000002dc                result
+ .bss           0x000000000000031c       0x28 uart.elf-qsort.o
+                0x000000000000031c                result_q
+ *(COMMON)
+                0x0000000000000348                . = ALIGN (0x8)
+ *fill*         0x0000000000000344        0x4 
+                0x0000000000000348                _ebss = .
+                0x0000000000000348                _end = .
+
+.mprjram        0x0000000038000000      0x3d4 load address 0x0000000010000b38
+                0x0000000038000000                . = ALIGN (0x8)
+                0x0000000038000000                _fsram = .
+ *libgcc.a:*(.text .text.*)
+ .mprjram       0x0000000038000000      0x1ac uart.elf-fir.o
+                0x0000000038000000                initfir
+                0x0000000038000080                fir_excute
+ .mprjram       0x00000000380001ac      0x174 uart.elf-mm.o
+                0x00000000380001ac                matmul
+ .mprjram       0x0000000038000320       0xb4 uart.elf-qsort.o
+                0x0000000038000320                qsort
+                0x0000000000000600                PROVIDE (_fstack = (ORIGIN (dff2) + LENGTH (dff2)))
+                0x0000000010000a60                PROVIDE (_fdata_rom = LOADADDR (.data))
+                [!provide]                        PROVIDE (_edata_rom = (LOADADDR (.data) + SIZEOF (.data)))
+                0x00000000380003d4                PROVIDE (_esram = (ORIGIN (mprjram) + SIZEOF (.mprjram)))
+                0x0000000010000b38                PROVIDE (_esram_rom = LOADADDR (.mprjram))
+LOAD uart.elf-crt0_vex.o
+LOAD uart.elf-isr.o
+LOAD uart.elf-uart.o
+LOAD uart.elf-counter_la_uart_wi_irq.o
+LOAD uart.elf-fir.o
+LOAD uart.elf-mm.o
+LOAD uart.elf-qsort.o
+LOAD /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a
+START GROUP
+LOAD /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/lib/libc.a
+LOAD /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/lib/libgloss.a
+END GROUP
+LOAD /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a
+OUTPUT(uart.elf elf32-littleriscv)
+
+.riscv.attributes
+                0x0000000000000000       0x20
+ .riscv.attributes
+                0x0000000000000000       0x1e uart.elf-crt0_vex.o
+ .riscv.attributes
+                0x000000000000001e       0x20 uart.elf-isr.o
+ .riscv.attributes
+                0x000000000000003e       0x1c uart.elf-uart.o
+ .riscv.attributes
+                0x000000000000005a       0x20 uart.elf-counter_la_uart_wi_irq.o
+ .riscv.attributes
+                0x000000000000007a       0x1c uart.elf-fir.o
+ .riscv.attributes
+                0x0000000000000096       0x1c uart.elf-mm.o
+ .riscv.attributes
+                0x00000000000000b2       0x1c uart.elf-qsort.o
+
+.comment        0x0000000000000000       0x1b
+ .comment       0x0000000000000000       0x1b uart.elf-isr.o
+                                         0x1c (size before relaxing)
+ .comment       0x000000000000001b       0x1c uart.elf-uart.o
+ .comment       0x000000000000001b       0x1c uart.elf-counter_la_uart_wi_irq.o
+ .comment       0x000000000000001b       0x1c uart.elf-fir.o
+ .comment       0x000000000000001b       0x1c uart.elf-mm.o
+ .comment       0x000000000000001b       0x1c uart.elf-qsort.o
+
+.debug_line     0x0000000000000000      0xfd4
+ .debug_line    0x0000000000000000      0x20a uart.elf-crt0_vex.o
+ .debug_line    0x000000000000020a      0x151 uart.elf-isr.o
+ .debug_line    0x000000000000035b      0x25e uart.elf-uart.o
+ .debug_line    0x00000000000005b9      0x537 uart.elf-counter_la_uart_wi_irq.o
+ .debug_line    0x0000000000000af0      0x1d2 uart.elf-fir.o
+ .debug_line    0x0000000000000cc2      0x212 uart.elf-mm.o
+ .debug_line    0x0000000000000ed4      0x100 uart.elf-qsort.o
+
+.debug_line_str
+                0x0000000000000000      0x113
+ .debug_line_str
+                0x0000000000000000       0x41 uart.elf-crt0_vex.o
+ .debug_line_str
+                0x0000000000000041       0x8c uart.elf-isr.o
+                                         0xf5 (size before relaxing)
+ .debug_line_str
+                0x00000000000000cd        0x7 uart.elf-uart.o
+                                         0xbe (size before relaxing)
+ .debug_line_str
+                0x00000000000000d4       0x19 uart.elf-counter_la_uart_wi_irq.o
+                                        0x11f (size before relaxing)
+ .debug_line_str
+                0x00000000000000ed        0xc uart.elf-fir.o
+                                         0xa9 (size before relaxing)
+ .debug_line_str
+                0x00000000000000f9        0xa uart.elf-mm.o
+                                         0xa5 (size before relaxing)
+ .debug_line_str
+                0x0000000000000103       0x10 uart.elf-qsort.o
+                                         0xb1 (size before relaxing)
+
+.debug_info     0x0000000000000000      0x858
+ .debug_info    0x0000000000000000       0x25 uart.elf-crt0_vex.o
+ .debug_info    0x0000000000000025      0x1a3 uart.elf-isr.o
+ .debug_info    0x00000000000001c8      0x18c uart.elf-uart.o
+ .debug_info    0x0000000000000354      0x201 uart.elf-counter_la_uart_wi_irq.o
+ .debug_info    0x0000000000000555      0x13c uart.elf-fir.o
+ .debug_info    0x0000000000000691       0xee uart.elf-mm.o
+ .debug_info    0x000000000000077f       0xd9 uart.elf-qsort.o
+
+.debug_abbrev   0x0000000000000000      0x584
+ .debug_abbrev  0x0000000000000000       0x14 uart.elf-crt0_vex.o
+ .debug_abbrev  0x0000000000000014      0x131 uart.elf-isr.o
+ .debug_abbrev  0x0000000000000145       0xe3 uart.elf-uart.o
+ .debug_abbrev  0x0000000000000228      0x14f uart.elf-counter_la_uart_wi_irq.o
+ .debug_abbrev  0x0000000000000377       0xbd uart.elf-fir.o
+ .debug_abbrev  0x0000000000000434       0xaa uart.elf-mm.o
+ .debug_abbrev  0x00000000000004de       0xa6 uart.elf-qsort.o
+
+.debug_aranges  0x0000000000000000      0x110
+ .debug_aranges
+                0x0000000000000000       0x20 uart.elf-crt0_vex.o
+ .debug_aranges
+                0x0000000000000020       0x20 uart.elf-isr.o
+ .debug_aranges
+                0x0000000000000040       0x48 uart.elf-uart.o
+ .debug_aranges
+                0x0000000000000088       0x20 uart.elf-counter_la_uart_wi_irq.o
+ .debug_aranges
+                0x00000000000000a8       0x28 uart.elf-fir.o
+ .debug_aranges
+                0x00000000000000d0       0x20 uart.elf-mm.o
+ .debug_aranges
+                0x00000000000000f0       0x20 uart.elf-qsort.o
+
+.debug_str      0x0000000000000000      0x24b
+ .debug_str     0x0000000000000000       0x4d uart.elf-crt0_vex.o
+ .debug_str     0x000000000000004d      0x139 uart.elf-isr.o
+                                        0x17a (size before relaxing)
+ .debug_str     0x0000000000000186       0x31 uart.elf-uart.o
+                                        0x151 (size before relaxing)
+ .debug_str     0x00000000000001b7       0x52 uart.elf-counter_la_uart_wi_irq.o
+                                        0x17a (size before relaxing)
+ .debug_str     0x0000000000000209       0x32 uart.elf-fir.o
+                                        0x129 (size before relaxing)
+ .debug_str     0x000000000000023b        0x7 uart.elf-mm.o
+                                         0xf2 (size before relaxing)
+ .debug_str     0x0000000000000242        0x9 uart.elf-qsort.o
+                                         0xf3 (size before relaxing)
+
+.debug_frame    0x0000000000000000      0x42c
+ .debug_frame   0x0000000000000000      0x118 uart.elf-isr.o
+ .debug_frame   0x0000000000000118      0x114 uart.elf-uart.o
+ .debug_frame   0x000000000000022c      0x138 uart.elf-counter_la_uart_wi_irq.o
+ .debug_frame   0x0000000000000364       0x60 uart.elf-fir.o
+ .debug_frame   0x00000000000003c4       0x34 uart.elf-mm.o
+ .debug_frame   0x00000000000003f8       0x34 uart.elf-qsort.o
+
+.debug_rnglists
+                0x0000000000000000       0x8e
+ .debug_rnglists
+                0x0000000000000000       0x43 uart.elf-uart.o
+ .debug_rnglists
+                0x0000000000000043       0x1f uart.elf-fir.o
+ .debug_rnglists
+                0x0000000000000062       0x16 uart.elf-mm.o
+ .debug_rnglists
+                0x0000000000000078       0x16 uart.elf-qsort.o

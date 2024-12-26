@@ -1,0 +1,56 @@
+Reading uart.hex
+uart.hex loaded into memory
+Memory 5 bytes = 0x6f 0x00 0x00 0x0b 0x13
+VCD info: dumpfile uart.vcd opened for output.
+Waiting checkbits...
+Starting fork-join tasks
+LA Test FIR started
+LA Test UART1 started
+<UART>: tx data bit index 0: 1
+<UART>: tx data bit index 1: 1
+LA Test FIR finished
+latency =       16804
+LA Test MM started
+<UART>: tx data bit index 2: 1
+<UART>: tx data bit index 3: 1
+LA Test MM finished
+latency =        8977
+LA Test Qsort started
+<UART>: tx data bit index 4: 0
+LA Test Qsort finished
+latency =        3363
+<UART>: tx data bit index 5: 0
+<UART>: tx data bit index 6: 0
+<UART>: tx data bit index 7: 0
+tx complete 1
+LA Test UART1 finished
+<UART>: rx data bit index 0: 1
+<UART>: rx data bit index 1: 1
+<UART>: rx data bit index 2: 1
+<UART>: rx data bit index 3: 1
+<UART>: rx data bit index 4: 0
+<UART>: rx data bit index 5: 0
+<UART>: rx data bit index 6: 0
+<UART>: rx data bit index 7: 0
+<UART>: received word  15
+LA Test UART2 started
+<UART>: tx data bit index 0: 1
+<UART>: tx data bit index 1: 0
+<UART>: tx data bit index 2: 1
+<UART>: tx data bit index 3: 1
+<UART>: tx data bit index 4: 1
+<UART>: tx data bit index 5: 1
+<UART>: tx data bit index 6: 0
+<UART>: tx data bit index 7: 0
+tx complete 2
+LA Test UART2 finished
+<UART>: rx data bit index 0: 1
+<UART>: rx data bit index 1: 0
+<UART>: rx data bit index 2: 1
+<UART>: rx data bit index 3: 1
+<UART>: rx data bit index 4: 1
+<UART>: rx data bit index 5: 1
+<UART>: rx data bit index 6: 0
+<UART>: rx data bit index 7: 0
+<UART>: received word  61
+Integrated Test passed
