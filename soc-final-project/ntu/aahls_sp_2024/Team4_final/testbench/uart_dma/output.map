@@ -1,0 +1,196 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+vexriscv_debug   0x00000000f00f0000 0x0000000000000100
+dff              0x0000000000000000 0x0000000000000400
+dff2             0x0000000000000400 0x0000000000000200
+flash            0x0000000010000000 0x0000000001000000
+mprj             0x0000000030000000 0x0000000000100000
+mprjram          0x0000000038000000 0x0000000000400000
+hk               0x0000000026000000 0x0000000000100000
+csr              0x00000000f0000000 0x0000000000010000
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+                0x0000000000000000                __DYNAMIC = 0x0
+
+.text           0x0000000010000000      0x3d4
+                0x0000000010000000                _ftext = .
+ *crt0*(.text)
+ .text          0x0000000010000000      0x14c uart.elf-crt0_vex.o
+                0x0000000010000000                _start
+                0x0000000010000020                trap_entry
+ *crt0*(.text)
+ *(.text.isr)
+                0x000000001000014c                _etext = .
+ .text          0x000000001000014c      0x15c uart.elf-isr.o
+                0x000000001000023c                isr
+ .text          0x00000000100002a8       0x38 uart.elf-uart.o
+ .text          0x00000000100002e0       0xf4 uart.elf-counter_la_dma.o
+                0x0000000010000318                putchar
+                0x0000000010000380                print
+
+.mprj           0x00000000100003d4      0x1ec
+ .mprj          0x00000000100003d4      0x1ec uart.elf-uart.o
+                0x00000000100003d4                uart_write
+                0x000000001000041c                uart_write_char
+                0x0000000010000484                uart_write_string
+                0x00000000100004d8                uart_read_char
+                0x000000001000054c                uart_read
+
+.rela.dyn       0x00000000100005c0        0x0
+ .rela.text     0x00000000100005c0        0x0 uart.elf-crt0_vex.o
+
+.rodata         0x00000000100005c0        0x0
+                0x00000000100005c0                . = ALIGN (0x8)
+ *fill*         0x00000000100005c0        0x0 
+                0x00000000100005c0                _frodata = .
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ *(.rodata1)
+                0x00000000100005c0                . = ALIGN (0x8)
+                0x00000000100005c0                _erodata = .
+
+.data           0x0000000000000000      0x1b0 load address 0x00000000100005c0
+                0x0000000000000000                . = ALIGN (0x8)
+                0x0000000000000000                _fdata = .
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x0000000000000000        0x0 uart.elf-crt0_vex.o
+ .data          0x0000000000000000        0x0 uart.elf-isr.o
+ .data          0x0000000000000000        0x0 uart.elf-uart.o
+ .data          0x0000000000000000      0x1a8 uart.elf-counter_la_dma.o
+                0x0000000000000000                A
+                0x0000000000000040                B
+                0x0000000000000080                x
+                0x0000000000000180                q
+ *(.data1)
+                0x00000000000001b0                _gp = ALIGN (0x10)
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x00000000000001a8        0x4 uart.elf-isr.o
+                0x00000000000001a8                counter
+                0x00000000000001b0                . = ALIGN (0x8)
+ *fill*         0x00000000000001ac        0x4 
+                0x00000000000001b0                _edata = .
+
+.bss            0x00000000000001b0      0x140 load address 0x0000000010000770
+                0x00000000000001b0                . = ALIGN (0x8)
+                0x00000000000001b0                _fbss = .
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ *(.scommon)
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x00000000000001b0        0x0 uart.elf-crt0_vex.o
+ .bss           0x00000000000001b0        0x0 uart.elf-isr.o
+ .bss           0x00000000000001b0        0x0 uart.elf-uart.o
+ .bss           0x00000000000001b0      0x140 uart.elf-counter_la_dma.o
+                0x00000000000001b0                C
+                0x00000000000001f0                y
+ *(COMMON)
+                0x00000000000002f0                . = ALIGN (0x8)
+                0x00000000000002f0                _ebss = .
+                0x00000000000002f0                _end = .
+
+.mprjram        0x0000000038000000      0x4e8 load address 0x0000000010000770
+                0x0000000038000000                . = ALIGN (0x8)
+                0x0000000038000000                _fsram = .
+ *libgcc.a:*(.text .text.*)
+ .mprjram       0x0000000038000000      0x4e8 uart.elf-counter_la_dma.o
+                0x0000000038000000                main
+                0x0000000000000600                PROVIDE (_fstack = (ORIGIN (dff2) + LENGTH (dff2)))
+                0x00000000100005c0                PROVIDE (_fdata_rom = LOADADDR (.data))
+                [!provide]                        PROVIDE (_edata_rom = (LOADADDR (.data) + SIZEOF (.data)))
+                0x00000000380004e8                PROVIDE (_esram = (ORIGIN (mprjram) + SIZEOF (.mprjram)))
+                0x0000000010000770                PROVIDE (_esram_rom = LOADADDR (.mprjram))
+LOAD uart.elf-crt0_vex.o
+LOAD uart.elf-isr.o
+LOAD uart.elf-uart.o
+LOAD uart.elf-counter_la_dma.o
+LOAD /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a
+START GROUP
+LOAD /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/lib/libc.a
+LOAD /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/../../../../riscv32-unknown-elf/lib/libgloss.a
+END GROUP
+LOAD /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a
+OUTPUT(uart.elf elf32-littleriscv)
+
+.riscv.attributes
+                0x0000000000000000       0x20
+ .riscv.attributes
+                0x0000000000000000       0x1e uart.elf-crt0_vex.o
+ .riscv.attributes
+                0x000000000000001e       0x20 uart.elf-isr.o
+ .riscv.attributes
+                0x000000000000003e       0x1c uart.elf-uart.o
+ .riscv.attributes
+                0x000000000000005a       0x1c uart.elf-counter_la_dma.o
+
+.comment        0x0000000000000000       0x1b
+ .comment       0x0000000000000000       0x1b uart.elf-isr.o
+                                         0x1c (size before relaxing)
+ .comment       0x000000000000001b       0x1c uart.elf-uart.o
+ .comment       0x000000000000001b       0x1c uart.elf-counter_la_dma.o
+
+.debug_line     0x0000000000000000      0xb73
+ .debug_line    0x0000000000000000      0x20a uart.elf-crt0_vex.o
+ .debug_line    0x000000000000020a      0x151 uart.elf-isr.o
+ .debug_line    0x000000000000035b      0x25e uart.elf-uart.o
+ .debug_line    0x00000000000005b9      0x5ba uart.elf-counter_la_dma.o
+
+.debug_line_str
+                0x0000000000000000       0xf0
+ .debug_line_str
+                0x0000000000000000       0x45 uart.elf-crt0_vex.o
+ .debug_line_str
+                0x0000000000000045       0x8c uart.elf-isr.o
+                                         0xfd (size before relaxing)
+ .debug_line_str
+                0x00000000000000d1        0x7 uart.elf-uart.o
+                                         0xc6 (size before relaxing)
+ .debug_line_str
+                0x00000000000000d8       0x18 uart.elf-counter_la_dma.o
+                                         0xeb (size before relaxing)
+
+.debug_info     0x0000000000000000      0x542
+ .debug_info    0x0000000000000000       0x25 uart.elf-crt0_vex.o
+ .debug_info    0x0000000000000025      0x1a3 uart.elf-isr.o
+ .debug_info    0x00000000000001c8      0x18c uart.elf-uart.o
+ .debug_info    0x0000000000000354      0x1ee uart.elf-counter_la_dma.o
+
+.debug_abbrev   0x0000000000000000      0x31d
+ .debug_abbrev  0x0000000000000000       0x14 uart.elf-crt0_vex.o
+ .debug_abbrev  0x0000000000000014      0x131 uart.elf-isr.o
+ .debug_abbrev  0x0000000000000145       0xe3 uart.elf-uart.o
+ .debug_abbrev  0x0000000000000228       0xf5 uart.elf-counter_la_dma.o
+
+.debug_aranges  0x0000000000000000       0xb0
+ .debug_aranges
+                0x0000000000000000       0x20 uart.elf-crt0_vex.o
+ .debug_aranges
+                0x0000000000000020       0x20 uart.elf-isr.o
+ .debug_aranges
+                0x0000000000000040       0x48 uart.elf-uart.o
+ .debug_aranges
+                0x0000000000000088       0x28 uart.elf-counter_la_dma.o
+
+.debug_str      0x0000000000000000      0x1f8
+ .debug_str     0x0000000000000000       0x51 uart.elf-crt0_vex.o
+ .debug_str     0x0000000000000051      0x139 uart.elf-isr.o
+                                        0x17a (size before relaxing)
+ .debug_str     0x000000000000018a       0x31 uart.elf-uart.o
+                                        0x151 (size before relaxing)
+ .debug_str     0x00000000000001bb       0x3d uart.elf-counter_la_dma.o
+                                        0x150 (size before relaxing)
+
+.debug_frame    0x0000000000000000      0x2f8
+ .debug_frame   0x0000000000000000      0x118 uart.elf-isr.o
+ .debug_frame   0x0000000000000118      0x114 uart.elf-uart.o
+ .debug_frame   0x000000000000022c       0xcc uart.elf-counter_la_dma.o
+
+.debug_rnglists
+                0x0000000000000000       0x62
+ .debug_rnglists
+                0x0000000000000000       0x43 uart.elf-uart.o
+ .debug_rnglists
+                0x0000000000000043       0x1f uart.elf-counter_la_dma.o

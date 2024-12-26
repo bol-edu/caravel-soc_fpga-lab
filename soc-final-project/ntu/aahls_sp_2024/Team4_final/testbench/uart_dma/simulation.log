@@ -1,0 +1,19 @@
+Reading uart.hex
+uart.hex loaded into memory
+Memory 5 bytes = 0x6f 0x00 0x00 0x0b 0x13
+VCD info: dumpfile uart.vcd opened for output.
+** VVP Stop(0) **
+** Flushing output streams.
+** Current simulation time is 595137500 ticks.
+** Continue **
+** VVP Stop(0) **
+** Flushing output streams.
+** Current simulation time is 2175062500 ticks.
+** Continue **
+** VVP Stop(0) **
+** Flushing output streams.
+** Current simulation time is 3105012500 ticks.
+** Continue **
+** VVP Stop(0) **
+** Flushing output streams.
+** Current simulation time is 4203437500 ticks.
