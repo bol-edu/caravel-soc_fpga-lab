@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="caravel_ps" xd:componentRef="caravel_ps" xd:initiationInterval="1" xd:clockPeriod="10" xd:sequential="false" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="ps_mprj_in" xd:originalName="ps_mprj_in" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x10" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="ps_mprj_in" xd:originalName="ps_mprj_in" xd:direction="in" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x14" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="ps_mprj_out" xd:originalName="ps_mprj_out" xd:direction="out" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x1C" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="ps_mprj_out" xd:originalName="ps_mprj_out" xd:direction="out" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x20" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="ps_mprj_en" xd:originalName="ps_mprj_en" xd:direction="out" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x34" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="ps_mprj_en" xd:originalName="ps_mprj_en" xd:direction="out" xd:interfaceRef="s_axi_control" xd:busTypeRef="axilite" xd:offset="0x38" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="mprj_in" xd:originalName="mprj_in" xd:direction="out" xd:interfaceRef="mprj_in" xd:busTypeRef="register" xd:dataWidth="38"/>
+  <xd:arg xd:name="mprj_out" xd:originalName="mprj_out" xd:direction="in" xd:interfaceRef="mprj_out" xd:busTypeRef="register" xd:dataWidth="38"/>
+  <xd:arg xd:name="mprj_en" xd:originalName="mprj_en" xd:direction="in" xd:interfaceRef="mprj_en" xd:busTypeRef="register" xd:dataWidth="38"/>
+  <xd:latencyEstimates xd:best-case="0" xd:worst-case="0" xd:average-case="0"/>
+  <xd:resourceEstimates xd:LUT="344" xd:FF="162" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

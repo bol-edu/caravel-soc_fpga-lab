@@ -1,0 +1,15 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/hls05/temporary/caravel_fpga_lite/Caravel_FPGA_0_2/project/vitis_hls_project/hls_output_pin/run_hls.tcl:42:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="output_pin" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=output_pin" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/output_pin.cpp:9:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="output_pin" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=outpin_ctrl" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/output_pin.cpp:10:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="output_pin" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_none port=outpin" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/output_pin.cpp:11:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="output_pin" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_none port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

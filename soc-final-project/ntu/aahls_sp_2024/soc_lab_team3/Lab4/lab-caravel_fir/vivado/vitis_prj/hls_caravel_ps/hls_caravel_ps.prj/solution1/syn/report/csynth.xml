@@ -1,0 +1,636 @@
+<profile>
+    <ReportVersion>
+        <Version>2022.1</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>zynq</ProductFamily>
+        <Part>xc7z020-clg400-1</Part>
+        <TopModelName>caravel_ps</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>2.70</ClockUncertainty>
+        <TargetInitiationInterval>4294967295</TargetInitiationInterval>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>yes</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>1.993</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>0</Best-caseLatency>
+            <Average-caseLatency>0</Average-caseLatency>
+            <Worst-caseLatency>0</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+            <PipelineInitiationInterval>1</PipelineInitiationInterval>
+            <PipelineDepth>1</PipelineDepth>
+            <Interval-min>1</Interval-min>
+            <Interval-max>1</Interval-max>
+        </SummaryOfOverallLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <BRAM_18K>0</BRAM_18K>
+            <FF>162</FF>
+            <LUT>344</LUT>
+            <DSP>0</DSP>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>280</BRAM_18K>
+            <DSP>220</DSP>
+            <FF>106400</FF>
+            <LUT>53200</LUT>
+            <URAM>0</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>s_axi_control_AWVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_AWREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_AWADDR</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>6</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WDATA</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_WSTRB</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>4</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_ARADDR</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>6</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RDATA</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_RRESP</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BVALID</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BREADY</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>s_axi_control_BRESP</name>
+            <Object>control</Object>
+            <Type>pointer</Type>
+            <IOProtocol>s_axi</IOProtocol>
+            <Dir>out</Dir>
+            <Bits>2</Bits>
+            <Attribute>unknown</Attribute>
+            <CType>int</CType>
+            <HasCtrl>0</HasCtrl>
+        </RtlPorts>
+        <RtlPorts>
+            <name>mprj_in</name>
+            <Object>mprj_in</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>38</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>mprj_out</name>
+            <Object>mprj_out</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>38</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>mprj_en</name>
+            <Object>mprj_en</Object>
+            <Type>scalar</Type>
+            <Scope/>
+            <IOProtocol>ap_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>38</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>caravel_ps</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst_n</name>
+            <Object>caravel_ps</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_none</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="1">
+            <ModuleName>caravel_ps</ModuleName>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>caravel_ps</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <TargetInitiationInterval>4294967295</TargetInitiationInterval>
+                    <EstimatedClockPeriod>1.993</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>0</Best-caseLatency>
+                    <Average-caseLatency>0</Average-caseLatency>
+                    <Worst-caseLatency>0</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineDepth>1</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>280</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <FF>162</FF>
+                    <AVAIL_FF>106400</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>344</LUT>
+                    <AVAIL_LUT>53200</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>220</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands>
+        <config_op>
+            <ENTRY impl="all mul" latency="-1 mul" op="mul" precision="mul standard"/>
+            <ENTRY impl="all add" latency="-1 add" op="add" precision="add standard"/>
+            <ENTRY impl="all sub" latency="-1 sub" op="sub" precision="sub standard"/>
+            <ENTRY impl="all fadd" latency="-1 fadd" op="fadd" precision="fadd standard"/>
+            <ENTRY impl="all fsub" latency="-1 fsub" op="fsub" precision="fsub standard"/>
+            <ENTRY impl="all fdiv" latency="-1 fdiv" op="fdiv" precision="fdiv standard"/>
+            <ENTRY impl="all fexp" latency="-1 fexp" op="fexp" precision="fexp standard"/>
+            <ENTRY impl="all flog" latency="-1 flog" op="flog" precision="flog standard"/>
+            <ENTRY impl="all fmul" latency="-1 fmul" op="fmul" precision="fmul standard"/>
+            <ENTRY impl="all frsqrt" latency="-1 frsqrt" op="frsqrt" precision="frsqrt standard"/>
+            <ENTRY impl="all frecip" latency="-1 frecip" op="frecip" precision="frecip standard"/>
+            <ENTRY impl="all fsqrt" latency="-1 fsqrt" op="fsqrt" precision="fsqrt standard"/>
+            <ENTRY impl="all dadd" latency="-1 dadd" op="dadd" precision="dadd standard"/>
+            <ENTRY impl="all dsub" latency="-1 dsub" op="dsub" precision="dsub standard"/>
+            <ENTRY impl="all ddiv" latency="-1 ddiv" op="ddiv" precision="ddiv standard"/>
+            <ENTRY impl="all dexp" latency="-1 dexp" op="dexp" precision="dexp standard"/>
+            <ENTRY impl="all dlog" latency="-1 dlog" op="dlog" precision="dlog standard"/>
+            <ENTRY impl="all dmul" latency="-1 dmul" op="dmul" precision="dmul standard"/>
+            <ENTRY impl="all drsqrt" latency="-1 drsqrt" op="drsqrt" precision="drsqrt standard"/>
+            <ENTRY impl="all drecip" latency="-1 drecip" op="drecip" precision="drecip standard"/>
+            <ENTRY impl="all dsqrt" latency="-1 dsqrt" op="dsqrt" precision="dsqrt standard"/>
+            <ENTRY impl="all hadd" latency="-1 hadd" op="hadd" precision="hadd standard"/>
+            <ENTRY impl="all hsub" latency="-1 hsub" op="hsub" precision="hsub standard"/>
+            <ENTRY impl="all hdiv" latency="-1 hdiv" op="hdiv" precision="hdiv standard"/>
+            <ENTRY impl="all hmul" latency="-1 hmul" op="hmul" precision="hmul standard"/>
+            <ENTRY impl="all hsqrt" latency="-1 hsqrt" op="hsqrt" precision="hsqrt standard"/>
+            <ENTRY impl="all facc" latency="-1 facc" op="facc" precision="facc standard"/>
+            <ENTRY impl="all fmacc" latency="-1 fmacc" op="fmacc" precision="fmacc standard"/>
+            <ENTRY impl="all fmadd" latency="-1 fmadd" op="fmadd" precision="fmadd standard"/>
+        </config_op>
+        <config_storage>
+            <ENTRY auto_srl_max_bits="1024 fifo" auto_srl_max_depth="2 fifo" impl="autosrl fifo" type="fifo"/>
+        </config_storage>
+    </UserConfigCommands>
+    <Args>
+        <Arg ArgName="ps_mprj_in" index="0" direction="in" srcType="ap_uint&lt;38&gt;" srcSize="64">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="ps_mprj_in_1" usage="data" direction="in"/>
+                <hwRef type="register" interface="s_axi_control" name="ps_mprj_in_2" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="ps_mprj_out" index="1" direction="out" srcType="ap_uint&lt;38&gt;&amp;" srcSize="64">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="ps_mprj_out_1" usage="data" direction="out"/>
+                <hwRef type="register" interface="s_axi_control" name="ps_mprj_out_2" usage="data" direction="out"/>
+                <hwRef type="register" interface="s_axi_control" name="ps_mprj_out_ctrl" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="ps_mprj_en" index="2" direction="out" srcType="ap_uint&lt;38&gt;&amp;" srcSize="64">
+            <hwRefs>
+                <hwRef type="register" interface="s_axi_control" name="ps_mprj_en_1" usage="data" direction="out"/>
+                <hwRef type="register" interface="s_axi_control" name="ps_mprj_en_2" usage="data" direction="out"/>
+                <hwRef type="register" interface="s_axi_control" name="ps_mprj_en_ctrl" usage="control" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="mprj_in" index="3" direction="inout" srcType="ap_uint&lt;38&gt;&amp;" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="mprj_in" name="mprj_in" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="mprj_out" index="4" direction="in" srcType="ap_uint&lt;38&gt;" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="mprj_out" name="mprj_out" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="mprj_en" index="5" direction="in" srcType="ap_uint&lt;38&gt;" srcSize="64">
+            <hwRefs>
+                <hwRef type="port" interface="mprj_en" name="mprj_en" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="s_axi_control" type="axi4lite" busTypeName="aximm" mode="slave" dataWidth="32" addrWidth="6" portPrefix="s_axi_control_" paramPrefix="C_S_AXI_CONTROL_">
+            <ports>
+                <port>s_axi_control_ARADDR</port>
+                <port>s_axi_control_ARREADY</port>
+                <port>s_axi_control_ARVALID</port>
+                <port>s_axi_control_AWADDR</port>
+                <port>s_axi_control_AWREADY</port>
+                <port>s_axi_control_AWVALID</port>
+                <port>s_axi_control_BREADY</port>
+                <port>s_axi_control_BRESP</port>
+                <port>s_axi_control_BVALID</port>
+                <port>s_axi_control_RDATA</port>
+                <port>s_axi_control_RREADY</port>
+                <port>s_axi_control_RRESP</port>
+                <port>s_axi_control_RVALID</port>
+                <port>s_axi_control_WDATA</port>
+                <port>s_axi_control_WREADY</port>
+                <port>s_axi_control_WSTRB</port>
+                <port>s_axi_control_WVALID</port>
+            </ports>
+            <registers>
+                <register offset="0x10" name="ps_mprj_in_1" access="W" description="Data signal of ps_mprj_in" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="ps_mprj_in" access="W" description="Bit 31 to 0 of ps_mprj_in"/>
+                    </fields>
+                </register>
+                <register offset="0x14" name="ps_mprj_in_2" access="W" description="Data signal of ps_mprj_in" range="32">
+                    <fields>
+                        <field offset="0" width="6" name="ps_mprj_in" access="W" description="Bit 37 to 32 of ps_mprj_in"/>
+                        <field offset="6" width="26" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x1c" name="ps_mprj_out_1" access="R" description="Data signal of ps_mprj_out" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="ps_mprj_out" access="R" description="Bit 31 to 0 of ps_mprj_out"/>
+                    </fields>
+                </register>
+                <register offset="0x20" name="ps_mprj_out_2" access="R" description="Data signal of ps_mprj_out" range="32">
+                    <fields>
+                        <field offset="0" width="6" name="ps_mprj_out" access="R" description="Bit 37 to 32 of ps_mprj_out"/>
+                        <field offset="6" width="26" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x24" name="ps_mprj_out_ctrl" access="R" description="Control signal of ps_mprj_out" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="ps_mprj_out_ap_vld" access="R" description="Control signal ps_mprj_out_ap_vld"/>
+                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x34" name="ps_mprj_en_1" access="R" description="Data signal of ps_mprj_en" range="32">
+                    <fields>
+                        <field offset="0" width="32" name="ps_mprj_en" access="R" description="Bit 31 to 0 of ps_mprj_en"/>
+                    </fields>
+                </register>
+                <register offset="0x38" name="ps_mprj_en_2" access="R" description="Data signal of ps_mprj_en" range="32">
+                    <fields>
+                        <field offset="0" width="6" name="ps_mprj_en" access="R" description="Bit 37 to 32 of ps_mprj_en"/>
+                        <field offset="6" width="26" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+                <register offset="0x3c" name="ps_mprj_en_ctrl" access="R" description="Control signal of ps_mprj_en" range="32">
+                    <fields>
+                        <field offset="0" width="1" name="ps_mprj_en_ap_vld" access="R" description="Control signal ps_mprj_en_ap_vld"/>
+                        <field offset="1" width="31" name="RESERVED" access="R" description="Reserved.  0s on read."/>
+                    </fields>
+                </register>
+            </registers>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="16" argName="ps_mprj_in"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="28" argName="ps_mprj_out"/>
+                <constraint constraint_type="pragma interface" mode="s_axilite" register_option="0" offset="52" argName="ps_mprj_en"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="mprj_in" type="data" busTypeName="data" protocol="ap_none" mode="master" dataWidth="38">
+            <portMaps>
+                <portMap portMapName="mprj_in">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>mprj_in</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="mprj_in"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="mprj_out" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="38">
+            <portMaps>
+                <portMap portMapName="mprj_out">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>mprj_out</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="mprj_out"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="mprj_en" type="data" busTypeName="data" protocol="ap_none" mode="slave" dataWidth="38">
+            <portMaps>
+                <portMap portMapName="mprj_en">DATA</portMap>
+            </portMaps>
+            <ports>
+                <port>mprj_en</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_none" register_option="0" argName="mprj_en"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_BUSIF">s_axi_control</busParam>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst_n" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_LOW</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst_n">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst_n</port>
+            </ports>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="S_AXILITE Interfaces">
+                <table isCollapsed="0">
+                    <keys size="5">Interface, Data Width, Address Width, Offset, Register</keys>
+                    <column name="s_axi_control">32, 6, 16, 0, , , , , </column>
+                </table>
+            </item>
+            <item name="S_AXILITE Registers">
+                <table isCollapsed="0">
+                    <keys size="7">Interface, Register, Offset, Width, Access, Description, Bit Fields</keys>
+                    <column name="s_axi_control">ps_mprj_in_1, 0x10, 32, W, Data signal of ps_mprj_in, </column>
+                    <column name="s_axi_control">ps_mprj_in_2, 0x14, 32, W, Data signal of ps_mprj_in, </column>
+                    <column name="s_axi_control">ps_mprj_out_1, 0x1c, 32, R, Data signal of ps_mprj_out, </column>
+                    <column name="s_axi_control">ps_mprj_out_2, 0x20, 32, R, Data signal of ps_mprj_out, </column>
+                    <column name="s_axi_control">ps_mprj_out_ctrl, 0x24, 32, R, Control signal of ps_mprj_out, 0=ps_mprj_out_ap_vld</column>
+                    <column name="s_axi_control">ps_mprj_en_1, 0x34, 32, R, Data signal of ps_mprj_en, </column>
+                    <column name="s_axi_control">ps_mprj_en_2, 0x38, 32, R, Data signal of ps_mprj_en, </column>
+                    <column name="s_axi_control">ps_mprj_en_ctrl, 0x3c, 32, R, Control signal of ps_mprj_en, 0=ps_mprj_en_ap_vld</column>
+                </table>
+            </item>
+            <item name="REGISTER">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Mode, Bitwidth</keys>
+                    <column name="mprj_en">ap_none, 38, , </column>
+                    <column name="mprj_in">ap_none, 38, , </column>
+                    <column name="mprj_out">ap_none, 38, , </column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk, </column>
+                    <column name="ap_rst_n">reset, ap_rst_n, </column>
+                    <column name="ap_ctrl">ap_ctrl_none, , </column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="ps_mprj_in">in, ap_uint&lt;38&gt;</column>
+                    <column name="ps_mprj_out">out, ap_uint&lt;38&gt;&amp;</column>
+                    <column name="ps_mprj_en">out, ap_uint&lt;38&gt;&amp;</column>
+                    <column name="mprj_in">inout, ap_uint&lt;38&gt;&amp;</column>
+                    <column name="mprj_out">in, ap_uint&lt;38&gt;</column>
+                    <column name="mprj_en">in, ap_uint&lt;38&gt;</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="4">Argument, HW Interface, HW Type, HW Info</keys>
+                    <column name="ps_mprj_in">s_axi_control, register, name=ps_mprj_in_1 offset=0x10 range=32, </column>
+                    <column name="ps_mprj_in">s_axi_control, register, name=ps_mprj_in_2 offset=0x14 range=32, </column>
+                    <column name="ps_mprj_out">s_axi_control, register, name=ps_mprj_out_1 offset=0x1c range=32, </column>
+                    <column name="ps_mprj_out">s_axi_control, register, name=ps_mprj_out_2 offset=0x20 range=32, </column>
+                    <column name="ps_mprj_out">s_axi_control, register, name=ps_mprj_out_ctrl offset=0x24 range=32, </column>
+                    <column name="ps_mprj_en">s_axi_control, register, name=ps_mprj_en_1 offset=0x34 range=32, </column>
+                    <column name="ps_mprj_en">s_axi_control, register, name=ps_mprj_en_2 offset=0x38 range=32, </column>
+                    <column name="ps_mprj_en">s_axi_control, register, name=ps_mprj_en_ctrl offset=0x3c range=32, </column>
+                    <column name="mprj_in">mprj_in, port, , </column>
+                    <column name="mprj_out">mprj_out, port, , </column>
+                    <column name="mprj_en">mprj_en, port, , </column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ReportBurst>
+        <section name="M_AXI Burst Information" level="0" HEADER_NOTE="Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings."/>
+    </ReportBurst>
+    <PragmaReport>
+        <Pragma type="pipeline" location="src/caravel_ps.cpp:30" status="valid" parentFunction="caravel_ps" variable="" isDirective="0" options=""/>
+        <Pragma type="interface" location="src/caravel_ps.cpp:31" status="valid" parentFunction="caravel_ps" variable="ps_mprj_in" isDirective="0" options="s_axilite port=ps_mprj_in"/>
+        <Pragma type="interface" location="src/caravel_ps.cpp:32" status="valid" parentFunction="caravel_ps" variable="ps_mprj_out" isDirective="0" options="s_axilite port=ps_mprj_out"/>
+        <Pragma type="interface" location="src/caravel_ps.cpp:33" status="valid" parentFunction="caravel_ps" variable="ps_mprj_en" isDirective="0" options="s_axilite port=ps_mprj_en"/>
+        <Pragma type="interface" location="src/caravel_ps.cpp:34" status="valid" parentFunction="caravel_ps" variable="return" isDirective="0" options="ap_ctrl_none port=return"/>
+        <Pragma type="interface" location="src/caravel_ps.cpp:37" status="valid" parentFunction="caravel_ps" variable="mprj_in" isDirective="0" options="ap_none port=mprj_in"/>
+        <Pragma type="interface" location="src/caravel_ps.cpp:38" status="valid" parentFunction="caravel_ps" variable="mprj_out" isDirective="0" options="ap_none port=mprj_out"/>
+        <Pragma type="interface" location="src/caravel_ps.cpp:39" status="valid" parentFunction="caravel_ps" variable="mprj_en" isDirective="0" options="ap_none port=mprj_en"/>
+        <Pragma type="unroll" location="src/caravel_ps.cpp:48" status="valid" parentFunction="caravel_ps" variable="" isDirective="0" options=""/>
+    </PragmaReport>
+</profile>
+

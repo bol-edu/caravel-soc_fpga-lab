@@ -1,0 +1,16 @@
+<pragmas>
+<pragma file="src/caravel_ps.cpp" line="30" pragmaType="pipeline" parentfunction="caravel_ps" off="0" ii="-1" style=""/>
+<pragma file="src/caravel_ps.cpp" line="48" pragmaType="unroll" parentfunction="caravel_ps" factor="-1" skip_exit_check="0"/>
+<pragma file="src/caravel_ps.cpp" line="31" pragmaType="interface" parentfunction="caravel_ps" mode="s_axilite" port="ps_mprj_in" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/caravel_ps.cpp" line="32" pragmaType="interface" parentfunction="caravel_ps" mode="s_axilite" port="ps_mprj_out" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/caravel_ps.cpp" line="33" pragmaType="interface" parentfunction="caravel_ps" mode="s_axilite" port="ps_mprj_en" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/caravel_ps.cpp" line="34" pragmaType="interface" parentfunction="caravel_ps" mode="ap_ctrl_none" port="return" name=""/>
+<pragma file="src/caravel_ps.cpp" line="37" pragmaType="interface" parentfunction="caravel_ps" mode="ap_none" port="mprj_in" name="" register="0"/>
+<pragma file="src/caravel_ps.cpp" line="38" pragmaType="interface" parentfunction="caravel_ps" mode="ap_none" port="mprj_out" name="" register="0"/>
+<pragma file="src/caravel_ps.cpp" line="39" pragmaType="interface" parentfunction="caravel_ps" mode="ap_none" port="mprj_en" name="" register="0"/>
+<pragma file="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" line="1172" pragmaType="inline" parentfunction="ap_int_base<38, false>::operator[](int)" off="0" region="0" recursive="0"/>
+<pragma file="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" line="820" pragmaType="inline" parentfunction="ap_bit_ref<38, false>::ap_bit_ref(ap_int_base<38, false>*, int)" off="0" region="0" recursive="0"/>
+<pragma file="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" line="825" pragmaType="inline" parentfunction="ap_bit_ref<38, false>::operator bool() const" off="0" region="0" recursive="0"/>
+<pragma file="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" line="0" pragmaType="inline" parentfunction="ap_bit_ref<38, false>::operator=(unsigned long long)" off="0" region="0" recursive="0"/>
+<pragma file="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h" line="0" pragmaType="inline" parentfunction="ap_bit_ref<38, false>::operator=(ap_bit_ref<38, false> const&)" off="0" region="0" recursive="0"/>
+</pragmas>

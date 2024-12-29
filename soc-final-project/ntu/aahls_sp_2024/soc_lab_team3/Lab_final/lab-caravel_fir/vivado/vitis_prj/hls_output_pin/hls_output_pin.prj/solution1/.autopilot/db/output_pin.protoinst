@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"output_pin": {
+			"proto_instances": {
+			}
+		}
+	}
+}

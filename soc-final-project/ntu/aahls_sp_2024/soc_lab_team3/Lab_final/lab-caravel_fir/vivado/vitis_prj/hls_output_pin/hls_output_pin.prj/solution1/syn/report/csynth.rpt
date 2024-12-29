@@ -1,0 +1,109 @@
+
+
+================================================================
+== Synthesis Summary Report of 'output_pin'
+================================================================
++ General Information: 
+    * Date:           Mon May 22 15:26:02 2023
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+    * Project:        hls_output_pin.prj
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------+------+------+---------+--------+----------+---------+------+----------+------+----+----------+----------+-----+
+    |    Modules   | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |    |          |          |     |
+    |    & Loops   | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|    FF    |    LUT   | URAM|
+    +--------------+------+------+---------+--------+----------+---------+------+----------+------+----+----------+----------+-----+
+    |+ output_pin  |     -|  6.30|        0|   0.000|         -|        1|     -|        no|     -|   -|  37 (~0%)|  42 (~0%)|    -|
+    +--------------+------+------+---------+--------+----------+---------+------+----------+------+----+----------+----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 5             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+-------------+--------+-------+--------+----------------------------+
+| Interface     | Register    | Offset | Width | Access | Description                |
++---------------+-------------+--------+-------+--------+----------------------------+
+| s_axi_control | outpin_ctrl | 0x10   | 32    | W      | Data signal of outpin_ctrl |
++---------------+-------------+--------+-------+--------+----------------------------+
+
+* REGISTER
++-----------+---------+----------+
+| Interface | Mode    | Bitwidth |
++-----------+---------+----------+
+| outpin    | ap_none | 1        |
++-----------+---------+----------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+----------+
+| Interface | Type         | Ports    |
++-----------+--------------+----------+
+| ap_clk    | clock        | ap_clk   |
+| ap_rst_n  | reset        | ap_rst_n |
+| ap_ctrl   | ap_ctrl_none |          |
++-----------+--------------+----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-------------+-----------+----------+
+| Argument    | Direction | Datatype |
++-------------+-----------+----------+
+| outpin_ctrl | in        | bool     |
+| outpin      | out       | bool&    |
++-------------+-----------+----------+
+
+* SW-to-HW Mapping
++-------------+---------------+----------+---------------------------------------+
+| Argument    | HW Interface  | HW Type  | HW Info                               |
++-------------+---------------+----------+---------------------------------------+
+| outpin_ctrl | s_axi_control | register | name=outpin_ctrl offset=0x10 range=32 |
+| outpin      | outpin        | port     |                                       |
++-------------+---------------+----------+---------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
+  No bind op info in design
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+----------------------------+-------------------------------------------------+
+| Type      | Options                    | Location                                        |
++-----------+----------------------------+-------------------------------------------------+
+| interface | s_axilite port=outpin_ctrl | src/output_pin.cpp:9 in output_pin, outpin_ctrl |
+| interface | ap_none port=outpin        | src/output_pin.cpp:10 in output_pin, outpin     |
+| interface | ap_ctrl_none port=return   | src/output_pin.cpp:11 in output_pin, return     |
++-----------+----------------------------+-------------------------------------------------+
+
+

@@ -1,0 +1,137 @@
+
+
+================================================================
+== Synthesis Summary Report of 'caravel_ps'
+================================================================
++ General Information: 
+    * Date:           Mon May 22 15:26:31 2023
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+    * Project:        hls_caravel_ps.prj
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |    Modules   | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |    |           |           |     |
+    |    & Loops   | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT    | URAM|
+    +--------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |+ caravel_ps  |    II|  5.31|        0|   0.000|         -|        1|     -|       yes|     -|   -|  162 (~0%)|  344 (~0%)|    -|
+    +--------------+------+------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 6             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+------------------+--------+-------+--------+-------------------------------+----------------------+
+| Interface     | Register         | Offset | Width | Access | Description                   | Bit Fields           |
++---------------+------------------+--------+-------+--------+-------------------------------+----------------------+
+| s_axi_control | ps_mprj_in_1     | 0x10   | 32    | W      | Data signal of ps_mprj_in     |                      |
+| s_axi_control | ps_mprj_in_2     | 0x14   | 32    | W      | Data signal of ps_mprj_in     |                      |
+| s_axi_control | ps_mprj_out_1    | 0x1c   | 32    | R      | Data signal of ps_mprj_out    |                      |
+| s_axi_control | ps_mprj_out_2    | 0x20   | 32    | R      | Data signal of ps_mprj_out    |                      |
+| s_axi_control | ps_mprj_out_ctrl | 0x24   | 32    | R      | Control signal of ps_mprj_out | 0=ps_mprj_out_ap_vld |
+| s_axi_control | ps_mprj_en_1     | 0x34   | 32    | R      | Data signal of ps_mprj_en     |                      |
+| s_axi_control | ps_mprj_en_2     | 0x38   | 32    | R      | Data signal of ps_mprj_en     |                      |
+| s_axi_control | ps_mprj_en_ctrl  | 0x3c   | 32    | R      | Control signal of ps_mprj_en  | 0=ps_mprj_en_ap_vld  |
++---------------+------------------+--------+-------+--------+-------------------------------+----------------------+
+
+* REGISTER
++-----------+---------+----------+
+| Interface | Mode    | Bitwidth |
++-----------+---------+----------+
+| mprj_en   | ap_none | 38       |
+| mprj_in   | ap_none | 38       |
+| mprj_out  | ap_none | 38       |
++-----------+---------+----------+
+
+* TOP LEVEL CONTROL
++-----------+--------------+----------+
+| Interface | Type         | Ports    |
++-----------+--------------+----------+
+| ap_clk    | clock        | ap_clk   |
+| ap_rst_n  | reset        | ap_rst_n |
+| ap_ctrl   | ap_ctrl_none |          |
++-----------+--------------+----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-------------+-----------+--------------+
+| Argument    | Direction | Datatype     |
++-------------+-----------+--------------+
+| ps_mprj_in  | in        | ap_uint<38>  |
+| ps_mprj_out | out       | ap_uint<38>& |
+| ps_mprj_en  | out       | ap_uint<38>& |
+| mprj_in     | inout     | ap_uint<38>& |
+| mprj_out    | in        | ap_uint<38>  |
+| mprj_en     | in        | ap_uint<38>  |
++-------------+-----------+--------------+
+
+* SW-to-HW Mapping
++-------------+---------------+----------+--------------------------------------------+
+| Argument    | HW Interface  | HW Type  | HW Info                                    |
++-------------+---------------+----------+--------------------------------------------+
+| ps_mprj_in  | s_axi_control | register | name=ps_mprj_in_1 offset=0x10 range=32     |
+| ps_mprj_in  | s_axi_control | register | name=ps_mprj_in_2 offset=0x14 range=32     |
+| ps_mprj_out | s_axi_control | register | name=ps_mprj_out_1 offset=0x1c range=32    |
+| ps_mprj_out | s_axi_control | register | name=ps_mprj_out_2 offset=0x20 range=32    |
+| ps_mprj_out | s_axi_control | register | name=ps_mprj_out_ctrl offset=0x24 range=32 |
+| ps_mprj_en  | s_axi_control | register | name=ps_mprj_en_1 offset=0x34 range=32     |
+| ps_mprj_en  | s_axi_control | register | name=ps_mprj_en_2 offset=0x38 range=32     |
+| ps_mprj_en  | s_axi_control | register | name=ps_mprj_en_ctrl offset=0x3c range=32  |
+| mprj_in     | mprj_in       | port     |                                            |
+| mprj_out    | mprj_out      | port     |                                            |
+| mprj_en     | mprj_en       | port     |                                            |
++-------------+---------------+----------+--------------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
+  No bind op info in design
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+----------------------------+--------------------------------------------------+
+| Type      | Options                    | Location                                         |
++-----------+----------------------------+--------------------------------------------------+
+| pipeline  |                            | src/caravel_ps.cpp:30 in caravel_ps              |
+| interface | s_axilite port=ps_mprj_in  | src/caravel_ps.cpp:31 in caravel_ps, ps_mprj_in  |
+| interface | s_axilite port=ps_mprj_out | src/caravel_ps.cpp:32 in caravel_ps, ps_mprj_out |
+| interface | s_axilite port=ps_mprj_en  | src/caravel_ps.cpp:33 in caravel_ps, ps_mprj_en  |
+| interface | ap_ctrl_none port=return   | src/caravel_ps.cpp:34 in caravel_ps, return      |
+| interface | ap_none port=mprj_in       | src/caravel_ps.cpp:37 in caravel_ps, mprj_in     |
+| interface | ap_none port=mprj_out      | src/caravel_ps.cpp:38 in caravel_ps, mprj_out    |
+| interface | ap_none port=mprj_en       | src/caravel_ps.cpp:39 in caravel_ps, mprj_en     |
+| unroll    |                            | src/caravel_ps.cpp:48 in caravel_ps              |
++-----------+----------------------------+--------------------------------------------------+
+
+

@@ -1,0 +1,89 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Sun Nov 17 02:27:32 2024
+[*]
+[dumpfile] "/home/ubuntu/caravel-soc_fpga-lab/lab-caravel_fir/testbench/counter_la_fir/counter_la_fir.vcd"
+[dumpfile_mtime] "Sat Nov 16 14:56:41 2024"
+[dumpfile_size] 97744722
+[savefile] "/home/ubuntu/caravel-soc_fpga-lab/lab-caravel_fir/testbench/counter_la_fir/waveform.gtkw"
+[timestart] 1864110000
+[size] 1848 868
+[pos] 6060 129
+*-22.000000 1875034000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] counter_la_fir_tb.
+[treeopen] counter_la_fir_tb.uut.
+[treeopen] counter_la_fir_tb.uut.mprj.
+[sst_width] 292
+[signals_width] 404
+[sst_expanded] 1
+[sst_vpaned_height] 436
+@200
+-#counter_la_tb
+-
+-#uut(caravel)
+-
+-#soc
+-
+-
+-#VexRiscV
+-
+-mprj
+-
+-User Bram
+-
+-RAM256
+-
+-
+-
+@28
+counter_la_fir_tb.uut.mprj.fir_hardware.ARREADY
+counter_la_fir_tb.uut.mprj.fir_hardware.AWREADY
+counter_la_fir_tb.uut.mprj.fir_hardware.WREADY
+counter_la_fir_tb.uut.mprj.fir_hardware._sm_tlast
+counter_la_fir_tb.uut.mprj.fir_hardware.ap_ctrl[5:0]
+@24
+counter_la_fir_tb.uut.mprj.fir_hardware.ap_state[1:0]
+@28
+counter_la_fir_tb.uut.mprj.fir_hardware.ap_state[1:0]
+@22
+counter_la_fir_tb.uut.mprj.fir_hardware.araddr[31:0]
+@28
+counter_la_fir_tb.uut.mprj.fir_hardware.arready
+counter_la_fir_tb.uut.mprj.fir_hardware.arvalid
+@22
+counter_la_fir_tb.uut.mprj.fir_hardware.awaddr[31:0]
+@28
+counter_la_fir_tb.uut.mprj.fir_hardware.awready
+counter_la_fir_tb.uut.mprj.fir_hardware.awvalid
+counter_la_fir_tb.uut.mprj.fir_hardware.axis_clk
+counter_la_fir_tb.uut.mprj.fir_hardware.axis_rst_n
+@420
+counter_la_fir_tb.uut.mprj.fir_hardware.ss_tdata[31:0]
+@28
+counter_la_fir_tb.uut.mprj.fir_hardware.ss_tvalid
+counter_la_fir_tb.uut.mprj.fir_hardware.ss_tready
+@22
+counter_la_fir_tb.uut.mprj.fir_hardware.data_WE[3:0]
+@420
+counter_la_fir_tb.uut.mprj.fir_hardware.data_A[31:0]
+@22
+counter_la_fir_tb.uut.mprj.fir_hardware.data_Di[31:0]
+@420
+counter_la_fir_tb.uut.mprj.fir_hardware.data_Do[31:0]
+counter_la_fir_tb.uut.mprj.fir_hardware.sm_tdata[31:0]
+@28
+counter_la_fir_tb.uut.mprj.fir_hardware.sm_tready
+counter_la_fir_tb.uut.mprj.fir_hardware.sm_tvalid
+@24
+counter_la_fir_tb.uut.mprj.fir_hardware.k[4:0]
+@420
+counter_la_fir_tb.uut.mprj.fir_hardware.x[31:0]
+counter_la_fir_tb.uut.mprj.fir_hardware.h[31:0]
+counter_la_fir_tb.uut.mprj.fir_hardware.m[31:0]
+counter_la_fir_tb.uut.mprj.fir_hardware.y[31:0]
+@23
+counter_la_fir_tb.uut.mprj_io[37:0]
+@420
+counter_la_fir_tb.uut.mprj.fir_hardware.tlast_cnt[9:0]
+[pattern_trace] 1
+[pattern_trace] 0

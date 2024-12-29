@@ -1,0 +1,45 @@
+#!/bin/bash
+
+
+set -e
+
+
+ASSEMBLY_FILES=(fir.s fir_control.s)
+OBJECT_FILES=()
+OUTPUT_ELF="counter_la_fir.elf"
+LINKER_SCRIPT="../../firmware/sections.lds"
+CRT0="../../firmware/crt0_vex.S"
+ISR="../../firmware/isr.c"
+
+
+for asm in "${ASSEMBLY_FILES[@]}"; do
+  obj_file="${asm%.s}.o"
+  riscv32-unknown-elf-as -march=rv32i -o "$obj_file" "$asm"
+  OBJECT_FILES+=("$obj_file")
+  echo "ass file: $obj_file"
+done
+
+# 重生 .elf 文件
+riscv32-unknown-elf-gcc -Wl,--no-warn-rwx-segments -g \
+    -Xlinker -Map=output.map \
+    -I../../firmware \
+    -march=rv32i -mabi=ilp32 -D__vexriscv__ \
+    -Wl,-Bstatic,-T,"$LINKER_SCRIPT",--strip-discarded \
+    -ffreestanding -nostartfiles -o "$OUTPUT_ELF" "$CRT0" "$ISR" "${OBJECT_FILES[@]}"
+
+echo "Sussece Generate: $OUTPUT_ELF"
+
+# .elf 轉 .hex 
+riscv32-unknown-elf-objcopy -O verilog "$OUTPUT_ELF" counter_la_fir.hex
+sed -ie 's/@10/@00/g' counter_la_fir.hex
+
+echo "已生成 .hex 文件: counter_la_fir.hex"
+
+# 模擬
+iverilog -Ttyp -DFUNCTIONAL -DSIM -DUNIT_DELAY=#1 \
+    -f./include.rtl.list -o counter_la_fir.vvp counter_la_fir_tb.v
+vvp counter_la_fir.vvp
+
+rm -f counter_la_fir.vvp counter_la_fir.elf counter_la_fir.hex
+
+echo "Finish"

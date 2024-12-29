@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+set -e
+
+
+SOURCE_C_FILES=(fir.c fir_control.c)
+
+# 生組合語言
+for src in "${SOURCE_C_FILES[@]}"; do
+  asm_file="${src%.c}.s"
+  riscv32-unknown-elf-gcc -S -march=rv32i -mabi=ilp32 -I../../firmware -D__vexriscv__ -O2 "$asm_file" "$src"
+  echo "assem: $asm_file"
+done

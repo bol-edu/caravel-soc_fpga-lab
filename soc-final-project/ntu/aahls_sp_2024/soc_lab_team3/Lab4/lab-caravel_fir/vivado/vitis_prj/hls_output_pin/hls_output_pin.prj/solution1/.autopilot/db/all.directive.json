@@ -1,0 +1,18 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "output_pin",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/home\/hls05\/temporary\/caravel_fpga_lite\/Caravel_FPGA_0_2\/project\/vitis_hls_project\/hls_output_pin\/run_hls.tcl",
+          "sourceLine": "42",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "output_pin"
+              }]
+          }
+        }]
+    }]}

@@ -1,0 +1,5 @@
+<pragmas>
+<pragma file="src/output_pin.cpp" line="9" pragmaType="interface" parentfunction="output_pin" mode="s_axilite" port="outpin_ctrl" bundle="" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="src/output_pin.cpp" line="10" pragmaType="interface" parentfunction="output_pin" mode="ap_none" port="outpin" name="" register="0"/>
+<pragma file="src/output_pin.cpp" line="11" pragmaType="interface" parentfunction="output_pin" mode="ap_ctrl_none" port="return" name=""/>
+</pragmas>
