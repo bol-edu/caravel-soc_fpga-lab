@@ -11,7 +11,7 @@
 -- ap_start:  axilite
 -- ap_done: axilite
 - Using one Multiplier and one Adder
-- - Shift register implemented with SRAM (Shift_RAM = 32 DW)
+- Shift register implemented with SRAM (Shift_RAM = 32 DW)
 - Tap coefficient implemented with SRAM (Tap_RAM = 32 DW) and initialized by axilite write
 Operation
 - ap_start to initiate FIR engine (ap_start valid for one clock cycle)
