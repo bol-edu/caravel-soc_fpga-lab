@@ -270,19 +270,22 @@ module fir_tb
             @(posedge axis_clk);
             arvalid <= 1; araddr <= addr;
             rready <= 1;
-            fork begin
-                while (!arready) @(posedge axis_clk);
-                arvalid<=0;
-            end join begin
-                while (!rvalid) @(posedge axis_clk);
-                if( (rdata & mask) != (exp_data & mask)) begin
-                    $display("ERROR: exp = %d, rdata = %d", exp_data, rdata);
-                    error_coef <= 1;
-                end else begin
-                    $display("OK: exp = %d, rdata = %d", exp_data, rdata);
-                end
-                rready<=0;
-            end
+            fork
+		begin
+                	while (!arready) @(posedge axis_clk);
+                	arvalid<=0;
+		end
+		begin
+	                while (!rvalid) @(posedge axis_clk);
+	                if( (rdata & mask) != (exp_data & mask)) begin
+	                    $display("ERROR: exp = %d, rdata = %d", exp_data, rdata);
+	                    error_coef <= 1;
+	                end else begin
+	                    $display("OK: exp = %d, rdata = %d", exp_data, rdata);
+	                end
+	                rready<=0;
+		end
+            join
         end
     endtask
 
