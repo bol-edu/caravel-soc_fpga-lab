@@ -182,7 +182,7 @@ module fir_tb
         for(i=0;i<(data_length-1);i=i+1) begin
             ss_tlast = 0; axi_stream_master(Din_list[i]);
         end
-	    config_read_check(12'h00, 32'h00, 32'h0000_0002); // check done = 0
+        config_read_check(12'h00, 32'h00, 32'h0000_0002); // check idle = 0
         ss_tlast = 1; axi_stream_master(Din_list[(`Data_Num - 1)]);
         $display("------End the data input(AXI-Stream)------");
     end
@@ -252,13 +252,17 @@ module fir_tb
             @(posedge axis_clk);
             awvalid <= 1; awaddr <= addr;
             wvalid  <= 1; wdata <= data;
-            fork begin
-                while (!awready) @(posedge axis_clk);
-                awvalid<=0;    
-            end join begin
-                while (!wready) @(posedge axis_clk);
-                wvalid<=0;           
-            end
+            fork
+                begin
+                    while (!awready) @(posedge axis_clk);
+                    awvalid<=0;
+                end
+                begin
+                    while (!wready) @(posedge axis_clk);
+                    wvalid<=0;                    
+                
+                end
+            join 
         end
     endtask
 
@@ -270,22 +274,23 @@ module fir_tb
             @(posedge axis_clk);
             arvalid <= 1; araddr <= addr;
             rready <= 1;
-            fork
-		begin
-                	while (!arready) @(posedge axis_clk);
-                	arvalid<=0;
-		end
-		begin
-	                while (!rvalid) @(posedge axis_clk);
-	                if( (rdata & mask) != (exp_data & mask)) begin
-	                    $display("ERROR: exp = %d, rdata = %d", exp_data, rdata);
-	                    error_coef <= 1;
-	                end else begin
-	                    $display("OK: exp = %d, rdata = %d", exp_data, rdata);
-	                end
-	                rready<=0;
-		end
-            join
+            fork 
+                begin
+                    while (!arready) @(posedge axis_clk);
+                    arvalid<=0;
+                end
+                begin
+                    while (!rvalid) @(posedge axis_clk);
+                    if( (rdata & mask) != (exp_data & mask)) begin
+                        $display("ERROR: exp = %d, rdata = %d", exp_data, rdata);
+                        error_coef <= 1;
+                    end else begin
+                        $display("OK: exp = %d, rdata = %d", exp_data, rdata);
+                    end
+                    rready<=0;                
+
+                end
+            join 
         end
     endtask
 
