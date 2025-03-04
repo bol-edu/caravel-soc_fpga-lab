@@ -256,13 +256,15 @@ module fir_tb
                 begin
                     while (!awready) @(posedge axis_clk);
                     awvalid<=0;
+		    awaddr<=0;
                 end
                 begin
                     while (!wready) @(posedge axis_clk);
                     wvalid<=0;                    
-                
+                    wdata<=0;
                 end
             join 
+		@(posedge axis_clk);
         end
     endtask
 
@@ -278,6 +280,7 @@ module fir_tb
                 begin
                     while (!arready) @(posedge axis_clk);
                     arvalid<=0;
+		    araddr<=0;
                 end
                 begin
                     while (!rvalid) @(posedge axis_clk);
@@ -288,9 +291,9 @@ module fir_tb
                         $display("OK: exp = %d, rdata = %d", exp_data, rdata);
                     end
                     rready<=0;                
-
                 end
             join 
+		@(posedge axis_clk);
         end
     endtask
 
