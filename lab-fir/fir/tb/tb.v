@@ -182,7 +182,7 @@ module fir_tb
         for(i=0;i<(data_length-1);i=i+1) begin
             ss_tlast = 0; axi_stream_master(Din_list[i]);
         end
-        config_read_check(12'h00, 32'h00, 32'h0000_0002); // check idle = 0
+	    config_read_check(12'h00, 32'h00, 32'h0000_0002); // check done= 0
         ss_tlast = 1; axi_stream_master(Din_list[(`Data_Num - 1)]);
         $display("------End the data input(AXI-Stream)------");
     end
