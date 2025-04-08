@@ -1,0 +1,214 @@
+[*]
+[*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
+[*] Tue Apr  8 11:32:12 2025
+[*]
+[dumpfile] "/home/ubuntu/Lab4-2/lab-caravel_fir_new/testbench/counter_la_fir/counter_la_fir.vcd"
+[dumpfile_mtime] "Fri Apr  4 08:53:36 2025"
+[dumpfile_size] 34274757
+[savefile] "/home/ubuntu/Lab4-2/lab-caravel_fir_new/testbench/counter_la_fir/lab4_2.gtkw"
+[timestart] 669910000
+[size] 1860 877
+[pos] -89 -89
+*-23.015614 711920000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] counter_la_fir_tb.
+[treeopen] counter_la_fir_tb.uut.
+[treeopen] counter_la_fir_tb.uut.mprj.
+[treeopen] counter_la_fir_tb.uut.mprj.mprj.
+[treeopen] counter_la_fir_tb.uut.soc.
+[treeopen] counter_la_fir_tb.uut.soc.core.
+[treeopen] counter_la_fir_tb.uut.soc.core.VexRiscv.
+[sst_width] 233
+[signals_width] 449
+[sst_expanded] 1
+[sst_vpaned_height] 288
+@200
+-
+@28
+counter_la_fir_tb.uut.soc.core_clk
+counter_la_fir_tb.uut.soc.core_rstn
+@200
+-==== Flash ====
+@28
+counter_la_fir_tb.spiflash.io1
+counter_la_fir_tb.spiflash.csb
+counter_la_fir_tb.spiflash.clk
+@200
+-=== Caravel ===
+@28
+counter_la_fir_tb.uut.soc.flash_io1_di
+@200
+-===== CPU =====
+-Cache
+@28
+counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache._zz_1
+@22
+counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.lineLoader_write_data_0_payload_data[31:0]
+@28
+counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache._zz_fetchStage_read_banksValue_0_dataMem_1
+@22
+counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache._zz_banks_0_port1[31:0]
+@200
+-iBUS
+@c00022
+counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+@28
+(0)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(1)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(2)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(3)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(4)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(5)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(6)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(7)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(8)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(9)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(10)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(11)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(12)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(13)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(14)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(15)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(16)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(17)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(18)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(19)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(20)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(21)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(22)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(23)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(24)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(25)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(26)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(27)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(28)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(29)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(30)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+(31)counter_la_fir_tb.uut.soc.core.VexRiscv.iBus_cmd_payload_address[31:0]
+@1401200
+-group_end
+@28
+counter_la_fir_tb.uut.soc.core.VexRiscv.iBusWishbone_CYC
+counter_la_fir_tb.uut.soc.core.VexRiscv.iBusWishbone_STB
+counter_la_fir_tb.uut.soc.core.VexRiscv.iBusWishbone_ACK
+@200
+-dBUS
+@22
+counter_la_fir_tb.uut.soc.core.VexRiscv.dBus_cmd_rData_address[31:0]
+@28
+counter_la_fir_tb.uut.soc.core.VexRiscv.dBusWishbone_CYC
+counter_la_fir_tb.uut.soc.core.VexRiscv.dBusWishbone_STB
+counter_la_fir_tb.uut.soc.core.VexRiscv.dBusWishbone_ACK
+@200
+-DFF
+@28
+counter_la_fir_tb.uut.soc.core.dff_bus_ack
+counter_la_fir_tb.uut.soc.core.dff2_bus_ack
+@200
+-Fetch Code
+@c00022
+counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+@28
+(0)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(1)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(2)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(3)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(4)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(5)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(6)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(7)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(8)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(9)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(10)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(11)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(12)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(13)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(14)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(15)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(16)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(17)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(18)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(19)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(20)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(21)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(22)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(23)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(24)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(25)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(26)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(27)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(28)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(29)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(30)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+(31)counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_fetch_physicalAddress[31:0]
+@1401200
+-group_end
+@22
+counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_decode_physicalAddress[31:0]
+counter_la_fir_tb.uut.soc.core.VexRiscv.IBusCachedPlugin_cache.io_cpu_decode_data[31:0]
+@200
+-=== UsrBram ===
+@28
+counter_la_fir_tb.uut.mprj.mprj.user_bram.EN0
+@22
+counter_la_fir_tb.uut.mprj.mprj.user_bram.WE0[3:0]
+counter_la_fir_tb.uut.mprj.mprj.user_bram.A0[31:0]
+@200
+-=== MPRJWB ===
+@28
+counter_la_fir_tb.uut.mprj.mprj.wb_clk_i
+[color] 2
+counter_la_fir_tb.uut.mprj.wbs_cyc_i
+[color] 2
+counter_la_fir_tb.uut.mprj.wbs_stb_i
+@22
+counter_la_fir_tb.uut.mprj.mprj.wbs_adr_i[31:0]
+@28
+[color] 2
+counter_la_fir_tb.uut.mprj.wbs_ack_o
+[color] 2
+counter_la_fir_tb.uut.mprj.wbs_we_i
+@200
+-===== FIR =====
+-SS
+@28
+[color] 2
+counter_la_fir_tb.uut.mprj.fir_hardware.ss_tvalid
+[color] 3
+counter_la_fir_tb.uut.mprj.fir_hardware.ss_tready
+@200
+-SM
+@28
+[color] 3
+counter_la_fir_tb.uut.mprj.fir_hardware.sm_tvalid
+[color] 2
+counter_la_fir_tb.uut.mprj.fir_hardware.sm_tready
+@200
+-AXI-Read
+@22
+counter_la_fir_tb.uut.mprj.araddr[31:0]
+counter_la_fir_tb.uut.mprj.rdata[31:0]
+@28
+counter_la_fir_tb.uut.mprj.fir_hardware.arvalid
+counter_la_fir_tb.uut.mprj.fir_hardware.arready
+counter_la_fir_tb.uut.mprj.fir_hardware.rready
+counter_la_fir_tb.uut.mprj.fir_hardware.rvalid
+@200
+-AXI-Write
+@22
+counter_la_fir_tb.uut.mprj.awaddr[31:0]
+counter_la_fir_tb.uut.mprj.wdata[31:0]
+@28
+counter_la_fir_tb.uut.mprj.awvalid
+counter_la_fir_tb.uut.mprj.awready
+counter_la_fir_tb.uut.mprj.wvalid
+counter_la_fir_tb.uut.mprj.wready
+@201
+-
+@28
+counter_la_fir_tb.uut.mprj.fir_hardware.ap_start
+counter_la_fir_tb.uut.mprj.fir_hardware.ap_idle
+counter_la_fir_tb.uut.mprj.fir_hardware.ap_done
+@200
+-
+[pattern_trace] 1
+[pattern_trace] 0
